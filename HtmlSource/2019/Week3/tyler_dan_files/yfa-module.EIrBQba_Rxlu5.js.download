@@ -1,0 +1,995 @@
+/* jslint  sloppy:true, nomen:true, white:true*/
+/*global YUI*/
+
+/**
+ * Proved the Y.Fantasy.Mod class
+ * @module yfa-module
+**/
+
+
+/**
+* Y.Fantasy.Mod handles the default JS functions built into Fantasy .Mod HTML structured, including tabbed navigation,
+* refreshing content, Ajax content, etc.
+*
+* @class Mod
+* @constructor
+* @extends XHR
+* @param {Object} cfg Configuration object. See attributes section for configuration options.
+**/
+
+YUI.add('yfa-module', (function() {
+    var modules= {};
+
+    return function(Y) {
+        var evEventPrefix    = 'yfamodule',
+            EV_DISPLAYUPDATE = 'yfamodule:displayudpate',
+            EV_SWITCHTAB     = 'yfamodule:switchtab',
+            EV_CHANGESELECT  = 'yfamodule:changedModSelect',
+            EV_TABSELECTED   = 'yfamodule:tabselected',
+            EV_DATARECEIVED  = 'yfamodule:datareceived';
+
+
+        function YFAModule(cfg) {
+            YFAModule.superclass.constructor.apply(this, arguments);
+        }
+
+        YFAModule.NAME = 'yfamodule';
+        YFAModule.ATTRS = {
+
+            /**
+             * The module's element, normally defined by the class .Mod
+             * @attribute el
+             * @type Node|Selector
+             **/
+            'el': {
+                'value': null,
+                'setter': function(val, fullname) {
+                    return Y.one(val);
+                }
+            },
+
+            /**
+             * The callback object for module IO requests, used when switching tabs in dynamic modules. Rarely overwritten
+             * @attribute callbackObj
+             * @type Object
+             * @default Object with success and failure functions.
+             */
+            'callbackObj': {
+                'value': {
+                    'success': function(cId, response) {
+                        var target = this.targets[ cId ],
+                            respObj = this.parseResponse(cId, response),
+                            content, destinationEl, contentHTML;
+
+                        if (this.getErrors(cId)) {
+                            Y.log(this.getErrors(cId), 'warn', 'yfa-module');
+                            // handle errors here
+                        } else if (respObj.contentIsNew) {
+                            contentHTML = Y.Fantasy.Mod.cleanupHtml(respObj.content);
+                            content = Y.Node.create(contentHTML);
+
+                            destinationEl = this.insertContent(content, target);
+                            this.processModSelect(cId, respObj.objects);
+                            this.processBadge(cId, respObj.objects);
+                            this.processModHide(cId, respObj.objects);
+
+                            if (destinationEl) {
+                                this.cacheContent(Y.Fantasy.XHR.getTransaction(cId), destinationEl);
+                                this.updateModuleDisplay(destinationEl);
+                            }
+                        } else {
+                            // content is unchanged
+                            Y.log('Content hasn\'t change, won\'t refresh module');
+                        }
+                        if (Y.Lang.isArray(respObj.objects) && respObj.objects.length) {
+                            this.fire(EV_DATARECEIVED, {objects: respObj.objects });
+                        }
+                        this.refreshFlyoutSelect();
+                    },
+                    'failure': function(cId, response) {
+                        var failCount = this.get('failedRequestCount') || 0,
+                            failThresh = this.get('failedRequestThreshold');
+
+                        Y.log('failure handler called on connection ' + cId, 'error', 'yfa-module');
+                        failCount += 1;
+                        if (failCount > failThresh) {
+                            this.destroyRefresh();
+                        }
+                        this.set('failedRequestCount', failCount);
+                    }
+                }
+            },
+
+            /**
+             * Trigger handler, for handling tab switching and IO requests for dynamic links. Rarely overwritten
+             * @attribute triggerHandler
+             * @type Function
+             */
+            'triggerHandler': {
+                'value': function(e, obj) {
+                    // Y.log("trigger");
+                    if (this.ancestor('.orphan')) {
+                        return;
+                    }
+                    var doPreventDefault = false,
+                        connection, // eslint-disable-line no-unused-vars
+                        targetNode = null,
+                        nav = this.ancestor('[data-dynamic]'),
+                        href = this.getAttribute('href'),
+                        re = /^\#/,
+                        target,
+                        isDynamic = false,
+                        forceRefresh = false,
+                        eventPayload = { 'func': null },
+                        liAncestor,
+                        fn;
+
+                    liAncestor = this.ancestor('li');
+                    if (this.hasAttribute('data-href')) {
+                        href = this.getData('href');
+                    } else if (this.hasAttribute('data-href-current')) {
+                        href = window.location.href;
+                    }
+                    if (this.hasClass('yfa-dynamic')) {
+                        nav = this;
+                        isDynamic = true;
+                        forceRefresh = true;
+                    } else if (nav) {
+                        // obj.switchTab( this.ancestor("li") );
+                        if (nav.getAttribute('data-dynamic') === 'true') {
+                            isDynamic = true;
+                        }
+                        if (nav.getAttribute('data-nocache') === 'true' || (liAncestor && liAncestor.getAttribute('data-nocache') === 'true')) {
+                            forceRefresh = true;
+                        }
+                    } else {
+                        obj.switchTab(liAncestor, nav);
+                    }
+                    if (isDynamic) {
+                        target = this.hasAttribute('data-target') ? this.getAttribute('data-target') : nav.getAttribute('data-target');
+                        // Y.log(target);
+                        targetNode = target ? obj.get('el').one(target) : null;
+
+                        if (targetNode !== null && !forceRefresh) {
+                            doPreventDefault = obj.loadCachedContent(this, target);
+                        }
+
+                        fn = function() {
+                            var connection = obj.fetch(this, href);
+                            if (connection) {
+                                obj.switchTab(liAncestor, nav);
+                                obj.targets[ connection.id ] = target;
+                            }
+                        };
+
+                        eventPayload.func = Y.bind(fn, this);
+                        eventPayload.isPrevented = false;
+                        eventPayload.module = obj.get('el');
+                        eventPayload.displayTarget = target;
+
+
+                        if (!doPreventDefault) {
+                            doPreventDefault = true;
+                            obj.fire(EV_SWITCHTAB, eventPayload);
+                        } else {
+                            obj.switchTab(liAncestor, nav);
+                        }
+                    } else {
+                        var selector = href;
+                        if (this.hasAttribute('data-target') && !re.test(selector)) {
+                            selector = this.getAttribute('data-target');
+                        }
+                        obj.switchTab(liAncestor, nav);
+                        if (re.test(selector)) {
+                            if (obj.get('el').one(selector)) {
+                                doPreventDefault = obj.updateModuleDisplay(obj.get('el').one(selector));
+                            }
+                        }
+                    }
+                    if (doPreventDefault && e && Y.Lang.isFunction(e.preventDefault) && this.getData('prevent-default') != 'false') {
+                        e.preventDefault();
+                    }
+                }
+            },
+
+            /**
+             * How long to cache dynamic content for. Value is in milliseconds.
+             * @attribute cacheTTL
+             * @type Number
+             * @default 30000 (5 minutes)
+            **/
+
+            'cacheTTL': {
+                value: 5 * 60 * 1000
+            },
+
+            /**
+             * Count of failed requests. If this number exceeds a pre-set threshold, and the module is auto-refreshing, the auto-refresh will be cancelled.
+             * @attribute failedRequestCount
+             * @type Number
+             * @default 0
+            **/
+            'failedRequestCount': {
+                value: 0
+            },
+
+            /**
+             * Threshold for failed requests in an auto-refreshing module.
+             * @attribute failedRequestThreshold
+             * @type Number
+             * @default 10
+            **/
+            'failedRequestThreshold': {
+                value: 10
+            }
+
+        };
+
+        Y.extend(YFAModule, Y.Fantasy.XHR, {
+
+            /**
+             * Publishes displayupdate and switchtab functions
+             * @method _createEvents
+             * @private
+            */
+            _createEvents: function() {
+                var self = this;
+
+                /**
+                 * Fired when new content is loaded. Uses DOM event facade, and broadcasts to the YUI global scope.
+                 * @event yfamodule:displayupdate
+                **/
+                this.publish(EV_DISPLAYUPDATE, {
+                    queuable: false,
+                    emitFacade: true,
+                    bubbles: true,
+                    broadcast: 2,
+                    prefix: evEventPrefix
+                });
+
+                /**
+                 * Fired when new tab is changed. Uses DOM event facade, and broadcasts to the YUI global scope.
+                 * @event yfamodule:displayupdate
+                **/
+                this.publish(EV_TABSELECTED, {
+                    queuable: false,
+                    emitFacade: true,
+                    bubbles: true,
+                    broadcast: 2,
+                    prefix: evEventPrefix
+                });
+
+                /**
+                 * Fired when action is taken to switch tabs. Uses DOM event facade. calling preventDefault() on this will prevent the tab switching from taking place.
+                 * @event yfamodule:switchtab
+                 * @param {Function} func Function that will execute tab switching. When you want to execute some code before switching tabs, such as validating a form, create
+                 * a listener for this, and call preventDefault() on the event object. Then execute whatever code you planned to execute, and finally, call e.func() to execute the tab switch.
+                **/
+                this.publish(EV_SWITCHTAB, {
+                    queuable: false,
+                    emitFacade: true,
+                    defaultFn: self._doNothing,
+                    preventedFn: self._doNothing,
+                    preventable: true,
+                    bubbles: true,
+                    bubbleEvents: true,
+                    broadcast: 2,
+                    prefix: evEventPrefix
+                });
+
+                /**
+                 * Fired when XHR payload includes data in the objects property
+                 * @event yfamodule:datareceived
+                 * @param {Array} objects Array of objects sent along with HTML content.
+                **/
+                this.publish(EV_DATARECEIVED, {
+                    queuable: false,
+                    emitFacade: true,
+                    preventable: true,
+                    bubbles: true,
+                    bubbleEvents: true,
+                    broadcast: 2,
+                    prefix: evEventPrefix
+                });
+
+                this.after(EV_SWITCHTAB, self._execEvtPayload);
+            },
+
+            /**
+             * Function to execute tab swtich if the tabswitch event wasn't cancelled.
+             * @method _execEvtPayload
+             * @private
+             * @param {Event} ev
+             **/
+            _execEvtPayload: function(ev) {
+                ev.func();
+            },
+            _doNothing: function(ev) {
+                return;
+            },
+
+            /**
+             * Attaches event listeners on tabs and other dynamic content, caches any existing content and sets up any auto-refreshing content. Normally called by initializer.
+             * @method register
+             * @private
+             **/
+            register: function() {
+                var el = this.get('el'),
+                    self = this;
+                modules[el] = self;
+                el.delegate('click', self.get('triggerHandler'), '.Navitem:not(.Js-static) > .Navtarget:not(.Js-static), a.yfa-dynamic', null, self);
+                el.delegate('click', self.modToggleHandler, '.Btn-mod-toggle', null, self);
+                el.delegate('change', self.handleModSelectChange, 'select[data-dynamic=true]', null, self);
+
+                this._createEvents();
+                this.set('isRegistered', true);
+                this.cacheInitialContent();
+                this.initRefresh();
+
+                this.refreshFlyoutSelect();
+            },
+
+            _flyoutSelect: null,
+            initFlyoutSelect: function(flyout) {
+                var fl = new Y.Fantasy.FlyoutSelect({'el': flyout, 'trigger_classes': 'Btn Btn-short Fz-xs Grid-u',
+                    'ul_classes': 'Nav-v Nav-plain Dropdown Nowrap No-p Box-shadow Bdr-radius Bdr',
+                    'use_link': true,
+                    'title_changed_listener': EV_CHANGESELECT});
+                this._flyoutSelect = fl;
+            },
+
+            refreshFlyoutSelect: function() {
+                var modSelect = this._getModSelect(),
+                    flyout;
+                if (modSelect) {
+                    flyout = modSelect.ancestor('.Flyoutselectbox');
+                }
+                if (flyout) {
+                    if (this._flyoutSelect) {
+                        this._flyoutSelect.destroy();
+                    }
+                    this.initFlyoutSelect(flyout);
+                }
+            },
+
+            /**
+            * Toggle visibility of module 
+            * @method modToggleHandler
+            **/
+            modToggleHandler: function(e, obj) {
+                e.preventDefault();
+                if (e.target.test('.Btn-mod-toggle')) {
+                    modToggle = Y.one('.Mod-toggle');
+                    if (modToggle.hasClass('Hidden')) {
+                        modToggle.removeClass('Hidden');
+                        if (e.target.test('.Btn-mod-toggle')) {
+                            e.target.addClass('Hidden');
+                        }
+                    } else {
+                        modToggle.addClass('Hidden');
+                        Y.one('form textarea').set('value', null);
+                        Y.one('.Btn-mod-toggle').removeClass('Hidden');
+                    }
+                }
+            },
+
+            /**
+             * Sets up refreshing content. Looks for data-refresh attribute on .yfa-dynamic modules, which should be a number in milliseconds.
+             * @method initRefresh
+             **/
+            initRefresh: function() {
+                var module = this.get('el'),
+                    refreshLinks,
+                    self = this;
+
+                this.destroyRefresh();
+                refreshLinks = module.all('.yfa-dynamic[data-refresh]');
+                if (refreshLinks.size()) {
+                    Y.some(refreshLinks, function(n) {
+                        var refreshTime = parseInt(n.getAttribute('data-refresh'), 10),
+                            isSubmod, isHidden = false;
+
+                        isSubmod = n.ancestor('.Submod');
+                        if (isSubmod) {
+                            isHidden = (isSubmod.getComputedStyle('display') === 'none');
+                        }
+                        if (isHidden) {
+                            return false;
+                        }
+                        if (refreshTime) {
+                            self._refresh = Y.later(refreshTime, n, self.get('triggerHandler'), [null, self], true);
+                            if (!self._refreshLimit) {
+                                self._refreshLimit = Y.later(refreshTime * 5000, self, self.destroyRefresh); 
+                            }
+                            this.set('failedRequestCount', 0);
+                            return true;
+                        }
+                    });
+                }
+                if (Y.Lang.isFunction(Y.Fantasy.RegEditSettings)) {
+                    Y.Fantasy.RegEditSettings.init();
+                }
+            },
+
+            /**
+             * Halts and destroys refreshing content.
+             * @method destroyRefresh
+             */
+            destroyRefresh: function() {
+                if (this._refresh && Y.Lang.isFunction(this._refresh.cancel)) {
+                    this._refresh.cancel();
+                }
+                this._refresh = null;
+            },
+
+            /**
+             * Stores object returned by `Y.later` for refreshing content.
+             * @property _refresh
+             * @private
+             * @type Object
+             * @default null
+            **/
+            _refresh: null,
+            _refreshLimit: null,
+
+            /**
+             * Adds .Selected to current submodule, removes .Selected from sibling submodules.
+             * @method updateModuleDisplay
+             * @param {String} destination Selector for submodule content.
+             * @return {Boolean} `true` if module successfully swithced tabs.
+            **/
+            updateModuleDisplay: function(destination) {
+                var el = this.get('el'), destinationEl, focusEl,
+                    sibs;
+
+                destinationEl = (Y.Lang.isString(destination)) ? el.one(destination) : destination;
+
+                focusEl = destinationEl;
+
+                /*
+                if(destinationEl.hasClass("yfa-submod")) {
+                    focusEl = destinationEl;
+                }
+                else {
+                    if( destinationEl.ancestor(".yfa-submod")) {
+                        focusEl = destinationEl.ancestor(".yfa-submod");
+                    }
+                }
+    */
+                if (focusEl) {
+                    // right now, only add selected class to .yfa-submod content. This may need to change later if need be, so feel free to remove this restriction
+                    sibs = focusEl.siblings('.Submod');
+                    sibs.removeClass('Selected');
+                    focusEl.addClass('Selected');
+                    this.fire(EV_DISPLAYUPDATE, {
+                        'module': el,
+                        'displayTarget': focusEl
+                    });
+                    this.initRefresh();
+                    return true;
+                } else {
+                    this.initRefresh();
+                }
+                return false;
+            },
+
+            /**
+             * Switches the actual tab nav items themselves, does not switch the content tabs.
+             * @method switchTab
+             * @param {Node} tabEl the tab to make active.
+             */
+            switchTab: function(tabEl, navEl) {
+                if (!tabEl) {
+                    return;
+                }
+                var siblings = tabEl.siblings(),
+                    supernav,
+                    subnav,
+                    supernavEl,
+                    subnavEl,
+                    subnavElSelected;
+                tabEl.addClass('Selected');
+                siblings.removeClass('Selected');
+
+                Y.fire(EV_TABSELECTED, {
+                    'tab': tabEl
+                });
+
+                if (navEl) {
+                    supernav = navEl.getData('supernav-target');
+                    supernavEl = (supernav) ? Y.one(supernav) : null;
+                    if (supernavEl) {
+                        if (!supernavEl.hasClass('Navitem')) {
+                            supernavEl = supernavEl.ancestor('.Navitem'); 
+                        }
+                        if (supernavEl) {
+                            this.switchTab(supernavEl);
+                        }
+                    }
+                    if (tabEl.one('.Navtarget')) {
+                        subnav = tabEl.one('.Navtarget').getData('subnav-target');
+                        subnavEl = (subnav) ? Y.one(subnav) : null;
+                        subnavElSelected = (subnavEl) ? subnavEl.one('.Navitem.Default-selected') : null;
+                        if (subnavElSelected) {
+                            this.switchTab(subnavElSelected);
+                        } else if (subnavEl) {
+                            subnavEl.all('.Navitem.Selected').removeClass('Selected');
+                        }
+                    }
+                }
+            },
+
+            /**
+             * Handles select menu changes. Regular event handler
+             *
+             * @method handleModSelectChange
+             **/
+            handleModSelectChange: function(e, obj) {
+                var target = this.getAttribute('data-target'),
+                    targetNode = target ? obj.get('el').one(target) : null,
+                    fn,
+                    eventPayload = {},
+                    href,
+                    re = /^http(s)?:\/\//;
+
+                href = this.get('value');
+
+                const targetInputName = this.getAttribute('data-radio-input-target');
+                if (targetInputName) {
+                    const targetInputNodes = document.querySelectorAll('input[name="' + targetInputName + '"]');
+                    const targetInputsArray = targetInputNodes ? Array.prototype.slice.call(targetInputNodes) : null;
+
+                    const checkedInput = targetInputsArray ? targetInputsArray.filter(function(node) {
+                        return node.checked;
+                    }).shift() : null;
+
+                    if (checkedInput) {
+                        const checkedInputValue = checkedInput.value;
+                        href = href + '&selected_value=' + checkedInputValue;
+                    }
+                }
+
+                if (re.test(href)) {
+                    document.location.href = href;
+                }
+
+                if (targetNode && href) {
+                    fn = function() {
+                        var connection = obj.fetch(this, href);
+                        if (connection) {
+                            obj.targets[ connection.id ] = target;
+                        }
+                    };
+
+                    eventPayload.func = Y.bind(fn, this);
+                    eventPayload.isPrevented = false;
+                    obj.fire(EV_SWITCHTAB, eventPayload);
+                }
+            },
+
+            /**
+             * Inserts content into a submodule. Normally used after refreshing or loading a new tab. The behavior described here is complicated,
+             * but it allows for flexibility in what the XHR requests return and how we specify where content should go. There are a few different behaviors for inserting content (this will confuse you, read the source code for a better understanding):
+             *    <ol><li>Both the module and the new `content` are searched for an element that matches the CSS selector `target`.
+             *    <li>If `target` selector finds a node in BOTH the module and in the `content`, the innerHTML of module's `target`  is set to the innerHTML of the `content`'s target.
+             *    <li>If `target` selector only finds a node in the module, it's innerHTML is replaced with `content`.
+             *    <li>If `target` selector only finds a node in `content`, and that node has the class '.Submod', then that node is inserted into the `.Js-submods` element of the module if it exists.
+             *    <li>If `target` selector doesn't find any matching nodes in the module or in the content, or if it only finds it in `content` and that node doesn't have the class '.Submod' or
+             *    if there is no .Js-submods element to insert a submod into, nothing gets inserted into the module.
+             *
+             * @method insertContent
+             * @param {Node} content HTML to insert.
+             * @param {String} target CSS selector that specifies where content should be inserted. See description for behavior.
+             *
+             * @return {Node} Returns the node that content was inserted into or `null` if no content was inserted.
+             */
+            insertContent: function(content, target) {
+                //  Y.log("entry", "error", "insertContent");
+                var module = this.get('el'),
+                    targetEl,
+                    destinationEl = null, targetInContent;
+                targetEl = module.one(target);
+                if (targetEl) {
+                    //  Y.log("targetEl found", "error", "insertContent");
+                    // the target element, where this content should be loaded, already exists in the module
+                    if (content.one(target)) {
+                        //     Y.log("target found in content", "error", "insertContent");
+                        targetEl.setHTML(content.one(target).getHTML());
+                    } else {
+                        //   Y.log("target WASN'T found in content", "error", "insertContent");
+                        targetEl.setHTML(content);
+                    }
+                    destinationEl = targetEl;
+                } else {
+                    // the target element doesn't exist in this module. Check if we can find it within
+                    // the content, and that it's a sub-module, and there's a sub-modules container within
+                    // the module. If so, append target content into the sub-modules container
+                    //  Y.log("targetEl WASN'T FOUND", "error", "insertContent");
+                    //  Y.log(target);
+                    targetInContent = content.one(target);
+                    //    Y.log(content.getHTML());
+                    if (targetInContent && targetInContent.hasClass('Submod')) {
+                    //    Y.log("target found in content", "error", "insertContent");
+                        if (module.one('.Js-submods')) {
+                        //    Y.log("inserting content now.");
+                            module.one('.Js-submods').append(targetInContent);
+                            destinationEl = targetInContent;
+                        }
+                    }
+                }
+                if (destinationEl) {
+                    this.initRefresh();
+                }
+                return destinationEl;
+            },
+
+            /**
+             * Contains a reference to the existing module select menu for nav.
+             * @property {false|Null|Node} _modSelect
+             * @private
+             **/
+            _modSelect: false,
+
+            /**
+             * Returns the module select menu, if one exists.
+             * @method _getModSelect
+             * @private
+             * @return {Node|Null} Select menu or null, if none exists
+             **/
+            _getModSelect: function() {
+                var el = this.get('el');
+                if (el) {
+                    var modSelect = el.one('.Mod-select');
+                    if (modSelect) {
+                        this._modSelect = modSelect;
+                    }
+                }
+                
+                return this._modSelect;
+            },
+
+            /**
+             * Process the select options sent by XHR responses for Module select menus.
+             * Options should be in this form:
+             *   <pre>
+             *      {
+             *          "selectitems": [
+             *              {
+             *                  "label": "Option 1", // option's label
+             *                  "target": "1", // options value
+             *                  "selected": true // whether this option is selected
+             *               }
+             *          ]
+             *       }
+             *   </pre>
+             * @method processModSelect
+             * @param {Number} cId The connection Id of the XHR request.
+             * @param {Array} respObjects An array of objects, one of which may have selectitems (see above). This is commobnly
+             * retrieved from the "objects" property of Fantasy JSON responses.
+             **/
+            processModSelect: function(cId, respObjects) {
+                var sel = this._getModSelect(),
+                    newOptTemplate,
+                    hideSel = true;
+
+                if (sel) {
+                    Y.Array.some(respObjects, function(obj) {
+                        if (obj.selectitems && Y.Lang.isArray(obj.selectitems)) {
+                            newOptTemplate = Y.Node.create('<option value=\'\'></option>');
+                            sel.empty();
+                            Y.Array.each(obj.selectitems, function(selectitem) {
+                                var newOpt = newOptTemplate.cloneNode();
+                                newOpt.set('value', selectitem.target);
+                                newOpt.set('text', selectitem.label);
+                                if (selectitem.selected) {
+                                    newOpt.setAttribute('selected', selectitem.selected);
+                                }
+                                if (selectitem.next) {
+                                    newOpt.setAttribute('next', selectitem.next);
+                                }
+                                if (selectitem.prev) {
+                                    newOpt.setAttribute('prev', selectitem.prev);
+                                }
+
+                                sel.append(newOpt);
+                            });
+                            hideSel = false;
+                            return true;
+                        }
+                    });
+                    Y.Array.some(respObjects, function(obj) {
+                        if (obj.selecttarget) {
+                            sel.setAttribute('data-target', obj.selecttarget);
+                            return true;
+                        }
+                    });
+                    if (hideSel) {
+                        sel.addClass('Js-hidden');
+                        sel.ancestor('.Selectbox').addClass('Js-hidden');
+                    } else {
+                        sel.removeClass('Js-hidden');
+                        sel.ancestor('.Selectbox').removeClass('Js-hidden');
+                    }
+                    Y.fire(EV_CHANGESELECT, {hidden: sel.ancestor('.Selectbox').hasClass('Js-hidden'), select: sel});
+                }
+            },
+
+            /**
+             * Process the badge info sent by XHR response
+             * Options should be in this form:
+             *   <pre>
+             *      {
+             *          "badges": [
+             *              [
+             *                  {
+             *                  "name": "badge name ", // badges data-badge-name value
+             *                  "value": "1", // badge count value
+             *                  },....
+             *              ]
+             *          ]
+             *       }
+             *   </pre>
+             * @method processBadge
+             * @param {Number} cId The connection Id of the XHR request.
+             * @param {Array} respObjects An array of objects, one of which may have selectitems (see above). This is commobnly
+             * retrieved from the "objects" property of Fantasy JSON responses.
+             **/
+            processBadge: function(cId, respObjects) {
+                Y.Array.some(respObjects, function(obj) {
+                    if (obj.badges && Y.Lang.isArray(obj.badges)) {
+                        Y.Array.each(obj.badges, function(badge) {
+                            if (badge.name !== undefined && badge.value !== undefined) {
+                                var badgeList = Y.all('[data-badge-name='+badge.name+']');
+                                badgeList.each(function(badgeEl) {
+                                    if (parseInt(badge.value, 10) === 0) {
+                                        badgeEl.addClass('Hidden');
+                                    } else {
+                                        badgeEl.setHTML(badge.value);
+                                        badgeEl.removeClass('Hidden');
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+            },
+
+
+            /**
+             * Process the hideMod boolean sent by XHR response
+             * @method processModHide
+             * @param {Number} cId The connection Id of the XHR request.
+             * @param {Array} respObjects An array of objects, one of which may have selectitems (see above). This is commobnly
+             * retrieved from the "objects" property of Fantasy JSON responses.
+             **/
+            processModHide: function(cId, respObjects) {
+                var mod = this.get('el');
+                Y.Array.some(respObjects, function(obj) {
+                    if (obj.hideMod && obj.hideMod === true) {
+                        mod.addClass('Hidden');
+                    } 
+                });
+            },
+
+            /**
+             * Caches content when the data-target is the same for all nav items.
+             * @method _cacheSharedTargetContent
+             * @private
+            **/
+            _cacheSharedTargetContent: function(nav, target) {
+            // this handles cases where the data-target attribute is applied to the nav element itself,
+            // and applies to all tabs within the nav. It will only cache content for the selected tab.
+                var selectedNavTab, targetEl;
+                selectedNavTab = nav.one('.Selected a');
+                targetEl = this.get('el').one(target);
+                if (selectedNavTab && targetEl) {
+                    this.cacheContent(selectedNavTab, targetEl);
+                }
+            },
+
+            /**
+             * Caches content for each nav item if data-target is different for each nav item.
+             * @method _cacheNavItemTargetContent
+             * @private
+            **/
+            _cacheNavItemTargetContent: function(nav) {
+            // this handles cases where the data-target attribute is applied to each <a> tag within the
+            // nav (which indicates the content may be preloaded), and will attempt to cache all pre-loaded
+            // content.
+                var navItems = nav.all('a'),
+                    self = this;
+
+                navItems.each(function(navItem) {
+                    var target, targetEl;
+                    target = navItem.getAttribute('data-target');
+                    if (target) {
+                        targetEl = self.get('el').one(target);
+                    }
+                    if (targetEl) {
+                        self.cacheContent(navItem, targetEl);
+                    }
+                }, self);
+            },
+
+            /**
+             * Caches content that already exists in the module is instantiated.
+             * @method cacheInitialContent
+            **/
+            cacheInitialContent: function() {
+                // Figure out the initlially loaded content, and map that to the selected nav and subnav tabs
+                // so that the initial content can be cahced.
+                var navs, el,
+                    self = this;
+
+
+                el = this.get('el');
+                navs = el.all('.Nav-h, .Nav-v');
+
+                navs.each(function(nav) {
+                    var target, dynamic;
+
+                    target = nav.getAttribute('data-target');
+                    dynamic = nav.getAttribute('data-dynamic') === 'true' ? true : false;
+
+                    if (dynamic) {
+                        if (target) {
+                            self._cacheSharedTargetContent(nav, target);
+                        } else {
+                            self._cacheNavItemTargetContent(nav);
+                        }
+                    }
+                }, self);
+            },
+
+            /**
+             * Actual content caching function called by internal private functions.
+             * @method cacheContent
+             * @param {Node} node Element with an href attribute. The href is used as the cache key.
+             * @param {Node} content The content that should be cached.
+            **/
+            cacheContent: function(node, content) {
+                var href = node.getAttribute ? node.getAttribute('href') : false,
+                    self = this,
+                    modSelect = this._getModSelect();
+                if (href) {
+                    this.urlCache[ href ] = content.getHTML();
+                    Y.later(this.get('cacheTTL'), self, function() {
+                        this.urlCache[ href ] = false;
+                    });
+
+                    if (modSelect) {
+                        this.selectCache[ href ] = modSelect.cloneNode(true);
+                    }
+                }
+            },
+
+            /**
+             * Loads content that has been cached.
+             * @method loadCachedContent
+             * @param {String} url The url of the cached content.
+             * @param {String} target CSS selector describing where this content should go.
+             * @return {Boolean} true if cached content was loaded successfully
+            **/
+            loadCachedContent: function(url, target) {
+                var href = Y.Lang.isString(url) ? url : url.getAttribute && url.getAttribute('href'),
+                    content;
+                if (href) {
+                    content = this.urlCache[href] || false;
+                }
+                if (content) {
+                    this.insertContent(Y.Node.create(content), target);
+                    this.updateModuleDisplay(target);
+                    this.loadCachedSelect(href);
+                    return true;
+                }
+                return false;
+            },
+
+            /**
+             * Load a cached select menu, if any.
+             * @method loadCachedSelect
+             * @param {String} href The url of the cached content.
+             **/
+            loadCachedSelect: function(href) {
+                var sel = this._getModSelect(),
+                    cachedSel,
+                    cachedSelClone;
+                if (sel) {
+                    cachedSel = this.selectCache[ href ];
+                    if (cachedSel) {
+                        cachedSelClone = cachedSel.cloneNode(true);
+                        sel.replace(cachedSelClone);
+                        this._modSelect = cachedSelClone;
+                        if (this._modSelect.hasClass('Js-hidden')) {
+                            this._modSelect.ancestor('.Selectbox').addClass('Js-hidden');
+                        } else {
+                            this._modSelect.ancestor('.Selectbox').removeClass('Js-hidden');
+                        }
+                        this.refreshFlyoutSelect();
+                        Y.fire(EV_CHANGESELECT, {hidden: cachedSelClone.ancestor('.Selectbox').hasClass('Js-hidden'), select: this._modSelect});
+                    }
+                }
+            },
+
+            /**
+             * Hash of cached content.
+             * @property {Object} urlCache
+            **/
+            urlCache: {},
+
+            /**
+             * Hash associating XHR connection ids with targets in the module for inserting content.
+             * @property {Object} targets
+            **/
+            targets: {},
+
+            /**
+             * Hash of cached select menus.
+             * @property {Object} selectCache
+             **/
+            selectCache: {}
+
+        },
+        {
+
+            /**
+             * Reloads the current tab.
+             * @method reload
+             * @static
+             * @param {String|Node} selector The .Mod DOM element, either as a CSS selector or a YUI/HTML Node.
+             * @return {Boolean} true if module was found.
+            */
+            reload: function(selector) {
+                var mod = Y.Fantasy.Mod.getModule(selector);
+                if (mod) {
+                    var el = mod.get('el');
+                    var selectedTab = el.one('.Navitem.Selected a');
+                    if (selectedTab) {
+                        var fn = mod.get('triggerHandler');
+                        var method = (selectedTab && Y.Lang.isString(fn)) ? selectedTab[fn] : fn;
+                        if (!method.apply) {
+                            method(null,mod);
+                        } else {
+                            method.apply(selectedTab, [null, mod]);
+                        }
+                        return true;
+                    }
+                }
+                return false;
+            },
+
+            /**
+             * Returns the Y.Fantasy.Mod instance for a given module if it already exists.
+             * @method getModule
+             * @static
+             * @param {String|Node} selector The .Mod DOM element, either as a CSS selector or a YUI/HTML Node.
+             * @return {Object} The Y.Fantasy.Mod instance, or undefined.
+            **/
+            getModule: function(selector) {
+                var el = Y.one(selector);
+                if (el) {
+                    return modules[el];
+                }
+                return undefined;
+            },
+
+            /*
+             * Applies any necessary cleanup to the returned html, such as replacing HTML5 elements with <div>
+             * for older versions of IE
+             * @method cleanupHtml
+             * @static
+             * @param {String} html The html string to clean up.
+             * @return {String} The cleaned-up html.
+            **/
+            cleanupHtml: function(html) {
+                if (Y.UA.ie && Y.UA.ie < 9) {
+                    html = html.replace(/<(\/?)(section|article|nav)/g, '<$1div');
+                }
+                return html;
+            }
+        });
+
+        Y.namespace('Fantasy');
+        Y.Fantasy.Mod = YFAModule;
+    };
+})(), '0.1', {'requires': ['ysf-xhr', 'node', 'node-event-delegate', 'selector-css3', 'base', 'ysf-flyout-select']});

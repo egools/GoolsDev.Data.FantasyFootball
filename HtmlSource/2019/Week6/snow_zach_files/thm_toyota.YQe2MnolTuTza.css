@@ -1,0 +1,321 @@
+#Stencil .Thm-light .Thm-toyota .Thm-inherit .Hd,
+#Stencil .Thm-light .Thm-toyota.Thm-override .Hd {
+  background: black;
+  color: white;
+}
+#Stencil .Thm-light .Thm-toyota .Thm-inherit h2,
+#Stencil .Thm-light .Thm-toyota .Thm-inherit .F-mod-header,
+#Stencil .Thm-light .Thm-toyota.Thm-override h2,
+#Stencil .Thm-light .Thm-toyota.Thm-override .F-mod-header {
+  color: white;
+}
+
+.Thm-toyota .Thm-inherit,
+.Thm-toyota.Thm-override {
+  color: #333;
+  /* Medal-data hover */
+}
+.Thm-toyota .Thm-inherit .Hd,
+.Thm-toyota.Thm-override .Hd {
+  color: #333;
+}
+.Thm-toyota .Thm-inherit .Hd .spon-ad,
+.Thm-toyota.Thm-override .Hd .spon-ad {
+  overflow: hidden;
+  width: 120px;
+  height: 30px;
+}
+.Thm-toyota .Thm-inherit .Bd,
+.Thm-toyota.Thm-override .Bd {
+  background-color: #f3f3f3;
+}
+.Thm-toyota .Thm-inherit .Ft,
+.Thm-toyota.Thm-override .Ft {
+  color: #000;
+}
+.Thm-toyota .Thm-inherit .hall-of-fame-link,
+.Thm-toyota.Thm-override .hall-of-fame-link {
+  background-image: url(https://s.yimg.com/cv/ae/fantasy/img/nfl/toyota_2017_sprite_v2.png);
+  background-position: 27px 0;
+  background-repeat: no-repeat;
+  height: 70px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .Thm-toyota .Thm-inherit .hall-of-fame-link,
+  .Thm-toyota.Thm-override .hall-of-fame-link {
+    background-image: url(https://s.yimg.com/cv/ae/fantasy/img/nfl/toyota_2017_sprite_v2@2x.png);
+    background-size: auto 475px;
+  }
+}
+.Thm-toyota .Thm-inherit .hall-of-fame-link-medals,
+.Thm-toyota.Thm-override .hall-of-fame-link-medals {
+  background-position: 38px 0;
+}
+.Thm-toyota .Thm-inherit #biggest-blowout-header .hall-of-fame-link,
+.Thm-toyota.Thm-override #biggest-blowout-header .hall-of-fame-link {
+  background-position: 0 0;
+}
+.Thm-toyota .Thm-inherit .hall-of-fame-link-vertical,
+.Thm-toyota.Thm-override .hall-of-fame-link-vertical {
+  background-image: url(https://s.yimg.com/cv/ae/fantasy/img/nfl/toyota_2017_sprite_v2.png);
+  background-position: 25px -304px;
+  background-repeat: no-repeat;
+  height: 77px;
+  width: 103px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .Thm-toyota .Thm-inherit .hall-of-fame-link-vertical,
+  .Thm-toyota.Thm-override .hall-of-fame-link-vertical {
+    background-image: url(https://s.yimg.com/cv/ae/fantasy/img/nfl/toyota_2017_sprite_v2@2x.png);
+    background-size: auto 475px;
+  }
+}
+.Thm-toyota .Thm-inherit a,
+.Thm-toyota.Thm-override a {
+  color: #dc9f38;
+}
+.Thm-toyota .Thm-inherit .Bgshade,
+.Thm-toyota.Thm-override .Bgshade {
+  background-color: #dc9f38;
+}
+.Thm-toyota .Thm-inherit .Bg-shade2,
+.Thm-toyota.Thm-override .Bg-shade2 {
+  background-color: #e7e7e7;
+}
+.Thm-toyota .Thm-inherit .F-accent,
+.Thm-toyota.Thm-override .F-accent {
+  color: #fff;
+}
+.Thm-toyota .Thm-inherit .F-shade,
+.Thm-toyota.Thm-override .F-shade {
+  color: #dc9f38;
+}
+.Thm-toyota .Thm-inherit .Trophy-mount .medal-data,
+.Thm-toyota.Thm-override .Trophy-mount .medal-data {
+  display: none;
+  padding: 5px;
+  font-size: 85%;
+  width: 200px;
+  border: 1px solid #aa6c35;
+  background-color: #f9eaa6;
+  color: #212326;
+}
+.Thm-toyota .Thm-inherit .Trophy-mount .medal-data h5,
+.Thm-toyota.Thm-override .Trophy-mount .medal-data h5 {
+  font-size: 110%;
+  font-weight: bold;
+}
+.Thm-toyota .Thm-inherit .Trophy-mount .medal-data h5,
+.Thm-toyota .Thm-inherit .Trophy-mount .medal-data em,
+.Thm-toyota .Thm-inherit .Trophy-mount .medal-data p,
+.Thm-toyota.Thm-override .Trophy-mount .medal-data h5,
+.Thm-toyota.Thm-override .Trophy-mount .medal-data em,
+.Thm-toyota.Thm-override .Trophy-mount .medal-data p {
+  display: none;
+}
+.Thm-toyota .Thm-inherit .Trophy-mount:hover .medal-data,
+.Thm-toyota.Thm-override .Trophy-mount:hover .medal-data {
+  display: block;
+  position: absolute;
+  left: -73px;
+  top: -60px;
+  z-index: 100;
+}
+.Thm-toyota .Thm-inherit .Trophy-mount:hover .medal-data h5,
+.Thm-toyota .Thm-inherit .Trophy-mount:hover .medal-data p,
+.Thm-toyota.Thm-override .Trophy-mount:hover .medal-data h5,
+.Thm-toyota.Thm-override .Trophy-mount:hover .medal-data p {
+  display: block;
+}
+.Thm-toyota .Thm-inherit a,
+.Thm-toyota.Thm-override a {
+  outline: none;
+  text-decoration: none;
+}
+.Thm-toyota .Thm-inherit .Trophy-mount:hover .medal-data p.share,
+.Thm-toyota.Thm-override .Trophy-mount:hover .medal-data p.share {
+  margin-top: 5px;
+  height: 22px;
+  line-height: 2.2em;
+}
+.Thm-toyota .Thm-inherit .Trophy-mount:hover .medal-data p.share span,
+.Thm-toyota.Thm-override .Trophy-mount:hover .medal-data p.share span {
+  float: right;
+  *float: none;
+}
+.Thm-toyota .Thm-inherit .Trophy-mount:hover .medal-data p.share a,
+.Thm-toyota.Thm-override .Trophy-mount:hover .medal-data p.share a {
+  background: url(https://s.yimg.com/dh/ap/us/sp/fn/default/full/nfl/toyota_team_medals_2012.png) no-repeat scroll 0 -260px;
+  width: 23px;
+  height: 22px;
+  text-indent: -999em;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+.Thm-toyota .Thm-inherit .Trophy-mount:hover .medal-data p.share a.twitter,
+.Thm-toyota.Thm-override .Trophy-mount:hover .medal-data p.share a.twitter {
+  background-position: 0 -292px;
+}
+.Thm-toyota .Thm-inherit .Trophy-mount .medal-data span.pointer,
+.Thm-toyota.Thm-override .Trophy-mount .medal-data span.pointer {
+  background: url(https://s.yimg.com/dh/ap/us/sp/fn/default/full/nfl/toyota_team_medals_2012.png) no-repeat scroll 0 -323px;
+  display: block;
+  position: absolute;
+  bottom: -11px;
+  left: 90px;
+  width: 21px;
+  height: 12px;
+}
+.Thm-toyota .Thm-inherit .winner-label,
+.Thm-toyota.Thm-override .winner-label {
+  background-image: url(https://s.yimg.com/cv/ae/fantasy/img/nfl/toyota_2017_sprite_v2.png);
+  background-position: 0 -90px;
+  height: 16px;
+  width: 45px;
+  display: block;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .Thm-toyota .Thm-inherit .winner-label,
+  .Thm-toyota.Thm-override .winner-label {
+    background-image: url(https://s.yimg.com/cv/ae/fantasy/img/nfl/toyota_2017_sprite_v2@2x.png);
+    background-size: auto 475px;
+  }
+}
+.Thm-toyota .Thm-inherit .congrats-winner-label,
+.Thm-toyota.Thm-override .congrats-winner-label {
+  background-image: url(https://s.yimg.com/cv/ae/fantasy/img/nfl/toyota_2017_sprite_v2.png);
+  background-position: 0 -876px;
+  height: 28px;
+  width: 330px;
+  display: block;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .Thm-toyota .Thm-inherit .congrats-winner-label,
+  .Thm-toyota.Thm-override .congrats-winner-label {
+    background-image: url(https://s.yimg.com/cv/ae/fantasy/img/nfl/toyota_2017_sprite_v2@2x.png);
+    background-size: auto 475px;
+  }
+}
+.Thm-toyota .Thm-inherit .View-all-medals,
+.Thm-toyota.Thm-override .View-all-medals {
+  background-image: url(https://s.yimg.com/cv/ae/fantasy/img/nfl/toyota_2017_sprite_v2.png);
+  background-position: 0 -124px;
+  height: 31px;
+  width: 246px;
+  display: inline-block;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .Thm-toyota .Thm-inherit .View-all-medals,
+  .Thm-toyota.Thm-override .View-all-medals {
+    background-image: url(https://s.yimg.com/cv/ae/fantasy/img/nfl/toyota_2017_sprite_v2@2x.png);
+    background-size: auto 475px;
+  }
+}
+.Thm-toyota .Thm-inherit .View-earned-medals,
+.Thm-toyota.Thm-override .View-earned-medals {
+  background-image: url(https://s.yimg.com/cv/ae/fantasy/img/nfl/toyota_2017_sprite_v2.png);
+  background-position: 0 -174px;
+  height: 31px;
+  width: 303px;
+  display: inline-block;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .Thm-toyota .Thm-inherit .View-earned-medals,
+  .Thm-toyota.Thm-override .View-earned-medals {
+    background-image: url(https://s.yimg.com/cv/ae/fantasy/img/nfl/toyota_2017_sprite_v2@2x.png);
+    background-size: auto 475px;
+  }
+}
+.Thm-toyota .Thm-inherit .unearned-medal,
+.Thm-toyota.Thm-override .unearned-medal {
+  width: 60px;
+  height: 60px;
+  background-image: url(https://s.yimg.com/cv/ae/fantasy/img/nfl/toyota_2017_sprite_v2.png);
+  background-position: 0 -224px;
+  display: block;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .Thm-toyota .Thm-inherit .unearned-medal,
+  .Thm-toyota.Thm-override .unearned-medal {
+    background-image: url(https://s.yimg.com/cv/ae/fantasy/img/nfl/toyota_2017_sprite_v2@2x.png);
+    background-size: auto 475px;
+  }
+}
+.Thm-toyota .Thm-inherit .View-all-blowouts,
+.Thm-toyota.Thm-override .View-all-blowouts {
+  background-image: url(https://s.yimg.com/cv/ae/fantasy/img/nfl/toyota_2017_sprite_v2.png);
+  background-position: 0 -445px;
+  height: 30px;
+  width: 246px;
+  display: inline-block;
+  left: -40px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .Thm-toyota .Thm-inherit .View-all-blowouts,
+  .Thm-toyota.Thm-override .View-all-blowouts {
+    background-image: url(https://s.yimg.com/cv/ae/fantasy/img/nfl/toyota_2017_sprite_v2@2x.png);
+    background-size: auto 475px;
+  }
+}
+.Thm-toyota .Thm-inherit .Nominate-footer,
+.Thm-toyota.Thm-override .Nominate-footer {
+  background-image: url(https://s.yimg.com/cv/ae/fantasy/img/nfl/Toyota_2017_Nominate.jpg);
+  background-repeat: no-repeat;
+  background-size: 300px 100px;
+  background-position: center;
+  height: 100px;
+}
+.Thm-toyota .Thm-inherit .Learnmore-footer,
+.Thm-toyota.Thm-override .Learnmore-footer {
+  background-image: url(https://s.yimg.com/cv/ae/fantasy/img/nfl/Toyota_2017_LearnMore.jpg);
+  background-repeat: no-repeat;
+  background-size: 300px 100px;
+  background-position: center;
+  height: 100px;
+}
+.Thm-toyota .Thm-inherit .Votenow-footer,
+.Thm-toyota.Thm-override .Votenow-footer {
+  background-image: url(https://s.yimg.com/cv/ae/fantasy/img/nfl/Toyota_2017_VoteNow.jpg);
+  background-repeat: no-repeat;
+  background-size: 300px 100px;
+  background-position: center;
+  height: 100px;
+}
+.Thm-toyota .Thm-inherit .Visithall-footer,
+.Thm-toyota.Thm-override .Visithall-footer {
+  background-image: url(https://s.yimg.com/cv/ae/fantasy/img/nfl/Toyota_2017_VisitHall.jpg);
+  background-repeat: no-repeat;
+  background-size: 300px 100px;
+  background-position: center;
+  height: 100px;
+}
+
+#Stencil .Thm-toyota .Thm-inherit .Bdr,
+#Stencil .Thm-toyota .Thm-inherit .Bdrtop,
+#Stencil .Thm-toyota .Thm-inherit .Bdrbot,
+#Stencil .Thm-toyota .Thm-inherit .Bdrx,
+#Stencil .Thm-toyota .Thm-inherit .Bdry,
+#Stencil .Thm-toyota .Thm-inherit .Bdrstart,
+#Stencil .Thm-toyota .Thm-inherit .Bdrend,
+#Stencil .Thm-toyota.Thm-override .Bdr,
+#Stencil .Thm-toyota.Thm-override .Bdrtop,
+#Stencil .Thm-toyota.Thm-override .Bdrbot,
+#Stencil .Thm-toyota.Thm-override .Bdrx,
+#Stencil .Thm-toyota.Thm-override .Bdry,
+#Stencil .Thm-toyota.Thm-override .Bdrstart,
+#Stencil .Thm-toyota.Thm-override .Bdrend {
+  border-color: #ccc9c9;
+}
+#Stencil .Thm-toyota .Thm-inherit .Bg-shade2,
+#Stencil .Thm-toyota.Thm-override .Bg-shade2 {
+  background-color: #e7e7e7;
+}
+#Stencil .Thm-toyota .Thm-inherit .F-accent,
+#Stencil .Thm-toyota.Thm-override .F-accent {
+  color: #fff;
+}
+#Stencil .Thm-toyota .Thm-inherit .F-shade,
+#Stencil .Thm-toyota.Thm-override .F-shade {
+  color: #dc9f38;
+}

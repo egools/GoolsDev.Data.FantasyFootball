@@ -1,0 +1,836 @@
+a {
+  color: #333333;
+}
+a:hover {
+  color: #0078FF;
+  text-decoration: underline;
+}
+a:hover.F-icon {
+  text-decoration: none;
+}
+
+p a,
+td a {
+  color: #0078FF;
+}
+
+.No-Hover-Underline:hover {
+  text-decoration: none;
+}
+
+html {
+  background-color: #cbcbcb;
+}
+
+body {
+  position: relative;
+}
+
+.Desktop:not(.Touch) body:after {
+  background-color: #cbcbcb;
+  content: "";
+  height: calc( 100vh - 100%);
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  bottom: 100%;
+  top: 100%;
+}
+
+.Page-ft {
+  background: #f3f3f3;
+}
+
+.Page-ft a {
+  color: #757575;
+}
+
+.Page-masthead {
+  background: transparent;
+  border-bottom-color: #f3f3f3;
+}
+
+.Page-maincontent,
+.Page-footercontent,
+.Page-ft {
+  background-color: white;
+}
+
+.Desktop:not(.Touch) .Page-wrap {
+  margin-left: calc( (100vw - 100%) / 2 * -1);
+}
+
+@media print {
+  .Page-wrap {
+    margin-left: 0px;
+  }
+}
+.template-html5 .Subnav-main-wrap,
+.template-html5 .Page-bd,
+.template-html5 .Page-ft {
+  background-color: white;
+  position: relative;
+  clear: both;
+}
+.template-html5 .Subnav-main-wrap:before, .template-html5 .Subnav-main-wrap:after,
+.template-html5 .Page-bd:before,
+.template-html5 .Page-bd:after,
+.template-html5 .Page-ft:before,
+.template-html5 .Page-ft:after {
+  background-color: #cbcbcb;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: calc( (100vw - 100%) / 2);
+}
+.template-html5 .Subnav-main-wrap:before,
+.template-html5 .Page-bd:before,
+.template-html5 .Page-ft:before {
+  left: 100%;
+}
+.template-html5 .Subnav-main-wrap:after,
+.template-html5 .Page-bd:after,
+.template-html5 .Page-ft:after {
+  right: 100%;
+}
+
+.Subnav-main-wrap .Navtarget {
+  color: #757575;
+}
+
+.Subnav-main > .Navitem > .Navtarget:hover {
+  color: #333333;
+}
+
+.Mod {
+  background: white;
+}
+
+.Bd {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.Hd {
+  border-bottom-color: #e7e7e7;
+}
+
+.F-page-header {
+  border-bottom: 2px solid #0078FF;
+}
+
+.Hd.Daily-bdr-bot,
+.Bd.Daily-bdr-bot {
+  border-bottom: 2px solid #00c073;
+}
+
+.Badge {
+  border-color: #e7e7e7;
+  color: #e7e7e7;
+}
+
+.coc-standings {
+  height: 0;
+  width: 0;
+  border-left: 10px solid;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.coc-standings.gold {
+  border-left-color: #E6BF22;
+}
+.coc-standings.silver {
+  border-left-color: #ADAEAB;
+}
+.coc-standings.bronze {
+  border-left-color: #A87E19;
+}
+.coc-standings.plastic {
+  border-left-color: #E51D2D;
+}
+
+.LeagueNotes a {
+  color: #0078FF;
+}
+
+.Btn,
+.Btn-secondary {
+  background-color: white;
+  background-image: none;
+  border: 1px solid #0078FF;
+  color: #0078FF;
+  -webkit-appearance: none;
+  text-shadow: none;
+}
+
+.Btn:hover,
+.Btn-secondary:hover {
+  background-color: #0078FF;
+  border-color: #0078FF;
+  color: white;
+}
+
+.Btn-primary,
+.Btn.Primary {
+  background-color: #0078FF;
+  background-image: none;
+  border: 1px solid #0078FF;
+  color: white;
+  -webkit-appearance: none;
+  text-shadow: none;
+}
+
+.Btn-primary:hover,
+.Btn.Primary:hover {
+  background-color: #3393ff;
+  border-color: #0078FF;
+  color: white;
+}
+
+.Btn-disabled,
+.Btn-disabled:hover {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.Btn-positive,
+.Btn-positive:hover {
+  background-color: #00c073;
+  color: white;
+  border-color: #00c073;
+}
+
+.Btn-negative,
+.Btn-negative:hover {
+  background-color: #e7252e;
+  color: white;
+  border-color: #e7252e;
+}
+
+.Btn-select {
+  color: #333333;
+}
+
+.Btn-select:hover {
+  color: white;
+}
+
+.Btn-select-active {
+  color: white;
+  background-color: #0078FF;
+}
+
+.Btn-shade {
+  background-color: #f3f3f3;
+}
+
+.Btn-pink, .Btn-pink:hover {
+  background-color: #F80E5D;
+  color: white;
+  border: 1px solid #F80E5D;
+  opacity: 0.6;
+}
+
+.Btn-pink:hover {
+  opacity: 0.4;
+}
+
+.Checkbox .Checked {
+  color: white;
+  border-color: #959595;
+  margin-right: 5px;
+  line-height: normal;
+  font-size: 8px;
+  padding: 3px;
+  width: 2.1em;
+}
+
+.Checkbox input:checked + label .Checked {
+  background: #0078FF;
+}
+
+.Checkbox input:disabled + label .Checked {
+  background-color: #cbcbcb;
+  border-color: #e7e7e7;
+}
+
+#hd {
+  border: none;
+}
+
+.Nav-main-wrap {
+  background: rgba(0, 0, 0, 0.6);
+  border-color: transparent;
+}
+
+.Nav-main {
+  color: #959595;
+}
+
+.Nav-main > .Navitem > .Navtarget {
+  color: #959595;
+}
+
+.Nav-main > .Navitem:hover > .Navtarget {
+  color: white;
+}
+
+.Nav-main > .Selected > .Navtarget,
+.Nav-main > .Selected:hover > .Navtarget {
+  color: white;
+}
+
+.Nav-main > .Navitem > .Navtarget.Fantasy-item {
+  color: #959595;
+}
+
+.Nav-main .Navitem-fantasy {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.Nav-main > .Navitem-disabled,
+.Nav-main > .Navitem-disabled:hover,
+.Nav-main > .Navitem-disabled:hover > .Navtarget {
+  background: none;
+  color: #757575;
+}
+
+.Nav-h {
+  padding-left: 0px;
+}
+.Nav-h:not(.Nav-main) {
+  border-bottom-color: #e7e7e7;
+  border-top-color: #e7e7e7;
+}
+
+.Nav-h:not(.Nav-main) > .Navitem > .Navtarget {
+  color: #757575;
+}
+
+.Nav-h:not(.Nav-main) > .Navitem.Selected > .Navtarget {
+  color: #333333;
+}
+
+.Nav-h:not(.Nav-main) > .Navitem:not(.Selected):hover > .Navtarget {
+  color: #0078FF;
+}
+
+.Nav-tabbed .Navitem {
+  border-bottom-color: transparent;
+}
+.Nav-tabbed .Navitem.Selected {
+  color: #333333;
+  border-bottom-color: #0078FF;
+}
+
+.Nav-tabbed .Navitem.Selected .Navtarget-icon {
+  background-color: #0078FF;
+}
+.Nav-tabbed .Navitem.Selected .Navtarget-icon .F-icon {
+  color: white;
+}
+
+.Nav-tabbed .Navitem > .Navtarget {
+  color: #757575;
+}
+
+.flyout_trigger:hover,
+.Js-next:hover,
+.Js-prev:hover {
+  color: #0078FF;
+}
+
+.Nav-flyout .Navtarget:hover {
+  background-color: #e6f2fa;
+}
+
+.yfa-flyout-content {
+  -moz-box-shadow: 3px 5px 15px 5px rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 3px 5px 15px 5px rgba(0, 0, 0, 0.26);
+  box-shadow: 3px 5px 15px 5px rgba(0, 0, 0, 0.26);
+}
+
+.Nav-bordered-south {
+  border-color: #e7e7e7;
+}
+
+.Nav-bordered-south > .Navitem > .Navtarget {
+  color: #757575;
+}
+
+.Nav-bordered-south > .Navitem.Selected > .Navtarget {
+  color: #333333;
+}
+
+.Nav-bordered-south > .Navitem:not(.Selected):hover > .Navtarget {
+  color: #0078FF;
+}
+
+.Nav-pointers-north > .Selected .Navpointer:before,
+.Nav-pointers-north > .Selected .Navpointer:after,
+.Nav-pointers-south > .Selected .Navpointer:before,
+.Nav-pointers-south > .Selected .Navpointer:after {
+  border-color: #E2E2E6;
+}
+
+.Nav-pointers-north > .Selected .Navpointer,
+.Nav-pointers-south > .Selected .Navpointer {
+  color: #E2E2E6;
+}
+
+.Dropdown {
+  background: rgba(0, 0, 0, 0.9);
+  border: none;
+}
+
+.Dropdown > .Hover {
+  background: rgba(0, 0, 0, 0.9);
+  color: #333333;
+}
+
+.Dropdown .Section {
+  color: white;
+}
+
+.Dropdown.Hover > li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+select {
+  border-color: #e7e7e7;
+  background-color: white;
+  color: #333333;
+}
+
+select[disabled] {
+  background: #f3f3f3;
+  color: #757575;
+}
+
+.Control-label {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #757575;
+}
+
+.Control-label span {
+  text-transform: none;
+}
+
+.Input {
+  border-color: #E2E2E6;
+}
+
+.Input:focus {
+  border-color: #0078FF;
+}
+
+.Input:disabled {
+  background-color: #f3f3f3;
+  border-color: #e7e7e7;
+}
+
+.Table .Selected > .Selected {
+  background: #e7e7e7;
+}
+
+.Table thead > tr:not(.First),
+.Table thead > tr.First.Last {
+  background: #f3f3f3;
+}
+
+.Table th {
+  color: #757575;
+  font-weight: normal;
+  border: none;
+}
+.Table th a {
+  color: #333333;
+}
+.Table th a:hover:not(.F-icon) {
+  color: #0078FF;
+  text-decoration: underline;
+}
+
+.Table td {
+  border-color: #e7e7e7;
+}
+
+.Table th.Selected {
+  background-color: #e7e7e7;
+}
+
+.Table td.Selected {
+  background-color: #f3f3f3;
+}
+
+.Table tr.Selected td {
+  background-color: #f3f3f3;
+}
+
+.Table-interactive tr:hover > td {
+  background: #e6f2fa;
+  /*player page game status hack*/
+}
+.Table-interactive tr:hover > td a:not(.Btn, .Btn-primary, .ysf-game-status) {
+  color: #0078FF !important;
+}
+.Table-interactive tr:hover > td .ysf-game-status a:hover:not(.Btn, .Btn-primary, .ysf-game-status) {
+  color: #0078FF !important;
+}
+
+.Table-interactive tr:hover > td.Selected {
+  background: #e6f2fa;
+}
+
+.Table-underline tr:hover > td a:not(.Btn, .F-icon) {
+  text-decoration: underline;
+}
+
+.List-rich > .Listitem {
+  border-color: #e7e7e7;
+}
+
+.Avatar-xs,
+.Avatar-sm,
+.Avatar-med,
+.Avatar-lg {
+  background: #e7e7e7;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.Stuck {
+  border-bottom: 1px solid #959595;
+  color: #333333 !important;
+  background: #333333;
+}
+
+.Stuck:before,
+.Stuck:after {
+  margin-bottom: -1px;
+  background: transparent;
+}
+
+.Pointer {
+  border-color: #e7e7e7;
+}
+.Pointer:after {
+  border-color: white;
+}
+
+.Thm-snow .Thm-inherit.td-override .App-Bd a:not(.dfBtn),
+.Thm-snow.Thm-override.td-override .App-Bd a:not(.dfBtn),
+.Thm-snow .td-override .App-Bd a:not(.dfBtn),
+.Thm-snow .transparent.td-override .App-Bd a:not(.dfBtn) {
+  color: #333333;
+}
+.Thm-snow .Thm-inherit.td-override .App-Bd .ysp-game-link,
+.Thm-snow.Thm-override.td-override .App-Bd .ysp-game-link,
+.Thm-snow .td-override .App-Bd .ysp-game-link,
+.Thm-snow .transparent.td-override .App-Bd .ysp-game-link {
+  padding: 10px 0px;
+  border-bottom: 1px solid #e7e7e7;
+}
+.Thm-snow .Thm-inherit.td-override .App-Hd, .Thm-snow .Thm-inherit.td-override .SimpleTabs,
+.Thm-snow.Thm-override.td-override .App-Hd,
+.Thm-snow.Thm-override.td-override .SimpleTabs,
+.Thm-snow .td-override .App-Hd,
+.Thm-snow .td-override .SimpleTabs,
+.Thm-snow .transparent.td-override .App-Hd,
+.Thm-snow .transparent.td-override .SimpleTabs {
+  border-bottom-color: #e7e7e7;
+}
+.Thm-snow .Thm-inherit.td-override .Bgc-02,
+.Thm-snow.Thm-override.td-override .Bgc-02,
+.Thm-snow .td-override .Bgc-02,
+.Thm-snow .transparent.td-override .Bgc-02 {
+  background-color: #e6f2fa;
+}
+
+#Stencil .F-trade {
+  color: #0078FF;
+}
+#Stencil .F-watch {
+  color: #0078FF;
+}
+#Stencil .F-error {
+  color: #c00;
+}
+#Stencil .F-success {
+  color: #000;
+}
+#Stencil .F-position {
+  color: #5f5f5f;
+}
+#Stencil .F-rank-good {
+  color: #00c073;
+}
+#Stencil .F-rank-bad {
+  color: #e7252e;
+}
+#Stencil .F-rank-neutral {
+  color: #daa400;
+}
+#Stencil .Linkable:hover {
+  background: #e6f2fa;
+}
+#Stencil .Linkable:hover a:not(.Btn, .Btn-primary) {
+  color: #0078FF !important;
+}
+#Stencil .Bg {
+  background: white;
+}
+#Stencil .Bg-shade {
+  background: #f3f3f3;
+}
+#Stencil .Bg-shade2 {
+  background: #f3f3f3;
+}
+#Stencil .Bg-shade3 {
+  background: #959595;
+}
+#Stencil .Bg-shade4 {
+  background: #333333;
+}
+#Stencil .Bg-overlay {
+  background-color: white;
+}
+#Stencil .Bg-gold {
+  background-color: #E6BF22;
+}
+#Stencil .Bg-silver {
+  background-color: #ADAEAB;
+}
+#Stencil .Bg-bronze {
+  background-color: #A87E19;
+}
+#Stencil .Bg-plastic {
+  background-color: #E51D2D;
+}
+#Stencil .Bg-highlight {
+  background: #fff;
+}
+#Stencil .Bg-highlight2 {
+  background: #fff;
+}
+#Stencil .Bg-highlight3 {
+  background: #fff;
+}
+#Stencil .Bg-positive {
+  background: #00c073;
+}
+#Stencil .Bg-negative {
+  background: #e7252e;
+}
+#Stencil .Bg-neutral {
+  background: #daa400;
+}
+#Stencil .Bg-selected {
+  background: #e6f2fa;
+}
+#Stencil .Bg-daily {
+  background: #00c073;
+}
+#Stencil .Bdr,
+#Stencil .Bdrx,
+#Stencil .Bdry,
+#Stencil .Bdrtop,
+#Stencil .Bdrbot,
+#Stencil .Bdrstart,
+#Stencil .Bdrend {
+  border-color: #e7e7e7;
+}
+#Stencil .Bdr-shade {
+  border-color: #f3f3f3;
+}
+#Stencil .Bdr-shade2 {
+  border-color: #e7e7e7;
+}
+#Stencil .Bdr-shade3 {
+  border-color: #959595;
+}
+#Stencil .Bdr-accent {
+  border-color: #6e329d;
+}
+#Stencil .Box-shadow {
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 5px;
+}
+#Stencil .Box-shadow-inset {
+  -moz-box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 3px 0px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 3px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 3px 0px inset;
+}
+#Stencil .F-link {
+  color: #0078FF;
+}
+#Stencil .F-disabled {
+  color: #757575;
+}
+#Stencil .F-faded {
+  color: #757575;
+}
+#Stencil .F-faded2 {
+  color: #cbcbcb;
+}
+#Stencil .F-shade {
+  color: #757575;
+}
+#Stencil .F-shade2 {
+  color: #cbcbcb;
+}
+#Stencil .F-shade3 {
+  color: #e7e7e7;
+}
+#Stencil .F-shade4 {
+  color: #757575;
+}
+#Stencil .F-shade5 {
+  color: #959595;
+}
+#Stencil .F-reset {
+  color: #333333;
+}
+#Stencil .F-bright {
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#Stencil .F-positive {
+  color: #00c073;
+}
+#Stencil .F-negative {
+  color: #e7252e;
+}
+#Stencil .F-neutral {
+  color: #daa400;
+}
+#Stencil .F-live {
+  color: #be3f3f;
+}
+#Stencil .F-injury {
+  color: #e7252e;
+  cursor: help;
+}
+#Stencil .F-firstplace {
+  color: #e7bd44;
+}
+#Stencil .F-secondplace {
+  color: #cbcbcb;
+}
+#Stencil .F-thirdplace {
+  color: #5e3d20;
+}
+#Stencil .F-twitter {
+  color: #00ACED;
+}
+#Stencil .F-facebook {
+  color: #3B5998;
+}
+#Stencil .F-timestamp {
+  color: #757575;
+}
+#Stencil .F-felo-bronze {
+  color: #CF7F27;
+}
+#Stencil .F-felo-silver {
+  color: #959B9F;
+}
+#Stencil .F-felo-gold {
+  color: #D4B000;
+}
+#Stencil .F-felo-platinum {
+  color: #8BA4BB;
+}
+#Stencil .F-felo-diamond {
+  color: #3F97C2;
+}
+#Stencil .League-logo-bronze {
+  border: 4px #CF7F27 solid;
+}
+#Stencil .League-logo-silver {
+  border: 4px #959B9F solid;
+}
+#Stencil .League-logo-gold {
+  border: 4px #D4B000 solid;
+}
+#Stencil .League-logo-platinum {
+  border: 4px #8BA4BB solid;
+}
+#Stencil .League-logo-diamond {
+  border: 4px #3F97C2 solid;
+}
+#Stencil .Bg-felo-bronze {
+  background-color: #CF7F27;
+}
+#Stencil .Bg-felo-silver {
+  background-color: #959B9F;
+}
+#Stencil .Bg-felo-gold {
+  background-color: #D4B000;
+}
+#Stencil .Bg-felo-platinum {
+  background-color: #8BA4BB;
+}
+#Stencil .Bg-felo-diamond {
+  background-color: #3F97C2;
+}
+#Stencil .Rollover-basketball {
+  background-color: #fff3e8;
+  color: #ff8b12;
+  border: 1px solid #ff8b12;
+}
+#Stencil .Rollover-basketball-light {
+  background-color: #f4f5f9;
+  border: 1px solid #1f4182;
+}
+#Stencil .Rollover-basketball-dark {
+  background-color: #1f4182;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+#Stencil .Rollover-baseball {
+  background-color: #e8f9ef;
+  color: #1ac567;
+  border: 1px solid #1ac567;
+}
+#Stencil .Rollover-hockey {
+  background-color: #e7f3fe;
+  color: #188fff;
+  border: 1px solid #188fff;
+}
+#Stencil .Rollover-football {
+  background-color: #fce7ea;
+  color: #f0162f;
+  border: 1px solid #f0162f;
+}
+#Stencil .F-rollover-basketball {
+  color: #ff8b12;
+}
+#Stencil .F-rollover-baseball {
+  color: #1ac567;
+}
+#Stencil .F-rollover-hockey {
+  color: #188fff;
+}
+#Stencil .F-rollover-football {
+  color: #f0162f;
+}
+#Stencil .Rollover-basketball-border {
+  border: 1px solid #ff8b12;
+}
+#Stencil .Rollover-baseball-border {
+  border: 1px solid #1ac567;
+}
+#Stencil .Rollover-hockey-border {
+  border: 1px solid #188fff;
+}
+#Stencil .Rollover-football-border {
+  border: 1px solid #f0162f;
+}
