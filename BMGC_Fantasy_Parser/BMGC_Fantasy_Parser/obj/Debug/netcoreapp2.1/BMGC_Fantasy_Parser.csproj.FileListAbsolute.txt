@@ -1,0 +1,11 @@
+C:\Users\egoolsby\Documents\0_MyFiles\BMGC_Fantasy_Stats\BMGC_Fantasy_Parser\BMGC_Fantasy_Parser\bin\Debug\netcoreapp2.1\BMGC_Fantasy_Parser.deps.json
+C:\Users\egoolsby\Documents\0_MyFiles\BMGC_Fantasy_Stats\BMGC_Fantasy_Parser\BMGC_Fantasy_Parser\bin\Debug\netcoreapp2.1\BMGC_Fantasy_Parser.runtimeconfig.json
+C:\Users\egoolsby\Documents\0_MyFiles\BMGC_Fantasy_Stats\BMGC_Fantasy_Parser\BMGC_Fantasy_Parser\bin\Debug\netcoreapp2.1\BMGC_Fantasy_Parser.runtimeconfig.dev.json
+C:\Users\egoolsby\Documents\0_MyFiles\BMGC_Fantasy_Stats\BMGC_Fantasy_Parser\BMGC_Fantasy_Parser\bin\Debug\netcoreapp2.1\BMGC_Fantasy_Parser.dll
+C:\Users\egoolsby\Documents\0_MyFiles\BMGC_Fantasy_Stats\BMGC_Fantasy_Parser\BMGC_Fantasy_Parser\bin\Debug\netcoreapp2.1\BMGC_Fantasy_Parser.pdb
+C:\Users\egoolsby\Documents\0_MyFiles\BMGC_Fantasy_Stats\BMGC_Fantasy_Parser\BMGC_Fantasy_Parser\obj\Debug\netcoreapp2.1\BMGC_Fantasy_Parser.csprojAssemblyReference.cache
+C:\Users\egoolsby\Documents\0_MyFiles\BMGC_Fantasy_Stats\BMGC_Fantasy_Parser\BMGC_Fantasy_Parser\obj\Debug\netcoreapp2.1\BMGC_Fantasy_Parser.csproj.CoreCompileInputs.cache
+C:\Users\egoolsby\Documents\0_MyFiles\BMGC_Fantasy_Stats\BMGC_Fantasy_Parser\BMGC_Fantasy_Parser\obj\Debug\netcoreapp2.1\BMGC_Fantasy_Parser.AssemblyInfoInputs.cache
+C:\Users\egoolsby\Documents\0_MyFiles\BMGC_Fantasy_Stats\BMGC_Fantasy_Parser\BMGC_Fantasy_Parser\obj\Debug\netcoreapp2.1\BMGC_Fantasy_Parser.AssemblyInfo.cs
+C:\Users\egoolsby\Documents\0_MyFiles\BMGC_Fantasy_Stats\BMGC_Fantasy_Parser\BMGC_Fantasy_Parser\obj\Debug\netcoreapp2.1\BMGC_Fantasy_Parser.dll
+C:\Users\egoolsby\Documents\0_MyFiles\BMGC_Fantasy_Stats\BMGC_Fantasy_Parser\BMGC_Fantasy_Parser\obj\Debug\netcoreapp2.1\BMGC_Fantasy_Parser.pdb
