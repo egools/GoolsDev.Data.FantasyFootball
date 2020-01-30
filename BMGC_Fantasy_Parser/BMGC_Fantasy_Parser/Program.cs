@@ -1,7 +1,9 @@
 ﻿using AngleSharp;
 using AngleSharp.Dom;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Runtime.Serialization;
 using System.Threading.Tasks;
 
 namespace BMGC_Fantasy_Parser
@@ -19,10 +21,10 @@ namespace BMGC_Fantasy_Parser
 
             //td[5] => row player position
 
-            //tr .player .ysf-player-name a    => short name
-            //tr .player .ysf-player-name span => team - pos
-            //tr .player .ysf-game-status a[0] => score / result
-            //tr .player .ysf-game-status a[1] => opponent
+            //.player .ysf-player-name a    => short name
+            //.player .ysf-player-name span => team - pos
+            //.player .ysf-game-status a[0] => score / result
+            //.player .ysf-game-status a[1] => opponent
 
             //tr .Fw-b a.pps =>                points scored
             //td[2/8] div =>                   projected points
@@ -33,6 +35,53 @@ namespace BMGC_Fantasy_Parser
             var context = BrowsingContext.New(Configuration.Default);
             var html = File.ReadAllText(path);
             return await context.OpenAsync(req => req.Content(html)); ;
+        }
+
+        public class FantasyOwner
+        {
+            public string OwnerName { get; set; }
+            public string TeamName { get; set; }
+            public List<FantasyTeam> Weeks { get; set; }
+        }
+
+        public class FantasyTeam
+        {
+            public FantasyPlayer QB { get; set; }
+            public FantasyPlayer RB1 { get; set; }
+            public FantasyPlayer RB2 { get; set; }
+            public FantasyPlayer WR1 { get; set; }
+            public FantasyPlayer WR2 { get; set; }
+            public FantasyPlayer TE { get; set; }
+            public FantasyPlayer FLEX { get; set; }
+            public FantasyPlayer DEF { get; set; }
+            public FantasyPlayer K { get; set; }
+            public List<FantasyPlayer> Bench { get; set; }
+            public float Score =>
+                QB.ActualPoints +
+                RB1.ActualPoints +
+                RB2.ActualPoints +
+                WR1.ActualPoints +
+                WR2.ActualPoints +
+                TE.ActualPoints +
+                FLEX.ActualPoints +
+                DEF.ActualPoints +
+                K.ActualPoints;
+        }
+
+        public class FantasyPlayer
+        {
+            public string FullName { get; set; }
+            public string ShortName { get; set; }
+            public string Position { get; set; }
+            public float ProjectedPoints { get; set; }
+            public float ActualPoints { get; set; } 
+        }
+
+        public class FantasyMatchup
+        {
+            public FantasyTeam LeftTeam { get; set; }
+            public FantasyTeam RightTeam { get; set; }
+
         }
     }
 }
