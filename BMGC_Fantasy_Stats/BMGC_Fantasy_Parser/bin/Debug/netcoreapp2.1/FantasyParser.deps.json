@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": ""
+    "signature": "d10f2d2d826e23b49e774609c0b5a385afd7b3da"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,7 +9,7 @@
       "FantasyParser/1.0.0": {
         "dependencies": {
           "AngleSharp": "0.13.0",
-          "FantasyUtil": "1.0.0"
+          "FantasyComponents": "1.0.0"
         },
         "runtime": {
           "FantasyParser.dll": {}
@@ -53,9 +53,9 @@
           }
         }
       },
-      "FantasyUtil/1.0.0": {
+      "FantasyComponents/1.0.0": {
         "runtime": {
-          "FantasyUtil.dll": {}
+          "FantasyComponents.dll": {}
         }
       }
     }
@@ -87,7 +87,7 @@
       "path": "system.text.encoding.codepages/4.5.0",
       "hashPath": "system.text.encoding.codepages.4.5.0.nupkg.sha512"
     },
-    "FantasyUtil/1.0.0": {
+    "FantasyComponents/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

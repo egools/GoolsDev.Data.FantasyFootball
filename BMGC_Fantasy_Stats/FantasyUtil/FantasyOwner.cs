@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FantasyComponents
 {
-    public class FantasyOwner
+    public class FantasyOwner : IComparable
     {
         public string ManagerName { get; set; }
         public string TeamName { get; set; }
@@ -15,6 +15,11 @@ namespace FantasyComponents
             ManagerName = managerName;
             TeamName = teamName;
             Weeks = new List<FantasyTeam>();
+        }
+
+        public int CompareTo(object obj)
+        {
+            return ManagerName.CompareTo(obj);
         }
     }
 }

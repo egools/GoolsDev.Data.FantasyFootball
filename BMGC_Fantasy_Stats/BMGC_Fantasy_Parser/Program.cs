@@ -15,8 +15,8 @@ namespace FantasyParser
         static void Main(string[] args)
         {
 
+            
             var path = Directory.GetDirectories("../../../HtmlSource/");
-
             //for(int week = 1; week <= 16; week++)
             //{
             //    var files = Directory.GetFiles("../../../HtmlSource/2019/Week" + week);
@@ -27,32 +27,21 @@ namespace FantasyParser
             //    }
             //}
 
-
             var document = GetDocument(@"../../../HtmlSource/2019/Week1/gools_snow.html").Result;
             var players = document.QuerySelectorAll("#matchups #statTable1 tbody tr:not(.Last), #bench-table #statTable2 tbody tr:not(.Last)");
 
-            //#matchup-header .user-id => manager names
-            //#matchup-header a.F-link => team names
             var week = document.QuerySelector("#matchup_selectlist_nav .flyout-title").InnerHtml;
             var managerNames = document.QuerySelectorAll("#matchup-header .user-id").Select(elm => elm.InnerHtml).ToList();
             var teamNames = document.QuerySelectorAll("#matchup-header a.F-link").Select(elm => elm.InnerHtml).ToList();
+            var league = new FantasyLeague("BMGC");
+            var season = new FantasySeason(2019);
+            league.Seasons.Add(season);
 
             var leftManager = new FantasyOwner(managerNames[0], teamNames[0]);
             var rightManager = new FantasyOwner(managerNames[1], teamNames[1]);
 
             var leftTeam = new FantasyTeam(week);
             var rightTeam = new FantasyTeam(week);
-
-            //data-stat-note-id on clickable stat columns (.has-stat-note) includes ID for stat breakdown with player name ("#pps-31896")
-            //e.g. document.querySelector("#pps-31896 h2").innerText => "DK Metcalf Stat Breakdown"
-
-            //td:nth-child(6) div => row player position
-            //.player .ysf-player-name a    => short name
-            //.player .ysf-player-name span => team - pos
-            //.player .ysf-game-status a[0] => game score / result
-            //.player .ysf-game-status a[1] => opponent
-            //.Fw-b a.pps                   => points scored
-            //td[3/9] div                   => projected points
 
 
             foreach (var row in players)
@@ -71,10 +60,11 @@ namespace FantasyParser
 
                 var leftMatchupPlayer = new MatchupPlayer()
                 {
+                    //PlayerID = statNodeIDs[0],
                     ActualPoints = float.Parse(pointsScored[0]),
                     ProjectedPoints = float.Parse(projectedLeft),
                     MatchupPosition = Util.ParseFantasyPosition(fantasyPosition),
-                    Player = new NFLPlayer
+                    Player = new NFLPlayer(statNodeIDs[0])
                     {
                         FullName = fullNameLeft,
                         ShortName = shortNames[0],
@@ -84,11 +74,11 @@ namespace FantasyParser
                 };
                 var rightMatchupPlayer = new MatchupPlayer()
                 {
-
+                    //PlayerID = statNodeIDs[1],
                     ActualPoints = float.Parse(pointsScored[1]),
                     ProjectedPoints = float.Parse(projectedRight),
                     MatchupPosition = Util.ParseFantasyPosition(fantasyPosition),
-                    Player = new NFLPlayer
+                    Player = new NFLPlayer(statNodeIDs[1])
                     {
                         FullName = fullNameLeft,
                         ShortName = shortNames[1],
@@ -100,7 +90,6 @@ namespace FantasyParser
                 leftTeam.AddPlayer(leftMatchupPlayer);
                 rightTeam.AddPlayer(rightMatchupPlayer);
             }
-            var t = leftTeam.IdealTeam();
 
         }
 
