@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gools BBPC\\Documents\\Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj": {}
+    "C:\\Users\\egoolsby\\Documents\\0_MyFiles\\BMGC\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gools BBPC\\Documents\\Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj": {
+    "C:\\Users\\egoolsby\\Documents\\0_MyFiles\\BMGC\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gools BBPC\\Documents\\Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj",
+        "projectUniqueName": "C:\\Users\\egoolsby\\Documents\\0_MyFiles\\BMGC\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj",
         "projectName": "FantasyComponents",
-        "projectPath": "C:\\Users\\Gools BBPC\\Documents\\Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj",
-        "packagesPath": "C:\\Users\\Gools BBPC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gools BBPC\\Documents\\Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\obj\\",
+        "projectPath": "C:\\Users\\egoolsby\\Documents\\0_MyFiles\\BMGC\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj",
+        "packagesPath": "C:\\Users\\egoolsby.adm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\egoolsby\\Documents\\0_MyFiles\\BMGC\\BMGC_Fantasy_Stats\\FantasyUtil\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Gools BBPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\egoolsby.adm\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

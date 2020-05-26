@@ -7,7 +7,14 @@ namespace FantasyComponents
 {
     public class MatchupPlayer : IComparable
     {
-        public NFLPlayer Player { get; set; }
+        public MatchupPlayer(int id)
+        {
+            NFLPlayerID = id;
+        }
+
+        public int MatchupPlayerID { get; }
+        public int MatchupRosterID { get; set; }
+        public int NFLPlayerID { get; set; }
         public FantasyPosition MatchupPosition { get; set; }
         public float ProjectedPoints { get; set; }
         public float ActualPoints { get; set; }

@@ -6,29 +6,31 @@ namespace FantasyComponents
 {
     public static class Util
     {
+        [Flags]
         public enum NFLPosition
         {
             QB = 1,
             RB = 2,
-            WR = 3,
-            TE = 4,
-            DEF = 5,
-            K = 6,
-            Unknown = 99
+            WR = 4,
+            TE = 8,
+            DEF = 16,
+            K = 32,
+            Unknown = 64
         }
 
+        [Flags]
         public enum FantasyPosition
         {
-            QB = 10,
-            RB1 = 20,
-            RB2 = 21,
-            WR1 = 30,
-            WR2 = 31,
-            TE = 40,
-            DEF = 50,
-            K = 60,
-            FLEX = 99,
-            BN = 100
+            QB = NFLPosition.QB,
+            RB1 = NFLPosition.RB,
+            RB2 = NFLPosition.RB,
+            WR1 = NFLPosition.WR,
+            WR2 = NFLPosition.WR,
+            TE = NFLPosition.TE,
+            DEF = NFLPosition.DEF,
+            K = NFLPosition.K,
+            FLEX = NFLPosition.RB | NFLPosition.WR | NFLPosition.TE,
+            BN = NFLPosition.QB | NFLPosition.RB | NFLPosition.WR | NFLPosition.TE | NFLPosition.DEF | NFLPosition.K
         }
 
         public static NFLPosition ParseNFLPosition(string pos)

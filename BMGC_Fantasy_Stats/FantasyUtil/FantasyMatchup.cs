@@ -6,9 +6,9 @@ namespace FantasyComponents
 {
     public class FantasyMatchup
     {
-        public FantasyTeam LeftTeam { get; set; }
-        public FantasyTeam RightTeam { get; set; }
-
-        public int Winner => LeftTeam.CompareTo(RightTeam);
+        public int LeftTeamID { get; set; }
+        public int RightTeamID { get; set; }
+        public int Week { get; set; }
+        public int FantasyYear { get; set; }
     }
 }

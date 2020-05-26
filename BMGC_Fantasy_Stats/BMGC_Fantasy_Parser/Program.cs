@@ -33,15 +33,15 @@ namespace FantasyParser
             var week = document.QuerySelector("#matchup_selectlist_nav .flyout-title").InnerHtml;
             var managerNames = document.QuerySelectorAll("#matchup-header .user-id").Select(elm => elm.InnerHtml).ToList();
             var teamNames = document.QuerySelectorAll("#matchup-header a.F-link").Select(elm => elm.InnerHtml).ToList();
-            var league = new FantasyLeague("BMGC");
+            var league = new FantasyLeagueYear("BMGC");
             var season = new FantasySeason(2019);
             league.Seasons.Add(season);
 
-            var leftManager = new FantasyOwner(managerNames[0], teamNames[0]);
-            var rightManager = new FantasyOwner(managerNames[1], teamNames[1]);
+            var leftManager = new FantasyTeam(managerNames[0], teamNames[0]);
+            var rightManager = new FantasyTeam(managerNames[1], teamNames[1]);
 
-            var leftTeam = new FantasyTeam(week);
-            var rightTeam = new FantasyTeam(week);
+            var leftTeam = new MatchupRoster(week);
+            var rightTeam = new MatchupRoster(week);
 
 
             foreach (var row in players)

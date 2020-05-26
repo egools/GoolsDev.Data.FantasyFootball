@@ -7,7 +7,7 @@ namespace FantasyComponents
 {
     public class NFLPlayer : IComparable
     {
-        public string ID { get; }
+        public string NFLPlayerID { get; }
         public string FullName { get; set; }
         public string ShortName { get; set; }
         public string NFLTeam { get; set; }
@@ -15,7 +15,7 @@ namespace FantasyComponents
 
         public NFLPlayer(string id)
         {
-            ID = id;
+            NFLPlayerID = id;
         }
         public bool IsEligible(FantasyPosition position)
         {
@@ -31,7 +31,13 @@ namespace FantasyComponents
 
         public int CompareTo(object obj)
         {
-            return ID.CompareTo(obj);
+            if (obj == null) return 1;
+            var otherPlayer = obj as NFLPlayer;
+
+            if (otherPlayer != null)
+                return NFLPlayerID.CompareTo(otherPlayer.NFLPlayerID);
+            else
+                throw new ArgumentException("Object is not a NFLPlayer");
         }
     }
 }

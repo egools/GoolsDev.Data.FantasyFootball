@@ -2,7 +2,6 @@ C:\Users\egoolsby\Documents\0_MyFiles\BMGC\BMGC_Fantasy_Stats\FantasyUtil\bin\De
 C:\Users\egoolsby\Documents\0_MyFiles\BMGC\BMGC_Fantasy_Stats\FantasyUtil\bin\Debug\netcoreapp2.1\FantasyComponents.dll
 C:\Users\egoolsby\Documents\0_MyFiles\BMGC\BMGC_Fantasy_Stats\FantasyUtil\bin\Debug\netcoreapp2.1\FantasyComponents.pdb
 C:\Users\egoolsby\Documents\0_MyFiles\BMGC\BMGC_Fantasy_Stats\FantasyUtil\obj\Debug\netcoreapp2.1\FantasyComponents.csprojAssemblyReference.cache
-C:\Users\egoolsby\Documents\0_MyFiles\BMGC\BMGC_Fantasy_Stats\FantasyUtil\obj\Debug\netcoreapp2.1\FantasyComponents.csproj.CoreCompileInputs.cache
 C:\Users\egoolsby\Documents\0_MyFiles\BMGC\BMGC_Fantasy_Stats\FantasyUtil\obj\Debug\netcoreapp2.1\FantasyComponents.AssemblyInfoInputs.cache
 C:\Users\egoolsby\Documents\0_MyFiles\BMGC\BMGC_Fantasy_Stats\FantasyUtil\obj\Debug\netcoreapp2.1\FantasyComponents.AssemblyInfo.cs
 C:\Users\egoolsby\Documents\0_MyFiles\BMGC\BMGC_Fantasy_Stats\FantasyUtil\obj\Debug\netcoreapp2.1\FantasyComponents.dll
