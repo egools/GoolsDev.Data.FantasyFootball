@@ -1,0 +1,482 @@
+/* eslint-disable block-scoped-var, no-use-before-define */
+YUI.add('ysf-reactinvites', function (Y) {
+    Y.namespace('Fantasy');
+    var noop = function() {};
+    var INVITESTRINGS = [];
+    var SOURCEMAP = {
+        '-1420': 'google',
+        '-1417': 'facebook',
+        '-1421': 'outlook'
+    };
+    var PROGRSS_CONTACTS_HOST = '';
+    var PROGRSS_HOST = '';
+    var WINDOW_WIDTH = 700;
+    var WINDOW_HEIGHT =  500;
+    var windowTop = (screen.height / 2) - (WINDOW_HEIGHT / 2);
+    var windowLeft = (screen.width / 2) - (WINDOW_WIDTH / 2);
+    var guid = '';
+    var wssid = '';
+    var endpoints = {};
+    var XDR = { 'credentials': true };
+    var HEADERS = { 'Content-Type': 'application/json' };
+    var shareUrl = '';
+    var loginUrl = '';
+    var fbInvUrl = '';
+    var fbTitle = '';
+    var gameImage = '';
+    var twitterString = '';
+    var unlimitedMembers = false;
+    var crumb;
+    var container = document.getElementById('invites-component');
+    var cfgSendInvites;
+    var isV2;
+    var isV3;
+    var bgImage;
+    var isCommish;
+    var isHeadtoHead;
+    var finalizeTeamLink;
+    var canInvitePreviousLeague;
+    var invitePreviousLeagues;
+    var remindInvited;
+    var oddTeamsEnabled;
+    var showOddTeamsMsgEnabled;
+
+    if (window.InviteContactsStore && window.InvitePreferencesStore && window.InviteMessageStore && window.Invites && container && window.Immutable && window.React && window.ReactDOM) {
+        var stores = {
+            'InviteContactsStore': InviteContactsStore,
+            'InvitePreferencesStore': InvitePreferencesStore,
+            'InviteMessageStore': InviteMessageStore
+        };
+
+        Y.Fantasy.ReactInvites = {
+            init: function(cfg) {
+                INVITESTRINGS = cfg.inviteStrings;
+                PROGRSS_CONTACTS_HOST = cfg.progrssContactsHost;
+                PROGRSS_HOST = cfg.progrssHost;
+                guid = cfg.guid;
+                wssid = cfg.wssid;
+                shareUrl = cfg.shareUrl;
+                crumb = cfg.crumb;
+                loginUrl = cfg.loginUrl;
+                fbInvUrl = cfg.fbInvUrl;
+                fbTitle = cfg.fbTitle;
+                gameImage = cfg.gameImage;
+                twitterString = cfg.twitterString;
+                unlimitedMembers = cfg.unlimitedMembers;
+                cfgSendInvites = cfg.sendInvitesHandler;
+                isV2 = cfg.isV2 || false;
+                isV3 = cfg.isV3 || false;
+                finalizeTeamLink = cfg.finalizeTeamLink;
+                canInvitePreviousLeague = cfg.canInvitePreviousLeague;
+                invitePreviousLeagues = cfg.invitePreviousLeagues;
+                isHeadtoHead = cfg.isHeadtoHead || false;
+                remindInvited = cfg.remindInvited;
+                bgImage = cfg.bgImage;
+                isCommish = cfg.isCommish;
+                oddTeamsEnabled = cfg.oddTeamsEnabled;
+                showOddTeamsMsgEnabled = cfg.showOddTeamsMsgEnabled;
+
+
+                endpoints = {
+                    'contacts': PROGRSS_CONTACTS_HOST + '/progrss/v1/user/' + guid + '/contacts;out=name,email,image;?view=compact&count=max&ymreqid=36862bc0-f61d-939f-1000-d00013010002&format=json&custId=fantasysports&wssid=' + wssid,
+                    'preferences': PROGRSS_CONTACTS_HOST + '/progrss/v1/user/' + guid + '/contacts/preferences?format=json&custId=fantasysports&wssid=' + wssid,
+                    'init': PROGRSS_HOST + '/progrss/v1/credstore/user/' + guid + '/service/{spid}/init?wssid=' + wssid,
+                    'import': PROGRSS_CONTACTS_HOST + '/progrss/v1/user/' + guid + '/contacts/import?format=json&custId=fantasysports&wssid=' + wssid
+                };
+
+                endpoints.sendEmails = cfg.sendEndpoint;
+
+                this._updateContacts();
+            },
+
+            render: function (infoData) {
+                ReactDOM.render(React.createElement(Invites, {
+                    infoData: infoData ? Immutable.fromJS(JSON.parse(infoData)) : false,
+                    shareLink: shareUrl,
+                    send: this._handleSend.bind(this),
+                    filterContacts: this._handleFilterContacts.bind(this),
+                    sortContacts: this._handleSortContacts.bind(this),
+                    importContacts: this._handleImportContacts.bind(this),
+                    addContact: this._handleAddContact.bind(this),
+                    removeContact: this._handleRemoveContact.bind(this),
+                    clearContacts: this._handleClearContacts.bind(this),
+                    setMessage: this._handleSetMessage.bind(this),
+                    beaconEvent: this._beaconEvent.bind(this),
+                    beaconClick: this._beaconClick.bind(this),
+                    shareFacebook: this._shareFacebook.bind(this),
+                    shareTwitter: this._shareTwitter.bind(this),
+                    unlimitedMembers: unlimitedMembers,
+                    isV2: isV2,
+                    isV3: isV3,
+                    bgImage: bgImage,
+                    isCommish: isCommish,
+                    finalizeTeamLink: finalizeTeamLink,
+                    canInvitePreviousLeague: canInvitePreviousLeague,
+                    invitePreviousLeagues: invitePreviousLeagues,
+                    remindInvited: remindInvited,
+                    isHeadtoHead: isHeadtoHead,
+                    oddTeamsEnabled: oddTeamsEnabled,
+                    showOddTeamsMsgEnabled: showOddTeamsMsgEnabled,
+                    context: {
+                        getStore: function (store) {
+                            return stores[store];
+                        },
+                        locales: ['en-US', 'en'],
+                        messages: INVITESTRINGS
+                    }
+                }), container
+                );
+            },
+
+            _sendInvite: function(emails, message, successMessage) {
+                var self = this;
+
+                Y.Fantasy.Cors(endpoints.sendEmails, {
+                    method: 'POST',
+                    xdr: XDR,
+                    headers: { 
+                        'Ajax-Request': 'true' 
+                    },
+                    TIMEOUT: 5000,
+                    data: {
+                        crumb: crumb,
+                        stage: 1,
+                        emails: emails.join(','),
+                        note: message
+                    },
+                    on: {
+                        success: function (id,res) {
+                            var oResponse = Y.JSON.parse(res.responseText);
+                            var errors = oResponse.errors;
+                            var tout = new Y.Fantasy.Tout();
+
+                            if (errors.length > 0) {
+                                Y.each(errors, function(error) {
+                                    tout.displayTout({
+                                        'message': error.title.replace('&nbsp;', ' '),
+                                        'error': true
+                                    });
+                                });
+                            } else {
+                                self._handleClearContacts();
+                                self._handleSetMessage('');
+                                self._handleFilterContacts('');
+
+                                tout.displayTout({
+                                    'message': successMessage
+                                });   
+                                // fire event so listeners can update as necessary
+                                Y.fire('invitefriends:success', {});
+                            }
+                        },
+                        failure: function (id, response) {
+                            var tout = new Y.Fantasy.Tout();
+                            tout.displayTout({
+                                'message': 'There was an error sending the email' + (emails.length > 1 ? 's' : ''),
+                                'error': true
+                            });
+
+                            // Handling 302 redirects when the login cookie timeouts
+                            // By submitting the form, users will go through the login process
+                            // (it does a real submit, not an ajax submit, so the redirect will work)
+                            if (response.statusText !== 'abort') {
+                                window.location.href = loginUrl;  
+                            }
+                        }
+                    }
+                });
+            },
+
+            _handleSend: function (emails, message) {
+                if (cfgSendInvites) {
+                    cfgSendInvites(emails, message);
+                } else {
+                    var success = emails.length > 1 ? 'Your invites have been sent' : 'Your invite has been sent';
+                    this._sendInvite(emails, message, success);
+                }
+            },
+
+            _parseContacts: function (data) {
+                var dataContacts = data.contacts || {};
+                var contactsArray = dataContacts.contact || [];
+                var contactsLength = contactsArray.length;
+                var contacts = [];
+                var emails = {};
+                var eachEmail = function (e) {
+                    if (!emails[e]) {
+                        contacts.push({
+                            index: name || e,
+                            email: e,
+                            name: name,
+                            image: image,
+                            sources: sources
+                        });
+                        emails[email] = true;
+                    }
+                };
+
+                var sourceMapper = function (s) {
+                    if (SOURCEMAP[s.id]) {
+                        sources.push(SOURCEMAP[s.id]);
+                    }
+                };
+
+
+                for (var i = 0; i < contactsLength; i++) {
+                    var categories = contactsArray[i].categories;
+                    var fields = contactsArray[i].fields;
+                    var fieldsLength = fields.length;
+                    var name = '';
+                    var image = '';
+                    var email = [];
+                    var sources = categories.length > 0 ? [] : ['yahoo'];
+
+                    categories.forEach(sourceMapper);
+
+
+                    for (var k = 0; k < fieldsLength; k++) {
+                        var fieldValue = fields[k].value;
+
+                        switch (fields[k].type) {
+                            case 'name': 
+                                name = Y.Fantasy.html.htmlDecode([fieldValue.givenName, fieldValue.middleName, fieldValue.familyName].filter(function(n) {
+                                    return n; 
+                                }).join(' '));
+                                break;
+                            case 'email': 
+                                email.push(fieldValue);
+                                break;
+                            case 'Image': 
+                                if (fieldValue.imageSource !== 'google') {
+                                    image = image ? image : Y.Fantasy.html.htmlDecode(fieldValue.imageUrl);
+                                }
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+
+                    email.forEach(eachEmail);
+                }
+
+                InviteContactsStore.load(contacts);
+            },
+
+            _getContacts: function (e) {
+                var self = this;
+
+                Y.Fantasy.Cors(endpoints.contacts, {
+                    method: 'GET',
+                    xdr: XDR,
+                    headers: HEADERS,
+                    on: {
+                        start: function () {
+                            InviteContactsStore.setStatusLoading();
+                        },
+                        success: function (id, res) {
+                            self._parseContacts(JSON.parse(res.response));
+                        },
+                        failure: function () {
+                            InviteContactsStore.setStatusFailure();
+                        }
+                    }
+                });
+            },
+
+            _parsePreferences: function(state) {
+                InvitePreferencesStore.load(state.preferences);
+            },
+
+            _getPreferences: function () {
+                var self = this;
+
+                Y.Fantasy.Cors(endpoints.preferences, {
+                    method: 'GET',
+                    xdr: XDR,
+                    headers: HEADERS,
+                    on: {
+                        start: function () {
+                            InvitePreferencesStore.setStatusLoading();
+                        },
+                        success: function (id, res) {
+                            self._parsePreferences(JSON.parse(res.response));
+                        },
+                        failure: function () {
+                            InvitePreferencesStore.setStatusFailure();
+                        }
+                    }
+                });
+            },
+
+            _updateContacts: function () {
+                this._getContacts();
+                this._getPreferences();
+            },
+
+            _handleFilterContacts: function (string) {
+                InviteContactsStore.applyFilter({
+                    search: string
+                });
+            },
+
+            _handleSortContacts: function (sort) {
+                InviteContactsStore.applySort({
+                    column: sort,
+                    direction: 'desc'
+                });
+            },
+
+            _handleImportContacts: function (src, spid) {
+                var self = this;
+                var url = Y.Lang.sub(endpoints.init, { spid: spid });
+
+                Y.Fantasy.Cors(url, {
+                    method: 'POST',
+                    xdr: XDR,
+                    headers: HEADERS,
+                    timeout: 5000,
+                    on: {
+                        start: function () {
+                            InvitePreferencesStore.setStatusLoading();
+                        },
+                        success: function(id, res) {
+                            var data = JSON.parse(res.response).results;
+                            self._openAuthWindow(data, src, spid);
+                        },
+                        failure: function () {
+                            InvitePreferencesStore.setStatusFailure();
+                        }
+                    }
+                });
+            },
+
+            _openAuthWindow: function (data, src, spid) {
+                var self = this;
+                var windowRef = window.open(data.authorizeUrl, 'OAuth', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, copyhistory=no, width=' + WINDOW_WIDTH + ', height=' + WINDOW_HEIGHT + ', top=' + windowTop + ', left=' + windowLeft);
+                var interval;
+
+                if (!windowRef) {
+                    InvitePreferencesStore.setStatusFailure('popup_blocked');
+                } else {
+                    interval = setInterval(function () {
+                        if (windowRef && windowRef.closed) {
+                            self._contactsImport(src, spid);
+                            clearInterval(interval);
+                        }
+                    });
+                }
+            },
+
+            _contactsImport: function (src, spid) {
+                var self = this;
+                var url = endpoints.import;
+                var data = Y.JSON.stringify({'src': src, 'spid': spid});
+
+                Y.Fantasy.Cors(url, {
+                    method: 'POST',
+                    xdr: XDR,
+                    headers: HEADERS,
+                    data: data,
+                    on: {
+                        success: function () {
+                            self._pollContactsPreferences(src);
+                        },
+                        failure: function () {
+                            InvitePreferencesStore.setStatusFailure();
+                        }
+                    }
+                });
+            },
+
+            _pollContactsPreferences: function (src) {
+                var self = this;
+
+                Y.Fantasy.Cors(endpoints.preferences, {
+                    method: 'GET',
+                    xdr: XDR,
+                    headers: HEADERS,
+                    on: {
+                        success: function (id, res) {
+                            var data = JSON.parse(res.response).preferences;
+                            var key = 'import_status_' + src;
+
+                            self._parsePollContactsPreferences(data[key], src);
+                        },
+                        failure: function () {
+                            InvitePreferencesStore.setStatusFailure();
+                        }
+                    }
+                });
+            },
+
+            _parsePollContactsPreferences: function (data, src) {
+                var self = this;
+                var status = data.status || '';
+
+                switch (status) {
+                    case 'DONE': 
+                        var tout = new Y.Fantasy.Tout();
+                        tout.displayTout({
+                            'message': src + ' has been imported.'
+                        });   
+                        this._updateContacts();
+                        break;
+                    case 'FAIL': 
+                        InvitePreferencesStore.setStatusFailure();
+                        break;
+                    default: 
+                        setTimeout(function () {
+                            self._pollContactsPreferences(src);
+                        });
+                        break;
+                }
+            },
+
+            _handleAddContact: function (contact) {
+                InviteMessageStore.addContact(contact);
+            },
+
+            _handleRemoveContact: function (contact) {
+                InviteMessageStore.removeContact(contact);
+            },
+
+            _handleClearContacts: function () {
+                InviteMessageStore.clearContacts();
+            },
+
+            _handleSetMessage: function (msg) {
+                InviteMessageStore.setMessage(msg);
+            },
+
+            _beaconEvent: function (payload) {
+                Y.Fantasy.rapid.beaconEvent(payload.name, payload.params);
+            },
+
+            _beaconClick: function (payload) {
+                Y.Fantasy.rapid.beaconClick(payload.sec, payload.slk, payload._p || 0, payload.params, payload.outcome);
+            },
+
+            _shareFacebook: function () {
+                if (FB) {
+                    FB.ui({
+                        method: 'send',
+                        link: fbInvUrl,
+                        name: fbTitle,
+                        picture: gameImage
+                    });
+                }
+            },
+
+            _shareTwitter: function () {
+                window.open('https://twitter.com/intent/tweet?text=' + twitterString, '_blank');
+            }
+        };
+    } else {
+        Y.Fantasy.ReactInvites = {
+            init: noop,
+            render: noop
+        };
+    }
+}, '', {
+    'requires': ['node-base', 'io-xdr', 'json-stringify', 'ysf-html', 'ysf-cors', 'ysf-flowtips', 'ysf-tout']
+});

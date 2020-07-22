@@ -837,23 +837,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\egoolsby.adm\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Eric\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\egoolsby\\Documents\\0_MyFiles\\BMGC\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Parser\\FantasyParser.csproj",
+      "projectUniqueName": "C:\\Users\\Eric\\Documents\\GitHub\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Parser\\FantasyParser.csproj",
       "projectName": "FantasyParser",
-      "projectPath": "C:\\Users\\egoolsby\\Documents\\0_MyFiles\\BMGC\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Parser\\FantasyParser.csproj",
-      "packagesPath": "C:\\Users\\egoolsby.adm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\egoolsby\\Documents\\0_MyFiles\\BMGC\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Parser\\obj\\",
+      "projectPath": "C:\\Users\\Eric\\Documents\\GitHub\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Parser\\FantasyParser.csproj",
+      "packagesPath": "C:\\Users\\Eric\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Eric\\Documents\\GitHub\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Parser\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\egoolsby.adm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Eric\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -866,8 +862,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\egoolsby\\Documents\\0_MyFiles\\BMGC\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj": {
-              "projectPath": "C:\\Users\\egoolsby\\Documents\\0_MyFiles\\BMGC\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj"
+            "C:\\Users\\Eric\\Documents\\GitHub\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj": {
+              "projectPath": "C:\\Users\\Eric\\Documents\\GitHub\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj"
             }
           }
         }
@@ -902,7 +898,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

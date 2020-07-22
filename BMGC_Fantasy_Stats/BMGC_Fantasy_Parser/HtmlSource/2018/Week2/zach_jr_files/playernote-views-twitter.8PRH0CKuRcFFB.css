@@ -1,0 +1,137 @@
+/**
+ * playernote-views-twitter.css
+ * Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+ * @package media_module_sports
+ * @link http://dist.corp.yahoo.com/by-package/media_module_sports/
+ * @author ronadams@oath.com 
+ */
+
+.playernoteview-twitter{
+	background-color:#fff;
+}
+
+.playernoteview-twitter .navlist li { 
+  float: left;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.playernoteview-twitter ul.twitter-official,
+.playernoteview-twitter ul.twitter-search {
+  list-style: none outside none;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	height: 262px;
+	_height: 267px;
+	width:100%;
+}
+
+.playernoteview-twitter ul.twitter-official li,
+.playernoteview-twitter ul.twitter-search li{
+	border-top:1px solid #e7e7e5;
+	*width:480px;
+  height: auto;
+	display:block;
+  list-style: none outside none;
+  min-height: 65px;
+	line-height:1.2em;
+	clear:left;
+	padding:5px 0;
+}
+
+.playernoteview-twitter ul.twitter-official li a.avatar,
+.playernoteview-twitter ul.twitter-search li a.avatar{
+  background-position: 5px 5px;
+  background-repeat: no-repeat;
+	width:48px;
+	height:48px;
+	text-indent:-999em;
+	padding:5px;
+	float:left;
+	display:block;
+}
+
+.playernoteview-twitter ul.twitter-official li.first,
+.playernoteview-twitter ul.twitter-search li.first{
+	border-top:none;
+	margin-top:5px;
+}
+
+.playernoteview-twitter ul.twitter-official li.last,
+.playernoteview-twitter ul.twitter-search li.last{
+	border-bottom:1px solid #e7e7e5;
+}
+
+.playernoteview-twitter ul.twitter-official li.notweets,
+.playernoteview-twitter ul.twitter-search li.notweets{
+	padding-left:10px;
+}
+
+.playernoteview-twitter ul.twitter-official li.odd,
+.playernoteview-twitter ul.twitter-search li.odd{
+	background-color:#fff;
+}
+
+.playernoteview-twitter ul.twitter-official li.even,
+.playernoteview-twitter ul.twitter-search li.even{
+	background-color:#f1f2ed;
+}
+
+.playernoteview-twitter ul.twitter-official li span,
+.playernoteview-twitter ul.twitter-search li span{
+	font-weight:bold;
+}
+
+.playernoteview-twitter ul.twitter-official li span.time,
+.playernoteview-twitter ul.twitter-search li span.time{
+	font-weight:normal;
+	color:#999;
+	font-size:85%;
+}
+
+.playernoteview-twitter ul.twitter-official li.noresults,
+.playernoteview-twitter ul.twitter-search li.noresults{
+	padding:10px;
+}
+
+ul.twitter-search{
+	display:none;
+}
+
+.twitternav{
+  padding:5px;
+  position:relative;
+  text-align: left;
+  overflow: hidden;
+  color: #666;
+  font-size: 85%;
+	-moz-box-shadow:0 3px 3px #aaa;
+	-webkit-box-shadow:0 3px 3px #aaa;
+	box-shadow:0 3px 3px #aaa;
+	*border-bottom:1px solid #aaa;
+	width:100%;
+}
+
+.twitternav ul{
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  zoom:1;
+  *display:inline;
+	position:fixed;
+	width:100%;
+}
+
+.twitternav li{
+  padding: 3px 8px;
+  margin: 0 2px;
+}
+
+.twitternav li a{
+  color: #0069aa;
+}
+
+.twitternav li.selected a{
+  color: #000;
+  font-weight:bold;
+}
