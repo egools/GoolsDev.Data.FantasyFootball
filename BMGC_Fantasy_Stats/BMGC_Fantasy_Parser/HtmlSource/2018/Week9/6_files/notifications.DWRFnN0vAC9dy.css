@@ -1,0 +1,64 @@
+.yfa-notifications.new > li.new > a:before,
+.yfa-notifications.new tr.new > td:first-child > a:before {
+  background: url('https://s.yimg.com/dh/ap/fantasy/img/core-sd10264613e.png');
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .yfa-notifications.new > li.new > a:before,
+  .yfa-notifications.new tr.new > td:first-child > a:before {
+    background: url('https://s.yimg.com/dh/ap/fantasy/img/core2x-sc75c187afc.png');
+    background-size: auto 62px;
+  }
+}
+
+.yfa-notifications.new > li.new > a,
+.yfa-notifications.new tr.new > td > a {
+  font-weight: bold;
+}
+.yfa-notifications.new > li.new .yfa-timestamp,
+.yfa-notifications.new tr.new > td .yfa-timestamp {
+  color: red;
+}
+.yfa-notifications.new > li,
+.yfa-notifications.new tr > td:first-child {
+  padding-left: 13px;
+}
+.yfa-notifications.new > li.new,
+.yfa-notifications.new tr.new > td:first-child {
+  font-size: 200%;
+  border: 1px solid red;
+  padding-left: 0;
+}
+.yfa-notifications.new > li.new > a,
+.yfa-notifications.new tr.new > td:first-child > a {
+  display: inline-block;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+.yfa-notifications.new > li.new > a:before,
+.yfa-notifications.new tr.new > td:first-child > a:before {
+  content: "";
+  display: inline-block;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  margin-right: 5px;
+  background-position: 0 -16px;
+  height: 8px;
+  width: 8px;
+}
+.yfa-notifications.yfa-flyout-content .List-rich li {
+  padding-left: 1.5em;
+}
+.yfa-notifications.yfa-flyout-content .List-rich li.new-bullet:before {
+  background-color: #794DB7;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  content: " ";
+  display: inline-block;
+  margin: 0 .4em 0 -1em;
+  min-height: 8px;
+  min-width: 8px;
+  text-indent: 0;
+}

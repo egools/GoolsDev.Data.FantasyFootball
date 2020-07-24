@@ -1,0 +1,52 @@
+.yfa-banner.rivalry {
+  background: url(https://s.yimg.com/dh/ap/sports/fn/full/2013/rivalry.png) center top;
+  color: #fff;
+  height: 50px;
+  text-indent: -9999px;
+}
+
+.yfa-banner.matchupheader {
+  background: #eee;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+  border: 3px solid black;
+}
+.yfa-banner.matchupheader .yfa-figure {
+  background: orange;
+  /* placeholder */
+}
+.yfa-banner.matchupheader .yfa-title {
+  font-size: 25px;
+}
+.yfa-banner.matchupheader .yfa-stat-val,
+.yfa-banner.matchupheader .yfa-note {
+  clear: both;
+  font-weight: bold;
+}
+.yfa-banner.matchupheader .yfa-stat-val {
+  font-size: 15px;
+}
+.yfa-banner.matchupheader .edit-commishnote-form {
+  clear: both;
+}
+.yfa-banner.matchupheader.left {
+  padding-right: 20px;
+}
+.yfa-banner.matchupheader.left .yfa-title,
+.yfa-banner.matchupheader.left .yfa-stat-val,
+.yfa-banner.matchupheader.left .yfa-note,
+.yfa-banner.matchupheader.left .edit-commishnote-form {
+  float: right;
+}
+.yfa-banner.matchupheader.left .yfa-figure {
+  float: right;
+}
+.yfa-banner.matchupheader.right {
+  padding-left: 20px;
+}
+.yfa-banner.matchupheader.right .yfa-figure {
+  float: left;
+}

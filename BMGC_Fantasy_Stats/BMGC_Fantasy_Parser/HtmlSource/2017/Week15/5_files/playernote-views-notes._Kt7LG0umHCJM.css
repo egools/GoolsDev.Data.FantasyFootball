@@ -1,0 +1,355 @@
+/**
+ * playernote-views-notes.css
+ * Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+ * @package media_module_sports
+ * @link http://dist.corp.yahoo.com/by-package/media_module_sports/
+ * @author ronadams@oath.com 
+ */
+ 
+.yui3-ysplayernote .playerdata,
+.yui3-ysplayernote .playernotes {
+    background-color: white;
+    float: left;
+    width: 50%;
+}
+
+.yui3-ysplayernote .playernotes {
+    float: right;
+}
+
+.yui3-ysplayernote .playerdata {
+    border-right: 1px solid #CCCCCC;
+    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    width: 49%;
+}
+
+.yui3-ysplayernote .playerdetails em{
+    font-size:85%;
+}
+.yui3-ysplayernote .playerdetails em.positive {
+    color: #14A963;
+}
+
+.yui3-ysplayernote .playerdetails em.negative {
+    color: #E86155;
+}
+
+.yui3-ysplayernote .teamsched-bd,
+.yui3-ysplayernote .yui-dt-bd
+{
+    background: white;
+    height: 100px;
+    overflow: auto;
+}
+
+.yui3-ysplayernote .teamsched .yui-dt-odd td {
+    background-color: white;
+}
+.yui3-ysplayernote .teamsched .yui-dt-even td {
+    background-color: #F1F2ED;
+}
+
+.yui3-ysplayernote .no-sched {
+    height: 119px;
+}
+
+.yui3-ysplayernote .no-sched .team-table td {
+  padding: 10px 4px;
+}
+
+.yui3-ysplayernote .playernotes-ft {
+    margin-top: -2px;
+    font-size: 77%;
+    zoom: 1;
+}
+
+.yui3-ysplayernote .teamsched-ft,
+.yui3-ysplayernote .playernotes-ft
+{
+    border-top: 1px solid #CCCCCC;
+}
+.yui3-ysplayernote .teamsched-ft {
+    /* -moz-box-shadow: -2px -1px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: -2px -1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: -2px -1px 2px rgba(0, 0, 0, 0.3); */
+}
+.yui3-ysplayernote .playernotes-ft {
+    /* -moz-box-shadow: 3px -1px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 3px -1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px -1px 2px rgba(0, 0, 0, 0.3);*/
+}
+
+.yui3-ysplayernote .teamsched-ft p,
+.yui3-ysplayernote .playernotes-ft p {
+    background: white;
+    border-top: 1px solid #dbdbdb;
+    height: 10px;
+    padding: 5px;
+}
+
+.yui3-ysplayernote .teamsched .teamtable {
+    margin-bottom: 0;
+    width: auto;
+}
+
+.yui3-ysplayernote .teamsched-bd {
+    height: 117px;
+}
+.yui3-ysplayernote .teamsched-bd h5 {
+    padding:3px;
+    background-color:#eee;
+}
+.yui3-ysplayernote .teamsched-bd .teamtable {
+    position: absolute;
+    left: -9999em;
+}
+
+.yui3-ysplayernote .no-sched .teamtable {
+    position: static;
+    left: 0;
+}
+
+.yui3-ysplayernote .teamsched table td.opp {
+    width: auto;
+}
+.yui3-ysplayernote .teamsched table td.fanpts{
+    width: 50px;
+    font-weight:bold;
+    text-align:left;
+}
+
+.yui3-ysplayernote .teamsched th em {
+    display:block;
+}
+
+.yui3-ysplayernote .teamsched th,
+.yui3-ysplayernote .teamsched thead
+{
+    border-width: 0;
+}
+
+.yui3-ysplayernote .teamsched .yui-dt-hd {
+    border-bottom: 1px solid #ABAB9E;
+    background-position:50% -2px;
+    background-repeat:repeat-x;
+}
+
+.yui3-ysplayernote .no-sched table {
+    width: 100%;
+}
+
+.yui3-ysplayernote .no-sched td {
+    text-align: center;
+}
+
+.yui3-ysplayernote .teamsched {
+    zoom:1;
+}
+
+.yui3-ysplayernote .teamsched .teamtable th.first {
+    border-left: 1px solid white;
+}
+
+.yui3-ysplayernote .teamsched .teamtable th {
+    border-right: 1px solid #ABAB9E;
+}
+
+.yui3-ysplayernote .teamsched .teamtable th.last {
+    border-right: 0px;
+}
+
+.yui3-ysplayernote .teamsched .teamtable td,
+.yui3-ysplayernote .teamsched .teamtable th
+{
+    white-space: nowrap;
+}
+
+.yui3-ysplayernote .teamsched .teamtable tr.future td.points {
+    color: #6f6f6f;
+    font-style: italic;
+}
+.yui3-ysplayernote .teamsched .teamtable th.stat {
+    background-color:#D8D9D5;
+    background-position:50% -2px;
+    background-repeat:repeat-x;
+    border-bottom:0 none;
+    text-align: center;
+}
+.yui3-ysplayernote .teamsched .teamtable th.three-pnt{
+    width:40px;
+}
+.yui3-ysplayernote .teamsched .teamtable td.status a.video {
+    display: inline-block;
+    text-indent: -9999em;
+    margin-left: 3px;
+    overflow: hidden;
+    padding-left: 0;
+    width: 13px;
+    zoom: 1;
+}
+.yui3-ysplayernote .teamsched .teamtable th.stat,
+.yui3-ysplayernote .teamsched .teamtable td.stat,
+.yui3-ysplayernote .teamsched .teamtable th.stat div,
+.yui3-ysplayernote .teamsched .teamtable td.stat div {
+    min-width: 25px;
+    text-align:left;
+    whitespace: nowrap;
+}
+.yui3-ysplayernote .teamsched .teamtable td.stat,
+.yui3-ysplayernote .teamsched .teamtable td.stat div {
+    min-width: 25px;
+}
+.yui3-ysplayernote .teamsched .teamtable th.yui-dt-col-gaa,
+.yui3-ysplayernote .teamsched .teamtable th.yui-dt-col-gaa div {
+    width: 25px;
+}
+.yui3-ysplayernote .teamsched .teamtable td.yui-dt-col-gaa,
+.yui3-ysplayernote .teamsched .teamtable td.yui-dt-col-gaa div {
+    width: 26px;
+}
+
+.yui3-ysplayernote .teamsched .teamtable tr.no-sched {
+    margin-bottom: 59px;
+}
+
+.yui3-ysplayernote .teamsched tr.future em.proj-pts,
+.yui3-ysplayernote .teamsched tr.current em.proj-pts,
+.yui3-ysplayernote .teamsched-ft em.proj-pts {
+    color: #868784;
+    font-style: italic;
+}
+
+.yui3-ysplayernote .teamsched-ft em.proj-pts {
+    display: block;
+    float: right;
+}
+
+.yui3-ysplayernote .playernotes-bd {
+    font-size: 85%;
+    height: 270px;
+    overflow: auto;
+    padding:0 7px 0;
+}
+
+.yui3-ysplayernote .playernotes-bd h6 {
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.yui3-ysplayernote .playernotes-bd p.no-notes {
+    border-bottom: 1px solid #313131;
+    color: #9d9d9d;
+    font-style: italic;
+    margin-bottom: 10px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.yui3-ysplayernote .noteitem {
+    border-bottom: 1px solid #313131;
+    padding:2px 2px 10px;
+    margin: 10px 5px 10px;
+    zoom:1;
+}
+
+.yui3-ysplayernote li.last {
+    border-bottom: none;
+}
+
+.yui3-ysplayernote .noteitem img {
+    margin-right: 4px;
+}
+
+.yui3-ysplayernote .noteitem p {
+    line-height: 131%;
+    margin-bottom: 5px;
+}
+
+.yui3-ysplayernote h4.team-notes {
+    color: #2a2a2a;
+    font-size: 92%;
+    margin-left: 7px;
+    float:none;
+}
+
+.yui3-ysplayernote h5 {
+    font-weight: bold;
+}
+
+.yui3-ysplayernote .noteitem strong,
+.yui3-ysplayernote .noteitem em {
+    font-weight: bold;
+}
+
+.yui3-ysplayernote .noteitem cite {
+    display: block;
+    margin-top: -5px;
+}
+.yui3-ysplayernote-hidden .teamsched .teamtable th {
+    border-right: none;
+}
+
+.yui3-ysplayernote-hidden .teamsched .teamtable {
+    border-top: none;
+    border-bottom: none;
+}
+
+.yui3-ysplayernote-hidden .teamsched thead,
+.yui3-ysplayernote-hidden .teamsched-ft {
+    border: none;
+}
+/* No YUI2 DataTable */
+.yui3-ysplayernote .teamsched{
+    zoom:1;
+    border-bottom:1px solid #abab9e;
+    height:250px;
+    margin:auto auto;
+    padding-top:20px;
+    position:relative;
+    background-color:#d8d9d5;
+}
+.yui3-ysplayernote .teamsched .teamtable th div.th-inner{
+    line-height:20px;
+    margin-left:-3px;
+    padding-left:5px;
+    position:absolute;
+    text-align:left;
+    top:0;
+    white-space:nowrap;
+}
+/* No YUI2 DataTable Overrides */
+.yui3-ysplayernote .teamsched .teamtable .headerRow0 th{
+    background:none;
+}
+.yui3-ysplayernote .teamsched .teamtable{
+    width:100%;
+}
+.yui3-ysplayernote .teamsched .teamtable th div{
+    border-left:1px solid #ABAB9E;
+}
+.yui3-ysplayernote .teamsched .teamtable th.first div{
+    border-left:0;
+}
+.yui3-ysplayernote .teamsched .teamtable th.week{
+    width:35px;
+}
+.yui3-ysplayernote .teamsched .teamtable{
+    margin-bottom:0;
+    border-collapse:collapse;
+}
+.yui3-ysplayernote .teamsched-bd{
+    height:100%;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+.yui3-ysplayernote .teamsched .teamtable tr th{
+    padding:0;
+}
+.yui3-ysplayernote .teamsched-bd .teamtable{
+    position:static;
+}
+.yui3-ysplayernote .teamsched .teamtable th{
+    border-right:0;
+}

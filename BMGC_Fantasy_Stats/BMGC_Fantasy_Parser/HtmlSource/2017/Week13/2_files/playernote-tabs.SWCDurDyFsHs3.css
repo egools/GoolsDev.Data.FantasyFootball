@@ -1,0 +1,67 @@
+<?php 
+$fonts = '"Yahoo Sans","Helvetica Neue",Helvetica,Arial,sans-serif';
+?>
+/**
+ * playernote-tabs.css
+ * Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+ * @package media_module_sports
+ * @link http://dist.corp.yahoo.com/by-package/media_module_sports/
+ * @author ronadams@oath.com 
+ */
+
+.yui3-ysplayernote .dynamicnote-tabs {
+}
+
+.yui3-ysplayernote ul.dynamicnote-tabs {
+    font-size:13px;
+    font-weight:400;
+    color:#DADADA;
+    word-spacing:0px;
+    line-height:17.55px;
+    text-align:left;
+    margin:0;
+    padding-top:5px;
+    padding-left:6px;
+    position:relative;
+    display:inline-block;
+    white-space:normal;
+    list-style:none outside none;
+}
+.yui3-ysplayernote .dynamicnote-tabs li {
+    font-size:13px;
+    font-weight:400;
+    color:#DADADA;
+    letter-spacing:normal;
+    word-spacing:0px;
+    line-height:17.55px;
+    text-align:left;
+    vertical-align:middle;
+    margin:0 10px;
+    padding:0 0 5px 0;
+    position:relative;
+    display:inline-block;
+    white-space:normal;
+    list-style:none outside none;
+}
+.yui3-ysplayernote .dynamicnote-tabs li.selected {
+    border-bottom: 5px solid #DADADA;
+    padding-bottom:0;
+}
+
+.yui3-ysplayernote .dynamicnote-tabs li a {
+    color:#dadada;
+    padding: 6px 0;
+}
+.yui3-ysplayernote .dynamicnote-tabs li.selected a {
+    color: #eee;
+    font-weight: 700;
+}
+.yui3-ysplayernote .dynamicnote-tabs li a:hover {
+    color:#fff;
+}
+.yui3-ysplayernote .yui3-ysplayernote-tabview .playernote-tabs {
+    margin-bottom:1px;
+    padding-right:10px;
+    background:rgb(52, 52, 52);
+    min-height:28px;
+}

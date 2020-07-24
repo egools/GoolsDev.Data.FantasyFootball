@@ -1,0 +1,19 @@
+/**
+ * playernote-views-video.css
+ * Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+ * @package media_module_sports
+ * @link http://dist.corp.yahoo.com/by-package/media_module_sports/
+ * @author ronadams@oath.com 
+ */
+
+.yui3-ysplayernote .playernoteview-video {
+    background-color: white;
+    margin-bottom: 1px;
+}
+.yui3-ysplayernote .playernoteview-video div {
+    margin-top: 10px;
+    text-align: center;
+}
+.yui3-ysplayernote .playernoteview-video div.no-video p {
+    margin-top: 120px;
+}
