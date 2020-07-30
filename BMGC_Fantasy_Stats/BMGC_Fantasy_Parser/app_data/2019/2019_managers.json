@@ -1,0 +1,78 @@
+{
+    "LeagueName": "Bald Mountain 14 (ID# 724919)",
+    "SeasonYear": "2019",
+    "Managers": [
+        {
+            "TeamName": "All Eyez On Me",
+            "Manager": "Gerald Prieskorn",
+            "MovesMade": 8,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Beast From The East",
+            "Manager": "Matt",
+            "MovesMade": 27,
+            "TradesMade": 1
+        },
+        {
+            "TeamName": "Brown vs. The NFL",
+            "Manager": "Truck",
+            "MovesMade": 28,
+            "TradesMade": 1
+        },
+        {
+            "TeamName": "Cage the Hampster",
+            "Manager": "Denny",
+            "MovesMade": 30,
+            "TradesMade": 1
+        },
+        {
+            "TeamName": "Cat",
+            "Manager": "Eric",
+            "MovesMade": 29,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Dad Says What",
+            "Manager": "Jeff Brakora",
+            "MovesMade": 41,
+            "TradesMade": 1
+        },
+        {
+            "TeamName": "Fuck this team.",
+            "Manager": "kev krank",
+            "MovesMade": 26,
+            "TradesMade": 2
+        },
+        {
+            "TeamName": "NFC North",
+            "Manager": "Zach",
+            "MovesMade": 28,
+            "TradesMade": 3
+        },
+        {
+            "TeamName": "Oh Biiilllyyy",
+            "Manager": "Bailey",
+            "MovesMade": 19,
+            "TradesMade": 5
+        },
+        {
+            "TeamName": "RectumIHardly69edHer",
+            "Manager": "DanG",
+            "MovesMade": 16,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "The good kind of RPO",
+            "Manager": "Tyler G",
+            "MovesMade": 31,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Topless Tapas",
+            "Manager": "SnowmanCommissioner",
+            "MovesMade": 34,
+            "TradesMade": 2
+        }
+    ]
+}

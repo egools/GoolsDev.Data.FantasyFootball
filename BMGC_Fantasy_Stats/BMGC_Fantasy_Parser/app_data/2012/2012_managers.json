@@ -1,0 +1,78 @@
+{
+    "LeagueName": "Bald Mountain 7 (ID# 109690)",
+    "SeasonYear": "2012",
+    "Managers": [
+        {
+            "TeamName": "All World",
+            "Manager": "Zach",
+            "MovesMade": 25,
+            "TradesMade": 1
+        },
+        {
+            "TeamName": "Braka Flocka",
+            "Manager": "Jeff Brakora",
+            "MovesMade": 26,
+            "TradesMade": 3
+        },
+        {
+            "TeamName": "DJG - Holdout",
+            "Manager": "DanG",
+            "MovesMade": 23,
+            "TradesMade": 4
+        },
+        {
+            "TeamName": "Durdy Burd",
+            "Manager": "Eric",
+            "MovesMade": 35,
+            "TradesMade": 1
+        },
+        {
+            "TeamName": "Fully Torqued",
+            "Manager": "JFO",
+            "MovesMade": 18,
+            "TradesMade": 2
+        },
+        {
+            "TeamName": "HAN SOLO",
+            "Manager": "steve",
+            "MovesMade": 20,
+            "TradesMade": 1
+        },
+        {
+            "TeamName": "LNGBNM",
+            "Manager": "SnowmanCommissioner",
+            "MovesMade": 36,
+            "TradesMade": 1
+        },
+        {
+            "TeamName": "NutsOnChin",
+            "Manager": "Gerald Prieskorn",
+            "MovesMade": 0,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Otis Ackner",
+            "Manager": "bruce",
+            "MovesMade": 11,
+            "TradesMade": 3
+        },
+        {
+            "TeamName": "TeamSuckCock III",
+            "Manager": "kev krank",
+            "MovesMade": 27,
+            "TradesMade": 3
+        },
+        {
+            "TeamName": "Temple... Preach!",
+            "Manager": "Steve Ackner",
+            "MovesMade": 14,
+            "TradesMade": 1
+        },
+        {
+            "TeamName": "Walk Wit My Tits",
+            "Manager": "Tyler G",
+            "MovesMade": 8,
+            "TradesMade": 0
+        }
+    ]
+}

@@ -1,0 +1,1327 @@
+{
+    "LeagueName": "Bald Mountain 13 (ID# 1109964)",
+    "SeasonYear": "2018",
+    "Teams": [
+        {
+            "TeamName": "【﻿ＣＨＯＷＴＩＭＥ】",
+            "Players": [
+                {
+                    "Round": 1,
+                    "DraftPosition": 1,
+                    "FullName": "Melvin Gordon III",
+                    "PlayerId": 28403,
+                    "Price": 54
+                },
+                {
+                    "Round": 2,
+                    "DraftPosition": 13,
+                    "FullName": "Tyreek Hill",
+                    "PlayerId": 29399,
+                    "Price": 35
+                },
+                {
+                    "Round": 3,
+                    "DraftPosition": 25,
+                    "FullName": "Royce Freeman",
+                    "PlayerId": 31041,
+                    "Price": 27
+                },
+                {
+                    "Round": 4,
+                    "DraftPosition": 37,
+                    "FullName": "Brandin Cooks",
+                    "PlayerId": 27548,
+                    "Price": 19
+                },
+                {
+                    "Round": 5,
+                    "DraftPosition": 49,
+                    "FullName": "Jay Ajayi",
+                    "PlayerId": 28537,
+                    "Price": 15
+                },
+                {
+                    "Round": 6,
+                    "DraftPosition": 61,
+                    "FullName": "Josh Gordon",
+                    "PlayerId": 26561,
+                    "Price": 13
+                },
+                {
+                    "Round": 7,
+                    "DraftPosition": 73,
+                    "FullName": "Calvin Ridley",
+                    "PlayerId": 30996,
+                    "Price": 9
+                },
+                {
+                    "Round": 8,
+                    "DraftPosition": 85,
+                    "FullName": "Evan Engram",
+                    "PlayerId": 30136,
+                    "Price": 6
+                },
+                {
+                    "Round": 9,
+                    "DraftPosition": 97,
+                    "FullName": "Isaiah Crowell",
+                    "PlayerId": 28014,
+                    "Price": 5
+                },
+                {
+                    "Round": 10,
+                    "DraftPosition": 109,
+                    "FullName": "Alshon Jeffery",
+                    "PlayerId": 25755,
+                    "Price": 5
+                },
+                {
+                    "Round": 11,
+                    "DraftPosition": 121,
+                    "FullName": "Carson Wentz",
+                    "PlayerId": 29236,
+                    "Price": 4
+                },
+                {
+                    "Round": 12,
+                    "DraftPosition": 133,
+                    "FullName": "Jimmy Garoppolo",
+                    "PlayerId": 27590,
+                    "Price": 3
+                },
+                {
+                    "Round": 13,
+                    "DraftPosition": 145,
+                    "FullName": "Graham Gano",
+                    "PlayerId": 9526,
+                    "Price": 2
+                },
+                {
+                    "Round": 14,
+                    "DraftPosition": 157,
+                    "FullName": "Minnesota",
+                    "PlayerId": null,
+                    "Price": 2
+                },
+                {
+                    "Round": 15,
+                    "DraftPosition": 169,
+                    "FullName": "Duke Johnson",
+                    "PlayerId": 28465,
+                    "Price": 1
+                }
+            ]
+        },
+        {
+            "TeamName": "Percocet Strip Joint",
+            "Players": [
+                {
+                    "Round": 1,
+                    "DraftPosition": 2,
+                    "FullName": "Ezekiel Elliott",
+                    "PlayerId": 29238,
+                    "Price": 71
+                },
+                {
+                    "Round": 2,
+                    "DraftPosition": 14,
+                    "FullName": "A.J. Green",
+                    "PlayerId": 24791,
+                    "Price": 40
+                },
+                {
+                    "Round": 3,
+                    "DraftPosition": 26,
+                    "FullName": "Chris Hogan",
+                    "PlayerId": 25178,
+                    "Price": 21
+                },
+                {
+                    "Round": 4,
+                    "DraftPosition": 38,
+                    "FullName": "Chris Carson",
+                    "PlayerId": 30362,
+                    "Price": 15
+                },
+                {
+                    "Round": 5,
+                    "DraftPosition": 50,
+                    "FullName": "Adrian Peterson",
+                    "PlayerId": 8261,
+                    "Price": 15
+                },
+                {
+                    "Round": 6,
+                    "DraftPosition": 62,
+                    "FullName": "Kirk Cousins",
+                    "PlayerId": 25812,
+                    "Price": 10
+                },
+                {
+                    "Round": 7,
+                    "DraftPosition": 74,
+                    "FullName": "LeGarrette Blount",
+                    "PlayerId": 24318,
+                    "Price": 8
+                },
+                {
+                    "Round": 8,
+                    "DraftPosition": 86,
+                    "FullName": "Jordan Reed",
+                    "PlayerId": 26708,
+                    "Price": 5
+                },
+                {
+                    "Round": 9,
+                    "DraftPosition": 98,
+                    "FullName": "Andrew Luck",
+                    "PlayerId": 25711,
+                    "Price": 4
+                },
+                {
+                    "Round": 10,
+                    "DraftPosition": 110,
+                    "FullName": "Jordy Nelson",
+                    "PlayerId": 8813,
+                    "Price": 3
+                },
+                {
+                    "Round": 11,
+                    "DraftPosition": 122,
+                    "FullName": "Philadelphia",
+                    "PlayerId": null,
+                    "Price": 2
+                },
+                {
+                    "Round": 12,
+                    "DraftPosition": 134,
+                    "FullName": "DeVante Parker",
+                    "PlayerId": 28402,
+                    "Price": 2
+                },
+                {
+                    "Round": 13,
+                    "DraftPosition": 146,
+                    "FullName": "Devontae Booker",
+                    "PlayerId": 29370,
+                    "Price": 2
+                },
+                {
+                    "Round": 14,
+                    "DraftPosition": 158,
+                    "FullName": "Harrison Butker",
+                    "PlayerId": 30346,
+                    "Price": 1
+                },
+                {
+                    "Round": 15,
+                    "DraftPosition": 170,
+                    "FullName": "Austin Seferian-Jenkins",
+                    "PlayerId": 27566,
+                    "Price": 1
+                }
+            ]
+        },
+        {
+            "TeamName": "BEST DAY EVER",
+            "Players": [
+                {
+                    "Round": 1,
+                    "DraftPosition": 3,
+                    "FullName": "Le'Veon Bell",
+                    "PlayerId": 26671,
+                    "Price": 64
+                },
+                {
+                    "Round": 2,
+                    "DraftPosition": 15,
+                    "FullName": "DeAndre Hopkins",
+                    "PlayerId": 26650,
+                    "Price": 54
+                },
+                {
+                    "Round": 3,
+                    "DraftPosition": 27,
+                    "FullName": "Doug Baldwin",
+                    "PlayerId": 25105,
+                    "Price": 25
+                },
+                {
+                    "Round": 4,
+                    "DraftPosition": 39,
+                    "FullName": "T.Y. Hilton",
+                    "PlayerId": 25802,
+                    "Price": 22
+                },
+                {
+                    "Round": 5,
+                    "DraftPosition": 51,
+                    "FullName": "Alfred Morris",
+                    "PlayerId": 25883,
+                    "Price": 11
+                },
+                {
+                    "Round": 6,
+                    "DraftPosition": 63,
+                    "FullName": "Dion Lewis",
+                    "PlayerId": 24936,
+                    "Price": 9
+                },
+                {
+                    "Round": 7,
+                    "DraftPosition": 75,
+                    "FullName": "Kyle Rudolph",
+                    "PlayerId": 24830,
+                    "Price": 4
+                },
+                {
+                    "Round": 8,
+                    "DraftPosition": 87,
+                    "FullName": "New England",
+                    "PlayerId": null,
+                    "Price": 2
+                },
+                {
+                    "Round": 9,
+                    "DraftPosition": 99,
+                    "FullName": "Tarik Cohen",
+                    "PlayerId": 30232,
+                    "Price": 2
+                },
+                {
+                    "Round": 10,
+                    "DraftPosition": 111,
+                    "FullName": "Robert Woods",
+                    "PlayerId": 26664,
+                    "Price": 2
+                },
+                {
+                    "Round": 11,
+                    "DraftPosition": 123,
+                    "FullName": "Eli Manning",
+                    "PlayerId": 6760,
+                    "Price": 1
+                },
+                {
+                    "Round": 12,
+                    "DraftPosition": 135,
+                    "FullName": "Robbie Gould",
+                    "PlayerId": 7520,
+                    "Price": 1
+                },
+                {
+                    "Round": 13,
+                    "DraftPosition": 147,
+                    "FullName": "Derek Carr",
+                    "PlayerId": 27564,
+                    "Price": 1
+                },
+                {
+                    "Round": 14,
+                    "DraftPosition": 159,
+                    "FullName": "Theo Riddick",
+                    "PlayerId": 26822,
+                    "Price": 1
+                },
+                {
+                    "Round": 15,
+                    "DraftPosition": 171,
+                    "FullName": "Rishard Matthews",
+                    "PlayerId": 25937,
+                    "Price": 1
+                }
+            ]
+        },
+        {
+            "TeamName": "Cage the Hampster",
+            "Players": [
+                {
+                    "Round": 1,
+                    "DraftPosition": 4,
+                    "FullName": "Michael Thomas",
+                    "PlayerId": 29281,
+                    "Price": 46
+                },
+                {
+                    "Round": 2,
+                    "DraftPosition": 16,
+                    "FullName": "Dalvin Cook",
+                    "PlayerId": 30154,
+                    "Price": 45
+                },
+                {
+                    "Round": 3,
+                    "DraftPosition": 28,
+                    "FullName": "Travis Kelce",
+                    "PlayerId": 26686,
+                    "Price": 29
+                },
+                {
+                    "Round": 4,
+                    "DraftPosition": 40,
+                    "FullName": "Jarvis Landry",
+                    "PlayerId": 27591,
+                    "Price": 17
+                },
+                {
+                    "Round": 5,
+                    "DraftPosition": 52,
+                    "FullName": "Kerryon Johnson",
+                    "PlayerId": 31013,
+                    "Price": 14
+                },
+                {
+                    "Round": 6,
+                    "DraftPosition": 64,
+                    "FullName": "Nelson Agholor",
+                    "PlayerId": 28408,
+                    "Price": 11
+                },
+                {
+                    "Round": 7,
+                    "DraftPosition": 76,
+                    "FullName": "Matt Breida",
+                    "PlayerId": 30552,
+                    "Price": 11
+                },
+                {
+                    "Round": 8,
+                    "DraftPosition": 88,
+                    "FullName": "Cam Newton",
+                    "PlayerId": 24788,
+                    "Price": 8
+                },
+                {
+                    "Round": 9,
+                    "DraftPosition": 100,
+                    "FullName": "Rashaad Penny",
+                    "PlayerId": 30997,
+                    "Price": 7
+                },
+                {
+                    "Round": 10,
+                    "DraftPosition": 112,
+                    "FullName": "Jordan Wilkins",
+                    "PlayerId": 31139,
+                    "Price": 4
+                },
+                {
+                    "Round": 11,
+                    "DraftPosition": 124,
+                    "FullName": "Jacksonville",
+                    "PlayerId": null,
+                    "Price": 3
+                },
+                {
+                    "Round": 12,
+                    "DraftPosition": 136,
+                    "FullName": "Michael Gallup",
+                    "PlayerId": 31051,
+                    "Price": 2
+                },
+                {
+                    "Round": 13,
+                    "DraftPosition": 148,
+                    "FullName": "Matt Bryant",
+                    "PlayerId": 6243,
+                    "Price": 1
+                },
+                {
+                    "Round": 14,
+                    "DraftPosition": 160,
+                    "FullName": "Tyler Lockett",
+                    "PlayerId": 28457,
+                    "Price": 1
+                },
+                {
+                    "Round": 15,
+                    "DraftPosition": 172,
+                    "FullName": "Corey Clement",
+                    "PlayerId": 30707,
+                    "Price": 1
+                }
+            ]
+        },
+        {
+            "TeamName": "RectumIHardly69edHer",
+            "Players": [
+                {
+                    "Round": 1,
+                    "DraftPosition": 5,
+                    "FullName": "Todd Gurley II",
+                    "PlayerId": 28398,
+                    "Price": 67
+                },
+                {
+                    "Round": 2,
+                    "DraftPosition": 17,
+                    "FullName": "Alex Collins",
+                    "PlayerId": 29405,
+                    "Price": 25
+                },
+                {
+                    "Round": 3,
+                    "DraftPosition": 29,
+                    "FullName": "JuJu Smith-Schuster",
+                    "PlayerId": 30175,
+                    "Price": 24
+                },
+                {
+                    "Round": 4,
+                    "DraftPosition": 41,
+                    "FullName": "Zach Ertz",
+                    "PlayerId": 26658,
+                    "Price": 17
+                },
+                {
+                    "Round": 5,
+                    "DraftPosition": 53,
+                    "FullName": "Deshaun Watson",
+                    "PlayerId": 30125,
+                    "Price": 16
+                },
+                {
+                    "Round": 6,
+                    "DraftPosition": 65,
+                    "FullName": "Demaryius Thomas",
+                    "PlayerId": 23997,
+                    "Price": 16
+                },
+                {
+                    "Round": 7,
+                    "DraftPosition": 77,
+                    "FullName": "Chris Thompson",
+                    "PlayerId": 26777,
+                    "Price": 11
+                },
+                {
+                    "Round": 8,
+                    "DraftPosition": 89,
+                    "FullName": "Mark Ingram II",
+                    "PlayerId": 24815,
+                    "Price": 10
+                },
+                {
+                    "Round": 9,
+                    "DraftPosition": 101,
+                    "FullName": "Tevin Coleman",
+                    "PlayerId": 28461,
+                    "Price": 7
+                },
+                {
+                    "Round": 10,
+                    "DraftPosition": 113,
+                    "FullName": "Los Angeles",
+                    "PlayerId": null,
+                    "Price": 2
+                },
+                {
+                    "Round": 11,
+                    "DraftPosition": 125,
+                    "FullName": "Chris Godwin",
+                    "PlayerId": 30197,
+                    "Price": 1
+                },
+                {
+                    "Round": 12,
+                    "DraftPosition": 137,
+                    "FullName": "Wil Lutz",
+                    "PlayerId": 29754,
+                    "Price": 1
+                },
+                {
+                    "Round": 13,
+                    "DraftPosition": 149,
+                    "FullName": "Randall Cobb",
+                    "PlayerId": 24851,
+                    "Price": 1
+                },
+                {
+                    "Round": 14,
+                    "DraftPosition": 161,
+                    "FullName": "John Brown",
+                    "PlayerId": 27619,
+                    "Price": 1
+                },
+                {
+                    "Round": 15,
+                    "DraftPosition": 173,
+                    "FullName": "James White",
+                    "PlayerId": 27658,
+                    "Price": 1
+                }
+            ]
+        },
+        {
+            "TeamName": "The good kind of RPO",
+            "Players": [
+                {
+                    "Round": 1,
+                    "DraftPosition": 6,
+                    "FullName": "Saquon Barkley",
+                    "PlayerId": 30972,
+                    "Price": 56
+                },
+                {
+                    "Round": 2,
+                    "DraftPosition": 18,
+                    "FullName": "Kareem Hunt",
+                    "PlayerId": 30199,
+                    "Price": 45
+                },
+                {
+                    "Round": 3,
+                    "DraftPosition": 30,
+                    "FullName": "Rob Gronkowski",
+                    "PlayerId": 24017,
+                    "Price": 33
+                },
+                {
+                    "Round": 4,
+                    "DraftPosition": 42,
+                    "FullName": "Allen Robinson II",
+                    "PlayerId": 27589,
+                    "Price": 17
+                },
+                {
+                    "Round": 5,
+                    "DraftPosition": 54,
+                    "FullName": "Larry Fitzgerald",
+                    "PlayerId": 6762,
+                    "Price": 17
+                },
+                {
+                    "Round": 6,
+                    "DraftPosition": 66,
+                    "FullName": "Russell Wilson",
+                    "PlayerId": 25785,
+                    "Price": 16
+                },
+                {
+                    "Round": 7,
+                    "DraftPosition": 78,
+                    "FullName": "Michael Crabtree",
+                    "PlayerId": 9274,
+                    "Price": 7
+                },
+                {
+                    "Round": 8,
+                    "DraftPosition": 90,
+                    "FullName": "Jamison Crowder",
+                    "PlayerId": 28493,
+                    "Price": 2
+                },
+                {
+                    "Round": 9,
+                    "DraftPosition": 102,
+                    "FullName": "Cameron Meredith",
+                    "PlayerId": 28697,
+                    "Price": 1
+                },
+                {
+                    "Round": 10,
+                    "DraftPosition": 114,
+                    "FullName": "Adam Vinatieri",
+                    "PlayerId": 3727,
+                    "Price": 1
+                },
+                {
+                    "Round": 11,
+                    "DraftPosition": 126,
+                    "FullName": "New Orleans",
+                    "PlayerId": null,
+                    "Price": 1
+                },
+                {
+                    "Round": 12,
+                    "DraftPosition": 138,
+                    "FullName": "Nick Chubb",
+                    "PlayerId": 31005,
+                    "Price": 1
+                },
+                {
+                    "Round": 13,
+                    "DraftPosition": 150,
+                    "FullName": "Spencer Ware",
+                    "PlayerId": 26817,
+                    "Price": 1
+                },
+                {
+                    "Round": 14,
+                    "DraftPosition": 162,
+                    "FullName": "Ronald Jones II",
+                    "PlayerId": 31008,
+                    "Price": 1
+                },
+                {
+                    "Round": 15,
+                    "DraftPosition": 174,
+                    "FullName": "Dak Prescott",
+                    "PlayerId": 29369,
+                    "Price": 1
+                }
+            ]
+        },
+        {
+            "TeamName": "Dad Says What",
+            "Players": [
+                {
+                    "Round": 1,
+                    "DraftPosition": 7,
+                    "FullName": "David Johnson",
+                    "PlayerId": 28474,
+                    "Price": 57
+                },
+                {
+                    "Round": 2,
+                    "DraftPosition": 19,
+                    "FullName": "Christian McCaffrey",
+                    "PlayerId": 30121,
+                    "Price": 51
+                },
+                {
+                    "Round": 3,
+                    "DraftPosition": 31,
+                    "FullName": "Odell Beckham Jr.",
+                    "PlayerId": 27540,
+                    "Price": 49
+                },
+                {
+                    "Round": 4,
+                    "DraftPosition": 43,
+                    "FullName": "Adam Thielen",
+                    "PlayerId": 27277,
+                    "Price": 27
+                },
+                {
+                    "Round": 5,
+                    "DraftPosition": 55,
+                    "FullName": "Trey Burton",
+                    "PlayerId": 27789,
+                    "Price": 5
+                },
+                {
+                    "Round": 6,
+                    "DraftPosition": 67,
+                    "FullName": "Jared Goff",
+                    "PlayerId": 29235,
+                    "Price": 2
+                },
+                {
+                    "Round": 7,
+                    "DraftPosition": 79,
+                    "FullName": "C.J. Anderson",
+                    "PlayerId": 26878,
+                    "Price": 1
+                },
+                {
+                    "Round": 8,
+                    "DraftPosition": 91,
+                    "FullName": "Chris Boswell",
+                    "PlayerId": 28188,
+                    "Price": 1
+                },
+                {
+                    "Round": 9,
+                    "DraftPosition": 103,
+                    "FullName": "Pittsburgh",
+                    "PlayerId": null,
+                    "Price": 1
+                },
+                {
+                    "Round": 10,
+                    "DraftPosition": 115,
+                    "FullName": "John Ross III",
+                    "PlayerId": 30122,
+                    "Price": 1
+                },
+                {
+                    "Round": 11,
+                    "DraftPosition": 127,
+                    "FullName": "Aaron Jones",
+                    "PlayerId": 30295,
+                    "Price": 1
+                },
+                {
+                    "Round": 12,
+                    "DraftPosition": 139,
+                    "FullName": "Marcus Mariota",
+                    "PlayerId": 28390,
+                    "Price": 1
+                },
+                {
+                    "Round": 13,
+                    "DraftPosition": 151,
+                    "FullName": "James Conner",
+                    "PlayerId": 30218,
+                    "Price": 1
+                },
+                {
+                    "Round": 14,
+                    "DraftPosition": 163,
+                    "FullName": "Courtland Sutton",
+                    "PlayerId": 31010,
+                    "Price": 1
+                },
+                {
+                    "Round": 15,
+                    "DraftPosition": 175,
+                    "FullName": "Anthony Miller",
+                    "PlayerId": 31021,
+                    "Price": 1
+                }
+            ]
+        },
+        {
+            "TeamName": "FugueStateUniversity",
+            "Players": [
+                {
+                    "Round": 1,
+                    "DraftPosition": 8,
+                    "FullName": "Alvin Kamara",
+                    "PlayerId": 30180,
+                    "Price": 55
+                },
+                {
+                    "Round": 2,
+                    "DraftPosition": 20,
+                    "FullName": "Stefon Diggs",
+                    "PlayerId": 28534,
+                    "Price": 36
+                },
+                {
+                    "Round": 3,
+                    "DraftPosition": 32,
+                    "FullName": "Davante Adams",
+                    "PlayerId": 27581,
+                    "Price": 32
+                },
+                {
+                    "Round": 4,
+                    "DraftPosition": 44,
+                    "FullName": "Carlos Hyde",
+                    "PlayerId": 27585,
+                    "Price": 14
+                },
+                {
+                    "Round": 5,
+                    "DraftPosition": 56,
+                    "FullName": "Emmanuel Sanders",
+                    "PlayerId": 24057,
+                    "Price": 14
+                },
+                {
+                    "Round": 6,
+                    "DraftPosition": 68,
+                    "FullName": "Bilal Powell",
+                    "PlayerId": 24913,
+                    "Price": 14
+                },
+                {
+                    "Round": 7,
+                    "DraftPosition": 80,
+                    "FullName": "Rex Burkhead",
+                    "PlayerId": 26813,
+                    "Price": 12
+                },
+                {
+                    "Round": 8,
+                    "DraftPosition": 92,
+                    "FullName": "Marshawn Lynch",
+                    "PlayerId": 8266,
+                    "Price": 11
+                },
+                {
+                    "Round": 9,
+                    "DraftPosition": 104,
+                    "FullName": "Patrick Mahomes",
+                    "PlayerId": 30123,
+                    "Price": 3
+                },
+                {
+                    "Round": 10,
+                    "DraftPosition": 116,
+                    "FullName": "Matt Ryan",
+                    "PlayerId": 8780,
+                    "Price": 2
+                },
+                {
+                    "Round": 11,
+                    "DraftPosition": 128,
+                    "FullName": "George Kittle",
+                    "PlayerId": 30259,
+                    "Price": 2
+                },
+                {
+                    "Round": 12,
+                    "DraftPosition": 140,
+                    "FullName": "Kenny Stills",
+                    "PlayerId": 26767,
+                    "Price": 2
+                },
+                {
+                    "Round": 13,
+                    "DraftPosition": 152,
+                    "FullName": "David Njoku",
+                    "PlayerId": 30142,
+                    "Price": 1
+                },
+                {
+                    "Round": 14,
+                    "DraftPosition": 164,
+                    "FullName": "Jake Elliott",
+                    "PlayerId": 30266,
+                    "Price": 1
+                },
+                {
+                    "Round": 15,
+                    "DraftPosition": 176,
+                    "FullName": "Baltimore",
+                    "PlayerId": null,
+                    "Price": 1
+                }
+            ]
+        },
+        {
+            "TeamName": "Oh Biiilllyyy",
+            "Players": [
+                {
+                    "Round": 1,
+                    "DraftPosition": 9,
+                    "FullName": "Antonio Brown",
+                    "PlayerId": 24171,
+                    "Price": 64
+                },
+                {
+                    "Round": 2,
+                    "DraftPosition": 21,
+                    "FullName": "Kenyan Drake",
+                    "PlayerId": 29307,
+                    "Price": 30
+                },
+                {
+                    "Round": 3,
+                    "DraftPosition": 33,
+                    "FullName": "LeSean McCoy",
+                    "PlayerId": 9317,
+                    "Price": 25
+                },
+                {
+                    "Round": 4,
+                    "DraftPosition": 45,
+                    "FullName": "Marquise Goodwin",
+                    "PlayerId": 26701,
+                    "Price": 18
+                },
+                {
+                    "Round": 5,
+                    "DraftPosition": 57,
+                    "FullName": "Golden Tate",
+                    "PlayerId": 24035,
+                    "Price": 17
+                },
+                {
+                    "Round": 6,
+                    "DraftPosition": 69,
+                    "FullName": "Tom Brady",
+                    "PlayerId": 5228,
+                    "Price": 14
+                },
+                {
+                    "Round": 7,
+                    "DraftPosition": 81,
+                    "FullName": "Greg Olsen",
+                    "PlayerId": 8285,
+                    "Price": 10
+                },
+                {
+                    "Round": 8,
+                    "DraftPosition": 93,
+                    "FullName": "Marlon Mack",
+                    "PlayerId": 30256,
+                    "Price": 5
+                },
+                {
+                    "Round": 9,
+                    "DraftPosition": 105,
+                    "FullName": "Keelan Cole",
+                    "PlayerId": 30396,
+                    "Price": 5
+                },
+                {
+                    "Round": 10,
+                    "DraftPosition": 117,
+                    "FullName": "Chris Ivory",
+                    "PlayerId": 24400,
+                    "Price": 3
+                },
+                {
+                    "Round": 11,
+                    "DraftPosition": 129,
+                    "FullName": "DJ Moore",
+                    "PlayerId": 30994,
+                    "Price": 3
+                },
+                {
+                    "Round": 12,
+                    "DraftPosition": 141,
+                    "FullName": "Los Angeles",
+                    "PlayerId": null,
+                    "Price": 2
+                },
+                {
+                    "Round": 13,
+                    "DraftPosition": 153,
+                    "FullName": "Alex Smith",
+                    "PlayerId": 7177,
+                    "Price": 2
+                },
+                {
+                    "Round": 14,
+                    "DraftPosition": 165,
+                    "FullName": "Matt Prater",
+                    "PlayerId": 8565,
+                    "Price": 1
+                },
+                {
+                    "Round": 15,
+                    "DraftPosition": 177,
+                    "FullName": "Charles Clay",
+                    "PlayerId": 24961,
+                    "Price": 1
+                }
+            ]
+        },
+        {
+            "TeamName": "Beast From The East",
+            "Players": [
+                {
+                    "Round": 1,
+                    "DraftPosition": 10,
+                    "FullName": "Keenan Allen",
+                    "PlayerId": 26699,
+                    "Price": 44
+                },
+                {
+                    "Round": 2,
+                    "DraftPosition": 22,
+                    "FullName": "Jordan Howard",
+                    "PlayerId": 29384,
+                    "Price": 38
+                },
+                {
+                    "Round": 3,
+                    "DraftPosition": 34,
+                    "FullName": "Lamar Miller",
+                    "PlayerId": 25807,
+                    "Price": 30
+                },
+                {
+                    "Round": 4,
+                    "DraftPosition": 46,
+                    "FullName": "Amari Cooper",
+                    "PlayerId": 28392,
+                    "Price": 22
+                },
+                {
+                    "Round": 5,
+                    "DraftPosition": 58,
+                    "FullName": "Marvin Jones Jr.",
+                    "PlayerId": 25876,
+                    "Price": 17
+                },
+                {
+                    "Round": 6,
+                    "DraftPosition": 70,
+                    "FullName": "Jimmy Graham",
+                    "PlayerId": 24070,
+                    "Price": 10
+                },
+                {
+                    "Round": 7,
+                    "DraftPosition": 82,
+                    "FullName": "Robby Anderson",
+                    "PlayerId": 29785,
+                    "Price": 10
+                },
+                {
+                    "Round": 8,
+                    "DraftPosition": 94,
+                    "FullName": "Julian Edelman",
+                    "PlayerId": 9496,
+                    "Price": 7
+                },
+                {
+                    "Round": 9,
+                    "DraftPosition": 106,
+                    "FullName": "Drew Brees",
+                    "PlayerId": 5479,
+                    "Price": 6
+                },
+                {
+                    "Round": 10,
+                    "DraftPosition": 118,
+                    "FullName": "Giovani Bernard",
+                    "PlayerId": 26660,
+                    "Price": 6
+                },
+                {
+                    "Round": 11,
+                    "DraftPosition": 130,
+                    "FullName": "Justin Tucker",
+                    "PlayerId": 26534,
+                    "Price": 2
+                },
+                {
+                    "Round": 12,
+                    "DraftPosition": 142,
+                    "FullName": "Denver",
+                    "PlayerId": null,
+                    "Price": 2
+                },
+                {
+                    "Round": 13,
+                    "DraftPosition": 154,
+                    "FullName": "Kelvin Benjamin",
+                    "PlayerId": 27556,
+                    "Price": 2
+                },
+                {
+                    "Round": 14,
+                    "DraftPosition": 166,
+                    "FullName": "Mike Williams",
+                    "PlayerId": 30120,
+                    "Price": 2
+                },
+                {
+                    "Round": 15,
+                    "DraftPosition": 178,
+                    "FullName": "Ben Roethlisberger",
+                    "PlayerId": 6770,
+                    "Price": 2
+                }
+            ]
+        },
+        {
+            "TeamName": "All Eyez On Me",
+            "Players": [
+                {
+                    "Round": 1,
+                    "DraftPosition": 11,
+                    "FullName": "Leonard Fournette",
+                    "PlayerId": 30117,
+                    "Price": 55
+                },
+                {
+                    "Round": 2,
+                    "DraftPosition": 23,
+                    "FullName": "Mike Evans",
+                    "PlayerId": 27535,
+                    "Price": 34
+                },
+                {
+                    "Round": 3,
+                    "DraftPosition": 35,
+                    "FullName": "Derrick Henry",
+                    "PlayerId": 29279,
+                    "Price": 29
+                },
+                {
+                    "Round": 4,
+                    "DraftPosition": 47,
+                    "FullName": "Jamaal Williams",
+                    "PlayerId": 30247,
+                    "Price": 19
+                },
+                {
+                    "Round": 5,
+                    "DraftPosition": 59,
+                    "FullName": "Will Fuller V",
+                    "PlayerId": 29255,
+                    "Price": 11
+                },
+                {
+                    "Round": 6,
+                    "DraftPosition": 71,
+                    "FullName": "Corey Davis",
+                    "PlayerId": 30118,
+                    "Price": 11
+                },
+                {
+                    "Round": 7,
+                    "DraftPosition": 83,
+                    "FullName": "Sony Michel",
+                    "PlayerId": 31001,
+                    "Price": 10
+                },
+                {
+                    "Round": 8,
+                    "DraftPosition": 95,
+                    "FullName": "Sterling Shepard",
+                    "PlayerId": 29274,
+                    "Price": 7
+                },
+                {
+                    "Round": 9,
+                    "DraftPosition": 107,
+                    "FullName": "Pierre Garcon",
+                    "PlayerId": 8982,
+                    "Price": 6
+                },
+                {
+                    "Round": 10,
+                    "DraftPosition": 119,
+                    "FullName": "Sammy Watkins",
+                    "PlayerId": 27532,
+                    "Price": 5
+                },
+                {
+                    "Round": 11,
+                    "DraftPosition": 131,
+                    "FullName": "Matthew Stafford",
+                    "PlayerId": 9265,
+                    "Price": 5
+                },
+                {
+                    "Round": 12,
+                    "DraftPosition": 143,
+                    "FullName": "Philip Rivers",
+                    "PlayerId": 6763,
+                    "Price": 4
+                },
+                {
+                    "Round": 13,
+                    "DraftPosition": 155,
+                    "FullName": "Greg Zuerlein",
+                    "PlayerId": 25881,
+                    "Price": 2
+                },
+                {
+                    "Round": 14,
+                    "DraftPosition": 167,
+                    "FullName": "Jack Doyle",
+                    "PlayerId": 27299,
+                    "Price": 1
+                },
+                {
+                    "Round": 15,
+                    "DraftPosition": 179,
+                    "FullName": "Houston",
+                    "PlayerId": null,
+                    "Price": 1
+                }
+            ]
+        },
+        {
+            "TeamName": "Fuck this team.",
+            "Players": [
+                {
+                    "Round": 1,
+                    "DraftPosition": 12,
+                    "FullName": "Julio Jones",
+                    "PlayerId": 24793,
+                    "Price": 57
+                },
+                {
+                    "Round": 2,
+                    "DraftPosition": 24,
+                    "FullName": "Devonta Freeman",
+                    "PlayerId": 27631,
+                    "Price": 49
+                },
+                {
+                    "Round": 3,
+                    "DraftPosition": 36,
+                    "FullName": "Joe Mixon",
+                    "PlayerId": 30161,
+                    "Price": 36
+                },
+                {
+                    "Round": 4,
+                    "DraftPosition": 48,
+                    "FullName": "Aaron Rodgers",
+                    "PlayerId": 7200,
+                    "Price": 23
+                },
+                {
+                    "Round": 5,
+                    "DraftPosition": 60,
+                    "FullName": "Peyton Barber",
+                    "PlayerId": 29560,
+                    "Price": 12
+                },
+                {
+                    "Round": 6,
+                    "DraftPosition": 72,
+                    "FullName": "Devin Funchess",
+                    "PlayerId": 28429,
+                    "Price": 6
+                },
+                {
+                    "Round": 7,
+                    "DraftPosition": 84,
+                    "FullName": "Cooper Kupp",
+                    "PlayerId": 30182,
+                    "Price": 5
+                },
+                {
+                    "Round": 8,
+                    "DraftPosition": 96,
+                    "FullName": "Delanie Walker",
+                    "PlayerId": 7924,
+                    "Price": 3
+                },
+                {
+                    "Round": 9,
+                    "DraftPosition": 108,
+                    "FullName": "Stephen Gostkowski",
+                    "PlayerId": 7867,
+                    "Price": 2
+                },
+                {
+                    "Round": 10,
+                    "DraftPosition": 120,
+                    "FullName": "Kenny Golladay",
+                    "PlayerId": 30209,
+                    "Price": 2
+                },
+                {
+                    "Round": 11,
+                    "DraftPosition": 132,
+                    "FullName": "Austin Ekeler",
+                    "PlayerId": 30423,
+                    "Price": 1
+                },
+                {
+                    "Round": 12,
+                    "DraftPosition": 144,
+                    "FullName": "Chicago",
+                    "PlayerId": null,
+                    "Price": 1
+                },
+                {
+                    "Round": 13,
+                    "DraftPosition": 156,
+                    "FullName": "Dez Bryant",
+                    "PlayerId": 23999,
+                    "Price": 1
+                },
+                {
+                    "Round": 14,
+                    "DraftPosition": 168,
+                    "FullName": "Corey Grant",
+                    "PlayerId": 28847,
+                    "Price": 1
+                },
+                {
+                    "Round": 15,
+                    "DraftPosition": 180,
+                    "FullName": "Josh Doctson",
+                    "PlayerId": 29256,
+                    "Price": 1
+                }
+            ]
+        }
+    ],
+    "IsAuction": true
+}

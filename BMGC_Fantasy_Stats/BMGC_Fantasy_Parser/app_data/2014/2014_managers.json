@@ -1,0 +1,78 @@
+{
+    "LeagueName": "Bald Mountain 9 (ID# 276246)",
+    "SeasonYear": "2014",
+    "Managers": [
+        {
+            "TeamName": "Andre 3 Plaques",
+            "Manager": "SnowmanCommissioner",
+            "MovesMade": 15,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Boom tho?",
+            "Manager": "Jeff Brakora",
+            "MovesMade": 33,
+            "TradesMade": 6
+        },
+        {
+            "TeamName": "Cage the Hampster",
+            "Manager": "Denny",
+            "MovesMade": 19,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "DanIs2Hot4Us",
+            "Manager": "Eric",
+            "MovesMade": 28,
+            "TradesMade": 2
+        },
+        {
+            "TeamName": "Dawson's Creek",
+            "Manager": "Tyler G",
+            "MovesMade": 23,
+            "TradesMade": 3
+        },
+        {
+            "TeamName": "FaceFuckers",
+            "Manager": "steve",
+            "MovesMade": 16,
+            "TradesMade": 1
+        },
+        {
+            "TeamName": "Football Butt69",
+            "Manager": "DanG",
+            "MovesMade": 14,
+            "TradesMade": 1
+        },
+        {
+            "TeamName": "Gerald Prieskorn",
+            "Manager": "Gerald Prieskorn",
+            "MovesMade": 4,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Morning Woodhead",
+            "Manager": "Zach",
+            "MovesMade": 25,
+            "TradesMade": 3
+        },
+        {
+            "TeamName": "Sack Attack!",
+            "Manager": "Steve Ackner",
+            "MovesMade": 36,
+            "TradesMade": 4
+        },
+        {
+            "TeamName": "Staff Infection",
+            "Manager": "Truck",
+            "MovesMade": 26,
+            "TradesMade": 1
+        },
+        {
+            "TeamName": "TSC Goin For 3",
+            "Manager": "kev krank",
+            "MovesMade": 30,
+            "TradesMade": 1
+        }
+    ]
+}

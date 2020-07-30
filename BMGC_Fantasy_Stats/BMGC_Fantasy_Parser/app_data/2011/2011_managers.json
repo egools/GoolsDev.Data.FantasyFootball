@@ -1,0 +1,78 @@
+{
+    "LeagueName": "BMGC VI (ID# 197497)",
+    "SeasonYear": "2011",
+    "Managers": [
+        {
+            "TeamName": "BigTimeTimmyJim",
+            "Manager": "steve",
+            "MovesMade": 5,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Cunilingus Rice",
+            "Manager": "kev krank",
+            "MovesMade": 27,
+            "TradesMade": 1
+        },
+        {
+            "TeamName": "Dan Knee",
+            "Manager": "DanG",
+            "MovesMade": 23,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "DanielThomasQuartet",
+            "Manager": "Eric",
+            "MovesMade": 25,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Double Birds",
+            "Manager": "SnowmanCommissioner",
+            "MovesMade": 24,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "DREAM TEAM",
+            "Manager": "Zach",
+            "MovesMade": 31,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Mike Vick Kennel Co.",
+            "Manager": "bruce",
+            "MovesMade": 21,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Niggaz be cray",
+            "Manager": "Steve Ackner",
+            "MovesMade": 17,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Not Last",
+            "Manager": "Tyler G",
+            "MovesMade": 38,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "NutsOnYourChin",
+            "Manager": "Gerald Prieskorn",
+            "MovesMade": 9,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Philadelphia Pride",
+            "Manager": "",
+            "MovesMade": 10,
+            "TradesMade": 1
+        },
+        {
+            "TeamName": "W.E.",
+            "Manager": "Jeff Brakora",
+            "MovesMade": 24,
+            "TradesMade": 0
+        }
+    ]
+}

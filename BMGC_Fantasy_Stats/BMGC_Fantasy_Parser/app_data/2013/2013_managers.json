@@ -1,0 +1,78 @@
+{
+    "LeagueName": "Bald Mountain VIII (ID# 215119)",
+    "SeasonYear": "2013",
+    "Managers": [
+        {
+            "TeamName": "$10 Side Bet",
+            "Manager": "Tyler G",
+            "MovesMade": 21,
+            "TradesMade": 2
+        },
+        {
+            "TeamName": "Arrelious Bennz",
+            "Manager": "Truck",
+            "MovesMade": 21,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "bodanksha smith",
+            "Manager": "Steve Ackner",
+            "MovesMade": 8,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Braka Flaka",
+            "Manager": "Jeff Brakora",
+            "MovesMade": 32,
+            "TradesMade": 2
+        },
+        {
+            "TeamName": "Cage the Hampster",
+            "Manager": "Denny",
+            "MovesMade": 13,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Child Please",
+            "Manager": "SnowmanCommissioner",
+            "MovesMade": 31,
+            "TradesMade": 1
+        },
+        {
+            "TeamName": "Colin Copernicus",
+            "Manager": "kev krank",
+            "MovesMade": 15,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "COOPER KLUX KLAN",
+            "Manager": "Zach",
+            "MovesMade": 54,
+            "TradesMade": 2
+        },
+        {
+            "TeamName": "From First To Last",
+            "Manager": "steve",
+            "MovesMade": 15,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Gerald Prieskorn",
+            "Manager": "Gerald Prieskorn",
+            "MovesMade": 8,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Grits N' Gravy",
+            "Manager": "Eric",
+            "MovesMade": 17,
+            "TradesMade": 2
+        },
+        {
+            "TeamName": "PamOliversConcussion",
+            "Manager": "DanG",
+            "MovesMade": 14,
+            "TradesMade": 1
+        }
+    ]
+}

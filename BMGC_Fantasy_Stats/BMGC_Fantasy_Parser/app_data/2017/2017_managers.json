@@ -1,0 +1,78 @@
+{
+    "LeagueName": "Bald Mountain 12 (ID# 1018864)",
+    "SeasonYear": "2017",
+    "Managers": [
+        {
+            "TeamName": "All Eyez On Me",
+            "Manager": "Gerald Prieskorn",
+            "MovesMade": 18,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Beast From The East",
+            "Manager": "Matt",
+            "MovesMade": 18,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Cage the Hampster",
+            "Manager": "Denny",
+            "MovesMade": 15,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Danthrax",
+            "Manager": "Jeff Brakora",
+            "MovesMade": 33,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Fuck this team.",
+            "Manager": "kev krank",
+            "MovesMade": 29,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Heavyweights",
+            "Manager": "Tyler G",
+            "MovesMade": 29,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "KirkCousinsPotatoes",
+            "Manager": "SnowmanCommissioner",
+            "MovesMade": 29,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Large Whale",
+            "Manager": "Zach",
+            "MovesMade": 20,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Make BM12 Great",
+            "Manager": "steve",
+            "MovesMade": 8,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Mr. Manager",
+            "Manager": "DanG",
+            "MovesMade": 22,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "You Rock Fellas",
+            "Manager": "Truck",
+            "MovesMade": 19,
+            "TradesMade": 1
+        },
+        {
+            "TeamName": "ＰＯＯＰＥＭＯＪＩ",
+            "Manager": "Eric",
+            "MovesMade": 26,
+            "TradesMade": 1
+        }
+    ]
+}

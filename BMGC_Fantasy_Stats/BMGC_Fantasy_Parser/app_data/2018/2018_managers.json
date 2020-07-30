@@ -1,0 +1,78 @@
+{
+    "LeagueName": "Bald Mountain 13 (ID# 1109964)",
+    "SeasonYear": "2018",
+    "Managers": [
+        {
+            "TeamName": "All Eyez On Me",
+            "Manager": "Gerald Prieskorn",
+            "MovesMade": 11,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Beast From The East",
+            "Manager": "Matt",
+            "MovesMade": 15,
+            "TradesMade": 1
+        },
+        {
+            "TeamName": "BEST DAY EVER",
+            "Manager": "Zach",
+            "MovesMade": 20,
+            "TradesMade": 2
+        },
+        {
+            "TeamName": "Cage the Hampster",
+            "Manager": "Denny",
+            "MovesMade": 15,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "Dad Says What",
+            "Manager": "Jeff Brakora",
+            "MovesMade": 40,
+            "TradesMade": 2
+        },
+        {
+            "TeamName": "Fuck this team.",
+            "Manager": "kev krank",
+            "MovesMade": 27,
+            "TradesMade": 0
+        },
+        {
+            "TeamName": "FugueStateUniversity",
+            "Manager": "SnowmanCommissioner",
+            "MovesMade": 26,
+            "TradesMade": 1
+        },
+        {
+            "TeamName": "Oh Biiilllyyy",
+            "Manager": "Bailey",
+            "MovesMade": 12,
+            "TradesMade": 1
+        },
+        {
+            "TeamName": "Percocet Strip Joint",
+            "Manager": "Truck",
+            "MovesMade": 31,
+            "TradesMade": 1
+        },
+        {
+            "TeamName": "RectumIHardly69edHer",
+            "Manager": "DanG",
+            "MovesMade": 14,
+            "TradesMade": 3
+        },
+        {
+            "TeamName": "The good kind of RPO",
+            "Manager": "Tyler G",
+            "MovesMade": 31,
+            "TradesMade": 2
+        },
+        {
+            "TeamName": "【﻿ＣＨＯＷＴＩＭＥ】",
+            "Manager": "Eric",
+            "MovesMade": 33,
+            "TradesMade": 1
+        }
+    ]
+}
