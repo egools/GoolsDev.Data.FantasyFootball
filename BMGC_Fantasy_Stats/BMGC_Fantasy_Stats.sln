@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FantasyParser", "BMGC_Fantasy_Parser\FantasyParser.csproj", "{7A53B59F-70B0-49EA-8BD7-D6130666DF3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyComponents", "FantasyUtil\FantasyComponents.csproj", "{C6E60BB5-FA82-4D48-869E-9D6B8B007767}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FantasyComponents", "FantasyUtil\FantasyComponents.csproj", "{C6E60BB5-FA82-4D48-869E-9D6B8B007767}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

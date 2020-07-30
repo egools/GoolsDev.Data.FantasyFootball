@@ -1,0 +1,257 @@
+{
+    "LeagueName": "Bald Mountain 10 (ID# 468053)",
+    "SeasonYear": "2015-16",
+    "Week": "3",
+    "LeftTeam": {
+        "Manager": "Snowman",
+        "TeamName": "Juice Is Loose",
+        "Players": [
+            {
+                "FullName": "Cam Newton",
+                "PlayerId": 24788,
+                "MatchupPosition": "QB",
+                "PointsScored": 29.9,
+                "ProjectedPoints": 18.8,
+                "ShortName": "C. Newton"
+            },
+            {
+                "FullName": "John Brown",
+                "PlayerId": 27619,
+                "MatchupPosition": "WR",
+                "PointsScored": 6.2,
+                "ProjectedPoints": 8.66,
+                "ShortName": "J. Brown"
+            },
+            {
+                "FullName": "T.Y. Hilton",
+                "PlayerId": 25802,
+                "MatchupPosition": "WR",
+                "PointsScored": 9.4,
+                "ProjectedPoints": 8.99,
+                "ShortName": "T. Hilton"
+            },
+            {
+                "FullName": "Le'Veon Bell",
+                "PlayerId": 26671,
+                "MatchupPosition": "RB",
+                "PointsScored": 19.2,
+                "ProjectedPoints": 14.91,
+                "ShortName": "L. Bell"
+            },
+            {
+                "FullName": "Ameer Abdullah",
+                "PlayerId": 28442,
+                "MatchupPosition": "RB",
+                "PointsScored": 10.2,
+                "ProjectedPoints": 10.07,
+                "ShortName": "A. Abdullah"
+            },
+            {
+                "FullName": "Jordan Reed",
+                "PlayerId": 26708,
+                "MatchupPosition": "TE",
+                "PointsScored": 9.6,
+                "ProjectedPoints": 6.3,
+                "ShortName": "J. Reed"
+            },
+            {
+                "FullName": "Mike Evans",
+                "PlayerId": 27535,
+                "MatchupPosition": "W/R/T",
+                "PointsScored": 10.1,
+                "ProjectedPoints": 9.42,
+                "ShortName": "M. Evans"
+            },
+            {
+                "FullName": "Mason Crosby",
+                "PlayerId": 8447,
+                "MatchupPosition": "K",
+                "PointsScored": 9,
+                "ProjectedPoints": 8.37,
+                "ShortName": "M. Crosby"
+            },
+            {
+                "FullName": "Philadelphia",
+                "PlayerId": 100021,
+                "MatchupPosition": "DEF",
+                "PointsScored": 16,
+                "ProjectedPoints": 9.63,
+                "ShortName": "P."
+            },
+            {
+                "FullName": "Philip Rivers",
+                "PlayerId": 6763,
+                "MatchupPosition": "BN",
+                "PointsScored": 9.84,
+                "ProjectedPoints": 16.02,
+                "ShortName": "P. Rivers"
+            },
+            {
+                "FullName": "Tevin Coleman",
+                "PlayerId": 28461,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 0,
+                "ShortName": "T. Coleman"
+            },
+            {
+                "FullName": "Jordan Cameron",
+                "PlayerId": 24889,
+                "MatchupPosition": "BN",
+                "PointsScored": 1.6,
+                "ProjectedPoints": 5.99,
+                "ShortName": "J. Cameron"
+            },
+            {
+                "FullName": "Martavis Bryant",
+                "PlayerId": 27646,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 0,
+                "ShortName": "M. Bryant"
+            },
+            {
+                "FullName": "Lance Dunbar",
+                "PlayerId": 26064,
+                "MatchupPosition": "BN",
+                "PointsScored": 10.5,
+                "ProjectedPoints": 4.37,
+                "ShortName": "L. Dunbar"
+            },
+            {
+                "FullName": "Kendall Wright",
+                "PlayerId": 25730,
+                "MatchupPosition": "BN",
+                "PointsScored": 16.8,
+                "ProjectedPoints": 7.86,
+                "ShortName": "K. Wright"
+            }
+        ]
+    },
+    "RightTeam": {
+        "Manager": "Gerald Prieskorn",
+        "TeamName": "Gerald Prieskorn",
+        "Players": [
+            {
+                "FullName": "Matthew Stafford",
+                "PlayerId": 9265,
+                "MatchupPosition": "QB",
+                "PointsScored": 8.58,
+                "ProjectedPoints": 16.14,
+                "ShortName": "M. Stafford"
+            },
+            {
+                "FullName": "Antonio Brown",
+                "PlayerId": 24171,
+                "MatchupPosition": "WR",
+                "PointsScored": 10.8,
+                "ProjectedPoints": 14.83,
+                "ShortName": "A. Brown"
+            },
+            {
+                "FullName": "Randall Cobb",
+                "PlayerId": 24851,
+                "MatchupPosition": "WR",
+                "PointsScored": 28.3,
+                "ProjectedPoints": 11.86,
+                "ShortName": "R. Cobb"
+            },
+            {
+                "FullName": "DeAngelo Williams",
+                "PlayerId": 7776,
+                "MatchupPosition": "RB",
+                "PointsScored": 0.2,
+                "ProjectedPoints": 3.86,
+                "ShortName": "D. Williams"
+            },
+            {
+                "FullName": "Melvin Gordon III",
+                "PlayerId": 28403,
+                "MatchupPosition": "RB",
+                "PointsScored": 5.1,
+                "ProjectedPoints": 10.57,
+                "ShortName": "M. Gordon III"
+            },
+            {
+                "FullName": "Jared Cook",
+                "PlayerId": 9353,
+                "MatchupPosition": "TE",
+                "PointsScored": 0.7,
+                "ProjectedPoints": 6.42,
+                "ShortName": "J. Cook"
+            },
+            {
+                "FullName": "Golden Tate",
+                "PlayerId": 24035,
+                "MatchupPosition": "W/R/T",
+                "PointsScored": 5.7,
+                "ProjectedPoints": 6.92,
+                "ShortName": "G. Tate"
+            },
+            {
+                "FullName": "Blair Walsh",
+                "PlayerId": 25885,
+                "MatchupPosition": "K",
+                "PointsScored": 7,
+                "ProjectedPoints": 8.58,
+                "ShortName": "B. Walsh"
+            },
+            {
+                "FullName": "Buffalo",
+                "PlayerId": 100002,
+                "MatchupPosition": "DEF",
+                "PointsScored": 15,
+                "ProjectedPoints": 9.68,
+                "ShortName": "B."
+            },
+            {
+                "FullName": "Todd Gurley II",
+                "PlayerId": 28398,
+                "MatchupPosition": "BN",
+                "PointsScored": 1.4,
+                "ProjectedPoints": 6.36,
+                "ShortName": "T. Gurley II"
+            },
+            {
+                "FullName": "C.J. Spiller",
+                "PlayerId": 23984,
+                "MatchupPosition": "BN",
+                "PointsScored": 2.6,
+                "ProjectedPoints": 6.16,
+                "ShortName": "C. Spiller"
+            },
+            {
+                "FullName": "Mike Wallace",
+                "PlayerId": 9348,
+                "MatchupPosition": "BN",
+                "PointsScored": 4.9,
+                "ProjectedPoints": 7.12,
+                "ShortName": "M. Wallace"
+            },
+            {
+                "FullName": "Montee Ball",
+                "PlayerId": 26681,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 0,
+                "ShortName": "M. Ball"
+            },
+            {
+                "FullName": "Devin Funchess",
+                "PlayerId": 28429,
+                "MatchupPosition": "BN",
+                "PointsScored": 1.4,
+                "ProjectedPoints": 4.95,
+                "ShortName": "D. Funchess"
+            },
+            {
+                "FullName": "Derek Carr",
+                "PlayerId": 27564,
+                "MatchupPosition": "BN",
+                "PointsScored": 20.46,
+                "ProjectedPoints": 13.5,
+                "ShortName": "D. Carr"
+            }
+        ]
+    }
+}

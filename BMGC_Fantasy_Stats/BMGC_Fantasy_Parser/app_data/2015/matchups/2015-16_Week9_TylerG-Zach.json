@@ -1,0 +1,257 @@
+{
+    "LeagueName": "Bald Mountain 10 (ID# 468053)",
+    "SeasonYear": "2015-16",
+    "Week": "9",
+    "LeftTeam": {
+        "Manager": "Tyler G",
+        "TeamName": "Forte Ounce Bounce",
+        "Players": [
+            {
+                "FullName": "Tyrod Taylor",
+                "PlayerId": 24967,
+                "MatchupPosition": "QB",
+                "PointsScored": 15.64,
+                "ProjectedPoints": 16.72,
+                "ShortName": "T. Taylor"
+            },
+            {
+                "FullName": "Demaryius Thomas",
+                "PlayerId": 23997,
+                "MatchupPosition": "WR",
+                "PointsScored": 5,
+                "ProjectedPoints": 12.69,
+                "ShortName": "D. Thomas"
+            },
+            {
+                "FullName": "Malcom Floyd",
+                "PlayerId": 7149,
+                "MatchupPosition": "WR",
+                "PointsScored": 0,
+                "ProjectedPoints": 8.72,
+                "ShortName": "M. Floyd"
+            },
+            {
+                "FullName": "James Starks",
+                "PlayerId": 24169,
+                "MatchupPosition": "RB",
+                "PointsScored": 18.2,
+                "ProjectedPoints": 5.2,
+                "ShortName": "J. Starks"
+            },
+            {
+                "FullName": "Kendall Gaskins",
+                "PlayerId": 27002,
+                "MatchupPosition": "RB",
+                "PointsScored": 2,
+                "ProjectedPoints": 6.6,
+                "ShortName": "K. Gaskins"
+            },
+            {
+                "FullName": "Zach Ertz",
+                "PlayerId": 26658,
+                "MatchupPosition": "TE",
+                "PointsScored": 4.4,
+                "ProjectedPoints": 6.56,
+                "ShortName": "Z. Ertz"
+            },
+            {
+                "FullName": "Travis Benjamin",
+                "PlayerId": 25810,
+                "MatchupPosition": "W/R/T",
+                "PointsScored": 2.2,
+                "ProjectedPoints": 8,
+                "ShortName": "T. Benjamin"
+            },
+            {
+                "FullName": "Nick Folk",
+                "PlayerId": 8432,
+                "MatchupPosition": "K",
+                "PointsScored": 0,
+                "ProjectedPoints": 8.16,
+                "ShortName": "N. Folk"
+            },
+            {
+                "FullName": "New England",
+                "PlayerId": 100017,
+                "MatchupPosition": "DEF",
+                "PointsScored": 9,
+                "ProjectedPoints": 8.36,
+                "ShortName": "N. England"
+            },
+            {
+                "FullName": "Jimmy Graham",
+                "PlayerId": 24070,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 0,
+                "ShortName": "J. Graham"
+            },
+            {
+                "FullName": "Calvin Johnson",
+                "PlayerId": 8256,
+                "MatchupPosition": "BN",
+                "PointsScored": null,
+                "ProjectedPoints": 0,
+                "ShortName": "C. Johnson"
+            },
+            {
+                "FullName": "Matt Forte",
+                "PlayerId": 8821,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 0,
+                "ShortName": "M. Forte"
+            },
+            {
+                "FullName": "Russell Wilson",
+                "PlayerId": 25785,
+                "MatchupPosition": "BN",
+                "PointsScored": null,
+                "ProjectedPoints": 0,
+                "ShortName": "R. Wilson"
+            },
+            {
+                "FullName": "Carlos Hyde",
+                "PlayerId": 27585,
+                "MatchupPosition": "BN",
+                "PointsScored": null,
+                "ProjectedPoints": 0,
+                "ShortName": "C. Hyde"
+            },
+            {
+                "FullName": "Doug Baldwin",
+                "PlayerId": 25105,
+                "MatchupPosition": "BN",
+                "PointsScored": null,
+                "ProjectedPoints": 0,
+                "ShortName": "D. Baldwin"
+            }
+        ]
+    },
+    "RightTeam": {
+        "Manager": "Zach",
+        "TeamName": "Morning Woodhead",
+        "Players": [
+            {
+                "FullName": "Peyton Manning",
+                "PlayerId": 4256,
+                "MatchupPosition": "QB",
+                "PointsScored": 15.24,
+                "ProjectedPoints": 16.98,
+                "ShortName": "P. Manning"
+            },
+            {
+                "FullName": "Amari Cooper",
+                "PlayerId": 28392,
+                "MatchupPosition": "WR",
+                "PointsScored": 14.8,
+                "ProjectedPoints": 8.9,
+                "ShortName": "A. Cooper"
+            },
+            {
+                "FullName": "Pierre Garcon",
+                "PlayerId": 8982,
+                "MatchupPosition": "WR",
+                "PointsScored": 7,
+                "ProjectedPoints": 7.84,
+                "ShortName": "P. Garcon"
+            },
+            {
+                "FullName": "Jonathan Stewart",
+                "PlayerId": 8790,
+                "MatchupPosition": "RB",
+                "PointsScored": 6.8,
+                "ProjectedPoints": 12.12,
+                "ShortName": "J. Stewart"
+            },
+            {
+                "FullName": "Jeremy Langford",
+                "PlayerId": 28494,
+                "MatchupPosition": "RB",
+                "PointsScored": 22.2,
+                "ProjectedPoints": 12.58,
+                "ShortName": "J. Langford"
+            },
+            {
+                "FullName": "Vernon Davis",
+                "PlayerId": 7755,
+                "MatchupPosition": "TE",
+                "PointsScored": 0,
+                "ProjectedPoints": 5.83,
+                "ShortName": "V. Davis"
+            },
+            {
+                "FullName": "Marquess Wilson",
+                "PlayerId": 26859,
+                "MatchupPosition": "W/R/T",
+                "PointsScored": 1.5,
+                "ProjectedPoints": 4.83,
+                "ShortName": "M. Wilson"
+            },
+            {
+                "FullName": "Matt Bryant",
+                "PlayerId": 6243,
+                "MatchupPosition": "K",
+                "PointsScored": 11,
+                "ProjectedPoints": 8.89,
+                "ShortName": "M. Bryant"
+            },
+            {
+                "FullName": "Minnesota",
+                "PlayerId": 100016,
+                "MatchupPosition": "DEF",
+                "PointsScored": 2,
+                "ProjectedPoints": 6.43,
+                "ShortName": "M."
+            },
+            {
+                "FullName": "Jeremy Maclin",
+                "PlayerId": 9283,
+                "MatchupPosition": "BN",
+                "PointsScored": null,
+                "ProjectedPoints": 0,
+                "ShortName": "J. Maclin"
+            },
+            {
+                "FullName": "Karlos Williams",
+                "PlayerId": 28543,
+                "MatchupPosition": "BN",
+                "PointsScored": 23,
+                "ProjectedPoints": 5.77,
+                "ShortName": "K. Williams"
+            },
+            {
+                "FullName": "Michael Floyd",
+                "PlayerId": 25723,
+                "MatchupPosition": "BN",
+                "PointsScored": null,
+                "ProjectedPoints": 0,
+                "ShortName": "M. Floyd"
+            },
+            {
+                "FullName": "David Cobb",
+                "PlayerId": 28526,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 0,
+                "ShortName": "D. Cobb"
+            },
+            {
+                "FullName": "Chris Johnson",
+                "PlayerId": 8801,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 0,
+                "ShortName": "C. Johnson"
+            },
+            {
+                "FullName": "Seattle",
+                "PlayerId": 100026,
+                "MatchupPosition": "BN",
+                "PointsScored": null,
+                "ProjectedPoints": 0,
+                "ShortName": "S."
+            }
+        ]
+    }
+}

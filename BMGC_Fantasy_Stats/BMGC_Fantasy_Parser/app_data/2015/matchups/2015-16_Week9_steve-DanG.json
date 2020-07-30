@@ -1,0 +1,257 @@
+{
+    "LeagueName": "Bald Mountain 10 (ID# 468053)",
+    "SeasonYear": "2015-16",
+    "Week": "9",
+    "LeftTeam": {
+        "Manager": "steve",
+        "TeamName": "Team AD",
+        "Players": [
+            {
+                "FullName": "Drew Brees",
+                "PlayerId": 5479,
+                "MatchupPosition": "QB",
+                "PointsScored": 36.38,
+                "ProjectedPoints": 18.35,
+                "ShortName": "D. Brees"
+            },
+            {
+                "FullName": "Julian Edelman",
+                "PlayerId": 9496,
+                "MatchupPosition": "WR",
+                "PointsScored": 9.5,
+                "ProjectedPoints": 11.23,
+                "ShortName": "J. Edelman"
+            },
+            {
+                "FullName": "Eric Decker",
+                "PlayerId": 24062,
+                "MatchupPosition": "WR",
+                "PointsScored": 13.9,
+                "ProjectedPoints": 9.01,
+                "ShortName": "E. Decker"
+            },
+            {
+                "FullName": "Doug Martin",
+                "PlayerId": 25741,
+                "MatchupPosition": "RB",
+                "PointsScored": 2.3,
+                "ProjectedPoints": 13,
+                "ShortName": "D. Martin"
+            },
+            {
+                "FullName": "DeMarco Murray",
+                "PlayerId": 24858,
+                "MatchupPosition": "RB",
+                "PointsScored": 22.1,
+                "ProjectedPoints": 12.55,
+                "ShortName": "D. Murray"
+            },
+            {
+                "FullName": "Greg Olsen",
+                "PlayerId": 8285,
+                "MatchupPosition": "TE",
+                "PointsScored": 12.6,
+                "ProjectedPoints": 9.74,
+                "ShortName": "G. Olsen"
+            },
+            {
+                "FullName": "Brandin Cooks",
+                "PlayerId": 27548,
+                "MatchupPosition": "W/R/T",
+                "PointsScored": 13.1,
+                "ProjectedPoints": 8.83,
+                "ShortName": "B. Cooks"
+            },
+            {
+                "FullName": "Mason Crosby",
+                "PlayerId": 8447,
+                "MatchupPosition": "K",
+                "PointsScored": 3,
+                "ProjectedPoints": 8.46,
+                "ShortName": "M. Crosby"
+            },
+            {
+                "FullName": "Los Angeles",
+                "PlayerId": 100014,
+                "MatchupPosition": "DEF",
+                "PointsScored": 3,
+                "ProjectedPoints": 8.2,
+                "ShortName": "L. Angeles"
+            },
+            {
+                "FullName": "Danny Woodhead",
+                "PlayerId": 9560,
+                "MatchupPosition": "BN",
+                "PointsScored": 17.1,
+                "ProjectedPoints": 9.55,
+                "ShortName": "D. Woodhead"
+            },
+            {
+                "FullName": "Gary Barnidge",
+                "PlayerId": 8907,
+                "MatchupPosition": "BN",
+                "PointsScored": 3.5,
+                "ProjectedPoints": 7.65,
+                "ShortName": "G. Barnidge"
+            },
+            {
+                "FullName": "Ryan Mathews",
+                "PlayerId": 23987,
+                "MatchupPosition": "BN",
+                "PointsScored": 12.7,
+                "ProjectedPoints": 5.7,
+                "ShortName": "R. Mathews"
+            },
+            {
+                "FullName": "Sammy Watkins",
+                "PlayerId": 27532,
+                "MatchupPosition": "BN",
+                "PointsScored": 22.8,
+                "ProjectedPoints": 6.93,
+                "ShortName": "S. Watkins"
+            },
+            {
+                "FullName": "Rashad Jennings",
+                "PlayerId": 9514,
+                "MatchupPosition": "BN",
+                "PointsScored": 4.7,
+                "ProjectedPoints": 6.23,
+                "ShortName": "R. Jennings"
+            },
+            {
+                "FullName": "Marvin Jones Jr.",
+                "PlayerId": 25876,
+                "MatchupPosition": "BN",
+                "PointsScored": 7.8,
+                "ProjectedPoints": 7.32,
+                "ShortName": "M. Jones Jr."
+            }
+        ]
+    },
+    "RightTeam": {
+        "Manager": "DanG",
+        "TeamName": "Logical Phallus See",
+        "Players": [
+            {
+                "FullName": "Jameis Winston",
+                "PlayerId": 28389,
+                "MatchupPosition": "QB",
+                "PointsScored": 18.28,
+                "ProjectedPoints": 15.01,
+                "ShortName": "J. Winston"
+            },
+            {
+                "FullName": "Rishard Matthews",
+                "PlayerId": 25937,
+                "MatchupPosition": "WR",
+                "PointsScored": 5.4,
+                "ProjectedPoints": 7.41,
+                "ShortName": "R. Matthews"
+            },
+            {
+                "FullName": "James Jones",
+                "PlayerId": 8332,
+                "MatchupPosition": "WR",
+                "PointsScored": 5.7,
+                "ProjectedPoints": 7.45,
+                "ShortName": "J. Jones"
+            },
+            {
+                "FullName": "Frank Gore",
+                "PlayerId": 7241,
+                "MatchupPosition": "RB",
+                "PointsScored": 16.2,
+                "ProjectedPoints": 9.51,
+                "ShortName": "F. Gore"
+            },
+            {
+                "FullName": "Latavius Murray",
+                "PlayerId": 26804,
+                "MatchupPosition": "RB",
+                "PointsScored": 7.5,
+                "ProjectedPoints": 9.42,
+                "ShortName": "L. Murray"
+            },
+            {
+                "FullName": "Charles Clay",
+                "PlayerId": 24961,
+                "MatchupPosition": "TE",
+                "PointsScored": 0.6,
+                "ProjectedPoints": 5.98,
+                "ShortName": "C. Clay"
+            },
+            {
+                "FullName": "Stevie Johnson",
+                "PlayerId": 9001,
+                "MatchupPosition": "W/R/T",
+                "PointsScored": 6.8,
+                "ProjectedPoints": 8.96,
+                "ShortName": "S. Johnson"
+            },
+            {
+                "FullName": "Brandon McManus",
+                "PlayerId": 27120,
+                "MatchupPosition": "K",
+                "PointsScored": 6,
+                "ProjectedPoints": 8.68,
+                "ShortName": "B. McManus"
+            },
+            {
+                "FullName": "Carolina",
+                "PlayerId": 100029,
+                "MatchupPosition": "DEF",
+                "PointsScored": 8,
+                "ProjectedPoints": 5.29,
+                "ShortName": "C."
+            },
+            {
+                "FullName": "DeSean Jackson",
+                "PlayerId": 8826,
+                "MatchupPosition": "BN",
+                "PointsScored": 1.5,
+                "ProjectedPoints": 8.39,
+                "ShortName": "D. Jackson"
+            },
+            {
+                "FullName": "Travis Kelce",
+                "PlayerId": 26686,
+                "MatchupPosition": "BN",
+                "PointsScored": null,
+                "ProjectedPoints": 0,
+                "ShortName": "T. Kelce"
+            },
+            {
+                "FullName": "Marshawn Lynch",
+                "PlayerId": 8266,
+                "MatchupPosition": "BN",
+                "PointsScored": null,
+                "ProjectedPoints": 0,
+                "ShortName": "M. Lynch"
+            },
+            {
+                "FullName": "Carson Palmer",
+                "PlayerId": 6337,
+                "MatchupPosition": "BN",
+                "PointsScored": null,
+                "ProjectedPoints": 0,
+                "ShortName": "C. Palmer"
+            },
+            {
+                "FullName": "Larry Fitzgerald",
+                "PlayerId": 6762,
+                "MatchupPosition": "BN",
+                "PointsScored": null,
+                "ProjectedPoints": 0,
+                "ShortName": "L. Fitzgerald"
+            },
+            {
+                "FullName": "Baltimore",
+                "PlayerId": 100033,
+                "MatchupPosition": "BN",
+                "PointsScored": null,
+                "ProjectedPoints": 0,
+                "ShortName": "B."
+            }
+        ]
+    }
+}

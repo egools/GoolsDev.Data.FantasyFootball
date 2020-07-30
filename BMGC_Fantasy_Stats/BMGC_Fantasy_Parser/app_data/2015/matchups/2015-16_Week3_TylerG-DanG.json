@@ -1,0 +1,257 @@
+{
+    "LeagueName": "Bald Mountain 10 (ID# 468053)",
+    "SeasonYear": "2015-16",
+    "Week": "3",
+    "LeftTeam": {
+        "Manager": "Tyler G",
+        "TeamName": "Forte Ounce Bounce",
+        "Players": [
+            {
+                "FullName": "Russell Wilson",
+                "PlayerId": 25785,
+                "MatchupPosition": "QB",
+                "PointsScored": 16.2,
+                "ProjectedPoints": 19.56,
+                "ShortName": "R. Wilson"
+            },
+            {
+                "FullName": "Calvin Johnson",
+                "PlayerId": 8256,
+                "MatchupPosition": "WR",
+                "PointsScored": 7.7,
+                "ProjectedPoints": 11.8,
+                "ShortName": "C. Johnson"
+            },
+            {
+                "FullName": "Demaryius Thomas",
+                "PlayerId": 23997,
+                "MatchupPosition": "WR",
+                "PointsScored": 13.2,
+                "ProjectedPoints": 12.77,
+                "ShortName": "D. Thomas"
+            },
+            {
+                "FullName": "Matt Forte",
+                "PlayerId": 8821,
+                "MatchupPosition": "RB",
+                "PointsScored": 7.4,
+                "ProjectedPoints": 12.47,
+                "ShortName": "M. Forte"
+            },
+            {
+                "FullName": "Carlos Hyde",
+                "PlayerId": 27585,
+                "MatchupPosition": "RB",
+                "PointsScored": 6.1,
+                "ProjectedPoints": 11.46,
+                "ShortName": "C. Hyde"
+            },
+            {
+                "FullName": "Jimmy Graham",
+                "PlayerId": 24070,
+                "MatchupPosition": "TE",
+                "PointsScored": 14.3,
+                "ProjectedPoints": 7.43,
+                "ShortName": "J. Graham"
+            },
+            {
+                "FullName": "Keenan Allen",
+                "PlayerId": 26699,
+                "MatchupPosition": "W/R/T",
+                "PointsScored": 25.3,
+                "ProjectedPoints": 8.37,
+                "ShortName": "K. Allen"
+            },
+            {
+                "FullName": "Adam Vinatieri",
+                "PlayerId": 3727,
+                "MatchupPosition": "K",
+                "PointsScored": 5,
+                "ProjectedPoints": 7.89,
+                "ShortName": "A. Vinatieri"
+            },
+            {
+                "FullName": "New England",
+                "PlayerId": 100017,
+                "MatchupPosition": "DEF",
+                "PointsScored": 5,
+                "ProjectedPoints": 10.53,
+                "ShortName": "N. England"
+            },
+            {
+                "FullName": "Bishop Sankey",
+                "PlayerId": 27582,
+                "MatchupPosition": "BN",
+                "PointsScored": 4.1,
+                "ProjectedPoints": 8.09,
+                "ShortName": "B. Sankey"
+            },
+            {
+                "FullName": "Marques Colston",
+                "PlayerId": 8001,
+                "MatchupPosition": "BN",
+                "PointsScored": 4.7,
+                "ProjectedPoints": 5.55,
+                "ShortName": "M. Colston"
+            },
+            {
+                "FullName": "Doug Baldwin",
+                "PlayerId": 25105,
+                "MatchupPosition": "BN",
+                "PointsScored": 3.5,
+                "ProjectedPoints": 7.59,
+                "ShortName": "D. Baldwin"
+            },
+            {
+                "FullName": "Colin Kaepernick",
+                "PlayerId": 24823,
+                "MatchupPosition": "BN",
+                "PointsScored": 5.28,
+                "ProjectedPoints": 16.9,
+                "ShortName": "C. Kaepernick"
+            },
+            {
+                "FullName": "Philly Brown",
+                "PlayerId": 27938,
+                "MatchupPosition": "BN",
+                "PointsScored": 1.2,
+                "ProjectedPoints": 4.6,
+                "ShortName": "P. Brown"
+            },
+            {
+                "FullName": "Travis Benjamin",
+                "PlayerId": 25810,
+                "MatchupPosition": "BN",
+                "PointsScored": 8.5,
+                "ProjectedPoints": 6.77,
+                "ShortName": "T. Benjamin"
+            }
+        ]
+    },
+    "RightTeam": {
+        "Manager": "DanG",
+        "TeamName": "Logical Phallus See",
+        "Players": [
+            {
+                "FullName": "Ryan Tannehill",
+                "PlayerId": 25718,
+                "MatchupPosition": "QB",
+                "PointsScored": 15.78,
+                "ProjectedPoints": 16.05,
+                "ShortName": "R. Tannehill"
+            },
+            {
+                "FullName": "Larry Fitzgerald",
+                "PlayerId": 6762,
+                "MatchupPosition": "WR",
+                "PointsScored": 25.4,
+                "ProjectedPoints": 9.88,
+                "ShortName": "L. Fitzgerald"
+            },
+            {
+                "FullName": "Stevie Johnson",
+                "PlayerId": 9001,
+                "MatchupPosition": "WR",
+                "PointsScored": 4.6,
+                "ProjectedPoints": 7.62,
+                "ShortName": "S. Johnson"
+            },
+            {
+                "FullName": "Jeremy Hill",
+                "PlayerId": 27583,
+                "MatchupPosition": "RB",
+                "PointsScored": 2.1,
+                "ProjectedPoints": 11.26,
+                "ShortName": "J. Hill"
+            },
+            {
+                "FullName": "Frank Gore",
+                "PlayerId": 7241,
+                "MatchupPosition": "RB",
+                "PointsScored": 21.4,
+                "ProjectedPoints": 11.45,
+                "ShortName": "F. Gore"
+            },
+            {
+                "FullName": "Travis Kelce",
+                "PlayerId": 26686,
+                "MatchupPosition": "TE",
+                "PointsScored": 10,
+                "ProjectedPoints": 7.85,
+                "ShortName": "T. Kelce"
+            },
+            {
+                "FullName": "Marshawn Lynch",
+                "PlayerId": 8266,
+                "MatchupPosition": "W/R/T",
+                "PointsScored": 2.3,
+                "ProjectedPoints": 14.94,
+                "ShortName": "M. Lynch"
+            },
+            {
+                "FullName": "Brandon McManus",
+                "PlayerId": 27120,
+                "MatchupPosition": "K",
+                "PointsScored": 7,
+                "ProjectedPoints": 7.75,
+                "ShortName": "B. McManus"
+            },
+            {
+                "FullName": "Carolina",
+                "PlayerId": 100029,
+                "MatchupPosition": "DEF",
+                "PointsScored": 5,
+                "ProjectedPoints": 7.19,
+                "ShortName": "C."
+            },
+            {
+                "FullName": "James Jones",
+                "PlayerId": 8332,
+                "MatchupPosition": "BN",
+                "PointsScored": 19.9,
+                "ProjectedPoints": 7.17,
+                "ShortName": "J. Jones"
+            },
+            {
+                "FullName": "Roddy White",
+                "PlayerId": 7203,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 6.96,
+                "ShortName": "R. White"
+            },
+            {
+                "FullName": "Anquan Boldin",
+                "PlayerId": 6390,
+                "MatchupPosition": "BN",
+                "PointsScored": 1.6,
+                "ProjectedPoints": 7.24,
+                "ShortName": "A. Boldin"
+            },
+            {
+                "FullName": "DeSean Jackson",
+                "PlayerId": 8826,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 0,
+                "ShortName": "D. Jackson"
+            },
+            {
+                "FullName": "Tyler Lockett",
+                "PlayerId": 28457,
+                "MatchupPosition": "BN",
+                "PointsScored": 6,
+                "ProjectedPoints": 4.69,
+                "ShortName": "T. Lockett"
+            },
+            {
+                "FullName": "Leonard Hankerson",
+                "PlayerId": 24866,
+                "MatchupPosition": "BN",
+                "PointsScored": 4.5,
+                "ProjectedPoints": 5.77,
+                "ShortName": "L. Hankerson"
+            }
+        ]
+    }
+}

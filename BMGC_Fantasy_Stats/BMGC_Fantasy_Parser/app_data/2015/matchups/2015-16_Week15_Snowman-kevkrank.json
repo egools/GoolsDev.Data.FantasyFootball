@@ -1,0 +1,257 @@
+{
+    "LeagueName": "Bald Mountain 10 (ID# 468053)",
+    "SeasonYear": "2015-16",
+    "Week": "15",
+    "LeftTeam": {
+        "Manager": "Snowman",
+        "TeamName": "Juice Is Loose",
+        "Players": [
+            {
+                "FullName": "Cam Newton",
+                "PlayerId": 24788,
+                "MatchupPosition": "QB",
+                "PointsScored": 41.6,
+                "ProjectedPoints": 22.46,
+                "ShortName": "C. Newton"
+            },
+            {
+                "FullName": "Martavis Bryant",
+                "PlayerId": 27646,
+                "MatchupPosition": "WR",
+                "PointsScored": 8.7,
+                "ProjectedPoints": 10.33,
+                "ShortName": "M. Bryant"
+            },
+            {
+                "FullName": "Danny Amendola",
+                "PlayerId": 9037,
+                "MatchupPosition": "WR",
+                "PointsScored": -1.7,
+                "ProjectedPoints": 9.85,
+                "ShortName": "D. Amendola"
+            },
+            {
+                "FullName": "Tim Hightower",
+                "PlayerId": 8926,
+                "MatchupPosition": "RB",
+                "PointsScored": 8.5,
+                "ProjectedPoints": 11.86,
+                "ShortName": "T. Hightower"
+            },
+            {
+                "FullName": "Denard Robinson",
+                "PlayerId": 26758,
+                "MatchupPosition": "RB",
+                "PointsScored": 7.4,
+                "ProjectedPoints": 11.84,
+                "ShortName": "D. Robinson"
+            },
+            {
+                "FullName": "Delanie Walker",
+                "PlayerId": 7924,
+                "MatchupPosition": "TE",
+                "PointsScored": 18.4,
+                "ProjectedPoints": 8.43,
+                "ShortName": "D. Walker"
+            },
+            {
+                "FullName": "Jordan Reed",
+                "PlayerId": 26708,
+                "MatchupPosition": "W/R/T",
+                "PointsScored": 20.4,
+                "ProjectedPoints": 8.71,
+                "ShortName": "J. Reed"
+            },
+            {
+                "FullName": "Stephen Gostkowski",
+                "PlayerId": 7867,
+                "MatchupPosition": "K",
+                "PointsScored": 17,
+                "ProjectedPoints": 9.05,
+                "ShortName": "S. Gostkowski"
+            },
+            {
+                "FullName": "Tampa Bay",
+                "PlayerId": 100027,
+                "MatchupPosition": "DEF",
+                "PointsScored": 1,
+                "ProjectedPoints": 6.71,
+                "ShortName": "T. Bay"
+            },
+            {
+                "FullName": "Theo Riddick",
+                "PlayerId": 26822,
+                "MatchupPosition": "BN",
+                "PointsScored": 3,
+                "ProjectedPoints": 6.99,
+                "ShortName": "T. Riddick"
+            },
+            {
+                "FullName": "Mike Evans",
+                "PlayerId": 27535,
+                "MatchupPosition": "BN",
+                "PointsScored": 15.7,
+                "ProjectedPoints": 10.46,
+                "ShortName": "M. Evans"
+            },
+            {
+                "FullName": "T.Y. Hilton",
+                "PlayerId": 25802,
+                "MatchupPosition": "BN",
+                "PointsScored": 2.9,
+                "ProjectedPoints": 7.89,
+                "ShortName": "T. Hilton"
+            },
+            {
+                "FullName": "Jay Ajayi",
+                "PlayerId": 28537,
+                "MatchupPosition": "BN",
+                "PointsScored": 10.2,
+                "ProjectedPoints": 3.44,
+                "ShortName": "J. Ajayi"
+            },
+            {
+                "FullName": "Philip Rivers",
+                "PlayerId": 6763,
+                "MatchupPosition": "BN",
+                "PointsScored": 20.44,
+                "ProjectedPoints": 18.71,
+                "ShortName": "P. Rivers"
+            },
+            {
+                "FullName": "Kamar Aiken",
+                "PlayerId": 25379,
+                "MatchupPosition": "BN",
+                "PointsScored": 18.8,
+                "ProjectedPoints": 7.85,
+                "ShortName": "K. Aiken"
+            }
+        ]
+    },
+    "RightTeam": {
+        "Manager": "kev krank",
+        "TeamName": "Fuck this team.",
+        "Players": [
+            {
+                "FullName": "Matt Ryan",
+                "PlayerId": 8780,
+                "MatchupPosition": "QB",
+                "PointsScored": 11.84,
+                "ProjectedPoints": 15.97,
+                "ShortName": "M. Ryan"
+            },
+            {
+                "FullName": "John Brown",
+                "PlayerId": 27619,
+                "MatchupPosition": "WR",
+                "PointsScored": 9.8,
+                "ProjectedPoints": 9.5,
+                "ShortName": "J. Brown"
+            },
+            {
+                "FullName": "Marvin Jones Jr.",
+                "PlayerId": 25876,
+                "MatchupPosition": "WR",
+                "PointsScored": 8.9,
+                "ProjectedPoints": 7.9,
+                "ShortName": "M. Jones Jr."
+            },
+            {
+                "FullName": "Lamar Miller",
+                "PlayerId": 25807,
+                "MatchupPosition": "RB",
+                "PointsScored": 2.4,
+                "ProjectedPoints": 11.42,
+                "ShortName": "L. Miller"
+            },
+            {
+                "FullName": "Chris Ivory",
+                "PlayerId": 24400,
+                "MatchupPosition": "RB",
+                "PointsScored": 4.2,
+                "ProjectedPoints": 11.19,
+                "ShortName": "C. Ivory"
+            },
+            {
+                "FullName": "Ben Watson",
+                "PlayerId": 6791,
+                "MatchupPosition": "TE",
+                "PointsScored": 10.9,
+                "ProjectedPoints": 7.73,
+                "ShortName": "B. Watson"
+            },
+            {
+                "FullName": "Charcandrick West",
+                "PlayerId": 28044,
+                "MatchupPosition": "W/R/T",
+                "PointsScored": 14.5,
+                "ProjectedPoints": 12.81,
+                "ShortName": "C. West"
+            },
+            {
+                "FullName": "Stephen Hauschka",
+                "PlayerId": 9066,
+                "MatchupPosition": "K",
+                "PointsScored": 13,
+                "ProjectedPoints": 8.1,
+                "ShortName": "S. Hauschka"
+            },
+            {
+                "FullName": "Green Bay",
+                "PlayerId": 100009,
+                "MatchupPosition": "DEF",
+                "PointsScored": 14,
+                "ProjectedPoints": 6.16,
+                "ShortName": "G. Bay"
+            },
+            {
+                "FullName": "Andy Dalton",
+                "PlayerId": 24822,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 0,
+                "ShortName": "A. Dalton"
+            },
+            {
+                "FullName": "Donte Moncrief",
+                "PlayerId": 27618,
+                "MatchupPosition": "BN",
+                "PointsScored": 11.1,
+                "ProjectedPoints": 6.28,
+                "ShortName": "D. Moncrief"
+            },
+            {
+                "FullName": "Jason Witten",
+                "PlayerId": 6405,
+                "MatchupPosition": "BN",
+                "PointsScored": 4.9,
+                "ProjectedPoints": 7.05,
+                "ShortName": "J. Witten"
+            },
+            {
+                "FullName": "Jordan Matthews",
+                "PlayerId": 27570,
+                "MatchupPosition": "BN",
+                "PointsScored": 21.9,
+                "ProjectedPoints": 7.17,
+                "ShortName": "J. Matthews"
+            },
+            {
+                "FullName": "Rueben Randle",
+                "PlayerId": 25773,
+                "MatchupPosition": "BN",
+                "PointsScored": 10.7,
+                "ProjectedPoints": 7.82,
+                "ShortName": "R. Randle"
+            },
+            {
+                "FullName": "J.J. Nelson",
+                "PlayerId": 28547,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 2.5,
+                "ShortName": "J. Nelson"
+            }
+        ]
+    }
+}

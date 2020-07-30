@@ -2,11 +2,399 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AngleSharp" Version="0.13.0" />
+    <Compile Remove="Migrations\20200730022518_CreateBMGCdb.cs" />
+    <Compile Remove="Migrations\20200730022518_CreateBMGCdb.Designer.cs" />
+    <Compile Remove="Migrations\20200730022713_CreateBMGCdb2.cs" />
+    <Compile Remove="Migrations\20200730022713_CreateBMGCdb2.Designer.cs" />
+    <Compile Remove="Migrations\20200730023137_CreateBMGCdb3.cs" />
+    <Compile Remove="Migrations\20200730023137_CreateBMGCdb3.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="app_data\2015\matchups\2015-16_Week10_DanG-JeffBrakora.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week10_Eric-kevkrank.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week10_GeraldPrieskorn-SteveAckner.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week10_Snowman-Truck.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week10_steve-Zach.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week10_TylerG-Denny.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week11_DanG-Truck.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week11_Denny-GeraldPrieskorn.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week11_Eric-TylerG.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week11_JeffBrakora-kevkrank.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week11_Snowman-Zach.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week11_steve-SteveAckner.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week12_DanG-SteveAckner.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week12_Eric-GeraldPrieskorn.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week12_kevkrank-Zach.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week12_Snowman-Denny.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week12_steve-JeffBrakora.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week12_TylerG-Truck.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week13_DanG-SteveAckner.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week13_Eric-Snowman.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week13_JeffBrakora-Truck.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week13_steve-kevkrank.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week13_TylerG-Denny.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week13_Zach-GeraldPrieskorn.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week14_Denny-Zach.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week14_Eric-TylerG.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week14_kevkrank-GeraldPrieskorn.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week14_Snowman-Truck.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week15_DanG-GeraldPrieskorn.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week15_Eric-Denny.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week15_JeffBrakora-Zach.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week15_Snowman-kevkrank.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week15_Truck-SteveAckner.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week15_TylerG-steve.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week16_DanG-SteveAckner.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week16_steve-Zach.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week16_Truck-GeraldPrieskorn.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week16_TylerG-JeffBrakora.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week1_Eric-SteveAckner.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week1_JeffBrakora-Zach.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week1_kevkrank-GeraldPrieskorn.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week1_Snowman-DanG.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week1_Truck-Denny.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week1_TylerG-steve.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week2_DanG-kevkrank.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week2_Eric-Denny.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week2_JeffBrakora-SteveAckner.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week2_Snowman-TylerG.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week2_steve-GeraldPrieskorn.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week2_Truck-Zach.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week3_Denny-Zach.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week3_Eric-JeffBrakora.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week3_Snowman-GeraldPrieskorn.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week3_steve-kevkrank.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week3_Truck-SteveAckner.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week3_TylerG-DanG.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week4_Eric-Truck.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week4_JeffBrakora-Denny.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week4_Snowman-kevkrank.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week4_steve-DanG.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week4_TylerG-GeraldPrieskorn.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week4_Zach-SteveAckner.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week5_DanG-GeraldPrieskorn.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week5_Denny-SteveAckner.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week5_Eric-Zach.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week5_JeffBrakora-Truck.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week5_Snowman-steve.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week5_TylerG-kevkrank.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week6_Eric-DanG.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week6_kevkrank-Denny.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week6_Snowman-JeffBrakora.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week6_steve-Truck.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week6_TylerG-SteveAckner.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week6_Zach-GeraldPrieskorn.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week7_DanG-Denny.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week7_Eric-steve.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week7_JeffBrakora-GeraldPrieskorn.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week7_kevkrank-Truck.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week7_Snowman-SteveAckner.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week7_TylerG-Zach.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week8_DanG-Zach.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week8_Eric-Snowman.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week8_kevkrank-SteveAckner.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week8_steve-Denny.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week8_Truck-GeraldPrieskorn.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week8_TylerG-JeffBrakora.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week9_Eric-kevkrank.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week9_GeraldPrieskorn-SteveAckner.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week9_Snowman-JeffBrakora.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week9_steve-DanG.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week9_Truck-Denny.json" />
+    <None Remove="app_data\2015\matchups\2015-16_Week9_TylerG-Zach.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="app_data\2015\matchups\2015-16_Week10_DanG-JeffBrakora.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week10_Eric-kevkrank.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week10_GeraldPrieskorn-SteveAckner.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week10_Snowman-Truck.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week10_steve-Zach.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week10_TylerG-Denny.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week11_DanG-Truck.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week11_Denny-GeraldPrieskorn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week11_Eric-TylerG.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week11_JeffBrakora-kevkrank.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week11_Snowman-Zach.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week11_steve-SteveAckner.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week12_DanG-SteveAckner.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week12_Eric-GeraldPrieskorn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week12_kevkrank-Zach.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week12_Snowman-Denny.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week12_steve-JeffBrakora.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week12_TylerG-Truck.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week13_DanG-SteveAckner.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week13_Eric-Snowman.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week13_JeffBrakora-Truck.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week13_steve-kevkrank.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week13_TylerG-Denny.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week13_Zach-GeraldPrieskorn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week14_Denny-Zach.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week14_Eric-TylerG.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week14_kevkrank-GeraldPrieskorn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week14_Snowman-Truck.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week15_DanG-GeraldPrieskorn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week15_Eric-Denny.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week15_JeffBrakora-Zach.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week15_Snowman-kevkrank.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week15_Truck-SteveAckner.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week15_TylerG-steve.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week16_DanG-SteveAckner.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week16_steve-Zach.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week16_Truck-GeraldPrieskorn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week16_TylerG-JeffBrakora.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week1_Eric-SteveAckner.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week1_JeffBrakora-Zach.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week1_kevkrank-GeraldPrieskorn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week1_Snowman-DanG.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week1_Truck-Denny.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week1_TylerG-steve.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week2_DanG-kevkrank.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week2_Eric-Denny.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week2_JeffBrakora-SteveAckner.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week2_Snowman-TylerG.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week2_steve-GeraldPrieskorn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week2_Truck-Zach.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week3_Denny-Zach.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week3_Eric-JeffBrakora.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week3_Snowman-GeraldPrieskorn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week3_steve-kevkrank.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week3_Truck-SteveAckner.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week3_TylerG-DanG.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week4_Eric-Truck.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week4_JeffBrakora-Denny.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week4_Snowman-kevkrank.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week4_steve-DanG.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week4_TylerG-GeraldPrieskorn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week4_Zach-SteveAckner.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week5_DanG-GeraldPrieskorn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week5_Denny-SteveAckner.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week5_Eric-Zach.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week5_JeffBrakora-Truck.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week5_Snowman-steve.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week5_TylerG-kevkrank.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week6_Eric-DanG.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week6_kevkrank-Denny.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week6_Snowman-JeffBrakora.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week6_steve-Truck.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week6_TylerG-SteveAckner.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week6_Zach-GeraldPrieskorn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week7_DanG-Denny.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week7_Eric-steve.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week7_JeffBrakora-GeraldPrieskorn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week7_kevkrank-Truck.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week7_Snowman-SteveAckner.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week7_TylerG-Zach.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week8_DanG-Zach.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week8_Eric-Snowman.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week8_kevkrank-SteveAckner.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week8_steve-Denny.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week8_Truck-GeraldPrieskorn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week8_TylerG-JeffBrakora.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week9_Eric-kevkrank.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week9_GeraldPrieskorn-SteveAckner.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week9_Snowman-JeffBrakora.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week9_steve-DanG.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week9_Truck-Denny.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\2015\matchups\2015-16_Week9_TylerG-Zach.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AngleSharp" Version="0.14.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>

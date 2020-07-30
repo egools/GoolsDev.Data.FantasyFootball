@@ -1,8 +1,8 @@
-C:\Users\egoolsby\Documents\0_MyFiles\BMGC\BMGC_Fantasy_Stats\FantasyUtil\bin\Debug\netcoreapp2.1\FantasyComponents.deps.json
-C:\Users\egoolsby\Documents\0_MyFiles\BMGC\BMGC_Fantasy_Stats\FantasyUtil\bin\Debug\netcoreapp2.1\FantasyComponents.dll
-C:\Users\egoolsby\Documents\0_MyFiles\BMGC\BMGC_Fantasy_Stats\FantasyUtil\bin\Debug\netcoreapp2.1\FantasyComponents.pdb
-C:\Users\egoolsby\Documents\0_MyFiles\BMGC\BMGC_Fantasy_Stats\FantasyUtil\obj\Debug\netcoreapp2.1\FantasyComponents.csprojAssemblyReference.cache
-C:\Users\egoolsby\Documents\0_MyFiles\BMGC\BMGC_Fantasy_Stats\FantasyUtil\obj\Debug\netcoreapp2.1\FantasyComponents.AssemblyInfoInputs.cache
-C:\Users\egoolsby\Documents\0_MyFiles\BMGC\BMGC_Fantasy_Stats\FantasyUtil\obj\Debug\netcoreapp2.1\FantasyComponents.AssemblyInfo.cs
-C:\Users\egoolsby\Documents\0_MyFiles\BMGC\BMGC_Fantasy_Stats\FantasyUtil\obj\Debug\netcoreapp2.1\FantasyComponents.dll
-C:\Users\egoolsby\Documents\0_MyFiles\BMGC\BMGC_Fantasy_Stats\FantasyUtil\obj\Debug\netcoreapp2.1\FantasyComponents.pdb
+C:\Users\Eric\source\repos\egools\BMGC_Fantasy_Stats\BMGC_Fantasy_Stats\FantasyUtil\bin\Debug\netcoreapp2.1\FantasyComponents.deps.json
+C:\Users\Eric\source\repos\egools\BMGC_Fantasy_Stats\BMGC_Fantasy_Stats\FantasyUtil\bin\Debug\netcoreapp2.1\FantasyComponents.dll
+C:\Users\Eric\source\repos\egools\BMGC_Fantasy_Stats\BMGC_Fantasy_Stats\FantasyUtil\bin\Debug\netcoreapp2.1\FantasyComponents.pdb
+C:\Users\Eric\source\repos\egools\BMGC_Fantasy_Stats\BMGC_Fantasy_Stats\FantasyUtil\obj\Debug\netcoreapp2.1\FantasyComponents.csprojAssemblyReference.cache
+C:\Users\Eric\source\repos\egools\BMGC_Fantasy_Stats\BMGC_Fantasy_Stats\FantasyUtil\obj\Debug\netcoreapp2.1\FantasyComponents.AssemblyInfoInputs.cache
+C:\Users\Eric\source\repos\egools\BMGC_Fantasy_Stats\BMGC_Fantasy_Stats\FantasyUtil\obj\Debug\netcoreapp2.1\FantasyComponents.AssemblyInfo.cs
+C:\Users\Eric\source\repos\egools\BMGC_Fantasy_Stats\BMGC_Fantasy_Stats\FantasyUtil\obj\Debug\netcoreapp2.1\FantasyComponents.dll
+C:\Users\Eric\source\repos\egools\BMGC_Fantasy_Stats\BMGC_Fantasy_Stats\FantasyUtil\obj\Debug\netcoreapp2.1\FantasyComponents.pdb

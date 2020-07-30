@@ -1,34 +1,37 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eric\\Documents\\GitHub\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Parser\\FantasyParser.csproj": {}
+    "C:\\Users\\Eric\\source\\repos\\egools\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Parser\\FantasyParser.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eric\\Documents\\GitHub\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Parser\\FantasyParser.csproj": {
+    "C:\\Users\\Eric\\source\\repos\\egools\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Parser\\FantasyParser.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eric\\Documents\\GitHub\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Parser\\FantasyParser.csproj",
+        "projectUniqueName": "C:\\Users\\Eric\\source\\repos\\egools\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Parser\\FantasyParser.csproj",
         "projectName": "FantasyParser",
-        "projectPath": "C:\\Users\\Eric\\Documents\\GitHub\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Parser\\FantasyParser.csproj",
+        "projectPath": "C:\\Users\\Eric\\source\\repos\\egools\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Parser\\FantasyParser.csproj",
         "packagesPath": "C:\\Users\\Eric\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eric\\Documents\\GitHub\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Parser\\obj\\",
+        "outputPath": "C:\\Users\\Eric\\source\\repos\\egools\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Parser\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\Eric\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.1"
+          "netcoreapp3.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.1": {
+          "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\Eric\\Documents\\GitHub\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj": {
-                "projectPath": "C:\\Users\\Eric\\Documents\\GitHub\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj"
+              "C:\\Users\\Eric\\source\\repos\\egools\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj": {
+                "projectPath": "C:\\Users\\Eric\\source\\repos\\egools\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj"
               }
             }
           }
@@ -40,17 +43,21 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.1": {
+        "netcoreapp3.0": {
           "dependencies": {
             "AngleSharp": {
               "target": "Package",
-              "version": "[0.13.0, )"
+              "version": "[0.14.0, )"
             },
-            "Microsoft.NETCore.App": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.1.0, )",
-              "autoReferenced": true
+              "version": "[3.1.6, )"
             }
           },
           "imports": [
@@ -63,19 +70,27 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Eric\\Documents\\GitHub\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj": {
+    "C:\\Users\\Eric\\source\\repos\\egools\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eric\\Documents\\GitHub\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj",
+        "projectUniqueName": "C:\\Users\\Eric\\source\\repos\\egools\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj",
         "projectName": "FantasyComponents",
-        "projectPath": "C:\\Users\\Eric\\Documents\\GitHub\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj",
+        "projectPath": "C:\\Users\\Eric\\source\\repos\\egools\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj",
         "packagesPath": "C:\\Users\\Eric\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eric\\Documents\\GitHub\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\obj\\",
+        "outputPath": "C:\\Users\\Eric\\source\\repos\\egools\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\Eric\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -118,7 +133,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

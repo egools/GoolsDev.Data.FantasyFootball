@@ -1,0 +1,257 @@
+{
+    "LeagueName": "Bald Mountain 10 (ID# 468053)",
+    "SeasonYear": "2015-16",
+    "Week": "15",
+    "LeftTeam": {
+        "Manager": "Eric",
+        "TeamName": "💩💩💩💩",
+        "Players": [
+            {
+                "FullName": "Aaron Rodgers",
+                "PlayerId": 7200,
+                "MatchupPosition": "QB",
+                "PointsScored": 10.06,
+                "ProjectedPoints": 19.52,
+                "ShortName": "A. Rodgers"
+            },
+            {
+                "FullName": "Allen Robinson II",
+                "PlayerId": 27589,
+                "MatchupPosition": "WR",
+                "PointsScored": 11.7,
+                "ProjectedPoints": 10.47,
+                "ShortName": "A. Robinson II"
+            },
+            {
+                "FullName": "Sammy Watkins",
+                "PlayerId": 27532,
+                "MatchupPosition": "WR",
+                "PointsScored": 23.1,
+                "ProjectedPoints": 9.96,
+                "ShortName": "S. Watkins"
+            },
+            {
+                "FullName": "Eddie Lacy",
+                "PlayerId": 26684,
+                "MatchupPosition": "RB",
+                "PointsScored": 2.3,
+                "ProjectedPoints": 11.06,
+                "ShortName": "E. Lacy"
+            },
+            {
+                "FullName": "Devonta Freeman",
+                "PlayerId": 27631,
+                "MatchupPosition": "RB",
+                "PointsScored": 16.1,
+                "ProjectedPoints": 14.8,
+                "ShortName": "D. Freeman"
+            },
+            {
+                "FullName": "Heath Miller",
+                "PlayerId": 7206,
+                "MatchupPosition": "TE",
+                "PointsScored": 1.2,
+                "ProjectedPoints": 6.5,
+                "ShortName": "H. Miller"
+            },
+            {
+                "FullName": "Allen Hurns",
+                "PlayerId": 27874,
+                "MatchupPosition": "W/R/T",
+                "PointsScored": 4.4,
+                "ProjectedPoints": 7.6,
+                "ShortName": "A. Hurns"
+            },
+            {
+                "FullName": "Graham Gano",
+                "PlayerId": 9526,
+                "MatchupPosition": "K",
+                "PointsScored": 9,
+                "ProjectedPoints": 7.95,
+                "ShortName": "G. Gano"
+            },
+            {
+                "FullName": "Kansas City",
+                "PlayerId": 100012,
+                "MatchupPosition": "DEF",
+                "PointsScored": 21,
+                "ProjectedPoints": 8.78,
+                "ShortName": "K. City"
+            },
+            {
+                "FullName": "Emmanuel Sanders",
+                "PlayerId": 24057,
+                "MatchupPosition": "BN",
+                "PointsScored": 31.5,
+                "ProjectedPoints": 8.64,
+                "ShortName": "E. Sanders"
+            },
+            {
+                "FullName": "Duke Johnson",
+                "PlayerId": 28465,
+                "MatchupPosition": "BN",
+                "PointsScored": 8.5,
+                "ProjectedPoints": 5.23,
+                "ShortName": "D. Johnson"
+            },
+            {
+                "FullName": "Antonio Andrews",
+                "PlayerId": 27946,
+                "MatchupPosition": "BN",
+                "PointsScored": 7,
+                "ProjectedPoints": 5.72,
+                "ShortName": "A. Andrews"
+            },
+            {
+                "FullName": "Tavon Austin",
+                "PlayerId": 26631,
+                "MatchupPosition": "BN",
+                "PointsScored": 19.3,
+                "ProjectedPoints": 8.67,
+                "ShortName": "T. Austin"
+            },
+            {
+                "FullName": "James White",
+                "PlayerId": 27658,
+                "MatchupPosition": "BN",
+                "PointsScored": 13.7,
+                "ProjectedPoints": 8.29,
+                "ShortName": "J. White"
+            },
+            {
+                "FullName": "Cincinnati",
+                "PlayerId": 100004,
+                "MatchupPosition": "BN",
+                "PointsScored": 15,
+                "ProjectedPoints": 7.5,
+                "ShortName": "C."
+            }
+        ]
+    },
+    "RightTeam": {
+        "Manager": "Denny",
+        "TeamName": "Cage the Hampster",
+        "Players": [
+            {
+                "FullName": "Tom Brady",
+                "PlayerId": 5228,
+                "MatchupPosition": "QB",
+                "PointsScored": 18.68,
+                "ProjectedPoints": 21.6,
+                "ShortName": "T. Brady"
+            },
+            {
+                "FullName": "DeAndre Hopkins",
+                "PlayerId": 26650,
+                "MatchupPosition": "WR",
+                "PointsScored": 9.4,
+                "ProjectedPoints": 12.75,
+                "ShortName": "D. Hopkins"
+            },
+            {
+                "FullName": "Brandon LaFell",
+                "PlayerId": 24053,
+                "MatchupPosition": "WR",
+                "PointsScored": 8.8,
+                "ProjectedPoints": 9.06,
+                "ShortName": "B. LaFell"
+            },
+            {
+                "FullName": "Adrian Peterson",
+                "PlayerId": 8261,
+                "MatchupPosition": "RB",
+                "PointsScored": 6.3,
+                "ProjectedPoints": 17.23,
+                "ShortName": "A. Peterson"
+            },
+            {
+                "FullName": "Ameer Abdullah",
+                "PlayerId": 28442,
+                "MatchupPosition": "RB",
+                "PointsScored": 12.9,
+                "ProjectedPoints": 7.33,
+                "ShortName": "A. Abdullah"
+            },
+            {
+                "FullName": "Antonio Gates",
+                "PlayerId": 6663,
+                "MatchupPosition": "TE",
+                "PointsScored": 8.8,
+                "ProjectedPoints": 8.49,
+                "ShortName": "A. Gates"
+            },
+            {
+                "FullName": "Giovani Bernard",
+                "PlayerId": 26660,
+                "MatchupPosition": "W/R/T",
+                "PointsScored": 5.1,
+                "ProjectedPoints": 8.76,
+                "ShortName": "G. Bernard"
+            },
+            {
+                "FullName": "Justin Tucker",
+                "PlayerId": 26534,
+                "MatchupPosition": "K",
+                "PointsScored": 2,
+                "ProjectedPoints": 7.61,
+                "ShortName": "J. Tucker"
+            },
+            {
+                "FullName": "Chicago",
+                "PlayerId": 100003,
+                "MatchupPosition": "DEF",
+                "PointsScored": -3,
+                "ProjectedPoints": 5.97,
+                "ShortName": "C."
+            },
+            {
+                "FullName": "DeVante Parker",
+                "PlayerId": 28402,
+                "MatchupPosition": "BN",
+                "PointsScored": 8.7,
+                "ProjectedPoints": 4.83,
+                "ShortName": "D. Parker"
+            },
+            {
+                "FullName": "T.J. Yeldon",
+                "PlayerId": 28424,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 0,
+                "ShortName": "T. Yeldon"
+            },
+            {
+                "FullName": "Eric Ebron",
+                "PlayerId": 27538,
+                "MatchupPosition": "BN",
+                "PointsScored": 7.9,
+                "ProjectedPoints": 5.78,
+                "ShortName": "E. Ebron"
+            },
+            {
+                "FullName": "Stefon Diggs",
+                "PlayerId": 28534,
+                "MatchupPosition": "BN",
+                "PointsScored": 17.5,
+                "ProjectedPoints": 6.3,
+                "ShortName": "S. Diggs"
+            },
+            {
+                "FullName": "Davante Adams",
+                "PlayerId": 27581,
+                "MatchupPosition": "BN",
+                "PointsScored": 3.2,
+                "ProjectedPoints": 7.47,
+                "ShortName": "D. Adams"
+            },
+            {
+                "FullName": "Devin Funchess",
+                "PlayerId": 28429,
+                "MatchupPosition": "BN",
+                "PointsScored": 9,
+                "ProjectedPoints": 5.34,
+                "ShortName": "D. Funchess"
+            }
+        ]
+    }
+}

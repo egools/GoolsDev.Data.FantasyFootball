@@ -1,18 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eric\\Documents\\GitHub\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj": {}
+    "C:\\Users\\Eric\\source\\repos\\egools\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eric\\Documents\\GitHub\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj": {
+    "C:\\Users\\Eric\\source\\repos\\egools\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eric\\Documents\\GitHub\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj",
+        "projectUniqueName": "C:\\Users\\Eric\\source\\repos\\egools\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj",
         "projectName": "FantasyComponents",
-        "projectPath": "C:\\Users\\Eric\\Documents\\GitHub\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj",
+        "projectPath": "C:\\Users\\Eric\\source\\repos\\egools\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\FantasyComponents.csproj",
         "packagesPath": "C:\\Users\\Eric\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eric\\Documents\\GitHub\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\obj\\",
+        "outputPath": "C:\\Users\\Eric\\source\\repos\\egools\\BMGC_Fantasy_Stats\\BMGC_Fantasy_Stats\\FantasyUtil\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\Eric\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -55,7 +58,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

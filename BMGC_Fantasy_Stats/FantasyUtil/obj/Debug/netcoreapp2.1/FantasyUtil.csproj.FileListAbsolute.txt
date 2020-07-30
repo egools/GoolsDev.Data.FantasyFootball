@@ -1,8 +1,0 @@
-C:\Users\Gools BBPC\Documents\Fantasy_Stats\BMGC_Fantasy_Stats\FantasyUtil\bin\Debug\netcoreapp2.1\FantasyUtil.deps.json
-C:\Users\Gools BBPC\Documents\Fantasy_Stats\BMGC_Fantasy_Stats\FantasyUtil\bin\Debug\netcoreapp2.1\FantasyUtil.dll
-C:\Users\Gools BBPC\Documents\Fantasy_Stats\BMGC_Fantasy_Stats\FantasyUtil\bin\Debug\netcoreapp2.1\FantasyUtil.pdb
-C:\Users\Gools BBPC\Documents\Fantasy_Stats\BMGC_Fantasy_Stats\FantasyUtil\obj\Debug\netcoreapp2.1\FantasyUtil.csprojAssemblyReference.cache
-C:\Users\Gools BBPC\Documents\Fantasy_Stats\BMGC_Fantasy_Stats\FantasyUtil\obj\Debug\netcoreapp2.1\FantasyUtil.AssemblyInfoInputs.cache
-C:\Users\Gools BBPC\Documents\Fantasy_Stats\BMGC_Fantasy_Stats\FantasyUtil\obj\Debug\netcoreapp2.1\FantasyUtil.AssemblyInfo.cs
-C:\Users\Gools BBPC\Documents\Fantasy_Stats\BMGC_Fantasy_Stats\FantasyUtil\obj\Debug\netcoreapp2.1\FantasyUtil.dll
-C:\Users\Gools BBPC\Documents\Fantasy_Stats\BMGC_Fantasy_Stats\FantasyUtil\obj\Debug\netcoreapp2.1\FantasyUtil.pdb

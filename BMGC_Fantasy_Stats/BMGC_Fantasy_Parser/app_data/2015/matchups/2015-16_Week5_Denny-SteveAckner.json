@@ -1,0 +1,257 @@
+{
+    "LeagueName": "Bald Mountain 10 (ID# 468053)",
+    "SeasonYear": "2015-16",
+    "Week": "5",
+    "LeftTeam": {
+        "Manager": "Denny",
+        "TeamName": "Cage the Hampster",
+        "Players": [
+            {
+                "FullName": "Tom Brady",
+                "PlayerId": 5228,
+                "MatchupPosition": "QB",
+                "PointsScored": 25.3,
+                "ProjectedPoints": 0,
+                "ShortName": "T. Brady"
+            },
+            {
+                "FullName": "DeAndre Hopkins",
+                "PlayerId": 26650,
+                "MatchupPosition": "WR",
+                "PointsScored": 16.9,
+                "ProjectedPoints": 10.05,
+                "ShortName": "D. Hopkins"
+            },
+            {
+                "FullName": "Willie Snead IV",
+                "PlayerId": 28026,
+                "MatchupPosition": "WR",
+                "PointsScored": 14.1,
+                "ProjectedPoints": 0,
+                "ShortName": "W. Snead IV"
+            },
+            {
+                "FullName": "Giovani Bernard",
+                "PlayerId": 26660,
+                "MatchupPosition": "RB",
+                "PointsScored": 10.1,
+                "ProjectedPoints": 7.46,
+                "ShortName": "G. Bernard"
+            },
+            {
+                "FullName": "Justin Forsett",
+                "PlayerId": 9010,
+                "MatchupPosition": "RB",
+                "PointsScored": 23,
+                "ProjectedPoints": 11.69,
+                "ShortName": "J. Forsett"
+            },
+            {
+                "FullName": "Antonio Gates",
+                "PlayerId": 6663,
+                "MatchupPosition": "TE",
+                "PointsScored": 21.2,
+                "ProjectedPoints": 6.7,
+                "ShortName": "A. Gates"
+            },
+            {
+                "FullName": "T.J. Yeldon",
+                "PlayerId": 28424,
+                "MatchupPosition": "W/R/T",
+                "PointsScored": 12.3,
+                "ProjectedPoints": 10.34,
+                "ShortName": "T. Yeldon"
+            },
+            {
+                "FullName": "Justin Tucker",
+                "PlayerId": 26534,
+                "MatchupPosition": "K",
+                "PointsScored": 6,
+                "ProjectedPoints": 8.79,
+                "ShortName": "J. Tucker"
+            },
+            {
+                "FullName": "Kansas City",
+                "PlayerId": 100012,
+                "MatchupPosition": "DEF",
+                "PointsScored": 11,
+                "ProjectedPoints": 7.7,
+                "ShortName": "K. City"
+            },
+            {
+                "FullName": "Tyrod Taylor",
+                "PlayerId": 24967,
+                "MatchupPosition": "BN",
+                "PointsScored": 22.36,
+                "ProjectedPoints": 0,
+                "ShortName": "T. Taylor"
+            },
+            {
+                "FullName": "Adrian Peterson",
+                "PlayerId": 8261,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 0,
+                "ShortName": "A. Peterson"
+            },
+            {
+                "FullName": "Davante Adams",
+                "PlayerId": 27581,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 6.61,
+                "ShortName": "D. Adams"
+            },
+            {
+                "FullName": "Jerick McKinnon",
+                "PlayerId": 27624,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 0,
+                "ShortName": "J. McKinnon"
+            },
+            {
+                "FullName": "Matt Jones",
+                "PlayerId": 28483,
+                "MatchupPosition": "BN",
+                "PointsScored": 9.7,
+                "ProjectedPoints": 3.76,
+                "ShortName": "M. Jones"
+            },
+            {
+                "FullName": "Dorial Green-Beckham",
+                "PlayerId": 28428,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 5.61,
+                "ShortName": "D. Green-Beckham"
+            }
+        ]
+    },
+    "RightTeam": {
+        "Manager": "Steve Ackner",
+        "TeamName": "Hack-a-Jew",
+        "Players": [
+            {
+                "FullName": "Joe Flacco",
+                "PlayerId": 8795,
+                "MatchupPosition": "QB",
+                "PointsScored": 24.6,
+                "ProjectedPoints": 16.39,
+                "ShortName": "J. Flacco"
+            },
+            {
+                "FullName": "Odell Beckham Jr.",
+                "PlayerId": 27540,
+                "MatchupPosition": "WR",
+                "PointsScored": 18.4,
+                "ProjectedPoints": 12.67,
+                "ShortName": "O. Beckham Jr."
+            },
+            {
+                "FullName": "Nelson Agholor",
+                "PlayerId": 28408,
+                "MatchupPosition": "WR",
+                "PointsScored": 0.5,
+                "ProjectedPoints": 6.18,
+                "ShortName": "N. Agholor"
+            },
+            {
+                "FullName": "Ronnie Hillman",
+                "PlayerId": 25777,
+                "MatchupPosition": "RB",
+                "PointsScored": 2.6,
+                "ProjectedPoints": 3.31,
+                "ShortName": "R. Hillman"
+            },
+            {
+                "FullName": "Lorenzo Taliaferro",
+                "PlayerId": 27666,
+                "MatchupPosition": "RB",
+                "PointsScored": 0,
+                "ProjectedPoints": 5.08,
+                "ShortName": "L. Taliaferro"
+            },
+            {
+                "FullName": "Rob Gronkowski",
+                "PlayerId": 24017,
+                "MatchupPosition": "TE",
+                "PointsScored": 6.7,
+                "ProjectedPoints": 9.37,
+                "ShortName": "R. Gronkowski"
+            },
+            {
+                "FullName": "Donte Moncrief",
+                "PlayerId": 27618,
+                "MatchupPosition": "W/R/T",
+                "PointsScored": 0.3,
+                "ProjectedPoints": 3.61,
+                "ShortName": "D. Moncrief"
+            },
+            {
+                "FullName": "Matt Prater",
+                "PlayerId": 8565,
+                "MatchupPosition": "K",
+                "PointsScored": 6,
+                "ProjectedPoints": 8.72,
+                "ShortName": "M. Prater"
+            },
+            {
+                "FullName": "Arizona",
+                "PlayerId": 100022,
+                "MatchupPosition": "DEF",
+                "PointsScored": 14,
+                "ProjectedPoints": 8.58,
+                "ShortName": "A."
+            },
+            {
+                "FullName": "Alshon Jeffery",
+                "PlayerId": 25755,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 10.59,
+                "ShortName": "A. Jeffery"
+            },
+            {
+                "FullName": "LeSean McCoy",
+                "PlayerId": 9317,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 13.05,
+                "ShortName": "L. McCoy"
+            },
+            {
+                "FullName": "David Johnson",
+                "PlayerId": 28474,
+                "MatchupPosition": "BN",
+                "PointsScored": 12.6,
+                "ProjectedPoints": 5.41,
+                "ShortName": "D. Johnson"
+            },
+            {
+                "FullName": "Jarvis Landry",
+                "PlayerId": 27591,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 0,
+                "ShortName": "J. Landry"
+            },
+            {
+                "FullName": "Ben Roethlisberger",
+                "PlayerId": 6770,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 16.74,
+                "ShortName": "B. Roethlisberger"
+            },
+            {
+                "FullName": "Joique Bell",
+                "PlayerId": 24262,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 9.39,
+                "ShortName": "J. Bell"
+            }
+        ]
+    }
+}
