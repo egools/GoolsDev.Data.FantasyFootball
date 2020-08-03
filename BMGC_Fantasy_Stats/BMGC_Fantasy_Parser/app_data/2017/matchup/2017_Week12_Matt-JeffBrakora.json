@@ -1,0 +1,542 @@
+{
+    "LeagueName": "Bald Mountain 12 (ID# 1018864)",
+    "SeasonYear": "2017",
+    "Week": "12",
+    "LeftTeam": {
+        "Manager": "Matt",
+        "TeamName": "Beast From The East",
+        "Players": [
+            {
+                "FullName": "Alex Smith",
+                "PlayerId": 7177,
+                "MatchupPosition": "QB",
+                "PointsScored": 13.46,
+                "ProjectedPoints": 18.52,
+                "ShortName": "A. Smith",
+                "Stats": [
+                    {
+                        "StatText": "199 Passing Yards",
+                        "Points": 7.96
+                    },
+                    {
+                        "StatText": "1 Passing Touchdowns",
+                        "Points": 4
+                    },
+                    {
+                        "StatText": "1 Interceptions",
+                        "Points": -2
+                    },
+                    {
+                        "StatText": "35 Rushing Yards",
+                        "Points": 3.5
+                    }
+                ]
+            },
+            {
+                "FullName": "Julio Jones",
+                "PlayerId": 24793,
+                "MatchupPosition": "WR",
+                "PointsScored": 38.8,
+                "ProjectedPoints": 11.39,
+                "ShortName": "J. Jones",
+                "Stats": [
+                    {
+                        "StatText": "15 Rushing Yards",
+                        "Points": 1.5
+                    },
+                    {
+                        "StatText": "253 Receiving Yards",
+                        "Points": 25.3
+                    },
+                    {
+                        "StatText": "2 Receiving Touchdowns",
+                        "Points": 12
+                    }
+                ]
+            },
+            {
+                "FullName": "Doug Baldwin",
+                "PlayerId": 25105,
+                "MatchupPosition": "WR",
+                "PointsScored": 2,
+                "ProjectedPoints": 10.87,
+                "ShortName": "D. Baldwin",
+                "Stats": [
+                    {
+                        "StatText": "-5 Rushing Yards",
+                        "Points": -0.5
+                    },
+                    {
+                        "StatText": "25 Receiving Yards",
+                        "Points": 2.5
+                    }
+                ]
+            },
+            {
+                "FullName": "Kareem Hunt",
+                "PlayerId": 30199,
+                "MatchupPosition": "RB",
+                "PointsScored": 2.6,
+                "ProjectedPoints": 13.04,
+                "ShortName": "K. Hunt",
+                "Stats": [
+                    {
+                        "StatText": "17 Rushing Yards",
+                        "Points": 1.7
+                    },
+                    {
+                        "StatText": "9 Receiving Yards",
+                        "Points": 0.9
+                    }
+                ]
+            },
+            {
+                "FullName": "Carlos Hyde",
+                "PlayerId": 27585,
+                "MatchupPosition": "RB",
+                "PointsScored": 6.8,
+                "ProjectedPoints": 11.88,
+                "ShortName": "C. Hyde",
+                "Stats": [
+                    {
+                        "StatText": "47 Rushing Yards",
+                        "Points": 4.7
+                    },
+                    {
+                        "StatText": "21 Receiving Yards",
+                        "Points": 2.1
+                    }
+                ]
+            },
+            {
+                "FullName": "Jack Doyle",
+                "PlayerId": 27299,
+                "MatchupPosition": "TE",
+                "PointsScored": 9.4,
+                "ProjectedPoints": 8.58,
+                "ShortName": "J. Doyle",
+                "Stats": [
+                    {
+                        "StatText": "94 Receiving Yards",
+                        "Points": 9.4
+                    }
+                ]
+            },
+            {
+                "FullName": "Alshon Jeffery",
+                "PlayerId": 25755,
+                "MatchupPosition": "W/R/T",
+                "PointsScored": 11.2,
+                "ProjectedPoints": 9.32,
+                "ShortName": "A. Jeffery",
+                "Stats": [
+                    {
+                        "StatText": "52 Receiving Yards",
+                        "Points": 5.2
+                    },
+                    {
+                        "StatText": "1 Receiving Touchdowns",
+                        "Points": 6
+                    }
+                ]
+            },
+            {
+                "FullName": "Greg Zuerlein",
+                "PlayerId": 25881,
+                "MatchupPosition": "K",
+                "PointsScored": 18,
+                "ProjectedPoints": 10.48,
+                "ShortName": "G. Zuerlein",
+                "Stats": [
+                    {
+                        "StatText": "1 Field Goals 20-29 Yards",
+                        "Points": 3
+                    },
+                    {
+                        "StatText": "2 Field Goals 40-49 Yards",
+                        "Points": 8
+                    },
+                    {
+                        "StatText": "1 Field Goals 50+ Yards",
+                        "Points": 5
+                    },
+                    {
+                        "StatText": "2 Point After Attempt Made",
+                        "Points": 2
+                    }
+                ]
+            },
+            {
+                "FullName": "Pittsburgh",
+                "PlayerId": 100023,
+                "MatchupPosition": "DEF",
+                "PointsScored": 3,
+                "ProjectedPoints": 10.79,
+                "ShortName": "P.",
+                "Stats": [
+                    {
+                        "StatText": "4 Sack",
+                        "Points": 4
+                    },
+                    {
+                        "StatText": "1 Points Allowed 28-34 points",
+                        "Points": -1
+                    }
+                ]
+            },
+            {
+                "FullName": "Hunter Henry",
+                "PlayerId": 29269,
+                "MatchupPosition": "BN",
+                "PointsScored": 13.6,
+                "ProjectedPoints": 6.26,
+                "ShortName": "H. Henry",
+                "Stats": [
+                    {
+                        "StatText": "76 Receiving Yards",
+                        "Points": 7.6
+                    },
+                    {
+                        "StatText": "1 Receiving Touchdowns",
+                        "Points": 6
+                    }
+                ]
+            },
+            {
+                "FullName": "Latavius Murray",
+                "PlayerId": 26804,
+                "MatchupPosition": "BN",
+                "PointsScored": 14.4,
+                "ProjectedPoints": 9.49,
+                "ShortName": "L. Murray",
+                "Stats": [
+                    {
+                        "StatText": "84 Rushing Yards",
+                        "Points": 8.4
+                    },
+                    {
+                        "StatText": "1 Rushing Touchdowns",
+                        "Points": 6
+                    }
+                ]
+            },
+            {
+                "FullName": "Marcus Mariota",
+                "PlayerId": 28390,
+                "MatchupPosition": "BN",
+                "PointsScored": 7.76,
+                "ProjectedPoints": 18.81,
+                "ShortName": "M. Mariota",
+                "Stats": [
+                    {
+                        "StatText": "184 Passing Yards",
+                        "Points": 7.36
+                    },
+                    {
+                        "StatText": "1 Passing Touchdowns",
+                        "Points": 4
+                    },
+                    {
+                        "StatText": "2 Interceptions",
+                        "Points": -4
+                    },
+                    {
+                        "StatText": "4 Rushing Yards",
+                        "Points": 0.4
+                    }
+                ]
+            },
+            {
+                "FullName": "Robby Anderson",
+                "PlayerId": 29785,
+                "MatchupPosition": "BN",
+                "PointsScored": 26.6,
+                "ProjectedPoints": 7.98,
+                "ShortName": "R. Anderson",
+                "Stats": [
+                    {
+                        "StatText": "146 Receiving Yards",
+                        "Points": 14.6
+                    },
+                    {
+                        "StatText": "2 Receiving Touchdowns",
+                        "Points": 12
+                    }
+                ]
+            },
+            {
+                "FullName": "Stefon Diggs",
+                "PlayerId": 28534,
+                "MatchupPosition": "BN",
+                "PointsScored": 7.5,
+                "ProjectedPoints": 8.71,
+                "ShortName": "S. Diggs",
+                "Stats": [
+                    {
+                        "StatText": "9 Rushing Yards",
+                        "Points": 0.9
+                    },
+                    {
+                        "StatText": "66 Receiving Yards",
+                        "Points": 6.6
+                    }
+                ]
+            },
+            {
+                "FullName": "Kansas City",
+                "PlayerId": 100012,
+                "MatchupPosition": "BN",
+                "PointsScored": 3,
+                "ProjectedPoints": 9.24,
+                "ShortName": "K. City",
+                "Stats": [
+                    {
+                        "StatText": "2 Sack",
+                        "Points": 2
+                    },
+                    {
+                        "StatText": "1 Points Allowed 14-20 points",
+                        "Points": 1
+                    }
+                ]
+            }
+        ]
+    },
+    "RightTeam": {
+        "Manager": "Jeff Brakora",
+        "TeamName": "Danthrax",
+        "Players": [
+            {
+                "FullName": "Kirk Cousins",
+                "PlayerId": 25812,
+                "MatchupPosition": "QB",
+                "PointsScored": 16.08,
+                "ProjectedPoints": 18.26,
+                "Stats": [
+                    {
+                        "StatText": "242 Passing Yards",
+                        "Points": 9.68
+                    },
+                    {
+                        "StatText": "2 Passing Touchdowns",
+                        "Points": 8
+                    },
+                    {
+                        "StatText": "1 Interceptions",
+                        "Points": -2
+                    },
+                    {
+                        "StatText": "4 Rushing Yards",
+                        "Points": 0.4
+                    }
+                ]
+            },
+            {
+                "FullName": "DeVante Parker",
+                "PlayerId": 28402,
+                "MatchupPosition": "WR",
+                "PointsScored": 0.5,
+                "ProjectedPoints": 6.66,
+                "Stats": [
+                    {
+                        "StatText": "5 Receiving Yards",
+                        "Points": 0.5
+                    }
+                ]
+            },
+            {
+                "FullName": "Jeremy Maclin",
+                "PlayerId": 9283,
+                "MatchupPosition": "WR",
+                "PointsScored": 0.6,
+                "ProjectedPoints": 7.11,
+                "Stats": [
+                    {
+                        "StatText": "6 Receiving Yards",
+                        "Points": 0.6
+                    }
+                ]
+            },
+            {
+                "FullName": "Jerick McKinnon",
+                "PlayerId": 27624,
+                "MatchupPosition": "RB",
+                "PointsScored": 5.4,
+                "ProjectedPoints": 9.31,
+                "Stats": [
+                    {
+                        "StatText": "23 Rushing Yards",
+                        "Points": 2.3
+                    },
+                    {
+                        "StatText": "31 Receiving Yards",
+                        "Points": 3.1
+                    }
+                ]
+            },
+            {
+                "FullName": "Dion Lewis",
+                "PlayerId": 24936,
+                "MatchupPosition": "RB",
+                "PointsScored": 11.3,
+                "ProjectedPoints": 9.23,
+                "Stats": [
+                    {
+                        "StatText": "112 Rushing Yards",
+                        "Points": 11.2
+                    },
+                    {
+                        "StatText": "1 Receiving Yards",
+                        "Points": 0.1
+                    }
+                ]
+            },
+            {
+                "FullName": "Tyler Kroft",
+                "PlayerId": 28473,
+                "MatchupPosition": "TE",
+                "PointsScored": 7.4,
+                "ProjectedPoints": 6.52,
+                "Stats": [
+                    {
+                        "StatText": "14 Receiving Yards",
+                        "Points": 1.4
+                    },
+                    {
+                        "StatText": "1 Receiving Touchdowns",
+                        "Points": 6
+                    }
+                ]
+            },
+            {
+                "FullName": "Keenan Allen",
+                "PlayerId": 26699,
+                "MatchupPosition": "W/R/T",
+                "PointsScored": 23.2,
+                "ProjectedPoints": 8.64,
+                "Stats": [
+                    {
+                        "StatText": "172 Receiving Yards",
+                        "Points": 17.2
+                    },
+                    {
+                        "StatText": "1 Receiving Touchdowns",
+                        "Points": 6
+                    }
+                ]
+            },
+            {
+                "FullName": "Matt Bryant",
+                "PlayerId": 6243,
+                "MatchupPosition": "K",
+                "PointsScored": 11,
+                "ProjectedPoints": 10.45,
+                "Stats": [
+                    {
+                        "StatText": "1 Field Goals 30-39 Yards",
+                        "Points": 3
+                    },
+                    {
+                        "StatText": "1 Field Goals 40-49 Yards",
+                        "Points": 4
+                    },
+                    {
+                        "StatText": "4 Point After Attempt Made",
+                        "Points": 4
+                    }
+                ]
+            },
+            {
+                "FullName": "Chicago",
+                "PlayerId": 100003,
+                "MatchupPosition": "DEF",
+                "PointsScored": 6,
+                "ProjectedPoints": 3.44,
+                "Stats": [
+                    {
+                        "StatText": "1 Sack",
+                        "Points": 1
+                    },
+                    {
+                        "StatText": "3 Fumble Recovery",
+                        "Points": 6
+                    },
+                    {
+                        "StatText": "1 Points Allowed 28-34 points",
+                        "Points": -1
+                    }
+                ]
+            },
+            {
+                "FullName": "JuJu Smith-Schuster",
+                "PlayerId": 30175,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 0,
+                "Stats": []
+            },
+            {
+                "FullName": "Ty Montgomery",
+                "PlayerId": 28482,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 0,
+                "Stats": []
+            },
+            {
+                "FullName": "Alex Collins",
+                "PlayerId": 29405,
+                "MatchupPosition": "BN",
+                "PointsScored": 11.7,
+                "ProjectedPoints": 9.07,
+                "Stats": [
+                    {
+                        "StatText": "60 Rushing Yards",
+                        "Points": 6
+                    },
+                    {
+                        "StatText": "1 Rushing Touchdowns",
+                        "Points": 6
+                    },
+                    {
+                        "StatText": "-3 Receiving Yards",
+                        "Points": -0.3
+                    }
+                ]
+            },
+            {
+                "FullName": "Sammy Watkins",
+                "PlayerId": 27532,
+                "MatchupPosition": "BN",
+                "PointsScored": 14.2,
+                "ProjectedPoints": 7.72,
+                "Stats": [
+                    {
+                        "StatText": "82 Receiving Yards",
+                        "Points": 8.2
+                    },
+                    {
+                        "StatText": "1 Receiving Touchdowns",
+                        "Points": 6
+                    }
+                ]
+            },
+            {
+                "FullName": "David Johnson",
+                "PlayerId": 28474,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 0,
+                "Stats": []
+            },
+            {
+                "FullName": "Darren McFadden",
+                "PlayerId": 8781,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 0,
+                "Stats": []
+            }
+        ]
+    }
+}
