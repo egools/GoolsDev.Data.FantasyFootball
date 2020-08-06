@@ -1,0 +1,481 @@
+{
+    "LeagueName": "BMGC VI (ID# 197497)",
+    "SeasonYear": "2011",
+    "Week": "11",
+    "LeftTeam": {
+        "Manager": "Steve Ackner",
+        "TeamName": "be cray",
+        "Players": [
+            {
+                "FullName": "Sam Bradford",
+                "PlayerId": 23976,
+                "MatchupPosition": "QB",
+                "PointsScored": 5.24,
+                "ProjectedPoints": 12.71,
+                "ShortName": "S. Bradford",
+                "Stats": [
+                    {
+                        "StatText": "181 Passing Yards",
+                        "Points": 7.24
+                    },
+                    {
+                        "StatText": "1 Passing Touchdowns",
+                        "Points": 4
+                    },
+                    {
+                        "StatText": "1 Interceptions",
+                        "Points": -2
+                    },
+                    {
+                        "StatText": "2 Fumbles Lost",
+                        "Points": -4
+                    }
+                ]
+            },
+            {
+                "FullName": "Anquan Boldin",
+                "PlayerId": 6390,
+                "MatchupPosition": "WR",
+                "PointsScored": 9.5,
+                "ProjectedPoints": 7.67,
+                "ShortName": "A. Boldin",
+                "Stats": [
+                    {
+                        "StatText": "35 Reception Yards",
+                        "Points": 3.5
+                    },
+                    {
+                        "StatText": "1 Reception Touchdowns",
+                        "Points": 6
+                    }
+                ]
+            },
+            {
+                "FullName": "A.J. Green",
+                "PlayerId": 24791,
+                "MatchupPosition": "WR",
+                "PointsScored": 0,
+                "ProjectedPoints": 0,
+                "ShortName": "A. Green",
+                "Stats": []
+            },
+            {
+                "FullName": "Shonn Greene",
+                "PlayerId": 9329,
+                "MatchupPosition": "RB",
+                "PointsScored": 1.4,
+                "ProjectedPoints": 12.91,
+                "ShortName": "S. Greene",
+                "Stats": [
+                    {
+                        "StatText": "10 Rushing Yards",
+                        "Points": 1
+                    },
+                    {
+                        "StatText": "4 Reception Yards",
+                        "Points": 0.4
+                    }
+                ]
+            },
+            {
+                "FullName": "Marshawn Lynch",
+                "PlayerId": 8266,
+                "MatchupPosition": "RB",
+                "PointsScored": 14.9,
+                "ProjectedPoints": 10.04,
+                "ShortName": "M. Lynch",
+                "Stats": [
+                    {
+                        "StatText": "88 Rushing Yards",
+                        "Points": 8.8
+                    },
+                    {
+                        "StatText": "1 Rushing Touchdowns",
+                        "Points": 6
+                    },
+                    {
+                        "StatText": "1 Reception Yards",
+                        "Points": 0.1
+                    }
+                ]
+            },
+            {
+                "FullName": "Rob Gronkowski",
+                "PlayerId": 24017,
+                "MatchupPosition": "TE",
+                "PointsScored": 21.6,
+                "ProjectedPoints": 11.95,
+                "ShortName": "R. Gronkowski",
+                "Stats": [
+                    {
+                        "StatText": "96 Reception Yards",
+                        "Points": 9.6
+                    },
+                    {
+                        "StatText": "2 Reception Touchdowns",
+                        "Points": 12
+                    }
+                ]
+            },
+            {
+                "FullName": "Brandon Jacobs",
+                "PlayerId": 7286,
+                "MatchupPosition": "W/R",
+                "PointsScored": 3.2,
+                "ProjectedPoints": 13.29,
+                "ShortName": "B. Jacobs",
+                "Stats": [
+                    {
+                        "StatText": "21 Rushing Yards",
+                        "Points": 2.1
+                    },
+                    {
+                        "StatText": "11 Reception Yards",
+                        "Points": 1.1
+                    }
+                ]
+            },
+            {
+                "FullName": "Mason Crosby",
+                "PlayerId": 8447,
+                "MatchupPosition": "K",
+                "PointsScored": 5,
+                "ProjectedPoints": 10.94,
+                "ShortName": "M. Crosby",
+                "Stats": [
+                    {
+                        "StatText": "5 Point After Attempt Made",
+                        "Points": 5
+                    }
+                ]
+            },
+            {
+                "FullName": "New York",
+                "PlayerId": 100019,
+                "MatchupPosition": "DEF",
+                "PointsScored": 8,
+                "ProjectedPoints": 10.87,
+                "ShortName": "N. York",
+                "Stats": [
+                    {
+                        "StatText": "1 Sack",
+                        "Points": 1
+                    },
+                    {
+                        "StatText": "3 Interception",
+                        "Points": 6
+                    },
+                    {
+                        "StatText": "1 Points Allowed 14-20 points",
+                        "Points": 1
+                    }
+                ]
+            },
+            {
+                "FullName": "Marques Colston",
+                "PlayerId": 8001,
+                "MatchupPosition": "BN",
+                "PointsScored": null,
+                "ProjectedPoints": 0,
+                "ShortName": "M. Colston",
+                "Stats": []
+            },
+            {
+                "FullName": "Jackie Battle",
+                "PlayerId": 8739,
+                "MatchupPosition": "BN",
+                "PointsScored": 3.6,
+                "ProjectedPoints": 7.46,
+                "ShortName": "J. Battle",
+                "Stats": [
+                    {
+                        "StatText": "33 Rushing Yards",
+                        "Points": 3.3
+                    },
+                    {
+                        "StatText": "3 Reception Yards",
+                        "Points": 0.3
+                    }
+                ]
+            },
+            {
+                "FullName": "Ben Roethlisberger",
+                "PlayerId": 6770,
+                "MatchupPosition": "BN",
+                "PointsScored": null,
+                "ProjectedPoints": 0,
+                "ShortName": "B. Roethlisberger",
+                "Stats": []
+            },
+            {
+                "FullName": "Brandon Pettigrew",
+                "PlayerId": 9284,
+                "MatchupPosition": "BN",
+                "PointsScored": 9.7,
+                "ProjectedPoints": 5.15,
+                "ShortName": "B. Pettigrew",
+                "Stats": [
+                    {
+                        "StatText": "37 Reception Yards",
+                        "Points": 3.7
+                    },
+                    {
+                        "StatText": "1 Reception Touchdowns",
+                        "Points": 6
+                    }
+                ]
+            },
+            {
+                "FullName": "Reggie Wayne",
+                "PlayerId": 5477,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 0,
+                "ShortName": "R. Wayne",
+                "Stats": []
+            },
+            {
+                "FullName": "Robert Meachem",
+                "PlayerId": 8281,
+                "MatchupPosition": "BN",
+                "PointsScored": null,
+                "ProjectedPoints": 0,
+                "ShortName": "R. Meachem",
+                "Stats": []
+            }
+        ]
+    },
+    "RightTeam": {
+        "Manager": "Tyler G",
+        "TeamName": "Not Last",
+        "Players": [
+            {
+                "FullName": "Mark Sanchez",
+                "PlayerId": 9269,
+                "MatchupPosition": "QB",
+                "PointsScored": 8.08,
+                "ProjectedPoints": 12.34,
+                "Stats": [
+                    {
+                        "StatText": "252 Passing Yards",
+                        "Points": 10.08
+                    },
+                    {
+                        "StatText": "1 Interceptions",
+                        "Points": -2
+                    }
+                ]
+            },
+            {
+                "FullName": "James Jones",
+                "PlayerId": 8332,
+                "MatchupPosition": "WR",
+                "PointsScored": 0,
+                "ProjectedPoints": 5.48,
+                "Stats": []
+            },
+            {
+                "FullName": "DeSean Jackson",
+                "PlayerId": 8826,
+                "MatchupPosition": "WR",
+                "PointsScored": 8.8,
+                "ProjectedPoints": 7.92,
+                "Stats": [
+                    {
+                        "StatText": "88 Reception Yards",
+                        "Points": 8.8
+                    }
+                ]
+            },
+            {
+                "FullName": "Danny Woodhead",
+                "PlayerId": 9560,
+                "MatchupPosition": "RB",
+                "PointsScored": 5.5,
+                "ProjectedPoints": 6.36,
+                "Stats": [
+                    {
+                        "StatText": "27 Rushing Yards",
+                        "Points": 2.7
+                    },
+                    {
+                        "StatText": "28 Reception Yards",
+                        "Points": 2.8
+                    }
+                ]
+            },
+            {
+                "FullName": "Dexter McCluster",
+                "PlayerId": 24011,
+                "MatchupPosition": "RB",
+                "PointsScored": 4.8,
+                "ProjectedPoints": 6.1,
+                "Stats": [
+                    {
+                        "StatText": "45 Rushing Yards",
+                        "Points": 4.5
+                    },
+                    {
+                        "StatText": "3 Reception Yards",
+                        "Points": 0.3
+                    }
+                ]
+            },
+            {
+                "FullName": "Jake Ballard",
+                "PlayerId": 24550,
+                "MatchupPosition": "TE",
+                "PointsScored": 1.3,
+                "ProjectedPoints": 5.98,
+                "Stats": [
+                    {
+                        "StatText": "13 Reception Yards",
+                        "Points": 1.3
+                    }
+                ]
+            },
+            {
+                "FullName": "Damian Williams",
+                "PlayerId": 24052,
+                "MatchupPosition": "W/R",
+                "PointsScored": 1.6,
+                "ProjectedPoints": 3.7,
+                "Stats": [
+                    {
+                        "StatText": "16 Reception Yards",
+                        "Points": 1.6
+                    }
+                ]
+            },
+            {
+                "FullName": "Nick Novak",
+                "PlayerId": 7505,
+                "MatchupPosition": "K",
+                "PointsScored": 9,
+                "ProjectedPoints": 8.33,
+                "Stats": [
+                    {
+                        "StatText": "1 Field Goals 20-29 Yards",
+                        "Points": 3
+                    },
+                    {
+                        "StatText": "1 Field Goals 40-49 Yards",
+                        "Points": 4
+                    },
+                    {
+                        "StatText": "2 Point After Attempt Made",
+                        "Points": 2
+                    }
+                ]
+            },
+            {
+                "FullName": "Detroit",
+                "PlayerId": 100008,
+                "MatchupPosition": "DEF",
+                "PointsScored": 5,
+                "ProjectedPoints": 9.56,
+                "Stats": [
+                    {
+                        "StatText": "1 Sack",
+                        "Points": 1
+                    },
+                    {
+                        "StatText": "4 Interception",
+                        "Points": 8
+                    },
+                    {
+                        "StatText": "1 Points Allowed 35+ points",
+                        "Points": -4
+                    }
+                ]
+            },
+            {
+                "FullName": "Nate Burleson",
+                "PlayerId": 6407,
+                "MatchupPosition": "BN",
+                "PointsScored": 12.3,
+                "ProjectedPoints": 5.23,
+                "Stats": [
+                    {
+                        "StatText": "63 Reception Yards",
+                        "Points": 6.3
+                    },
+                    {
+                        "StatText": "1 Reception Touchdowns",
+                        "Points": 6
+                    }
+                ]
+            },
+            {
+                "FullName": "Matt Hasselbeck",
+                "PlayerId": 4416,
+                "MatchupPosition": "BN",
+                "PointsScored": 4.66,
+                "ProjectedPoints": 12.19,
+                "Stats": [
+                    {
+                        "StatText": "124 Passing Yards",
+                        "Points": 4.96
+                    },
+                    {
+                        "StatText": "1 Interceptions",
+                        "Points": -2
+                    },
+                    {
+                        "StatText": "17 Rushing Yards",
+                        "Points": 1.7
+                    }
+                ]
+            },
+            {
+                "FullName": "Joe Flacco",
+                "PlayerId": 8795,
+                "MatchupPosition": "BN",
+                "PointsScored": 16.6,
+                "ProjectedPoints": 12.01,
+                "Stats": [
+                    {
+                        "StatText": "270 Passing Yards",
+                        "Points": 10.8
+                    },
+                    {
+                        "StatText": "2 Passing Touchdowns",
+                        "Points": 8
+                    },
+                    {
+                        "StatText": "1 Interceptions",
+                        "Points": -2
+                    },
+                    {
+                        "StatText": "-2 Rushing Yards",
+                        "Points": -0.2
+                    }
+                ]
+            },
+            {
+                "FullName": "Peyton Hillis",
+                "PlayerId": 9004,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 0,
+                "Stats": []
+            },
+            {
+                "FullName": "Santana Moss",
+                "PlayerId": 5463,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 0,
+                "Stats": []
+            },
+            {
+                "FullName": "Darren McFadden",
+                "PlayerId": 8781,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 2.53,
+                "Stats": []
+            }
+        ]
+    }
+}

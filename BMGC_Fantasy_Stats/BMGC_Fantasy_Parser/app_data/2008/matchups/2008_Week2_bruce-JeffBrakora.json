@@ -1,0 +1,551 @@
+{
+    "LeagueName": "black men still cant jump (ID# 6252)",
+    "SeasonYear": "2008",
+    "Week": "2",
+    "LeftTeam": {
+        "Manager": "bruce",
+        "TeamName": "Logan is God",
+        "Players": [
+            {
+                "FullName": "David Garrard",
+                "PlayerId": 5994,
+                "MatchupPosition": "QB",
+                "PointsScored": 7.8,
+                "ProjectedPoints": 13.78,
+                "ShortName": "D. Garrard",
+                "Stats": [
+                    {
+                        "StatText": "165 Passing Yards",
+                        "Points": 6.6
+                    },
+                    {
+                        "StatText": "1 Interceptions",
+                        "Points": -2
+                    },
+                    {
+                        "StatText": "32 Rushing Yards",
+                        "Points": 3.2
+                    }
+                ]
+            },
+            {
+                "FullName": "T.J. Houshmandzadeh",
+                "PlayerId": 5652,
+                "MatchupPosition": "WR",
+                "PointsScored": 2.6,
+                "ProjectedPoints": 10.87,
+                "ShortName": "T. Houshmandzadeh",
+                "Stats": [
+                    {
+                        "StatText": "26 Reception Yards",
+                        "Points": 2.6
+                    }
+                ]
+            },
+            {
+                "FullName": "Eddie Royal",
+                "PlayerId": 8819,
+                "MatchupPosition": "WR",
+                "PointsScored": 11.87,
+                "ProjectedPoints": 10.05,
+                "ShortName": "E. Royal",
+                "Stats": [
+                    {
+                        "StatText": "37 Reception Yards",
+                        "Points": 3.7
+                    },
+                    {
+                        "StatText": "1 Reception Touchdowns",
+                        "Points": 6
+                    },
+                    {
+                        "StatText": "6 Return Yards",
+                        "Points": 0.17
+                    },
+                    {
+                        "StatText": "1 2-Point Conversions",
+                        "Points": 2
+                    }
+                ]
+            },
+            {
+                "FullName": "Brian Westbrook",
+                "PlayerId": 5977,
+                "MatchupPosition": "RB",
+                "PointsScored": 28.3,
+                "ProjectedPoints": 15.53,
+                "ShortName": "B. Westbrook",
+                "Stats": [
+                    {
+                        "StatText": "58 Rushing Yards",
+                        "Points": 5.8
+                    },
+                    {
+                        "StatText": "2 Rushing Touchdowns",
+                        "Points": 12
+                    },
+                    {
+                        "StatText": "45 Reception Yards",
+                        "Points": 4.5
+                    },
+                    {
+                        "StatText": "1 Reception Touchdowns",
+                        "Points": 6
+                    }
+                ]
+            },
+            {
+                "FullName": "Thomas Jones",
+                "PlayerId": 5036,
+                "MatchupPosition": "RB",
+                "PointsScored": 7.5,
+                "ProjectedPoints": 9.11,
+                "ShortName": "T. Jones",
+                "Stats": [
+                    {
+                        "StatText": "70 Rushing Yards",
+                        "Points": 7
+                    },
+                    {
+                        "StatText": "5 Reception Yards",
+                        "Points": 0.5
+                    }
+                ]
+            },
+            {
+                "FullName": "Jeremy Shockey",
+                "PlayerId": 5900,
+                "MatchupPosition": "TE",
+                "PointsScored": 0.2,
+                "ProjectedPoints": 6.31,
+                "ShortName": "J. Shockey",
+                "Stats": [
+                    {
+                        "StatText": "22 Reception Yards",
+                        "Points": 2.2
+                    },
+                    {
+                        "StatText": "1 Fumbles Lost",
+                        "Points": -2
+                    }
+                ]
+            },
+            {
+                "FullName": "Santonio Holmes",
+                "PlayerId": 7774,
+                "MatchupPosition": "W/R",
+                "PointsScored": 10.4,
+                "ProjectedPoints": 8.94,
+                "ShortName": "S. Holmes",
+                "Stats": [
+                    {
+                        "StatText": "10 Rushing Yards",
+                        "Points": 1
+                    },
+                    {
+                        "StatText": "94 Reception Yards",
+                        "Points": 9.4
+                    }
+                ]
+            },
+            {
+                "FullName": "Nick Folk",
+                "PlayerId": 8432,
+                "MatchupPosition": "K",
+                "PointsScored": 14,
+                "ProjectedPoints": 8.35,
+                "ShortName": "N. Folk",
+                "Stats": [
+                    {
+                        "StatText": "1 Field Goals 40-49 Yards",
+                        "Points": 4
+                    },
+                    {
+                        "StatText": "1 Field Goals 50+ Yards",
+                        "Points": 5
+                    },
+                    {
+                        "StatText": "5 Point After Attempt Made",
+                        "Points": 5
+                    }
+                ]
+            },
+            {
+                "FullName": "Jacksonville",
+                "PlayerId": 100030,
+                "MatchupPosition": "DEF",
+                "PointsScored": 6,
+                "ProjectedPoints": 6.73,
+                "ShortName": "J.",
+                "Stats": [
+                    {
+                        "StatText": "3 Sack",
+                        "Points": 3
+                    },
+                    {
+                        "StatText": "1 Fumble Recovery",
+                        "Points": 2
+                    },
+                    {
+                        "StatText": "1 Points Allowed 14-20 points",
+                        "Points": 1
+                    }
+                ]
+            },
+            {
+                "FullName": "Marques Colston",
+                "PlayerId": 8001,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 0,
+                "ShortName": "M. Colston",
+                "Stats": []
+            },
+            {
+                "FullName": "Marc Bulger",
+                "PlayerId": 5197,
+                "MatchupPosition": "BN",
+                "PointsScored": 9.98,
+                "ProjectedPoints": 10.74,
+                "ShortName": "M. Bulger",
+                "Stats": [
+                    {
+                        "StatText": "177 Passing Yards",
+                        "Points": 7.08
+                    },
+                    {
+                        "StatText": "1 Passing Touchdowns",
+                        "Points": 4
+                    },
+                    {
+                        "StatText": "1 Interceptions",
+                        "Points": -2
+                    },
+                    {
+                        "StatText": "9 Rushing Yards",
+                        "Points": 0.9
+                    }
+                ]
+            },
+            {
+                "FullName": "Ricky Williams",
+                "PlayerId": 4653,
+                "MatchupPosition": "BN",
+                "PointsScored": 2.9,
+                "ProjectedPoints": 6.78,
+                "ShortName": "R. Williams",
+                "Stats": [
+                    {
+                        "StatText": "28 Rushing Yards",
+                        "Points": 2.8
+                    },
+                    {
+                        "StatText": "1 Reception Yards",
+                        "Points": 0.1
+                    }
+                ]
+            },
+            {
+                "FullName": "Leon Washington",
+                "PlayerId": 7866,
+                "MatchupPosition": "BN",
+                "PointsScored": 5.69,
+                "ProjectedPoints": 6.69,
+                "ShortName": "L. Washington",
+                "Stats": [
+                    {
+                        "StatText": "28 Rushing Yards",
+                        "Points": 2.8
+                    },
+                    {
+                        "StatText": "22 Reception Yards",
+                        "Points": 2.2
+                    },
+                    {
+                        "StatText": "24 Return Yards",
+                        "Points": 0.69
+                    }
+                ]
+            },
+            {
+                "FullName": "Andre Hall",
+                "PlayerId": 8205,
+                "MatchupPosition": "BN",
+                "PointsScored": 4.47,
+                "ProjectedPoints": 7.65,
+                "ShortName": "A. Hall",
+                "Stats": [
+                    {
+                        "StatText": "31 Rushing Yards",
+                        "Points": 3.1
+                    },
+                    {
+                        "StatText": "48 Return Yards",
+                        "Points": 1.37
+                    }
+                ]
+            },
+            {
+                "FullName": "Minnesota",
+                "PlayerId": 100016,
+                "MatchupPosition": "BN",
+                "PointsScored": 7,
+                "ProjectedPoints": 6.6,
+                "ShortName": "M.",
+                "Stats": [
+                    {
+                        "StatText": "2 Sack",
+                        "Points": 2
+                    },
+                    {
+                        "StatText": "2 Interception",
+                        "Points": 4
+                    },
+                    {
+                        "StatText": "1 Points Allowed 14-20 points",
+                        "Points": 1
+                    }
+                ]
+            }
+        ]
+    },
+    "RightTeam": {
+        "Manager": "Jeff Brakora",
+        "TeamName": "Patriots Suck",
+        "Players": [
+            {
+                "FullName": "Kurt Warner",
+                "PlayerId": 4541,
+                "MatchupPosition": "QB",
+                "PointsScored": 31.44,
+                "ProjectedPoints": 14.66,
+                "Stats": [
+                    {
+                        "StatText": "361 Passing Yards",
+                        "Points": 14.44
+                    },
+                    {
+                        "StatText": "BONUS: Passing Yards > 350",
+                        "Points": 5
+                    },
+                    {
+                        "StatText": "3 Passing Touchdowns",
+                        "Points": 12
+                    }
+                ]
+            },
+            {
+                "FullName": "Reggie Wayne",
+                "PlayerId": 5477,
+                "MatchupPosition": "WR",
+                "PointsScored": 15.3,
+                "ProjectedPoints": 11.42,
+                "Stats": [
+                    {
+                        "StatText": "93 Reception Yards",
+                        "Points": 9.3
+                    },
+                    {
+                        "StatText": "1 Reception Touchdowns",
+                        "Points": 6
+                    }
+                ]
+            },
+            {
+                "FullName": "Calvin Johnson",
+                "PlayerId": 8256,
+                "MatchupPosition": "WR",
+                "PointsScored": 24.9,
+                "ProjectedPoints": 9.72,
+                "Stats": [
+                    {
+                        "StatText": "129 Reception Yards",
+                        "Points": 12.9
+                    },
+                    {
+                        "StatText": "2 Reception Touchdowns",
+                        "Points": 12
+                    }
+                ]
+            },
+            {
+                "FullName": "Clinton Portis",
+                "PlayerId": 5937,
+                "MatchupPosition": "RB",
+                "PointsScored": 21.9,
+                "ProjectedPoints": 15.45,
+                "Stats": [
+                    {
+                        "StatText": "96 Rushing Yards",
+                        "Points": 9.6
+                    },
+                    {
+                        "StatText": "2 Rushing Touchdowns",
+                        "Points": 12
+                    },
+                    {
+                        "StatText": "3 Reception Yards",
+                        "Points": 0.3
+                    }
+                ]
+            },
+            {
+                "FullName": "Michael Turner",
+                "PlayerId": 6913,
+                "MatchupPosition": "RB",
+                "PointsScored": 4.8,
+                "ProjectedPoints": 12.15,
+                "Stats": [
+                    {
+                        "StatText": "42 Rushing Yards",
+                        "Points": 4.2
+                    },
+                    {
+                        "StatText": "6 Reception Yards",
+                        "Points": 0.6
+                    }
+                ]
+            },
+            {
+                "FullName": "Heath Miller",
+                "PlayerId": 7206,
+                "MatchupPosition": "TE",
+                "PointsScored": 3.3,
+                "ProjectedPoints": 7.48,
+                "Stats": [
+                    {
+                        "StatText": "33 Reception Yards",
+                        "Points": 3.3
+                    }
+                ]
+            },
+            {
+                "FullName": "Jamal Lewis",
+                "PlayerId": 5034,
+                "MatchupPosition": "W/R",
+                "PointsScored": 6.6,
+                "ProjectedPoints": 11.41,
+                "Stats": [
+                    {
+                        "StatText": "38 Rushing Yards",
+                        "Points": 3.8
+                    },
+                    {
+                        "StatText": "28 Reception Yards",
+                        "Points": 2.8
+                    }
+                ]
+            },
+            {
+                "FullName": "Adam Vinatieri",
+                "PlayerId": 3727,
+                "MatchupPosition": "K",
+                "PointsScored": 5,
+                "ProjectedPoints": 8.42,
+                "Stats": [
+                    {
+                        "StatText": "1 Field Goals 40-49 Yards",
+                        "Points": 4
+                    },
+                    {
+                        "StatText": "1 Point After Attempt Made",
+                        "Points": 1
+                    }
+                ]
+            },
+            {
+                "FullName": "Seattle",
+                "PlayerId": 100026,
+                "MatchupPosition": "DEF",
+                "PointsScored": 16,
+                "ProjectedPoints": 12.89,
+                "Stats": [
+                    {
+                        "StatText": "8 Sack",
+                        "Points": 8
+                    },
+                    {
+                        "StatText": "1 Fumble Recovery",
+                        "Points": 2
+                    },
+                    {
+                        "StatText": "1 Touchdown",
+                        "Points": 6
+                    }
+                ]
+            },
+            {
+                "FullName": "Lee Evans",
+                "PlayerId": 6772,
+                "MatchupPosition": "BN",
+                "PointsScored": 7.7,
+                "ProjectedPoints": 8.43,
+                "Stats": [
+                    {
+                        "StatText": "77 Reception Yards",
+                        "Points": 7.7
+                    }
+                ]
+            },
+            {
+                "FullName": "Eli Manning",
+                "PlayerId": 6760,
+                "MatchupPosition": "BN",
+                "PointsScored": 22.4,
+                "ProjectedPoints": 13.96,
+                "Stats": [
+                    {
+                        "StatText": "260 Passing Yards",
+                        "Points": 10.4
+                    },
+                    {
+                        "StatText": "3 Passing Touchdowns",
+                        "Points": 12
+                    }
+                ]
+            },
+            {
+                "FullName": "Jerry Porter",
+                "PlayerId": 5076,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 1.76,
+                "Stats": []
+            },
+            {
+                "FullName": "Vincent Jackson",
+                "PlayerId": 7237,
+                "MatchupPosition": "BN",
+                "PointsScored": 7.3,
+                "ProjectedPoints": 5.94,
+                "Stats": [
+                    {
+                        "StatText": "73 Reception Yards",
+                        "Points": 7.3
+                    }
+                ]
+            },
+            {
+                "FullName": "Justin Fargas",
+                "PlayerId": 6432,
+                "MatchupPosition": "BN",
+                "PointsScored": 4.3,
+                "ProjectedPoints": 9.85,
+                "Stats": [
+                    {
+                        "StatText": "43 Rushing Yards",
+                        "Points": 4.3
+                    }
+                ]
+            },
+            {
+                "FullName": "Ben Watson",
+                "PlayerId": 6791,
+                "MatchupPosition": "BN",
+                "PointsScored": 0,
+                "ProjectedPoints": 1.44,
+                "Stats": []
+            }
+        ]
+    }
+}

@@ -1,0 +1,529 @@
+{
+    "LeagueName": "Bald Mountain University (ID# 185591)",
+    "SeasonYear": "2010",
+    "Week": "1",
+    "LeftTeam": {
+        "Manager": "kev krank",
+        "TeamName": "Schaub on my Knob",
+        "Players": [
+            {
+                "FullName": "Jay Cutler",
+                "PlayerId": 7760,
+                "MatchupPosition": "QB",
+                "PointsScored": 26.08,
+                "ProjectedPoints": 15.79,
+                "ShortName": "J. Cutler",
+                "Stats": [
+                    {
+                        "StatText": "372 Passing Yards",
+                        "Points": 14.88
+                    },
+                    {
+                        "StatText": "BONUS: Passing Yards > 350",
+                        "Points": 5
+                    },
+                    {
+                        "StatText": "2 Passing Touchdowns",
+                        "Points": 8
+                    },
+                    {
+                        "StatText": "1 Interceptions",
+                        "Points": -2
+                    },
+                    {
+                        "StatText": "22 Rushing Yards",
+                        "Points": 2.2
+                    },
+                    {
+                        "StatText": "1 Fumbles Lost",
+                        "Points": -2
+                    }
+                ]
+            },
+            {
+                "FullName": "Calvin Johnson",
+                "PlayerId": 8256,
+                "MatchupPosition": "WR",
+                "PointsScored": 4.5,
+                "ProjectedPoints": 8.14,
+                "ShortName": "C. Johnson",
+                "Stats": [
+                    {
+                        "StatText": "45 Reception Yards",
+                        "Points": 4.5
+                    }
+                ]
+            },
+            {
+                "FullName": "Wes Welker",
+                "PlayerId": 7027,
+                "MatchupPosition": "WR",
+                "PointsScored": 18.4,
+                "ProjectedPoints": 8.41,
+                "ShortName": "W. Welker",
+                "Stats": [
+                    {
+                        "StatText": "64 Reception Yards",
+                        "Points": 6.4
+                    },
+                    {
+                        "StatText": "2 Reception Touchdowns",
+                        "Points": 12
+                    }
+                ]
+            },
+            {
+                "FullName": "DeAngelo Williams",
+                "PlayerId": 7776,
+                "MatchupPosition": "RB",
+                "PointsScored": 6.2,
+                "ProjectedPoints": 10.37,
+                "ShortName": "D. Williams",
+                "Stats": [
+                    {
+                        "StatText": "62 Rushing Yards",
+                        "Points": 6.2
+                    }
+                ]
+            },
+            {
+                "FullName": "Joseph Addai",
+                "PlayerId": 7779,
+                "MatchupPosition": "RB",
+                "PointsScored": 7.3,
+                "ProjectedPoints": 11.22,
+                "ShortName": "J. Addai",
+                "Stats": [
+                    {
+                        "StatText": "44 Rushing Yards",
+                        "Points": 4.4
+                    },
+                    {
+                        "StatText": "29 Reception Yards",
+                        "Points": 2.9
+                    }
+                ]
+            },
+            {
+                "FullName": "Visanthe Shiancoe",
+                "PlayerId": 6427,
+                "MatchupPosition": "TE",
+                "PointsScored": 13.6,
+                "ProjectedPoints": 7.08,
+                "ShortName": "V. Shiancoe",
+                "Stats": [
+                    {
+                        "StatText": "76 Reception Yards",
+                        "Points": 7.6
+                    },
+                    {
+                        "StatText": "1 Reception Touchdowns",
+                        "Points": 6
+                    }
+                ]
+            },
+            {
+                "FullName": "Marion Barber",
+                "PlayerId": 7285,
+                "MatchupPosition": "W/R",
+                "PointsScored": 4,
+                "ProjectedPoints": 8.04,
+                "ShortName": "M. Barber",
+                "Stats": [
+                    {
+                        "StatText": "39 Rushing Yards",
+                        "Points": 3.9
+                    },
+                    {
+                        "StatText": "1 Reception Yards",
+                        "Points": 0.1
+                    }
+                ]
+            },
+            {
+                "FullName": "Robbie Gould",
+                "PlayerId": 7520,
+                "MatchupPosition": "K",
+                "PointsScored": 7,
+                "ProjectedPoints": 9.49,
+                "ShortName": "R. Gould",
+                "Stats": [
+                    {
+                        "StatText": "1 Field Goals 20-29 Yards",
+                        "Points": 3
+                    },
+                    {
+                        "StatText": "1 Field Goals 30-39 Yards",
+                        "Points": 3
+                    },
+                    {
+                        "StatText": "1 Point After Attempt Made",
+                        "Points": 1
+                    }
+                ]
+            },
+            {
+                "FullName": "Cincinnati",
+                "PlayerId": 100004,
+                "MatchupPosition": "DEF",
+                "PointsScored": -1,
+                "ProjectedPoints": 7.4,
+                "ShortName": "C.",
+                "Stats": [
+                    {
+                        "StatText": "1 Points Allowed 28-34 points",
+                        "Points": -1
+                    }
+                ]
+            },
+            {
+                "FullName": "Matt Schaub",
+                "PlayerId": 6849,
+                "MatchupPosition": "BN",
+                "PointsScored": 5.98,
+                "ProjectedPoints": 13.97,
+                "ShortName": "M. Schaub",
+                "Stats": [
+                    {
+                        "StatText": "107 Passing Yards",
+                        "Points": 4.28
+                    },
+                    {
+                        "StatText": "1 Passing Touchdowns",
+                        "Points": 4
+                    },
+                    {
+                        "StatText": "1 Interceptions",
+                        "Points": -2
+                    },
+                    {
+                        "StatText": "-3 Rushing Yards",
+                        "Points": -0.3
+                    }
+                ]
+            },
+            {
+                "FullName": "Reggie Bush",
+                "PlayerId": 7751,
+                "MatchupPosition": "BN",
+                "PointsScored": 4.7,
+                "ProjectedPoints": 7.95,
+                "ShortName": "R. Bush",
+                "Stats": [
+                    {
+                        "StatText": "14 Rushing Yards",
+                        "Points": 1.4
+                    },
+                    {
+                        "StatText": "33 Reception Yards",
+                        "Points": 3.3
+                    }
+                ]
+            },
+            {
+                "FullName": "Terrell Owens",
+                "PlayerId": 3664,
+                "MatchupPosition": "BN",
+                "PointsScored": 5.3,
+                "ProjectedPoints": 9.15,
+                "ShortName": "T. Owens",
+                "Stats": [
+                    {
+                        "StatText": "53 Reception Yards",
+                        "Points": 5.3
+                    }
+                ]
+            },
+            {
+                "FullName": "Lee Evans",
+                "PlayerId": 6772,
+                "MatchupPosition": "BN",
+                "PointsScored": 3.4,
+                "ProjectedPoints": 8.32,
+                "ShortName": "L. Evans",
+                "Stats": [
+                    {
+                        "StatText": "34 Reception Yards",
+                        "Points": 3.4
+                    }
+                ]
+            },
+            {
+                "FullName": "Mike Williams",
+                "PlayerId": 24076,
+                "MatchupPosition": "BN",
+                "PointsScored": 9,
+                "ProjectedPoints": 4.33,
+                "ShortName": "M. Williams",
+                "Stats": [
+                    {
+                        "StatText": "30 Reception Yards",
+                        "Points": 3
+                    },
+                    {
+                        "StatText": "1 Reception Touchdowns",
+                        "Points": 6
+                    }
+                ]
+            },
+            {
+                "FullName": "Early Doucet",
+                "PlayerId": 8858,
+                "MatchupPosition": "BN",
+                "PointsScored": 3.7,
+                "ProjectedPoints": 4.39,
+                "ShortName": "E. Doucet",
+                "Stats": [
+                    {
+                        "StatText": "37 Reception Yards",
+                        "Points": 3.7
+                    }
+                ]
+            }
+        ]
+    },
+    "RightTeam": {
+        "Manager": "King James",
+        "TeamName": "CrackerAssFantastic",
+        "Players": [
+            {
+                "FullName": "Drew Brees",
+                "PlayerId": 5479,
+                "MatchupPosition": "QB",
+                "PointsScored": 12.88,
+                "ProjectedPoints": 18.46,
+                "Stats": [
+                    {
+                        "StatText": "237 Passing Yards",
+                        "Points": 9.48
+                    },
+                    {
+                        "StatText": "1 Passing Touchdowns",
+                        "Points": 4
+                    },
+                    {
+                        "StatText": "-6 Rushing Yards",
+                        "Points": -0.6
+                    }
+                ]
+            },
+            {
+                "FullName": "Greg Jennings",
+                "PlayerId": 7801,
+                "MatchupPosition": "WR",
+                "PointsScored": 14.2,
+                "ProjectedPoints": 8.31,
+                "Stats": [
+                    {
+                        "StatText": "82 Reception Yards",
+                        "Points": 8.2
+                    },
+                    {
+                        "StatText": "1 Reception Touchdowns",
+                        "Points": 6
+                    }
+                ]
+            },
+            {
+                "FullName": "Michael Crabtree",
+                "PlayerId": 9274,
+                "MatchupPosition": "WR",
+                "PointsScored": 1.2,
+                "ProjectedPoints": 7.57,
+                "Stats": [
+                    {
+                        "StatText": "12 Reception Yards",
+                        "Points": 1.2
+                    }
+                ]
+            },
+            {
+                "FullName": "Beanie Wells",
+                "PlayerId": 9295,
+                "MatchupPosition": "RB",
+                "PointsScored": 0,
+                "ProjectedPoints": 3.08,
+                "Stats": []
+            },
+            {
+                "FullName": "C.J. Spiller",
+                "PlayerId": 23984,
+                "MatchupPosition": "RB",
+                "PointsScored": 1.4,
+                "ProjectedPoints": 9.38,
+                "Stats": [
+                    {
+                        "StatText": "6 Rushing Yards",
+                        "Points": 0.6
+                    },
+                    {
+                        "StatText": "8 Reception Yards",
+                        "Points": 0.8
+                    }
+                ]
+            },
+            {
+                "FullName": "Brent Celek",
+                "PlayerId": 8416,
+                "MatchupPosition": "TE",
+                "PointsScored": 3.2,
+                "ProjectedPoints": 6.93,
+                "Stats": [
+                    {
+                        "StatText": "32 Reception Yards",
+                        "Points": 3.2
+                    }
+                ]
+            },
+            {
+                "FullName": "Austin Collie",
+                "PlayerId": 9391,
+                "MatchupPosition": "W/R",
+                "PointsScored": 20.3,
+                "ProjectedPoints": 7.32,
+                "Stats": [
+                    {
+                        "StatText": "163 Reception Yards",
+                        "Points": 16.3
+                    },
+                    {
+                        "StatText": "1 Reception Touchdowns",
+                        "Points": 6
+                    },
+                    {
+                        "StatText": "1 Fumbles Lost",
+                        "Points": -2
+                    }
+                ]
+            },
+            {
+                "FullName": "Ryan Longwell",
+                "PlayerId": 4080,
+                "MatchupPosition": "K",
+                "PointsScored": 4,
+                "ProjectedPoints": 8.55,
+                "Stats": [
+                    {
+                        "StatText": "1 Field Goals 40-49 Yards",
+                        "Points": 4
+                    }
+                ]
+            },
+            {
+                "FullName": "Green Bay",
+                "PlayerId": 100009,
+                "MatchupPosition": "DEF",
+                "PointsScored": 9,
+                "ProjectedPoints": 10.59,
+                "Stats": [
+                    {
+                        "StatText": "6 Sack",
+                        "Points": 6
+                    },
+                    {
+                        "StatText": "1 Fumble Recovery",
+                        "Points": 2
+                    },
+                    {
+                        "StatText": "1 Points Allowed 14-20 points",
+                        "Points": 1
+                    }
+                ]
+            },
+            {
+                "FullName": "Justin Forsett",
+                "PlayerId": 9010,
+                "MatchupPosition": "BN",
+                "PointsScored": 6,
+                "ProjectedPoints": 10.38,
+                "Stats": [
+                    {
+                        "StatText": "43 Rushing Yards",
+                        "Points": 4.3
+                    },
+                    {
+                        "StatText": "17 Reception Yards",
+                        "Points": 1.7
+                    }
+                ]
+            },
+            {
+                "FullName": "Thomas Jones",
+                "PlayerId": 5036,
+                "MatchupPosition": "BN",
+                "PointsScored": 3.9,
+                "ProjectedPoints": 7.92,
+                "Stats": [
+                    {
+                        "StatText": "39 Rushing Yards",
+                        "Points": 3.9
+                    }
+                ]
+            },
+            {
+                "FullName": "Chad Henne",
+                "PlayerId": 8834,
+                "MatchupPosition": "BN",
+                "PointsScored": 7.18,
+                "ProjectedPoints": 6.4,
+                "Stats": [
+                    {
+                        "StatText": "182 Passing Yards",
+                        "Points": 7.28
+                    },
+                    {
+                        "StatText": "-1 Rushing Yards",
+                        "Points": -0.1
+                    }
+                ]
+            },
+            {
+                "FullName": "Laurent Robinson",
+                "PlayerId": 8329,
+                "MatchupPosition": "BN",
+                "PointsScored": 7.8,
+                "ProjectedPoints": 5.3,
+                "Stats": [
+                    {
+                        "StatText": "18 Reception Yards",
+                        "Points": 1.8
+                    },
+                    {
+                        "StatText": "1 Reception Touchdowns",
+                        "Points": 6
+                    }
+                ]
+            },
+            {
+                "FullName": "Legedu Naanee",
+                "PlayerId": 8426,
+                "MatchupPosition": "BN",
+                "PointsScored": 17,
+                "ProjectedPoints": 5.07,
+                "Stats": [
+                    {
+                        "StatText": "110 Reception Yards",
+                        "Points": 11
+                    },
+                    {
+                        "StatText": "1 Reception Touchdowns",
+                        "Points": 6
+                    }
+                ]
+            },
+            {
+                "FullName": "Brandon Pettigrew",
+                "PlayerId": 9284,
+                "MatchupPosition": "BN",
+                "PointsScored": 0.6,
+                "ProjectedPoints": 2.92,
+                "Stats": [
+                    {
+                        "StatText": "6 Reception Yards",
+                        "Points": 0.6
+                    }
+                ]
+            }
+        ]
+    }
+}
