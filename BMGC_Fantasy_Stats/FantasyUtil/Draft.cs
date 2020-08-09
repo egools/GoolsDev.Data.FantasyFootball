@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace FantasyComponents
 {
-    class FantasyOwner
+    [Table("Drafts", Schema = "bmgc")]
+    public class Draft
     {
-        public string OwnerName { get; set; }
-        public int YearJoined { get; set; }
     }
 }

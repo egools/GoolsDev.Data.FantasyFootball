@@ -1,30 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace FantasyComponents
 {
-    public class FantasyTeam : IComparable
+    [Table("FantasyTeams", Schema = "bmgc")]
+    public class FantasyTeam
     {
         public string TeamName { get; set; }
-        public string OwnerName { get; set; }
-        public int FantasyYear { get; set; }
-
-        public FantasyTeam(string teamName, string ownerName)
-        {
-            TeamName = teamName;
-            OwnerName = ownerName;
-        }
-
-        public int CompareTo(object obj)
-        {
-            if (obj == null) return 1;
-            var otherPlayer = obj as FantasyTeam;
-
-            if (otherPlayer != null)
-                return TeamName.CompareTo(otherPlayer.TeamName);
-            else
-                throw new ArgumentException("Object is not a FantasyTeam");
-        }
+        public Manager Manager { get; set; }
+        public Season Season { get; set; }
     }
 }

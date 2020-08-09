@@ -20,7 +20,7 @@ namespace FantasyParser
                 
             }
 
-            //var document = GetDocument("https://sports.yahoo.com/nfl/players/25812/").Result;
+            //var document = GetDocument("https://sports.yahoo.com/nfl/players/{ysPlayerId}/").Result;
             //var a = document.QuerySelector(".ys-name").Text();
 
 
