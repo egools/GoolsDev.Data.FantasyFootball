@@ -13,5 +13,10 @@ namespace FantasyParser
         {
             optionsBuilder.UseSqlServer(@"Server=localhost;Database=BMGCFantasy;Trusted_Connection=True;");
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+        }
     }
 }

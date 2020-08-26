@@ -6,14 +6,15 @@ using System.Text;
 
 namespace FantasyComponents
 {
-    [Table("Managers")]
-    public class Manager
+    [Table("Leagues")]
+    public class League
     {
+
         [Key]
-        public int ManagerId { get; }
-        public string Name { get; }
-        public int YearJoined { get; }
-        
-            
+        public int LeagueId { get; }
+        public string LeagueName { get; }
+        public ICollection<Season> Seasons { get; }
+
+
     }
 }
