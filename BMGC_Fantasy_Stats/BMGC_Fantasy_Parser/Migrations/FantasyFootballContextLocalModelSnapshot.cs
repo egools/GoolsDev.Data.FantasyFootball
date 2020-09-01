@@ -157,7 +157,7 @@ namespace FantasyParser.Migrations
                     b.Property<short>("Losses")
                         .HasColumnType("smallint");
 
-                    b.Property<Guid?>("ManagerId")
+                    b.Property<Guid>("ManagerId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<short?>("MovesMade")
@@ -341,12 +341,15 @@ namespace FantasyParser.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("YahooLeagueId")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<short>("Year")
                         .HasColumnType("smallint");
 
                     b.HasKey("SeasonId");
+
+                    b.HasAlternateKey("YahooLeagueId");
 
                     b.HasIndex("LeagueId");
 
@@ -386,7 +389,9 @@ namespace FantasyParser.Migrations
                 {
                     b.HasOne("FantasyComponents.Manager", null)
                         .WithMany("ManagerSeasons")
-                        .HasForeignKey("ManagerId");
+                        .HasForeignKey("ManagerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("FantasyComponents.Season", null)
                         .WithMany("ManagerSeasons")
