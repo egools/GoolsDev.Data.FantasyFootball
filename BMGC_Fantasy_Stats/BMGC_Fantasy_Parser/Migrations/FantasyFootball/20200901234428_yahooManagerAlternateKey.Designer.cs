@@ -4,14 +4,16 @@ using FantasyParser;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FantasyParser.Migrations.FantasyFootball
 {
     [DbContext(typeof(FantasyFootballContext))]
-    partial class FantasyFootballContextModelSnapshot : ModelSnapshot
+    [Migration("20200901234428_yahooManagerAlternateKey")]
+    partial class yahooManagerAlternateKey
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

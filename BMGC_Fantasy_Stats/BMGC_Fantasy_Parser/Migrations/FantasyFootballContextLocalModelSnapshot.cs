@@ -137,10 +137,16 @@ namespace FantasyParser.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("YahooManagerId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<short?>("YearJoined")
                         .HasColumnType("smallint");
 
                     b.HasKey("ManagerId");
+
+                    b.HasAlternateKey("YahooManagerId");
 
                     b.ToTable("Managers");
                 });

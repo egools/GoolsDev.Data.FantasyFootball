@@ -50,6 +50,9 @@ namespace FantasyParser
                 .WithOne();
 
             modelBuilder.Entity<Manager>()
+                .HasAlternateKey(m => m.YahooManagerId);
+
+            modelBuilder.Entity<Manager>()
                 .HasMany(m => m.EloScores)
                 .WithOne()
                 .HasForeignKey(e => e.ManagerId);
