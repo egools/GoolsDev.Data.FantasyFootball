@@ -7,6 +7,13 @@ namespace FantasyComponents
     public static class Util
     {
         [Flags]
+        public enum DraftType
+        {
+            Snake = 1,
+            Auction = 2
+        }
+
+        [Flags]
         public enum NFLPosition
         {
             QB = 1,

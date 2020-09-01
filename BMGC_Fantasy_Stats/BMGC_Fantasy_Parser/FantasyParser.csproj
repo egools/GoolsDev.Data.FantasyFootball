@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,12 +13,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20200730022518_CreateBMGCdb.cs" />
-    <Compile Remove="Migrations\20200730022518_CreateBMGCdb.Designer.cs" />
-    <Compile Remove="Migrations\20200730022713_CreateBMGCdb2.cs" />
-    <Compile Remove="Migrations\20200730022713_CreateBMGCdb2.Designer.cs" />
-    <Compile Remove="Migrations\20200730023137_CreateBMGCdb3.cs" />
-    <Compile Remove="Migrations\20200730023137_CreateBMGCdb3.Designer.cs" />
+    <Compile Remove="Migrations\20200901190120_Test.cs" />
+    <Compile Remove="Migrations\20200901190120_Test.Designer.cs" />
+    <Compile Remove="Migrations\20200901223711_Test.cs" />
+    <Compile Remove="Migrations\20200901223711_Test.Designer.cs" />
+    <Compile Remove="Migrations\20200901224142_AddManagerId_ManagerSeason.cs" />
+    <Compile Remove="Migrations\20200901224142_AddManagerId_ManagerSeason.Designer.cs" />
+    <Compile Remove="Migrations\20200901224305_Recreate.cs" />
+    <Compile Remove="Migrations\20200901224305_Recreate.Designer.cs" />
+    <Compile Remove="Migrations\20200901225211_addFK_toManagerSeason.cs" />
+    <Compile Remove="Migrations\20200901225211_addFK_toManagerSeason.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,7 +42,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Migrations\FantasyFootball\" />
     <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="local.appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
