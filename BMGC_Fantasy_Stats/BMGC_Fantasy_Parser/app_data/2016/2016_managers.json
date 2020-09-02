@@ -6,73 +6,85 @@
             "TeamName": "Beast From The East",
             "Manager": "Matt",
             "MovesMade": 7,
-            "TradesMade": 0
+            "TradesMade": 0,
+            "YahooManagerId": "CHFAK6Q7YGPDCXQS3VMKGVTGHY"
         },
         {
             "TeamName": "Cage the Hampster",
             "Manager": "Denny",
             "MovesMade": 20,
-            "TradesMade": 0
+            "TradesMade": 0,
+            "YahooManagerId": "XEF3PIA7CDAPLYA2EGE6E6R774"
         },
         {
             "TeamName": "City Morgue",
             "Manager": "Tyler G",
             "MovesMade": 24,
-            "TradesMade": 0
+            "TradesMade": 0,
+            "YahooManagerId": "L5ZYRJCZJYEOPK5SDKDNCMOX54"
         },
         {
             "TeamName": "Colt Got Those Legs?",
             "Manager": "SnowmanCommissioner",
             "MovesMade": 23,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "Z5FF2PNGNS5KWNNDTR3TVTWVM4"
         },
         {
             "TeamName": "Dan Furlong",
             "Manager": "Zach",
             "MovesMade": 32,
-            "TradesMade": 2
+            "TradesMade": 2,
+            "YahooManagerId": "4M7UVL7DTXVY43HHBCJ7UAR4HY"
         },
         {
             "TeamName": "Danthrax",
             "Manager": "Jeff Brakora",
             "MovesMade": 56,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "Q6OIJRLPR3Q5WAXDTCFBC2G3AQ"
         },
         {
             "TeamName": "Fuck this team.",
             "Manager": "kev krank",
             "MovesMade": 25,
-            "TradesMade": 0
+            "TradesMade": 0,
+            "YahooManagerId": "3TJK4HI7KFN5NPSH5C5FJNFUSI"
         },
         {
             "TeamName": "Gerald Prieskorn",
             "Manager": "Gerald Prieskorn",
             "MovesMade": 11,
-            "TradesMade": 0
+            "TradesMade": 0,
+            "YahooManagerId": "OSV4ET47YVRHTHAZMUCZMQAR3Q"
         },
         {
             "TeamName": "Hopkins and a Jump",
             "Manager": "Truck",
             "MovesMade": 13,
-            "TradesMade": 0
+            "TradesMade": 0,
+            "YahooManagerId": "G53SCP47HSJJY7G4RIJFWD3M6Q"
         },
         {
             "TeamName": "Tony Mandarich",
             "Manager": "steve",
             "MovesMade": 13,
-            "TradesMade": 0
+            "TradesMade": 0,
+            "YahooManagerId": "VP2DUIBOC62CZJ6TW334CWK5FA"
         },
         {
             "TeamName": "Win This 4 Harambe",
             "Manager": "DanG",
             "MovesMade": 11,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "N4N4IY7432TCOID6HPG2RSCKTM"
         },
         {
             "TeamName": "💩💩💩💩",
             "Manager": "Eric",
             "MovesMade": 28,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "4XRMX6O3VBVXGMVQ3RTBR4ECKE"
         }
     ]
 }

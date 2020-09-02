@@ -6,73 +6,85 @@
             "TeamName": "Cage the Hampster",
             "Manager": "Denny",
             "MovesMade": 24,
-            "TradesMade": 0
+            "TradesMade": 0,
+            "YahooManagerId": "XEF3PIA7CDAPLYA2EGE6E6R774"
         },
         {
             "TeamName": "Danthrax",
             "Manager": "Jeff Brakora",
             "MovesMade": 36,
-            "TradesMade": 4
+            "TradesMade": 4,
+            "YahooManagerId": "Q6OIJRLPR3Q5WAXDTCFBC2G3AQ"
         },
         {
             "TeamName": "Forte Ounce Bounce",
             "Manager": "Tyler G",
             "MovesMade": 33,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "L5ZYRJCZJYEOPK5SDKDNCMOX54"
         },
         {
             "TeamName": "Fuck this team.",
             "Manager": "kev krank",
             "MovesMade": 20,
-            "TradesMade": 2
+            "TradesMade": 2,
+            "YahooManagerId": "3TJK4HI7KFN5NPSH5C5FJNFUSI"
         },
         {
             "TeamName": "Gerald Prieskorn",
             "Manager": "Gerald Prieskorn",
             "MovesMade": 7,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "OSV4ET47YVRHTHAZMUCZMQAR3Q"
         },
         {
             "TeamName": "Hack-a-Jew",
             "Manager": "Steve Ackner",
             "MovesMade": 13,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "P33BF4CV27D3G5MXVMVCH2WUAY"
         },
         {
             "TeamName": "Inhale A J of Green",
             "Manager": "Truck",
             "MovesMade": 19,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "G53SCP47HSJJY7G4RIJFWD3M6Q"
         },
         {
             "TeamName": "Juice Is Loose",
             "Manager": "SnowmanCommissioner",
             "MovesMade": 30,
-            "TradesMade": 2
+            "TradesMade": 2,
+            "YahooManagerId": "Z5FF2PNGNS5KWNNDTR3TVTWVM4"
         },
         {
             "TeamName": "Logical Phallus See",
             "Manager": "DanG",
             "MovesMade": 19,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "N4N4IY7432TCOID6HPG2RSCKTM"
         },
         {
             "TeamName": "Morning Woodhead",
             "Manager": "Zach",
             "MovesMade": 36,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "4M7UVL7DTXVY43HHBCJ7UAR4HY"
         },
         {
             "TeamName": "Team AD",
             "Manager": "steve",
             "MovesMade": 13,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "VP2DUIBOC62CZJ6TW334CWK5FA"
         },
         {
             "TeamName": "💩💩💩💩",
             "Manager": "Eric",
             "MovesMade": 34,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "4XRMX6O3VBVXGMVQ3RTBR4ECKE"
         }
     ]
 }

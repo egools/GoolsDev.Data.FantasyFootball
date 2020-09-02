@@ -40,11 +40,13 @@ function scrapManagers() {
     let headers = Array.from(document.querySelectorAll("#teams thead th")).map(elm => elm.innerText);
     for (const manager of managers) {
         let cols = Array.from(manager.querySelectorAll("td")).map(elm => elm.innerText);
+        let yid = manager.querySelector("span.user-id a").href.split("/").pop();
         leagueManagers.Managers.push({
             TeamName: cols[headers.indexOf("Team Name")],
             Manager: cols[headers.indexOf("Manager")],
             MovesMade: parseInt(cols[headers.indexOf("Moves")]),
-            TradesMade: parseInt(cols[headers.indexOf("Trades")])
+            TradesMade: parseInt(cols[headers.indexOf("Trades")]),
+            YahooManagerId: yid
         });
     }
     console.save(leagueManagers, `${seasonYear}_managers.json`);

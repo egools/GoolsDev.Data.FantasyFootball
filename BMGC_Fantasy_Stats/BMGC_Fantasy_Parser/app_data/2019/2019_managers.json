@@ -6,73 +6,85 @@
             "TeamName": "All Eyez On Me",
             "Manager": "Gerald Prieskorn",
             "MovesMade": 8,
-            "TradesMade": 0
+            "TradesMade": 0,
+            "YahooManagerId": "OSV4ET47YVRHTHAZMUCZMQAR3Q"
         },
         {
             "TeamName": "Beast From The East",
             "Manager": "Matt",
             "MovesMade": 27,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "CHFAK6Q7YGPDCXQS3VMKGVTGHY"
         },
         {
             "TeamName": "Brown vs. The NFL",
             "Manager": "Truck",
             "MovesMade": 28,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "G53SCP47HSJJY7G4RIJFWD3M6Q"
         },
         {
             "TeamName": "Cage the Hampster",
             "Manager": "Denny",
             "MovesMade": 30,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "XEF3PIA7CDAPLYA2EGE6E6R774"
         },
         {
             "TeamName": "Cat",
             "Manager": "Eric",
             "MovesMade": 29,
-            "TradesMade": 0
+            "TradesMade": 0,
+            "YahooManagerId": "4XRMX6O3VBVXGMVQ3RTBR4ECKE"
         },
         {
             "TeamName": "Dad Says What",
             "Manager": "Jeff Brakora",
             "MovesMade": 41,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "Q6OIJRLPR3Q5WAXDTCFBC2G3AQ"
         },
         {
             "TeamName": "Fuck this team.",
             "Manager": "kev krank",
             "MovesMade": 26,
-            "TradesMade": 2
+            "TradesMade": 2,
+            "YahooManagerId": "3TJK4HI7KFN5NPSH5C5FJNFUSI"
         },
         {
             "TeamName": "NFC North",
             "Manager": "Zach",
             "MovesMade": 28,
-            "TradesMade": 3
+            "TradesMade": 3,
+            "YahooManagerId": "4M7UVL7DTXVY43HHBCJ7UAR4HY"
         },
         {
             "TeamName": "Oh Biiilllyyy",
             "Manager": "Bailey",
             "MovesMade": 19,
-            "TradesMade": 5
+            "TradesMade": 5,
+            "YahooManagerId": "H2HSQP2YJPGGA6MKQ3BJ56LPB5"
         },
         {
             "TeamName": "RectumIHardly69edHer",
             "Manager": "DanG",
             "MovesMade": 16,
-            "TradesMade": 0
+            "TradesMade": 0,
+            "YahooManagerId": "N4N4IY7432TCOID6HPG2RSCKTM"
         },
         {
             "TeamName": "The good kind of RPO",
             "Manager": "Tyler G",
             "MovesMade": 31,
-            "TradesMade": 0
+            "TradesMade": 0,
+            "YahooManagerId": "L5ZYRJCZJYEOPK5SDKDNCMOX54"
         },
         {
             "TeamName": "Topless Tapas",
             "Manager": "SnowmanCommissioner",
             "MovesMade": 34,
-            "TradesMade": 2
+            "TradesMade": 2,
+            "YahooManagerId": "Z5FF2PNGNS5KWNNDTR3TVTWVM4"
         }
     ]
 }

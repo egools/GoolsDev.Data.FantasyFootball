@@ -6,73 +6,85 @@
             "TeamName": "All Eyez On Me",
             "Manager": "Gerald Prieskorn",
             "MovesMade": 11,
-            "TradesMade": 0
+            "TradesMade": 0,
+            "YahooManagerId": "OSV4ET47YVRHTHAZMUCZMQAR3Q"
         },
         {
             "TeamName": "Beast From The East",
             "Manager": "Matt",
             "MovesMade": 15,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "CHFAK6Q7YGPDCXQS3VMKGVTGHY"
         },
         {
             "TeamName": "BEST DAY EVER",
             "Manager": "Zach",
             "MovesMade": 20,
-            "TradesMade": 2
+            "TradesMade": 2,
+            "YahooManagerId": "4M7UVL7DTXVY43HHBCJ7UAR4HY"
         },
         {
             "TeamName": "Cage the Hampster",
             "Manager": "Denny",
             "MovesMade": 15,
-            "TradesMade": 0
+            "TradesMade": 0,
+            "YahooManagerId": "XEF3PIA7CDAPLYA2EGE6E6R774"
         },
         {
             "TeamName": "Dad Says What",
             "Manager": "Jeff Brakora",
             "MovesMade": 40,
-            "TradesMade": 2
+            "TradesMade": 2,
+            "YahooManagerId": "Q6OIJRLPR3Q5WAXDTCFBC2G3AQ"
         },
         {
             "TeamName": "Fuck this team.",
             "Manager": "kev krank",
             "MovesMade": 27,
-            "TradesMade": 0
+            "TradesMade": 0,
+            "YahooManagerId": "3TJK4HI7KFN5NPSH5C5FJNFUSI"
         },
         {
             "TeamName": "FugueStateUniversity",
             "Manager": "SnowmanCommissioner",
             "MovesMade": 26,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "Z5FF2PNGNS5KWNNDTR3TVTWVM4"
         },
         {
             "TeamName": "Oh Biiilllyyy",
             "Manager": "Bailey",
             "MovesMade": 12,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "H2HSQP2YJPGGA6MKQ3BJ56LPB5"
         },
         {
             "TeamName": "Percocet Strip Joint",
             "Manager": "Truck",
             "MovesMade": 31,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "G53SCP47HSJJY7G4RIJFWD3M6Q"
         },
         {
             "TeamName": "RectumIHardly69edHer",
             "Manager": "DanG",
             "MovesMade": 14,
-            "TradesMade": 3
+            "TradesMade": 3,
+            "YahooManagerId": "N4N4IY7432TCOID6HPG2RSCKTM"
         },
         {
             "TeamName": "The good kind of RPO",
             "Manager": "Tyler G",
             "MovesMade": 31,
-            "TradesMade": 2
+            "TradesMade": 2,
+            "YahooManagerId": "L5ZYRJCZJYEOPK5SDKDNCMOX54"
         },
         {
             "TeamName": "【﻿ＣＨＯＷＴＩＭＥ】",
             "Manager": "Eric",
             "MovesMade": 33,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "4XRMX6O3VBVXGMVQ3RTBR4ECKE"
         }
     ]
 }

@@ -6,73 +6,85 @@
             "TeamName": "CA$HIUS CLAY",
             "Manager": "Eric",
             "MovesMade": 30,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "4XRMX6O3VBVXGMVQ3RTBR4ECKE"
         },
         {
             "TeamName": "CPB",
             "Manager": "Gerald Prieskorn",
             "MovesMade": 10,
-            "TradesMade": 0
+            "TradesMade": 0,
+            "YahooManagerId": "OSV4ET47YVRHTHAZMUCZMQAR3Q"
         },
         {
             "TeamName": "Drew Stanton for MVP",
             "Manager": "Bowden",
             "MovesMade": 11,
-            "TradesMade": 0
+            "TradesMade": 0,
+            "YahooManagerId": "4DD7X7OCNOAVJGJZOBK227QTXM"
         },
         {
             "TeamName": "Imma Rape You",
             "Manager": "DanG",
             "MovesMade": 7,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "N4N4IY7432TCOID6HPG2RSCKTM"
         },
         {
             "TeamName": "Logan is God",
             "Manager": "bruce",
             "MovesMade": 18,
-            "TradesMade": 0
+            "TradesMade": 0,
+            "YahooManagerId": "AF7DVFQS5TC2STA7FDIEKVSGZA"
         },
         {
             "TeamName": "Loose Lips Lucy",
             "Manager": "King James",
             "MovesMade": 8,
-            "TradesMade": 4
+            "TradesMade": 4,
+            "YahooManagerId": "V43XVKQR3LLRY6BRAHIPAINIZ4"
         },
         {
             "TeamName": "Misery Business",
             "Manager": "Steve Ackner",
             "MovesMade": 40,
-            "TradesMade": 6
+            "TradesMade": 6,
+            "YahooManagerId": "P33BF4CV27D3G5MXVMVCH2WUAY"
         },
         {
             "TeamName": "Patriots Suck",
             "Manager": "Jeff Brakora",
             "MovesMade": 13,
-            "TradesMade": 0
+            "TradesMade": 0,
+            "YahooManagerId": "Q6OIJRLPR3Q5WAXDTCFBC2G3AQ"
         },
         {
             "TeamName": "PLYGTHR",
             "Manager": "",
             "MovesMade": 15,
-            "TradesMade": 3
+            "TradesMade": 3,
+            "YahooManagerId": "OKFO5Z7MGR7SCXU3DSPEBIB2VA"
         },
         {
             "TeamName": "Redskins",
             "Manager": "Zach",
             "MovesMade": 34,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "LKYUINNPMXPTYTX5LNQY4HA2JU"
         },
         {
             "TeamName": "TeamSuckCock2",
             "Manager": "kev krank",
             "MovesMade": 27,
-            "TradesMade": 1
+            "TradesMade": 1,
+            "YahooManagerId": "3TJK4HI7KFN5NPSH5C5FJNFUSI"
         },
         {
             "TeamName": "The Phil MOONsters",
             "Manager": "SnowmanCommissioner",
             "MovesMade": 22,
-            "TradesMade": 3
+            "TradesMade": 3,
+            "YahooManagerId": "Z5FF2PNGNS5KWNNDTR3TVTWVM4"
         }
     ]
 }
