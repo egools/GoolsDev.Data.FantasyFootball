@@ -25,34 +25,88 @@ namespace FantasyParser
         private static readonly FantasyFootballContextLocal _db = new FantasyFootballContextLocal();
         public static void Main(string[] args)
         {
-            var year = 2019;
+            //var year = 2019;
             //var games = PFRUtility.GetNFLRegularSeasonSchedule(year).ToList();
-            //ParseSeasons();
+            ParseSeasons();
             //var player = PFRUtility.FindPlayerInfo("Terrell Owens");
+            //_db.SaveChangesAsync().Wait();
+        }
+
+        public static void AddDataFromManagerDTO(ManagersDTO managersDTO)
+        {
+            var (seasonName, yid) = GetNameAndYIdFromDTO(managersDTO.LeagueName);
+            Season season = _db.Seasons
+                .Include(s => s.ManagerSeasons)
+                .FirstOrDefault(s => s.YahooLeagueId == yid);
+
+            if (season is null)
+            {
+                season = new Season(short.Parse(managersDTO.SeasonYear), yid, seasonName);
+                _db.Leagues
+                    .Include(l => l.Seasons)
+                    .First()
+                    .Seasons
+                    .Add(season);
+            }
+
+            foreach (ManagerDTO managerDTO in managersDTO.Managers)
+            {
+                Manager manager = _db.Managers
+                    .Include(m => m.ManagerSeasons)
+                    .FirstOrDefault(m => m.YahooManagerId == managerDTO.YahooManagerId);
+
+                if (manager is null)
+                {
+                    manager = new Manager(managerDTO.YahooManagerId, managerDTO.ManagerName);
+                    _db.Managers.Add(manager);
+                }
+
+                var managerSeason = season.ManagerSeasons.FirstOrDefault(ms => ms.ManagerId == manager.ManagerId);
+                if (managerSeason is null)
+                {
+                    managerSeason = new ManagerSeason(managerDTO.TeamName)
+                    {
+                        MovesMade = managerDTO.MovesMade,
+                        TradesMade = managerDTO.TradesMade,
+                    };
+                    manager.ManagerSeasons.Add(managerSeason);
+                    season.ManagerSeasons.Add(managerSeason);
+                }
+                else
+                {
+                    managerSeason.MovesMade = managerDTO.MovesMade;
+                    managerSeason.TradesMade = managerDTO.TradesMade;
+                }
+            }
+            _db.SaveChangesAsync().Wait();
+        }
+        public static void AddDataFromDraftDTO(DraftDTO draftDTO)
+        {
+            var (seasonName, yid) = GetNameAndYIdFromDTO(draftDTO.LeagueName);
+            Season season = _db.Seasons.FirstOrDefault(s => s.YahooLeagueId == yid)
+                ?? new Season(short.Parse(draftDTO.SeasonYear), yid, seasonName);
+        }
+        public static void AddDataFromMatchupDTO(MatchupDTO matchupDTO)
+        {
+            var (seasonName, yid) = GetNameAndYIdFromDTO(matchupDTO.LeagueName);
+            Season season = _db.Seasons
+                .Include(s => s.ManagerSeasons)
+                    .ThenInclude(ms => ms.Rosters)
+                .Include(s => s.Matchups)
+                .FirstOrDefault(s => s.YahooLeagueId == yid);
+            ManagerSeason managerSeasonLeft = season.ManagerSeasons.FirstOrDefault(ms => ms.TeamName == matchupDTO.LeftTeam.TeamName);
+            ManagerSeason managerSeasonRight = season.ManagerSeasons.FirstOrDefault(ms => ms.TeamName == matchupDTO.RightTeam.TeamName);
+
+            var matchup = new Matchup(byte.Parse(matchupDTO.Week));
+            AddPlayersFromTeamDTO(matchupDTO.LeftTeam, matchup.Roster1);
+            AddPlayersFromTeamDTO(matchupDTO.RightTeam, matchup.Roster2);
+            managerSeasonLeft.Rosters.Add(matchup.Roster1);
+            managerSeasonRight.Rosters.Add(matchup.Roster2);
+            season.Matchups.Add(matchup);
             _db.SaveChangesAsync().Wait();
         }
 
-        public static Season GetSeasonByYahooId(int yid)
-        {
-            return _db.Seasons.FirstOrDefault(s => s.YahooLeagueId == yid);
-        }
-
-        public static void AddDataFromDraftDTO()
-        {
-
-        }
-
-        public static void AddDataFromManagerDTO()
-        {
-
-        }
-
-        public static void AddDataFromMatchupDTO()
-        {
-
-        }
-
-        public static (string seasonName, int yahooSeasonId) SetNameAndYIdFromDTO(string name)
+        public static (string seasonName, int yahooSeasonId) GetNameAndYIdFromDTO(string name)
         {
             try
             {
@@ -67,45 +121,45 @@ namespace FantasyParser
             }
         }
 
+        public static void AddPlayersFromTeamDTO(TeamDTO team, MatchupRoster roster)
+        {
+            roster.ActualScore = team.ActualScore;
+            roster.ProjectedScore = team.ProjectedScore;
+            foreach (var playerDTO in team.Players)
+            {
+                var nflPlayer = _db.NFLPlayers.FirstOrDefault(p => p.YahooId == playerDTO.PlayerId);
+                if (nflPlayer is null)
+                {
+                    nflPlayer = new NFLPlayer(playerDTO.PlayerId, playerDTO.FullName, playerDTO.ShortName);
+                    _db.NFLPlayers.Add(nflPlayer);
+                }
+                if (string.IsNullOrEmpty(nflPlayer.ShortName))
+                    nflPlayer.ShortName = playerDTO.ShortName;
+                var matchupPosition = Util.ParseFantasyPosition(playerDTO.MatchupPosition);
+                var player = new MatchupPlayer(nflPlayer, playerDTO.ProjectedPoints, playerDTO.PointsScored, matchupPosition);
+                roster.MatchupPlayers.Add(player);
+            }
+        }
+
         public static void ParseSeasons()
         {
             var directories = Directory.GetDirectories("../../../app_data/");
-            var drafts = new List<DraftDTO>();
-            var managers = new List<ManagersDTO>();
-            var matchups = new List<MatchupDTO>();
             foreach (var dir in directories)
             {
                 var files = Directory.GetFiles(dir);
-                var draftFile = files.FirstOrDefault(f => f.Contains("draft"));
-                var managersFile = files.FirstOrDefault(f => f.Contains("managers"));
-                if (draftFile != null)
-                    drafts.Add(JsonConvert.DeserializeObject<DraftDTO>(File.ReadAllText(draftFile)));
-                if (managersFile != null)
-                    managers.Add(JsonConvert.DeserializeObject<ManagersDTO>(File.ReadAllText(managersFile)));
+                //var draftFile = files.FirstOrDefault(f => f.Contains("draft"));
+                //var managersFile = files.FirstOrDefault(f => f.Contains("managers"));
+                //if (draftFile != null)
+                //    AddDataFromDraftDTO(JsonConvert.DeserializeObject<DraftDTO>(File.ReadAllText(draftFile)));
+                //if (managersFile != null)
+                //    AddDataFromManagerDTO(JsonConvert.DeserializeObject<ManagersDTO>(File.ReadAllText(managersFile)));
 
                 var matchupFiles = Directory.GetFiles(Path.Combine(dir, "matchups"));
                 foreach (var matchupFile in matchupFiles)
                 {
-                    matchups.Add(JsonConvert.DeserializeObject<MatchupDTO>(File.ReadAllText(matchupFile)));
+                    AddDataFromMatchupDTO(JsonConvert.DeserializeObject<MatchupDTO>(File.ReadAllText(matchupFile)));
                 }
-            }
-            matchups = (from m in matchups
-                        orderby int.Parse(m.SeasonYear) ascending, m.Week ascending
-                        select m).ToList();
-            var elos = new Dictionary<string, List<int>>();
-            var elosMod = new Dictionary<string, List<int>>();
-            foreach (var matchup in matchups)
-            {
-                if (!elos.ContainsKey(matchup.LeftTeam.Manager))
-                {
-                    elosMod.Add(matchup.LeftTeam.Manager, new List<int> { 1500 });
-                    elos.Add(matchup.LeftTeam.Manager, new List<int> { 1500 });
-                }
-                if (!elos.ContainsKey(matchup.RightTeam.Manager))
-                {
-                    elos.Add(matchup.RightTeam.Manager, new List<int> { 1500 });
-                    elosMod.Add(matchup.RightTeam.Manager, new List<int> { 1500 });
-                }
+
             }
         }
 

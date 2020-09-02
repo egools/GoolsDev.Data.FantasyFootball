@@ -9,6 +9,8 @@ namespace FantasyComponents
     [Table("EloScores")]
     public class EloRating
     {
+        private EloRating() { }
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid EloRatingId { get; set; }

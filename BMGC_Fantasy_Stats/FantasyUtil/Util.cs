@@ -22,7 +22,8 @@ namespace FantasyComponents
             TE = 8,
             DEF = 16,
             K = 32,
-            Unknown = 64
+            D = 64,
+            Unknown = 128
         }
 
         [Flags]
@@ -35,9 +36,12 @@ namespace FantasyComponents
             WR2 = NFLPosition.WR,
             TE = NFLPosition.TE,
             DEF = NFLPosition.DEF,
+            D = NFLPosition.D,
             K = NFLPosition.K,
-            FLEX = NFLPosition.RB | NFLPosition.WR | NFLPosition.TE,
-            BN = NFLPosition.QB | NFLPosition.RB | NFLPosition.WR | NFLPosition.TE | NFLPosition.DEF | NFLPosition.K
+            W_R_T = NFLPosition.RB | NFLPosition.WR | NFLPosition.TE,
+            W_T = NFLPosition.WR | NFLPosition.TE,
+            W_R = NFLPosition.WR | NFLPosition.RB,
+            BN = NFLPosition.QB | NFLPosition.RB | NFLPosition.WR | NFLPosition.TE | NFLPosition.DEF | NFLPosition.K | NFLPosition.D
         }
 
         public static NFLPosition ParseNFLPosition(string pos)
@@ -48,6 +52,7 @@ namespace FantasyComponents
             else if (pos == "TE") return NFLPosition.TE;
             else if (pos == "DEF") return NFLPosition.DEF;
             else if (pos == "K") return NFLPosition.K;
+            else if (pos == "D") return NFLPosition.D;
             else return NFLPosition.Unknown;
         }
 
@@ -57,24 +62,14 @@ namespace FantasyComponents
             else if (pos == "RB") return FantasyPosition.RB1;
             else if (pos == "WR") return FantasyPosition.WR1;
             else if (pos == "TE") return FantasyPosition.TE;
-            else if (pos == "W/R/T") return FantasyPosition.FLEX;
+            else if (pos == "W/R/T") return FantasyPosition.W_R_T;
+            else if (pos == "W/R") return FantasyPosition.W_R;
+            else if (pos == "W/T") return FantasyPosition.W_T;
             else if (pos == "DEF") return FantasyPosition.DEF;
+            else if (pos == "D") return FantasyPosition.D;
             else if (pos == "K") return FantasyPosition.K;
             else if (pos == "BN") return FantasyPosition.BN;
             else return FantasyPosition.BN;
         }
-
-        public static readonly List<FantasyPosition> ValidRoster = new List<FantasyPosition>
-        {
-            FantasyPosition.QB,
-            FantasyPosition.RB1,
-            FantasyPosition.RB2,
-            FantasyPosition.WR1,
-            FantasyPosition.WR2,
-            FantasyPosition.TE ,
-            FantasyPosition.DEF,
-            FantasyPosition.K,
-            FantasyPosition.FLEX,
-        };
     }
 }

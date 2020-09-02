@@ -23,6 +23,14 @@
     <Compile Remove="Migrations\20200901224305_Recreate.Designer.cs" />
     <Compile Remove="Migrations\20200901225211_addFK_toManagerSeason.cs" />
     <Compile Remove="Migrations\20200901225211_addFK_toManagerSeason.Designer.cs" />
+    <Compile Remove="Migrations\20200902061912_replaceMatchupWithMatchupId_FK.cs" />
+    <Compile Remove="Migrations\20200902061912_replaceMatchupWithMatchupId_FK.Designer.cs" />
+    <Compile Remove="Migrations\20200902062203_replaceMatchupWithMatchupId_FK.cs" />
+    <Compile Remove="Migrations\20200902062203_replaceMatchupWithMatchupId_FK.Designer.cs" />
+    <Compile Remove="Migrations\20200902063629_replaceMatchupWithMatchupId_FK.cs" />
+    <Compile Remove="Migrations\20200902063629_replaceMatchupWithMatchupId_FK.Designer.cs" />
+    <Compile Remove="Migrations\20200902063956_replaceMatchupWithMatchupId_FK.cs" />
+    <Compile Remove="Migrations\20200902063956_replaceMatchupWithMatchupId_FK.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

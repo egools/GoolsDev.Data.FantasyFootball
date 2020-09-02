@@ -10,6 +10,17 @@
     [Table("Seasons")]
     public class Season
     {
+        private Season() { }
+        public Season(short year, int yahooLeagueId, string seasonName)
+        {
+            //SeasonId = Guid.NewGuid();
+            Year = year;
+            SeasonLeagueName = seasonName;
+            YahooLeagueId = yahooLeagueId;
+            Matchups = new List<Matchup>();
+            ManagerSeasons = new List<ManagerSeason>();
+        }
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid SeasonId { get; private set; }
@@ -20,21 +31,6 @@
         public Draft? Draft { get; set; }
         public ICollection<Matchup> Matchups { get; set; }
         public ICollection<ManagerSeason> ManagerSeasons { get; set; }
-
-        private Season()
-        {
-            //SeasonId = Guid.NewGuid();
-            Matchups = new List<Matchup>();
-            ManagerSeasons = new List<ManagerSeason>();
-        }
-
-        public Season(short year)
-        {
-            //SeasonId = Guid.NewGuid();
-            Year = year;
-            Matchups = new List<Matchup>();
-            ManagerSeasons = new List<ManagerSeason>();
-        }
 
         public void CreateSettings()
         {

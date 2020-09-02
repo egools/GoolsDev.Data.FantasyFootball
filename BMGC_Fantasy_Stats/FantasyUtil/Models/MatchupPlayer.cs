@@ -8,6 +8,15 @@ namespace FantasyComponents
     [Table("MatchupPlayers")]
     public class MatchupPlayer : IComparable<MatchupPlayer>
     {
+        private MatchupPlayer() { }
+        public MatchupPlayer(NFLPlayer nFLPlayer, float? projectedPoints, float? actualPoints, FantasyPosition matchupPosition)
+        {
+            NFLPlayer = nFLPlayer;
+            ProjectedPoints = projectedPoints;
+            ActualPoints = actualPoints;
+            MatchupPosition = matchupPosition;
+        }
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid MatchupPlayerId { get; set; }

@@ -4,10 +4,8 @@ using System.Text;
 
 namespace FantasyComponents.DTO
 {
-    public class DraftDTO
+    public class DraftDTO : BaseDTO
     {
-        public string LeagueName { get; set; }
-        public string SeasonYear { get; set; }
         public List<DraftTeamDTO> Teams { get; set; }
         public bool IsAuction { get; set; }
     }

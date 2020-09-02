@@ -188,6 +188,9 @@ namespace FantasyParser.Migrations
                     b.Property<short>("Wins")
                         .HasColumnType("smallint");
 
+                    b.Property<short?>("Year")
+                        .HasColumnType("smallint");
+
                     b.HasKey("ManagerSeasonId");
 
                     b.HasIndex("ManagerId");
@@ -281,7 +284,7 @@ namespace FantasyParser.Migrations
                     b.Property<Guid?>("ManagerSeasonId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("MatchupId")
+                    b.Property<Guid>("MatchupId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<float>("ProjectedScore")
@@ -290,8 +293,6 @@ namespace FantasyParser.Migrations
                     b.HasKey("RosterId");
 
                     b.HasIndex("ManagerSeasonId");
-
-                    b.HasIndex("MatchupId");
 
                     b.ToTable("MatchupRosters");
                 });
@@ -310,15 +311,12 @@ namespace FantasyParser.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("PFRUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ShortName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TeamsString")
-                        .IsRequired()
                         .HasColumnName("Teams")
                         .HasColumnType("nvarchar(max)");
 
@@ -437,10 +435,6 @@ namespace FantasyParser.Migrations
                     b.HasOne("FantasyComponents.ManagerSeason", null)
                         .WithMany("Rosters")
                         .HasForeignKey("ManagerSeasonId");
-
-                    b.HasOne("FantasyComponents.Matchup", "Matchup")
-                        .WithMany()
-                        .HasForeignKey("MatchupId");
                 });
 
             modelBuilder.Entity("FantasyComponents.Season", b =>

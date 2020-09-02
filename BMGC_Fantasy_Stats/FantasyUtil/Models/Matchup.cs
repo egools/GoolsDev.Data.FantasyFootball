@@ -9,6 +9,14 @@ namespace FantasyComponents
     [Table("Matchups")]
     public class Matchup
     {
+        private Matchup() { }
+        public Matchup(byte week)
+        {
+            Week = week;
+            Roster1 = new MatchupRoster();
+            Roster2 = new MatchupRoster();
+        }
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid MatchupId { get; set; }

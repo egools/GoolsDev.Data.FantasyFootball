@@ -17,16 +17,11 @@ namespace FantasyComponents
         public DraftType DraftType { get; set; }
         public short? Budget { get; set; }
 
-        public Draft(Guid seasonId)
-        {
-            DraftType = DraftType.Snake;
-            SeasonId = seasonId;
-        }
+        private Draft() { }
 
-        public Draft(Guid seasonId, DraftType draftType)
+        public Draft(DraftType draftType)
         {
             DraftType = draftType;
-            SeasonId = seasonId;
         }
 
         [Column("DraftOrder")]
@@ -34,11 +29,12 @@ namespace FantasyComponents
 
         private List<int> _draftOrder;
         [NotMapped]
-        public List<int> DraftOrder { 
+        public List<int> DraftOrder
+        {
             get
             {
                 return _draftOrder ?? DraftOrderString?.Split(",").Select(i => int.Parse(i)).ToList() ?? new List<int>();
-            } 
+            }
             set
             {
                 DraftOrderString = string.Join(',', value);

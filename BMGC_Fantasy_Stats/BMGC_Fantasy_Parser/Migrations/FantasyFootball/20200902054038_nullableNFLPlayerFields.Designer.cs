@@ -4,14 +4,16 @@ using FantasyParser;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FantasyParser.Migrations.FantasyFootball
 {
     [DbContext(typeof(FantasyFootballContext))]
-    partial class FantasyFootballContextModelSnapshot : ModelSnapshot
+    [Migration("20200902054038_nullableNFLPlayerFields")]
+    partial class nullableNFLPlayerFields
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -188,9 +190,6 @@ namespace FantasyParser.Migrations.FantasyFootball
                     b.Property<short>("Wins")
                         .HasColumnType("smallint");
 
-                    b.Property<short?>("Year")
-                        .HasColumnType("smallint");
-
                     b.HasKey("ManagerSeasonId");
 
                     b.HasIndex("ManagerId");
@@ -284,7 +283,7 @@ namespace FantasyParser.Migrations.FantasyFootball
                     b.Property<Guid?>("ManagerSeasonId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("MatchupId")
+                    b.Property<Guid?>("MatchupId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<float>("ProjectedScore")
@@ -293,6 +292,8 @@ namespace FantasyParser.Migrations.FantasyFootball
                     b.HasKey("RosterId");
 
                     b.HasIndex("ManagerSeasonId");
+
+                    b.HasIndex("MatchupId");
 
                     b.ToTable("MatchupRosters");
                 });
@@ -317,6 +318,7 @@ namespace FantasyParser.Migrations.FantasyFootball
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TeamsString")
+                        .IsRequired()
                         .HasColumnName("Teams")
                         .HasColumnType("nvarchar(max)");
 
@@ -435,6 +437,10 @@ namespace FantasyParser.Migrations.FantasyFootball
                     b.HasOne("FantasyComponents.ManagerSeason", null)
                         .WithMany("Rosters")
                         .HasForeignKey("ManagerSeasonId");
+
+                    b.HasOne("FantasyComponents.Matchup", "Matchup")
+                        .WithMany()
+                        .HasForeignKey("MatchupId");
                 });
 
             modelBuilder.Entity("FantasyComponents.Season", b =>

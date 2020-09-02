@@ -1,20 +1,22 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace FantasyComponents.DTO
 {
-    public class ManagersDTO
+    public class ManagersDTO : BaseDTO
     {
-        public string LeagueName { get; set; }
-        public string SeasonYear { get; set; }
         public List<ManagerDTO> Managers { get; set; }
     }
     public class ManagerDTO
     {
         public string TeamName { get; set; }
-        public string Manager { get; set; }
-        public int MovesMade { get; set; }
-        public int TradesMade { get; set; }
+        [JsonProperty(PropertyName ="Manager")]
+        public string ManagerName { get; set; }
+        public short MovesMade { get; set; }
+        public short TradesMade { get; set; }
+        public string YahooManagerId { get; set; }
     }
 }

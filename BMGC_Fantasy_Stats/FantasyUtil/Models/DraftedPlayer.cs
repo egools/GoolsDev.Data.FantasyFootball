@@ -7,6 +7,8 @@ namespace FantasyComponents
     [Table("DraftedPlayers")]
     public class DraftedPlayer
     {
+        private DraftedPlayer() { }
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid DraftedPlayerId { get; set; }

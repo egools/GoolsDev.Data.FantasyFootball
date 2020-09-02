@@ -32,14 +32,20 @@ function scrapeMatchup() {
     let week = document.querySelector("#fantasy header span").innerText.match(/Week (\d+)/)[1];
     let managerNames = Array.from(document.querySelectorAll("#matchup-header .user-id")).map(elm => elm.innerText);
     let teamNames = Array.from(document.querySelectorAll("#matchup-header a.F-link")).map(elm => elm.innerText);
+    let leftUrl = document.querySelector("#felo-overlay > div > div.Ptop-xl > table > thead > tr > th.Ta-start.Whs-nw.Fw-b.F-reset.Fz-sm.Wpx-200.D-ib.Ell.Px-xl > a").href
+    let rightUrl = document.querySelector("#felo-overlay > div > div.Ptop-xl > table > thead > tr > th.Ta-start.Whs-nw.Fw-b.F-reset.Fz-sm.Wpx-200.D-ib.Ell.Px-xl > a").href
+    let leftYahooId = leftUrl.substr(leftUrl.lastIndexOf("/") + 1, leftUrl.lastIndexOf("?") - leftUrl.lastIndexOf("/") - 1);
+    let rightYahooId = rightUrl.substr(rightUrl.lastIndexOf("/") + 1, rightUrl.lastIndexOf("?") - rightUrl.lastIndexOf("/") - 1);
 
     let leftTeam = {
         Manager: managerNames[0],
+        YahooManagerId: leftYahooId,
         TeamName: teamNames[0],
         Players: []
     };
     let rightTeam = {
         Manager: managerNames[1],
+        YahooManagerId: rightYahooId,
         TeamName: teamNames[1],
         Players: []
     };
