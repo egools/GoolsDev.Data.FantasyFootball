@@ -60,7 +60,7 @@ namespace FantasyParser.DTO
                 {
                     var player = new DraftedPlayer(playerDto.Round, playerDto.DraftPosition, playerDto.Price);
                     var nflPlayer = _repo.NFLPlayerRepo.FindById(playerDto.YahooPlayerId.ToString())
-                        ?? _repo.NFLPlayerRepo.AddNewNFLPlayer(playerDto.YahooPlayerId.ToString(), playerDto.FullName, playerDto.ShortName, playerDto.NFLPosition);
+                        ?? _repo.NFLPlayerRepo.AddNewNFLPlayer(playerDto.YahooPlayerId.ToString(), playerDto.FullName, playerDto.ShortName);
                     managerSeason.DraftedPlayers.Add(player);
                 }
             }
@@ -101,7 +101,7 @@ namespace FantasyParser.DTO
             foreach (var playerDto in team.Players)
             {
                 var nflPlayer = _repo.NFLPlayerRepo.FindById(playerDto.YahooPlayerId.ToString())
-                    ?? _repo.NFLPlayerRepo.AddNewNFLPlayer(playerDto.YahooPlayerId.ToString(), playerDto.FullName, playerDto.ShortName, playerDto.NFLPosition);
+                    ?? _repo.NFLPlayerRepo.AddNewNFLPlayer(playerDto.YahooPlayerId.ToString(), playerDto.FullName, playerDto.ShortName);
                 if (string.IsNullOrEmpty(nflPlayer.ShortName))
                 {
                     nflPlayer.ShortName = playerDto.ShortName;
