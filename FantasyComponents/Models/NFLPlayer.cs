@@ -1,10 +1,7 @@
 ﻿using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
-using static FantasyComponents.Util;
 
 namespace FantasyComponents
 {
@@ -25,7 +22,9 @@ namespace FantasyComponents
         public string PFRUrl { get; set; }
         public string FullName { get; init; }
         public string ShortName { get; set; }
-        public NFLPosition NFLPosition { get; set; }
+        public string DisplayPosition { get; set; }
+        public NFLPosition PrimaryPosition { get; set; }
+
         [Column("Teams")]
         public string TeamsString { get; set; }
 

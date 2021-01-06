@@ -9,6 +9,6 @@ namespace FantasyParser.DTO
         public string ShortName { get; set; }
         public string PlayerPosition { get; set; }
         public string PlayerYahooTeamAbbr { get; set; }
-        public NFLPosition NFLPosition => Util.ParseNFLPosition(PlayerPosition);
+        public NFLPosition NFLPosition => YahooUtilities.ParseNFLPosition(PlayerPosition);
     }
 }

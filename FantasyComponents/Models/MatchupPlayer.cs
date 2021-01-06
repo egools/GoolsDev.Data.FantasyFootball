@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using static FantasyComponents.Util;
 
 namespace FantasyComponents
 {
@@ -25,6 +24,7 @@ namespace FantasyComponents
         public float? ProjectedPoints { get; set; }
         public float? ActualPoints { get; set; }
         public FantasyPosition MatchupPosition { get; set; }
+        public FantasyPosition EligiblePositions { get; set; }
         public string GameResult { get; set; }
         public string StatBlock { get; set; }
 

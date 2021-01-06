@@ -30,7 +30,7 @@ namespace FantasyParser.DTO
         public float? PointsScored { get; set; }
         public float? ProjectedPoints { get; set; }
         public List<StatDto> Stats { get; set; }
-        public FantasyPosition FantasyPosition => Util.ParseFantasyPosition(MatchupPosition);
+        public FantasyPosition FantasyPosition => YahooUtilities.ParseFantasyPosition(MatchupPosition);
     }
     public class StatDto
 
