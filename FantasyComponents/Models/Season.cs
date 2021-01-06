@@ -37,6 +37,8 @@
             get => string.IsNullOrEmpty(SettingsJson) ? null : JsonConvert.DeserializeObject<Settings>(SettingsJson);
             set => SettingsJson = JsonConvert.SerializeObject(value);
         }
+
+        [ForeignKey("DraftId")]
         public virtual Draft Draft { get; set; }
         public virtual ICollection<Matchup> Matchups { get; set; }
         public virtual ICollection<Team> Teams { get; set; }

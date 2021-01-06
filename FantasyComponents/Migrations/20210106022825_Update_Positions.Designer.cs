@@ -4,14 +4,16 @@ using FantasyComponents;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FantasyComponents.Migrations
 {
     [DbContext(typeof(FantasyFootballContextLocal))]
-    partial class FantasyFootballContextLocalModelSnapshot : ModelSnapshot
+    [Migration("20210106022825_Update_Positions")]
+    partial class Update_Positions
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
