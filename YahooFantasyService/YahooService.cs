@@ -1,7 +1,6 @@
 ﻿using Azure.Storage.Blobs;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -10,6 +9,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace YahooFantasyService
@@ -70,7 +70,7 @@ namespace YahooFantasyService
 
             if (response.StatusCode == HttpStatusCode.OK)
             {
-                var token = JsonConvert.DeserializeObject<YahooTokenResponse>(await response.Content.ReadAsStringAsync());
+                var token = JsonSerializer.Deserialize<YahooTokenResponse>(await response.Content.ReadAsStringAsync());
                 var newToken = new YahooAuthToken
                 {
                     AccessToken = token.AccessToken,
@@ -91,7 +91,7 @@ namespace YahooFantasyService
             {
                 using var stream = await blobClient.OpenReadAsync();
                 using var sr = new StreamReader(stream);
-                return JsonConvert.DeserializeObject<YahooAuthToken>(sr.ReadToEnd());
+                return JsonSerializer.Deserialize<YahooAuthToken>(sr.ReadToEnd());
             }
             return null;
         }
@@ -101,14 +101,13 @@ namespace YahooFantasyService
             BlobServiceClient blobServiceClient = new BlobServiceClient(_settings.ConnectionString);
             BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(_settings.BlobContainerName);
             BlobClient blobClient = containerClient.GetBlobClient(_settings.BlobName);
-            var text = JsonConvert.SerializeObject(token);
+            var text = JsonSerializer.Serialize(token);
             using var stream = new MemoryStream(Encoding.ASCII.GetBytes(text));
             blobClient.UploadAsync(stream, overwrite: true);
         }
 
         private string BuildYahooUrl(string resource, string key, string subResource = "") => $"{_settings.BaseUrl}/{resource}/{key}/{subResource}?format=json";
 
-        //can be retrieved from league settings league.renew : [key]_[yahooLeagueId]
         public static readonly IReadOnlyDictionary<int, int> NFLGameKeys = new ReadOnlyDictionary<int, int>(new Dictionary<int, int>
         {
             { 2004, 101 },
