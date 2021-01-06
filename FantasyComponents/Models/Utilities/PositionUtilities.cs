@@ -53,8 +53,9 @@ namespace FantasyComponents
         IR = 1024
     }
 
-    public static class YahooUtilities
+    public static class PositionUtilities
     {
+
         public static NFLPosition ParseNFLPosition(string pos)
         {
             if (pos == "QB") return NFLPosition.QB;
