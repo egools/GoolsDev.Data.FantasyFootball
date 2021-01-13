@@ -1,13 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
 namespace YahooFantasyService
 {
-    public class YahooDraftResults : YahooLeagueBase
-    {
-        public List<YahooDraftPick> DraftPicks { get; set; }
-    }
-    public class YahooDraftPick
+    public class DraftPick
     {
         [JsonPropertyName("pick")]
         public int Pick { get; set; }
