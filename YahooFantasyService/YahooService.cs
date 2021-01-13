@@ -30,11 +30,11 @@ namespace YahooFantasyService
         private YahooAuthToken _yahooToken;
         private readonly YahooServiceSettings _settings;
 
-        public YahooLeagueSettings GetSeasonWithSettings(int year, int seasonId)
+        public YahooApiResultBase GetSeasonWithSettings(int year, int seasonId)
         {
             var url = BuildYahooUrl("league", $"{NFLGameKeys[year]}.l.{seasonId}", "settings");
             var result = CallYahooFantasyApi(url);
-            return new YahooLeagueSettings();
+            return new YahooApiResultBase();
         }
 
         public YahooMatchup GetMatchups()
