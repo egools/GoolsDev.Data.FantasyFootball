@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Text.Json.Serialization;
 
 namespace YahooFantasyService
 {
@@ -32,10 +31,6 @@ namespace YahooFantasyService
         public List<YahooTeamBase> Teams { get; set; }
     }
 
-    public class YahooTeamBase
-    {
-    }
-
     public class YahooPlayerApiResult : YahooApiResultBase
     {
         public YahooPlayerBase Players { get; set; }
@@ -44,9 +39,5 @@ namespace YahooFantasyService
     public class YahooPlayerCollectionApiResult : YahooApiResultBase
     {
         public List<YahooPlayerBase> Teams { get; set; }
-    }
-
-    public class YahooPlayerBase
-    {
     }
 }
