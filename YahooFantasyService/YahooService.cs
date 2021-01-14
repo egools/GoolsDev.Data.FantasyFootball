@@ -18,13 +18,7 @@ namespace YahooFantasyService
     {
         public YahooService(IOptions<YahooServiceSettings> options)
         {
-
             _settings = options.Value;
-            _yahooToken = GetTokenFromBlobStorage().Result;
-            if (_yahooToken.TokenExpiration < DateTime.UtcNow)
-            {
-                RefreshAuthToken().Wait();
-            }
         }
 
         private YahooAuthToken _yahooToken;
@@ -79,33 +73,8 @@ namespace YahooFantasyService
                         AccessToken = token.AccessToken,
                         TokenExpiration = DateTime.UtcNow.AddSeconds(token.ExpiresIn)
                     };
-                    WriteTokenToBlobStorage(_yahooToken);
                 }
             }
-        }
-        private async Task<YahooAuthToken> GetTokenFromBlobStorage()
-        {
-            BlobServiceClient blobServiceClient = new BlobServiceClient(_settings.ConnectionString);
-            BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(_settings.BlobContainerName);
-            BlobClient blobClient = containerClient.GetBlobClient(_settings.BlobName);
-
-            if (blobClient.Exists())
-            {
-                using var stream = await blobClient.OpenReadAsync();
-                using var sr = new StreamReader(stream);
-                return JsonSerializer.Deserialize<YahooAuthToken>(sr.ReadToEnd());
-            }
-            return null;
-        }
-
-        private void WriteTokenToBlobStorage(YahooAuthToken token)
-        {
-            BlobServiceClient blobServiceClient = new BlobServiceClient(_settings.ConnectionString);
-            BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(_settings.BlobContainerName);
-            BlobClient blobClient = containerClient.GetBlobClient(_settings.BlobName);
-            var text = JsonSerializer.Serialize(token);
-            using var stream = new MemoryStream(Encoding.ASCII.GetBytes(text));
-            blobClient.UploadAsync(stream, overwrite: true);
         }
 
         private string BuildYahooUrl(string resource, string key, string subResource = "") => $"{_settings.BaseUrl}/{resource}/{key}/{subResource}?format=json";
