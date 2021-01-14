@@ -23,7 +23,7 @@ namespace YahooFantasyService
             _yahooToken = GetTokenFromBlobStorage().Result;
             if (_yahooToken.TokenExpiration < DateTime.UtcNow)
             {
-                _yahooToken = RefreshAuthToken().Result;
+                RefreshAuthToken().Wait();
             }
         }
 
@@ -46,6 +46,7 @@ namespace YahooFantasyService
         {
             var client = new HttpClient();
 
+            await RefreshAuthToken();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _yahooToken.AccessToken);
             var response = await client.GetAsync(url);
             if (response.StatusCode == HttpStatusCode.OK)
@@ -55,31 +56,32 @@ namespace YahooFantasyService
             return null;
         }
 
-        private async Task<YahooAuthToken> RefreshAuthToken()
+        private async Task RefreshAuthToken()
         {
-            var client = new HttpClient();
-            var body = new Dictionary<string, string>
+            if (_yahooToken is null || _yahooToken.TokenExpiration < DateTime.UtcNow)
             {
-                { "grant_type", "refresh_token" },
-                { "redirect_uri", "oob" },
-                { "refresh_token", _settings.RefreshToken }
-            };
-
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", _settings.AuthHeader);
-            var response = await client.PostAsync(_settings.TokenUrl, new FormUrlEncodedContent(body));
-
-            if (response.StatusCode == HttpStatusCode.OK)
-            {
-                var token = JsonSerializer.Deserialize<YahooTokenResponse>(await response.Content.ReadAsStringAsync());
-                var newToken = new YahooAuthToken
+                var client = new HttpClient();
+                var body = new Dictionary<string, string>
                 {
-                    AccessToken = token.AccessToken,
-                    TokenExpiration = DateTime.UtcNow.AddSeconds(token.ExpiresIn)
+                    { "grant_type", "refresh_token" },
+                    { "redirect_uri", "oob" },
+                    { "refresh_token", _settings.RefreshToken }
                 };
-                WriteTokenToBlobStorage(newToken);
-                return newToken;
+
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", _settings.AuthHeader);
+                var response = await client.PostAsync(_settings.TokenUrl, new FormUrlEncodedContent(body));
+
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    var token = JsonSerializer.Deserialize<YahooTokenResponse>(await response.Content.ReadAsStringAsync());
+                    _yahooToken = new YahooAuthToken
+                    {
+                        AccessToken = token.AccessToken,
+                        TokenExpiration = DateTime.UtcNow.AddSeconds(token.ExpiresIn)
+                    };
+                    WriteTokenToBlobStorage(_yahooToken);
+                }
             }
-            return null;
         }
         private async Task<YahooAuthToken> GetTokenFromBlobStorage()
         {
