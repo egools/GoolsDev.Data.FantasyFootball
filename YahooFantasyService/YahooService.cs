@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -26,7 +27,7 @@ namespace YahooFantasyService
 
         public YahooApiResultBase GetSeasonWithSettings(int year, int seasonId)
         {
-            var url = BuildYahooUrl("league", $"{NFLGameKeys[year]}.l.{seasonId}", "settings");
+            var url = BuildYahooResourceUrl("league", $"{NFLGameKeys[year]}.l.{seasonId}", new List<string> { "settings" });
             var result = CallYahooFantasyApi(url);
             return new YahooApiResultBase();
         }
@@ -77,7 +78,22 @@ namespace YahooFantasyService
             }
         }
 
-        private string BuildYahooUrl(string resource, string key, string subResource = "") => $"{_settings.BaseUrl}/{resource}/{key}/{subResource}?format=json";
+        private string BuildYahooResourceUrl(string resource, string key, List<string> subResources)
+        {
+            var subResourceCollection = subResources.Any()
+                ? ";out=" + string.Join(",", subResources)
+                : string.Empty;
+
+            return $"{_settings.BaseUrl}/{resource}/{key}{subResourceCollection}?format=json";
+        }
+        private string BuildYahooCollectionUrl(string collection, string resource, List<string> keys, List<string> subResources)
+        {
+            var resourceKeys = string.Join(",", keys);
+            var subResourceCollection = subResources.Any()
+                ? ";out=" + string.Join(",", subResources)
+                : string.Empty;
+            return $"{_settings.BaseUrl}/{collection};{resource}_keys={resourceKeys}{subResourceCollection}?format=json";
+        }
 
         public static readonly IReadOnlyDictionary<int, int> NFLGameKeys = new ReadOnlyDictionary<int, int>(new Dictionary<int, int>
         {
