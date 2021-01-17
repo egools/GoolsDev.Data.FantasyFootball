@@ -1,8 +1,10 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using YahooFantasyService;
 
@@ -22,16 +24,10 @@ namespace FantasyParser
         }
         public void Run()
         {
-            Console.WriteLine("Hello from App.cs");
-            Console.WriteLine(_config.GetConnectionString("GoolsDevSqlConnection"));
-            //var a = new YahooService();
-            //a.GetSeasonWithSettings(2019, 724919);
-            //ParseSeasons();
-            //var a = new HttpClient();
-            //var token = "token";
-            //a.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-            //var response = await a.GetAsync("https://fantasysports.yahooapis.com/fantasy/v2/league/399.l.299900/teams/roster;weeks=1?format=json");
-            //var data = await response.Content.ReadAsStringAsync();
+            //var text = File.ReadAllText(@"C:\Users\Eric\source\repos\egools\app_data\yahoo_api_leagueSettings\2020.json");
+
+            //var result = _yahooService.CallYahooFantasyApi("https://fantasysports.yahooapis.com/fantasy/v2/league/399.l.299900;out=draftresults,settings,scoreboard,standings?format=json").Result;
+            var leagueResult = _yahooService.GetSeasonWithSettings(2020, 299900).Result;
         }
     }
 }

@@ -1,24 +1,36 @@
 ﻿using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace YahooFantasyService
 {
     public class YahooApiResultBase
     {
+        [JsonPropertyName("xml:lang")]
         public string XmlLang { get; set; }
+
+        [JsonPropertyName("yahoo:uri")]
         public string YahooUri { get; set; }
+
+        [JsonPropertyName("time")]
         public string Time { get; set; }
-        public string Copyright { get; set; }
+
+        [JsonPropertyName("refresh_rate")]
         public string RefreshRate { get; set; }
     }
 
-    public class YahooApiLeagueResult : YahooApiResultBase
+    public class YahooLeagueApiResult : YahooApiResultBase
     {
-        public YahooLeagueBase League { get; set; }
+        public YahooLeague League { get; set; }
+
+        [JsonPropertyName("league")]
+        public object[] LeagueObjectCollection { get; set; }
     }
 
     public class YahooLeagueCollectionApiResult : YahooApiResultBase
     {
-        public List<YahooLeagueBase> Teams { get; set; }
+        public List<YahooLeague> Leagues { get; set; }
+
+        public object[] LeaguesObjectCollection { get; set; }
     }
 
     public class YahooTeamApiResult : YahooApiResultBase
@@ -33,11 +45,11 @@ namespace YahooFantasyService
 
     public class YahooPlayerApiResult : YahooApiResultBase
     {
-        public YahooPlayerBase Players { get; set; }
+        public YahooPlayerBase Player { get; set; }
     }
 
     public class YahooPlayerCollectionApiResult : YahooApiResultBase
     {
-        public List<YahooPlayerBase> Teams { get; set; }
+        public List<YahooPlayerBase> Players { get; set; }
     }
 }

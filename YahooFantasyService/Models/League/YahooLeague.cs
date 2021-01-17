@@ -1,8 +1,9 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace YahooFantasyService
 {
-    public class YahooLeagueBase
+    public class YahooLeague
     {
         [JsonPropertyName("league_key")]
         public string LeagueKey { get; set; }
@@ -81,5 +82,14 @@ namespace YahooFantasyService
 
         [JsonPropertyName("season")]
         public string Season { get; set; }
+
+
+        public List<DraftPick> DraftPicks { get; set; }
+
+        public LeagueScoreboard Scoreboard { get; set; }
+
+        public LeagueSettings Settings { get; set; }
+
+        public List<YahooTeamStanding> Standings { get; set; }
     }
 }

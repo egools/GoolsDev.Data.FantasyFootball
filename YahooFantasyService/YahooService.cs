@@ -1,6 +1,4 @@
-﻿using Azure.Storage.Blobs;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Options;
+﻿using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -25,11 +23,15 @@ namespace YahooFantasyService
         private YahooAuthToken _yahooToken;
         private readonly YahooServiceSettings _settings;
 
-        public YahooApiResultBase GetSeasonWithSettings(int year, int seasonId)
+        public async Task<YahooLeagueApiResult> GetSeasonWithSettings(int year, int seasonId)
         {
             var url = BuildYahooResourceUrl("league", $"{NFLGameKeys[year]}.l.{seasonId}", new List<string> { "settings" });
-            var result = CallYahooFantasyApi(url);
-            return new YahooApiResultBase();
+            var jsonResult = await CallYahooFantasyApi(url);
+            using JsonDocument doc = JsonDocument.Parse(jsonResult);
+            var fantasyContent = doc.RootElement.GetProperty("fantasy_content").ToString();
+            var resultBase = JsonSerializer.Deserialize<YahooLeagueApiResult>(fantasyContent);
+            //TODO: parse league portion
+            return null;
         }
 
         public YahooMatchup GetMatchups()
@@ -95,7 +97,7 @@ namespace YahooFantasyService
             return $"{_settings.BaseUrl}/{collection};{resource}_keys={resourceKeys}{subResourceCollection}?format=json";
         }
 
-        public static readonly IReadOnlyDictionary<int, int> NFLGameKeys = new ReadOnlyDictionary<int, int>(new Dictionary<int, int>
+    public static readonly IReadOnlyDictionary<int, int> NFLGameKeys = new ReadOnlyDictionary<int, int>(new Dictionary<int, int>
         {
             { 2004, 101 },
             { 2005, 124 },
@@ -115,5 +117,5 @@ namespace YahooFantasyService
             { 2019, 390 },
             { 2020, 399 }
         });
-    }
+}
 }
