@@ -1,13 +1,13 @@
-﻿using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
 
 namespace YahooFantasyService
 {
     public class StandingStreak
     {
-        [JsonPropertyName("type")]
+        [JsonProperty(PropertyName = "type")]
         public string Type { get; set; }
 
-        [JsonPropertyName("value")]
+        [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
     }
 }

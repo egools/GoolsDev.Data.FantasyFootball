@@ -1,13 +1,13 @@
-﻿using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
 
 namespace YahooFantasyService
 {
     public class YahooPointsBase
     {
-        [JsonPropertyName("coverage_type")]
+        [JsonProperty(PropertyName = "coverage_type")]
         public string CoverageType { get; set; }
 
-        [JsonPropertyName("total")]
+        [JsonProperty(PropertyName = "total")]
         public string Total { get; set; }
     }
 }

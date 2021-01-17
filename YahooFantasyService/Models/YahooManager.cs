@@ -1,16 +1,16 @@
-﻿using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
 
 namespace YahooFantasyService
 {
     public class YahooManager
     {
-        [JsonPropertyName("manager_id")]
+        [JsonProperty(PropertyName = "manager_id")]
         public string ManagerId { get; set; }
 
-        [JsonPropertyName("nickname")]
+        [JsonProperty(PropertyName = "nickname")]
         public string Nickname { get; set; }
 
-        [JsonPropertyName("guid")]
+        [JsonProperty(PropertyName = "guid")]
         public string Guid { get; set; }
     }
 

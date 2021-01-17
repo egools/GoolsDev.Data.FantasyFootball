@@ -1,13 +1,13 @@
-﻿using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
 
 namespace YahooFantasyService
 {
     public class SettingsDivision
     {
-        [JsonPropertyName("division_id")]
+        [JsonProperty(PropertyName = "division_id")]
         public int DivisionId { get; set; }
 
-        [JsonPropertyName("name")]
+        [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
     }
 }

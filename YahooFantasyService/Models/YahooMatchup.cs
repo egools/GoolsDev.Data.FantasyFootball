@@ -1,44 +1,44 @@
 ﻿using System.Collections.Generic;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace YahooFantasyService
 {
     public class YahooMatchup
     {
-        [JsonPropertyName("week")]
+        [JsonProperty(PropertyName = "week")]
         public string Week { get; set; }
 
-        [JsonPropertyName("week_start")]
+        [JsonProperty(PropertyName = "week_start")]
         public string WeekStart { get; set; }
 
-        [JsonPropertyName("week_end")]
+        [JsonProperty(PropertyName = "week_end")]
         public string WeekEnd { get; set; }
 
-        [JsonPropertyName("status")]
+        [JsonProperty(PropertyName = "status")]
         public string Status { get; set; }
 
-        [JsonPropertyName("is_playoffs")]
+        [JsonProperty(PropertyName = "is_playoffs")]
         public string IsPlayoffs { get; set; }
 
-        [JsonPropertyName("is_consolation")]
+        [JsonProperty(PropertyName = "is_consolation")]
         public string IsConsolation { get; set; }
 
-        [JsonPropertyName("is_matchup_recap_available")]
+        [JsonProperty(PropertyName = "is_matchup_recap_available")]
         public int IsMatchupRecapAvailable { get; set; }
 
-        [JsonPropertyName("matchup_recap_url")]
+        [JsonProperty(PropertyName = "matchup_recap_url")]
         public string MatchupRecapUrl { get; set; }
 
-        [JsonPropertyName("matchup_recap_title")]
+        [JsonProperty(PropertyName = "matchup_recap_title")]
         public string MatchupRecapTitle { get; set; }
 
-        [JsonPropertyName("matchup_grades")]
+        [JsonProperty(PropertyName = "matchup_grades")]
         public List<MatchupGrade> MatchupGrades { get; set; }
 
-        [JsonPropertyName("is_tied")]
+        [JsonProperty(PropertyName = "is_tied")]
         public int IsTied { get; set; }
 
-        [JsonPropertyName("winner_team_key")]
+        [JsonProperty(PropertyName = "winner_team_key")]
         public string WinnerTeamKey { get; set; }
 
         public List<YahooMatchupTeam> MatchupTeams { get; set; }
@@ -46,10 +46,10 @@ namespace YahooFantasyService
 
     public class MatchupGrade
     {
-        [JsonPropertyName("team_key")]
+        [JsonProperty(PropertyName = "team_key")]
         public string TeamKey { get; set; }
 
-        [JsonPropertyName("grade")]
+        [JsonProperty(PropertyName = "grade")]
         public string Grade { get; set; }
     }
 

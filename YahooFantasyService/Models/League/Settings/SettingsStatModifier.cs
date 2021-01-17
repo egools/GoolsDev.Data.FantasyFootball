@@ -1,14 +1,14 @@
-﻿using System.Collections.Generic;
-using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace YahooFantasyService
 {
     public class SettingsStatModifier
     {
-        [JsonPropertyName("stat_id")]
+        [JsonProperty(PropertyName = "stat_id")]
         public int StatId { get; set; }
 
-        [JsonPropertyName("value")]
+        [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
 
         public List<SettingsStatBonus> Bonuses { get; set; }

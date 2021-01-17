@@ -1,5 +1,5 @@
-﻿using System;
-using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace YahooFantasyService
 {
@@ -11,16 +11,16 @@ namespace YahooFantasyService
 
     internal class YahooTokenResponse
     {
-        [JsonPropertyName("access_token")]
+        [JsonProperty(PropertyName = "access_token")]
         public string AccessToken { get; set; }
 
-        [JsonPropertyName("refresh_token")]
+        [JsonProperty(PropertyName = "refresh_token")]
         public string RefreshToken { get; set; }
 
-        [JsonPropertyName("expires_in")]
+        [JsonProperty(PropertyName = "expires_in")]
         public int ExpiresIn { get; set; }
 
-        [JsonPropertyName("token_type")]
+        [JsonProperty(PropertyName = "token_type")]
         public string TokenType { get; set; }
     }
 }

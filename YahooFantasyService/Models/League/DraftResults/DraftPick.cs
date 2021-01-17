@@ -1,22 +1,22 @@
-﻿using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
 
 namespace YahooFantasyService
 {
     public class DraftPick
     {
-        [JsonPropertyName("pick")]
+        [JsonProperty(PropertyName = "pick")]
         public int Pick { get; set; }
 
-        [JsonPropertyName("round")]
+        [JsonProperty(PropertyName = "round")]
         public int Round { get; set; }
 
-        [JsonPropertyName("cost")]
+        [JsonProperty(PropertyName = "cost")]
         public double Cost { get; set; }
 
-        [JsonPropertyName("team_key")]
+        [JsonProperty(PropertyName = "team_key")]
         public string TeamKey { get; set; }
 
-        [JsonPropertyName("player_key")]
+        [JsonProperty(PropertyName = "player_key")]
         public string PlayerKey { get; set; }
 
     }

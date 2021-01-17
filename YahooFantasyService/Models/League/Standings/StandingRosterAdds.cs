@@ -1,16 +1,16 @@
-﻿using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
 
 namespace YahooFantasyService
 {
     public class StandingRosterAdds
     {
-        [JsonPropertyName("coverage_type")]
+        [JsonProperty(PropertyName = "coverage_type")]
         public string CoverageType { get; set; }
 
-        [JsonPropertyName("coverage_value")]
+        [JsonProperty(PropertyName = "coverage_value")]
         public string CoverageValue { get; set; }
 
-        [JsonPropertyName("value")]
+        [JsonProperty(PropertyName = "value")]
         public string Value { get; set; }
     }
 }

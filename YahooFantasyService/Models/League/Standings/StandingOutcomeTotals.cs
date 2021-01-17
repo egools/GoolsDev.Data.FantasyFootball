@@ -1,19 +1,19 @@
-﻿using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
 
 namespace YahooFantasyService
 {
     public class StandingOutcomeTotals
     {
-        [JsonPropertyName("wins")]
+        [JsonProperty(PropertyName = "wins")]
         public string Wins { get; set; }
 
-        [JsonPropertyName("losses")]
+        [JsonProperty(PropertyName = "losses")]
         public string Losses { get; set; }
 
-        [JsonPropertyName("ties")]
+        [JsonProperty(PropertyName = "ties")]
         public int Ties { get; set; }
 
-        [JsonPropertyName("percentage")]
+        [JsonProperty(PropertyName = "percentage")]
         public string Percentage { get; set; }
     }
 }

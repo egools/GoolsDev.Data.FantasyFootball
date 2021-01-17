@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -8,7 +10,6 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
-using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace YahooFantasyService
@@ -27,9 +28,9 @@ namespace YahooFantasyService
         {
             var url = BuildYahooResourceUrl("league", $"{NFLGameKeys[year]}.l.{seasonId}", new List<string> { "settings" });
             var jsonResult = await CallYahooFantasyApi(url);
-            using JsonDocument doc = JsonDocument.Parse(jsonResult);
-            var fantasyContent = doc.RootElement.GetProperty("fantasy_content").ToString();
-            var resultBase = JsonSerializer.Deserialize<YahooLeagueApiResult>(fantasyContent);
+            var o = JObject.Parse(jsonResult);
+            var fantasyContent = o.SelectToken("fantasy_content");
+            var resultBase = JsonConvert.DeserializeObject<YahooLeagueApiResult>(fantasyContent.ToString());
             //TODO: parse league portion
             return null;
         }
@@ -70,7 +71,7 @@ namespace YahooFantasyService
 
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
-                    var token = JsonSerializer.Deserialize<YahooTokenResponse>(await response.Content.ReadAsStringAsync());
+                    var token = JsonConvert.DeserializeObject<YahooTokenResponse>(await response.Content.ReadAsStringAsync());
                     _yahooToken = new YahooAuthToken
                     {
                         AccessToken = token.AccessToken,

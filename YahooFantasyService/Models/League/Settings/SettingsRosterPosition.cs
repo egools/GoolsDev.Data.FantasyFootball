@@ -1,16 +1,16 @@
-﻿using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
 
 namespace YahooFantasyService
 {
     public class SettingsRosterPosition
     {
-        [JsonPropertyName("position")]
+        [JsonProperty(PropertyName = "position")]
         public string Position { get; set; }
 
-        [JsonPropertyName("position_type")]
+        [JsonProperty(PropertyName = "position_type")]
         public string PositionType { get; set; }
 
-        [JsonPropertyName("count")]
+        [JsonProperty(PropertyName = "count")]
         public int Count { get; set; }
     }
 }

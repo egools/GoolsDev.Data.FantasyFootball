@@ -1,53 +1,53 @@
-﻿using System.Collections.Generic;
-using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace YahooFantasyService
 {
     public class YahooTeamBase
     {
-        [JsonPropertyName("team_key")]
+        [JsonProperty(PropertyName = "team_key")]
         public string TeamKey { get; set; }
 
-        [JsonPropertyName("team_id")]
+        [JsonProperty(PropertyName = "team_id")]
         public string TeamId { get; set; }
 
-        [JsonPropertyName("name")]
+        [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
-        [JsonPropertyName("division_id")]
+        [JsonProperty(PropertyName = "division_id")]
         public string DivisionId { get; set; }
 
-        [JsonPropertyName("waiver_priority")]
+        [JsonProperty(PropertyName = "waiver_priority")]
         public int WaiverPriority { get; set; }
 
-        [JsonPropertyName("faab_balance")]
+        [JsonProperty(PropertyName = "faab_balance")]
         public string FaabBalance { get; set; }
 
-        [JsonPropertyName("number_of_moves")]
+        [JsonProperty(PropertyName = "number_of_moves")]
         public string NumberOfMoves { get; set; }
 
-        [JsonPropertyName("number_of_trades")]
+        [JsonProperty(PropertyName = "number_of_trades")]
         public int NumberOfTrades { get; set; }
 
-        [JsonPropertyName("roster_adds")]
+        [JsonProperty(PropertyName = "roster_adds")]
         public StandingRosterAdds RosterAdds { get; set; }
 
-        [JsonPropertyName("clinched_playoffs")]
+        [JsonProperty(PropertyName = "clinched_playoffs")]
         public int ClinchedPlayoffs { get; set; }
 
-        [JsonPropertyName("league_scoring_type")]
+        [JsonProperty(PropertyName = "league_scoring_type")]
         public string LeagueScoringType { get; set; }
 
-        [JsonPropertyName("has_draft_grade")]
+        [JsonProperty(PropertyName = "has_draft_grade")]
         public int HasDraftGrade { get; set; }
 
-        [JsonPropertyName("auction_budget_total")]
+        [JsonProperty(PropertyName = "auction_budget_total")]
         public string AuctionBudgetTotal { get; set; }
 
-        [JsonPropertyName("auction_budget_spent")]
+        [JsonProperty(PropertyName = "auction_budget_spent")]
         public int AuctionBudgetSpent { get; set; }
 
-        [JsonPropertyName("managers")]
+        [JsonProperty(PropertyName = "managers")]
         public List<YahooManager> Managers { get; set; }
     }
 }

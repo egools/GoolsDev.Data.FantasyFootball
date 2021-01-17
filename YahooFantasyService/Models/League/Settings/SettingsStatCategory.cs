@@ -1,32 +1,32 @@
-﻿using System.Collections.Generic;
-using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace YahooFantasyService
 {
     public class SettingsStatCategory
     {
-        [JsonPropertyName("stat_id")]
+        [JsonProperty(PropertyName = "stat_id")]
         public int StatId { get; set; }
 
-        [JsonPropertyName("enabled")]
+        [JsonProperty(PropertyName = "enabled")]
         public string Enabled { get; set; }
 
-        [JsonPropertyName("name")]
+        [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
-        [JsonPropertyName("display_name")]
+        [JsonProperty(PropertyName = "display_name")]
         public string DisplayName { get; set; }
 
-        [JsonPropertyName("sort_order")]
+        [JsonProperty(PropertyName = "sort_order")]
         public string SortOrder { get; set; }
 
-        [JsonPropertyName("position_type")]
+        [JsonProperty(PropertyName = "position_type")]
         public string PositionType { get; set; }
 
-        [JsonPropertyName("is_only_display_stat")]
+        [JsonProperty(PropertyName = "is_only_display_stat")]
         public string IsOnlyDisplayStat { get; set; }
 
-        [JsonPropertyName("is_excluded_from_display")]
+        [JsonProperty(PropertyName = "is_excluded_from_display")]
         public string IsExcludedFromDisplay { get; set; }
 
         public List<SettingsStatPositionType> StatPositionTypes { get; set; }
@@ -34,10 +34,10 @@ namespace YahooFantasyService
 
     public class SettingsStatPositionType
     {
-        [JsonPropertyName("position_type")]
+        [JsonProperty(PropertyName = "position_type")]
         public string PositionType { get; set; }
 
-        [JsonPropertyName("is_only_display_stat")]
+        [JsonProperty(PropertyName = "is_only_display_stat")]
         public string IsOnlyDisplayStat { get; set; }
     }
 }

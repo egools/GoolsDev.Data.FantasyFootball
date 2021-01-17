@@ -1,29 +1,32 @@
-﻿using System.Collections.Generic;
-using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
 
 namespace YahooFantasyService
 {
     public class YahooApiResultBase
     {
-        [JsonPropertyName("xml:lang")]
+        [JsonProperty(PropertyName = "xml:lang")]
         public string XmlLang { get; set; }
 
-        [JsonPropertyName("yahoo:uri")]
+        [JsonProperty(PropertyName = "yahoo:uri")]
         public string YahooUri { get; set; }
 
-        [JsonPropertyName("time")]
+        [JsonProperty(PropertyName = "time")]
         public string Time { get; set; }
 
-        [JsonPropertyName("refresh_rate")]
+        [JsonProperty(PropertyName = "refresh_rate")]
         public string RefreshRate { get; set; }
     }
 
     public class YahooLeagueApiResult : YahooApiResultBase
     {
-        public YahooLeague League { get; set; }
+        [JsonConstructor]
+        public YahooLeagueApiResult(JToken [] league)
+        {
 
-        [JsonPropertyName("league")]
-        public object[] LeagueObjectCollection { get; set; }
+        }
+        public YahooLeague League { get; set; }
     }
 
     public class YahooLeagueCollectionApiResult : YahooApiResultBase

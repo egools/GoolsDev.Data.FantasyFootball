@@ -1,13 +1,13 @@
-﻿using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
 
 namespace YahooFantasyService
 {
     public class YahooTeamStanding : YahooTeamBase
     {
-        [JsonPropertyName("team_points")]
+        [JsonProperty(PropertyName = "team_points")]
         public StandingTeamPoints TeamPoints { get; set; }
 
-        [JsonPropertyName("team_standings")]
+        [JsonProperty(PropertyName = "team_standings")]
         public StandingEntry StandingEntry { get; set; }
     }
 }

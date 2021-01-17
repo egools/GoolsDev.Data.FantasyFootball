@@ -1,28 +1,28 @@
-﻿using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
 
 namespace YahooFantasyService
 {
     public class StandingEntry
     {
-        [JsonPropertyName("rank")]
+        [JsonProperty(PropertyName = "rank")]
         public int Rank { get; set; }
 
-        [JsonPropertyName("playoff_seed")]
+        [JsonProperty(PropertyName = "playoff_seed")]
         public string PlayoffSeed { get; set; }
 
-        [JsonPropertyName("outcome_totals")]
+        [JsonProperty(PropertyName = "outcome_totals")]
         public StandingOutcomeTotals OutcomeTotals { get; set; }
 
-        [JsonPropertyName("divisional_outcome_totals")]
+        [JsonProperty(PropertyName = "divisional_outcome_totals")]
         public StandingOutcomeTotals DivisionalOutcomeTotals { get; set; }
 
-        [JsonPropertyName("streak")]
+        [JsonProperty(PropertyName = "streak")]
         public StandingStreak Streak { get; set; }
 
-        [JsonPropertyName("points_for")]
+        [JsonProperty(PropertyName = "points_for")]
         public string PointsFor { get; set; }
 
-        [JsonPropertyName("points_against")]
+        [JsonProperty(PropertyName = "points_against")]
         public double PointsAgainst { get; set; }
     }
 }
