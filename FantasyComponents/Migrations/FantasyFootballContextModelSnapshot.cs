@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FantasyComponents.Migrations
 {
-    [DbContext(typeof(FantasyFootballContextLocal))]
-    partial class FantasyFootballContextLocalModelSnapshot : ModelSnapshot
+    [DbContext(typeof(FantasyFootballContext))]
+    partial class FantasyFootballContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

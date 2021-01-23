@@ -7,7 +7,7 @@ namespace FantasyParser.DTO
 {
     public static class DtoParser
     {
-        private static readonly FantasyFootballUnitOfWork _repo = new FantasyFootballUnitOfWork(new FantasyFootballContextLocal("BMGC"));
+        private static readonly FantasyFootballUnitOfWork _repo;
         public static void AddDataFromManagerDto(ManagersDto managersDto)
         {
             var gameKey = "399";

@@ -4,6 +4,9 @@ using System.IO;
 using System.Linq;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
+using FantasyComponents;
+using Microsoft.EntityFrameworkCore;
+using FantasyComponents.DAL;
 
 namespace FantasyParser
 {
@@ -26,6 +29,9 @@ namespace FantasyParser
 
             services.AddTransient<App>();
             services.AddTransient<YahooService>();
+
+            services.AddTransient<FantasyFootballUnitOfWork>();
+            services.AddDbContext<FantasyFootballContext>(options => options.UseSqlServer(config.GetConnectionString("GoolsDevSqlConnection")));
 
             return services;
         }

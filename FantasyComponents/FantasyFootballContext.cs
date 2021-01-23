@@ -7,24 +7,22 @@ namespace FantasyComponents
     public class FantasyFootballContext : DbContext
     {
         protected readonly string LeagueName;
-        public FantasyFootballContext() : base() { }
-        public FantasyFootballContext(string leagueName) : base()
+        public FantasyFootballContext(DbContextOptions<FantasyFootballContext> options) : base(options)
+        {
+
+        }
+        public FantasyFootballContext(string leagueName, DbContextOptions<FantasyFootballContext> options) : base(options)
         {
             LeagueName = leagueName;
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            IConfigurationRoot configuration = new ConfigurationBuilder()
-                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
-                .AddJsonFile("local.appsettings.json")
-                .Build();
-            optionsBuilder
-                .UseSqlServer(configuration.GetConnectionString("db-goolsdev-prod"));
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<League>().HasQueryFilter(l => l.LeagueName == LeagueName);
+            //modelBuilder.Entity<League>().HasQueryFilter(l => l.LeagueName == LeagueName);
 
             modelBuilder.Entity<League>()
                 .HasMany(l => l.Seasons)

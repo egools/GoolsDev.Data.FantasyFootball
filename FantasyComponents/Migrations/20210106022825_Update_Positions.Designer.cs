@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FantasyComponents.Migrations
 {
-    [DbContext(typeof(FantasyFootballContextLocal))]
+    [DbContext(typeof(FantasyFootballContext))]
     [Migration("20210106022825_Update_Positions")]
     partial class Update_Positions
     {
