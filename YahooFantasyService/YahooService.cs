@@ -27,34 +27,41 @@ namespace YahooFantasyService
         public async Task<YahooLeagueApiResult> GetSeasonWithSettings(int year, int seasonId)
         {
             var url = BuildYahooResourceUrl("league", $"{NFLGameKeys[year]}.l.{seasonId}", new List<string> { "settings" });
-            var jsonResult = await CallYahooFantasyApi(url);
-            var o = JObject.Parse(jsonResult);
-            var fantasyContent = o.SelectToken("fantasy_content");
-            var resultBase = JsonConvert.DeserializeObject<YahooLeagueApiResult>(fantasyContent.ToString());
-            //TODO: parse league portion
-            return null;
+            var leagueResult = await CallYahooFantasyApi<YahooLeagueApiResult>(url);
+
+            if (leagueResult is YahooErrorApiResult errorResult)
+            {
+                throw new ArgumentException(errorResult.Error.Description);
+            }
+
+            return leagueResult as YahooLeagueApiResult;
         }
 
-        public YahooMatchup GetMatchups()
-        {
-            return new YahooMatchup();
-        }
-
-        public async Task<string> CallYahooFantasyApi(string url)
+        public async Task<YahooApiResultBase> CallYahooFantasyApi<T>(string url)
         {
             var client = new HttpClient();
 
             await RefreshAuthToken();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _yahooToken.AccessToken);
             var response = await client.GetAsync(url);
-            if (response.StatusCode == HttpStatusCode.OK)
+            var jsonResult = await response.Content.ReadAsStringAsync();
+
+            if (response.IsSuccessStatusCode)
             {
-                return await response.Content.ReadAsStringAsync();
+                JObject o = JObject.Parse(jsonResult);
+                var fantasyContent = o.SelectToken("fantasy_content").ToString();
+                var resultBase = JsonConvert.DeserializeObject<T>(fantasyContent) as YahooApiResultBase;
+                return resultBase;
             }
-            return null;
+            else
+            {
+                var errorResult = JsonConvert.DeserializeObject<YahooErrorApiResult>(jsonResult);
+                errorResult.StatusCode = response.StatusCode;
+                return errorResult;
+            }
         }
 
-        private async Task RefreshAuthToken()
+        private async Task RefreshAuthToken(bool retry = true)
         {
             if (_yahooToken is null || _yahooToken.TokenExpiration < DateTime.UtcNow)
             {
@@ -69,7 +76,7 @@ namespace YahooFantasyService
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", _settings.AuthHeader);
                 var response = await client.PostAsync(_settings.TokenUrl, new FormUrlEncodedContent(body));
 
-                if (response.StatusCode == HttpStatusCode.OK)
+                if (response.IsSuccessStatusCode)
                 {
                     var token = JsonConvert.DeserializeObject<YahooTokenResponse>(await response.Content.ReadAsStringAsync());
                     _yahooToken = new YahooAuthToken
@@ -77,6 +84,18 @@ namespace YahooFantasyService
                         AccessToken = token.AccessToken,
                         TokenExpiration = DateTime.UtcNow.AddSeconds(token.ExpiresIn)
                     };
+                }
+                else
+                {
+                    if(retry)
+                    {
+                        await RefreshAuthToken(false);
+                    }
+                    else
+                    {
+                        var error = JObject.Parse(await response.Content.ReadAsStringAsync());
+                        throw new HttpRequestException(error.Value<string>("error_description"), null, response.StatusCode);
+                    }
                 }
             }
         }
@@ -98,7 +117,7 @@ namespace YahooFantasyService
             return $"{_settings.BaseUrl}/{collection};{resource}_keys={resourceKeys}{subResourceCollection}?format=json";
         }
 
-    public static readonly IReadOnlyDictionary<int, int> NFLGameKeys = new ReadOnlyDictionary<int, int>(new Dictionary<int, int>
+        public static IReadOnlyDictionary<int, int> NFLGameKeys => new Dictionary<int, int>
         {
             { 2004, 101 },
             { 2005, 124 },
@@ -117,6 +136,6 @@ namespace YahooFantasyService
             { 2018, 380 },
             { 2019, 390 },
             { 2020, 399 }
-        });
-}
+        };
+    }
 }
