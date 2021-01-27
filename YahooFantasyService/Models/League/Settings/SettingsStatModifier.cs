@@ -7,15 +7,6 @@ namespace YahooFantasyService
 {
     public class SettingsStatModifier
     {
-        [JsonConstructor]
-        public SettingsStatModifier(JToken[] bonuses)
-        {
-            Bonuses = bonuses
-                ?.Select(s =>
-                    JsonConvert.DeserializeObject<SettingsStatBonus>(s.SelectToken("bonus").ToString()))
-                .ToList();
-        }
-
         [JsonProperty(PropertyName = "stat_id")]
         public int StatId { get; set; }
 
@@ -28,10 +19,15 @@ namespace YahooFantasyService
 
     public class SettingsStatBonus
     {
-        [JsonProperty(PropertyName = "target")]
+        [JsonConstructor]
+        public SettingsStatBonus(JToken bonus)
+        {
+            Target = bonus["target"].ToObject<int>();
+            Points = bonus["points"].ToObject<double>();
+        }
+
         public int Target { get; set; }
 
-        [JsonProperty(PropertyName = "points")]
         public double Points { get; set; }
     }
 }

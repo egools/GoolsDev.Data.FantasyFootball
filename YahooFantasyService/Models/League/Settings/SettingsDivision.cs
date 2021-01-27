@@ -1,13 +1,19 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace YahooFantasyService
 {
     public class SettingsDivision
     {
-        [JsonProperty(PropertyName = "division_id")]
+        [JsonConstructor]
+        public SettingsDivision(JToken division)
+        {
+            DivisionId = division["division_id"].ToObject<int>();
+            Name = division["name"].ToString();
+        }
+
         public int DivisionId { get; set; }
 
-        [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
     }
 }

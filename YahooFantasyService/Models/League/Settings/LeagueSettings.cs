@@ -9,13 +9,8 @@ namespace YahooFantasyService
     {
 
         [JsonConstructor]
-        public LeagueSettings(JToken[] divisions, JToken[] roster_positions, JToken stat_categories, JToken stat_modifiers)
+        public LeagueSettings(JToken[] roster_positions, JToken stat_categories, JToken stat_modifiers)
         {
-            Divisions = divisions
-                .Select(d => 
-                    JsonConvert.DeserializeObject<SettingsDivision>(d.SelectToken("division").ToString()))
-                .ToList();
-
             RosterPositions = roster_positions
                 .Select(rp =>
                     JsonConvert.DeserializeObject<SettingsRosterPosition>(rp.SelectToken("roster_position").ToString()))
@@ -125,6 +120,8 @@ namespace YahooFantasyService
         public List<SettingsRosterPosition> RosterPositions { get; set; }
         public List<SettingsStatCategory> StatCategories { get; set; }
         public List<SettingsStatModifier> StatModifiers { get; set; }
+
+        [JsonProperty(PropertyName = "divisions")]
         public List<SettingsDivision> Divisions { get; set; }
     }
 }
