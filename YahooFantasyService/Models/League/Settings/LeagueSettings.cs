@@ -9,13 +9,8 @@ namespace YahooFantasyService
     {
 
         [JsonConstructor]
-        public LeagueSettings(JToken[] roster_positions, JToken stat_categories, JToken stat_modifiers)
+        public LeagueSettings(JToken stat_categories, JToken stat_modifiers)
         {
-            RosterPositions = roster_positions
-                .Select(rp =>
-                    JsonConvert.DeserializeObject<SettingsRosterPosition>(rp.SelectToken("roster_position").ToString()))
-                .ToList();
-
             StatCategories = stat_categories
                 .SelectToken("stats")
                 .Select(s => 
@@ -116,12 +111,13 @@ namespace YahooFantasyService
         [JsonProperty(PropertyName = "uses_negative_points")]
         public string UsesNegativePoints { get; set; }
 
-
-        public List<SettingsRosterPosition> RosterPositions { get; set; }
-        public List<SettingsStatCategory> StatCategories { get; set; }
-        public List<SettingsStatModifier> StatModifiers { get; set; }
-
         [JsonProperty(PropertyName = "divisions")]
         public List<SettingsDivision> Divisions { get; set; }
+
+        [JsonProperty(PropertyName = "roster_positions")]
+        public List<SettingsRosterPosition> RosterPositions { get; set; }
+
+        public List<SettingsStatCategory> StatCategories { get; set; }
+        public List<SettingsStatModifier> StatModifiers { get; set; }
     }
 }

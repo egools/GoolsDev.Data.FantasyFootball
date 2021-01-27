@@ -7,15 +7,6 @@ namespace YahooFantasyService
 {
     public class SettingsStatCategory
     {
-        [JsonConstructor]
-        public SettingsStatCategory(JToken[] stat_position_types)
-        {
-            StatPositionTypes = stat_position_types
-                ?.Select(s =>
-                    JsonConvert.DeserializeObject<SettingsStatPositionType>(s.SelectToken("stat_position_type").ToString()))
-                .ToList();
-        }
-
         [JsonProperty(PropertyName = "stat_id")]
         public int StatId { get; set; }
 
@@ -40,15 +31,21 @@ namespace YahooFantasyService
         [JsonProperty(PropertyName = "is_excluded_from_display")]
         public string IsExcludedFromDisplay { get; set; }
 
+        [JsonProperty(PropertyName = "stat_position_types")]
         public List<SettingsStatPositionType> StatPositionTypes { get; set; }
     }
 
     public class SettingsStatPositionType
     {
-        [JsonProperty(PropertyName = "position_type")]
+        [JsonConstructor]
+        public SettingsStatPositionType(JToken stat_position_type)
+        {
+            PositionType = stat_position_type["position_type"].ToString();
+            IsOnlyDisplayStat = stat_position_type["is_only_display_stat"]?.ToString();
+        }
+
         public string PositionType { get; set; }
 
-        [JsonProperty(PropertyName = "is_only_display_stat")]
         public string IsOnlyDisplayStat { get; set; }
     }
 }
