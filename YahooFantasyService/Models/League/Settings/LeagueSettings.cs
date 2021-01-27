@@ -1,10 +1,39 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace YahooFantasyService
 {
     public class LeagueSettings
     {
+
+        [JsonConstructor]
+        public LeagueSettings(JToken[] divisions, JToken[] roster_positions, JToken stat_categories, JToken stat_modifiers)
+        {
+            Divisions = divisions
+                .Select(d => 
+                    JsonConvert.DeserializeObject<SettingsDivision>(d.SelectToken("division").ToString()))
+                .ToList();
+
+            RosterPositions = roster_positions
+                .Select(rp =>
+                    JsonConvert.DeserializeObject<SettingsRosterPosition>(rp.SelectToken("roster_position").ToString()))
+                .ToList();
+
+            StatCategories = stat_categories
+                .SelectToken("stats")
+                .Select(s => 
+                    JsonConvert.DeserializeObject<SettingsStatCategory>(s.SelectToken("stat").ToString()))
+                .ToList();
+
+            StatModifiers = stat_modifiers
+                .SelectToken("stats")
+                .Select(s =>
+                    JsonConvert.DeserializeObject<SettingsStatModifier>(s.SelectToken("stat").ToString()))
+                .ToList();
+        }
+
         [JsonProperty(PropertyName = "draft_type")]
         public string DraftType { get; set; }
 

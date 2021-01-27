@@ -24,9 +24,20 @@ namespace YahooFantasyService
         private YahooAuthToken _yahooToken;
         private readonly YahooServiceSettings _settings;
 
-        public async Task<YahooLeagueApiResult> GetSeasonWithSettings(int year, int seasonId)
+        public async Task<LeagueSettings> GetLeagueSettings(int year, int seasonId)
         {
-            var url = BuildYahooResourceUrl("league", $"{NFLGameKeys[year]}.l.{seasonId}", new List<string> { "settings" });
+            if(!NFLGameKeys.TryGetValue(year, out int gameKey))
+            {
+                throw new ArgumentException("NFL Game Key for given year does not exist.");
+            }
+            var leagueKey = $"{gameKey}.l.{seasonId}";
+            var leagueResult = await GetLeagueData(leagueKey, new List<string> { "settings" });
+            return leagueResult.League.Settings;
+        }
+
+        public async Task<YahooLeagueApiResult> GetLeagueData(string leagueKey, List<string> subResources = null)
+        {
+            var url = BuildYahooResourceUrl("league", leagueKey, subResources);
             var leagueResult = await CallYahooFantasyApi<YahooLeagueApiResult>(url);
 
             if (leagueResult is YahooErrorApiResult errorResult)
@@ -100,18 +111,18 @@ namespace YahooFantasyService
             }
         }
 
-        private string BuildYahooResourceUrl(string resource, string key, List<string> subResources)
+        private string BuildYahooResourceUrl(string resource, string key, List<string> subResources = null)
         {
-            var subResourceCollection = subResources.Any()
+            var subResourceCollection = subResources?.Any() ?? false
                 ? ";out=" + string.Join(",", subResources)
                 : string.Empty;
 
             return $"{_settings.BaseUrl}/{resource}/{key}{subResourceCollection}?format=json";
         }
-        private string BuildYahooCollectionUrl(string collection, string resource, List<string> keys, List<string> subResources)
+        private string BuildYahooCollectionUrl(string collection, string resource, List<string> keys, List<string> subResources = null)
         {
             var resourceKeys = string.Join(",", keys);
-            var subResourceCollection = subResources.Any()
+            var subResourceCollection = subResources?.Any() ?? false
                 ? ";out=" + string.Join(",", subResources)
                 : string.Empty;
             return $"{_settings.BaseUrl}/{collection};{resource}_keys={resourceKeys}{subResourceCollection}?format=json";

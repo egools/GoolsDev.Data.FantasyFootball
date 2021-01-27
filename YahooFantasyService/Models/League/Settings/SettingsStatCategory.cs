@@ -1,10 +1,21 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace YahooFantasyService
 {
     public class SettingsStatCategory
     {
+        [JsonConstructor]
+        public SettingsStatCategory(JToken[] stat_position_types)
+        {
+            StatPositionTypes = stat_position_types
+                ?.Select(s =>
+                    JsonConvert.DeserializeObject<SettingsStatPositionType>(s.SelectToken("stat_position_type").ToString()))
+                .ToList();
+        }
+
         [JsonProperty(PropertyName = "stat_id")]
         public int StatId { get; set; }
 
