@@ -59,9 +59,11 @@ namespace YahooFantasyService
 
             if (response.IsSuccessStatusCode)
             {
+                var stopwatch = System.Diagnostics.Stopwatch.StartNew();
                 JObject o = JObject.Parse(jsonResult);
                 var fantasyContent = o.SelectToken("fantasy_content").ToString();
                 var resultBase = JsonConvert.DeserializeObject<T>(fantasyContent) as YahooApiResultBase;
+                Console.WriteLine($"Deserialization: {stopwatch.ElapsedMilliseconds}");
                 return resultBase;
             }
             else
