@@ -25,8 +25,7 @@ namespace YahooFantasyService
                 .Where(d => d is not null)
                 .ToList();
             League.Scoreboard = league
-                .Select(j => j.SelectToken("scoreboard"))
-                .FirstOrDefault(j => j is not null)
+                .FirstOrDefault(j => j.SelectToken("scoreboard") is not null)
                 ?.ToObject<LeagueScoreboard>(); //TODO: handle scoreboard deserialization
             League.Standings = league
                 .Select(j => j.SelectToken("standings"))
