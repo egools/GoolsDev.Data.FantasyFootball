@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -6,12 +8,6 @@ namespace YahooFantasyService
 {
     public class YahooMatchup
     {
-        [JsonConstructor]
-        public YahooMatchup(JToken matchup_teams)
-        {
-
-        }
-
         [JsonProperty(PropertyName = "week")]
         public string Week { get; set; }
 
@@ -49,6 +45,30 @@ namespace YahooFantasyService
         public List<MatchupGrade> MatchupGrades { get; set; }
 
         public List<YahooMatchupTeam> MatchupTeams { get; set; }
+
+        [JsonExtensionData]
+        private IDictionary<string, JToken> _matchupTeamData;
+
+        [OnDeserialized]
+        private void OnDeserialized(StreamingContext streamingContext)
+        {
+            if (_matchupTeamData.TryGetValue("0", out JToken matchup))
+            {
+                MatchupTeams = new List<YahooMatchupTeam>();
+                foreach(var matchupTeam in matchup.SelectTokens("teams..team"))
+                {
+                    var tempMatchupTeam = matchupTeam[1];
+                    var baseTeamProps = matchupTeam[0].SelectTokens("[*]").Select(j => j.FirstOrDefault());
+                    foreach(var baseTeamProp in baseTeamProps)
+                    {
+                        if(baseTeamProp is JProperty prop)
+                            tempMatchupTeam[prop.Name] = prop.Value;
+                    }
+                    MatchupTeams.Add(tempMatchupTeam.ToObject<YahooMatchupTeam>());
+                }
+
+            }
+        }
     }
 
     public class MatchupGrade
