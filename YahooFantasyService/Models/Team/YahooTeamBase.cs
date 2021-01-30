@@ -1,5 +1,7 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace YahooFantasyService
 {
@@ -49,5 +51,18 @@ namespace YahooFantasyService
 
         [JsonProperty(PropertyName = "managers")]
         public List<YahooManager> Managers { get; set; }
+
+        public static JToken CondenseTeamJTokens(List<JToken> team)
+        {
+            var baseTeam = team[0];
+            var targetToken = team[1];
+            var baseTeamProps = baseTeam.SelectTokens("[*]").Select(j => j.FirstOrDefault());
+            foreach (var baseTeamProp in baseTeamProps)
+            {
+                if (baseTeamProp is JProperty prop)
+                    targetToken[prop.Name] = prop.Value;
+            }
+            return targetToken;
+        }
     }
 }
