@@ -18,19 +18,17 @@ namespace YahooFantasyService
                 .FirstOrDefault(j => j is not null)
                 ?.ToObject<LeagueSettings>();
             League.DraftPicks = league
-                .Select(j => j.SelectToken("draft_results"))
-                .FirstOrDefault(j => j is not null)
-                ?.Select(j => j.SelectToken("$..draft_result")
-                    ?.ToObject<DraftPick>())
-                .Where(d => d is not null)
+                .SelectMany(j =>
+                    j.SelectTokens("draft_results..draft_result"))
+                .Select(j => j.ToObject<DraftPick>())
                 .ToList();
             League.Scoreboard = league
                 .FirstOrDefault(j => j.SelectToken("scoreboard") is not null)
                 ?.ToObject<LeagueScoreboard>();
             League.Standings = league
-                .Select(j => j.SelectToken("standings"))
-                .FirstOrDefault(j => j is not null)
-                ?.ToObject<List<YahooTeamStanding>>(); //TODO: handle standings deserialization
+                .SelectMany(j => j.SelectTokens("standings[*].teams..team"))
+                .Select(j => YahooTeamStanding.FromJTokens(j.Children().ToList()))
+                .ToList();
         }
         public YahooLeague League { get; set; }
     }
