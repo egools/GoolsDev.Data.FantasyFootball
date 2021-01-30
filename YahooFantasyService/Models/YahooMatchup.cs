@@ -54,19 +54,10 @@ namespace YahooFantasyService
         {
             if (_matchupTeamData.TryGetValue("0", out JToken matchup))
             {
-                MatchupTeams = new List<YahooMatchupTeam>();
-                foreach(var matchupTeam in matchup.SelectTokens("teams..team"))
-                {
-                    var tempMatchupTeam = matchupTeam[1];
-                    var baseTeamProps = matchupTeam[0].SelectTokens("[*]").Select(j => j.FirstOrDefault());
-                    foreach(var baseTeamProp in baseTeamProps)
-                    {
-                        if(baseTeamProp is JProperty prop)
-                            tempMatchupTeam[prop.Name] = prop.Value;
-                    }
-                    MatchupTeams.Add(tempMatchupTeam.ToObject<YahooMatchupTeam>());
-                }
-
+                MatchupTeams = matchup
+                    .SelectTokens("teams..team")
+                    .Select(j => YahooMatchupTeam.FromJTokens(j.Children().ToList()))
+                    .ToList();
             }
         }
     }
