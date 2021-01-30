@@ -1,4 +1,7 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace YahooFantasyService
 {
@@ -12,5 +15,11 @@ namespace YahooFantasyService
 
         [JsonProperty(PropertyName = "team_projected_points")]
         public MatchupTeamPoints TeamProjectedPoints { get; set; }
+
+        public static YahooMatchupTeam FromJTokens(List<JToken> team)
+        {
+            var matchupTeam = CondenseTeamJTokens(team);
+            return matchupTeam.ToObject<YahooMatchupTeam>();
+        }
     }
 }
