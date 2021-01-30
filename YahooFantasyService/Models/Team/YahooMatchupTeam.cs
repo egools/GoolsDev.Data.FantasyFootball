@@ -18,7 +18,7 @@ namespace YahooFantasyService
 
         public static YahooMatchupTeam FromJTokens(List<JToken> team)
         {
-            var matchupTeam = CondenseTeamJTokens(team);
+            var matchupTeam = CondenseTeamJTokens(team[1], team[0]);
             return matchupTeam.ToObject<YahooMatchupTeam>();
         }
     }

@@ -52,10 +52,8 @@ namespace YahooFantasyService
         [JsonProperty(PropertyName = "managers")]
         public List<YahooManager> Managers { get; set; }
 
-        public static JToken CondenseTeamJTokens(List<JToken> team)
+        public static JToken CondenseTeamJTokens(JToken targetToken, JToken baseTeam)
         {
-            var baseTeam = team[0];
-            var targetToken = team[1];
             var baseTeamProps = baseTeam.SelectTokens("[*]").Select(j => j.FirstOrDefault());
             foreach (var baseTeamProp in baseTeamProps)
             {
