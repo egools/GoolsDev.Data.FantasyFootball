@@ -34,7 +34,8 @@ namespace FantasyParser
             //_uow.LeagueRepo.Insert(new League("BMGC2"));
             //_uow.Save();
             //var result = _yahooService.CallYahooFantasyApi("https://fantasysports.yahooapis.com/fantasy/v2/league/399.l.299900;out=draftresults,settings,scoreboard,standings?format=json").Result;
-            var leagueResult = _yahooService.GetLeagueData("399.l.299900", new List<string> { "draftresults", "scoreboard", "standings" } ).Result;
+            //var leagueResult = _yahooService.GetLeagueData("399.l.299900", YahooEnums.AllLeagueResources).Result;
+            var teamResult = _yahooService.GetTeamRosterWithStats("399.l.299900", "1");
         }
     }
 }
