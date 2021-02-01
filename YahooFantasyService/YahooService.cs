@@ -11,34 +11,57 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using static YahooFantasyService.YahooEnums;
 
 namespace YahooFantasyService
 {
-    public class YahooService
+    public partial class YahooService
     {
         public YahooService(IOptions<YahooServiceSettings> options)
         {
             _settings = options.Value;
+            _uriBuilder = new YahooUriBuilder(_settings.BaseUrl);
         }
 
         private YahooAuthToken _yahooToken;
         private readonly YahooServiceSettings _settings;
+        private YahooUriBuilder _uriBuilder;
 
         public async Task<LeagueSettings> GetLeagueSettings(int year, int seasonId)
         {
-            if(!NFLGameKeys.TryGetValue(year, out int gameKey))
+            if (!NFLGameKeys.TryGetValue(year, out int gameKey))
             {
                 throw new ArgumentException("NFL Game Key for given year does not exist.");
             }
             var leagueKey = $"{gameKey}.l.{seasonId}";
-            var leagueResult = await GetLeagueData(leagueKey, new List<string> { "settings" });
+            var leagueResult = await GetLeagueData(leagueKey, LeagueSubresource.Settings);
             return leagueResult.League.Settings;
         }
 
-        public async Task<YahooLeagueApiResult> GetLeagueData(string leagueKey, List<string> subResources = null)
+        public async Task<YahooTeamApiResult> GetTeamRosterWithStats(string teamKey, string week, TeamSubresource resources = TeamSubresource.None)
         {
-            var url = BuildYahooResourceUrl("league", leagueKey, subResources);
-            var leagueResult = await CallYahooFantasyApi<YahooLeagueApiResult>(url);
+            var uri = _uriBuilder.Build(new List<YahooUriPart> 
+            { 
+                new YahooUriResource("team", teamKey, resources),
+                new YahooUriResource("roster", new List<YahooFilter> {
+                    new YahooFilter("week", week) 
+                }),
+                new YahooUriResource("players", null, PlayerSubresource.Stats)
+            });
+            var teamResult = await CallYahooFantasyApi<YahooTeamApiResult>(uri);
+
+            if (teamResult is YahooErrorApiResult errorResult)
+            {
+                throw new ArgumentException(errorResult.Error.Description);
+            }
+
+            return teamResult as YahooTeamApiResult;
+        }
+
+        public async Task<YahooLeagueApiResult> GetLeagueData(string leagueKey, LeagueSubresource resources = LeagueSubresource.None)
+        {
+            var uri = _uriBuilder.Build(new List<YahooUriPart> { new YahooUriResource("league", leagueKey, resources) });
+            var leagueResult = await CallYahooFantasyApi<YahooLeagueApiResult>(uri);
 
             if (leagueResult is YahooErrorApiResult errorResult)
             {
@@ -48,13 +71,13 @@ namespace YahooFantasyService
             return leagueResult as YahooLeagueApiResult;
         }
 
-        public async Task<YahooApiResultBase> CallYahooFantasyApi<T>(string url)
+        public async Task<YahooApiResultBase> CallYahooFantasyApi<T>(string uri)
         {
             var client = new HttpClient();
 
             await RefreshAuthToken();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _yahooToken.AccessToken);
-            var response = await client.GetAsync(url);
+            var response = await client.GetAsync(uri);
             var jsonResult = await response.Content.ReadAsStringAsync();
 
             if (response.IsSuccessStatusCode)
@@ -100,7 +123,7 @@ namespace YahooFantasyService
                 }
                 else
                 {
-                    if(retry)
+                    if (retry)
                     {
                         await RefreshAuthToken(false);
                     }
@@ -111,23 +134,6 @@ namespace YahooFantasyService
                     }
                 }
             }
-        }
-
-        private string BuildYahooResourceUrl(string resource, string key, List<string> subResources = null)
-        {
-            var subResourceCollection = subResources?.Any() ?? false
-                ? ";out=" + string.Join(",", subResources)
-                : string.Empty;
-
-            return $"{_settings.BaseUrl}/{resource}/{key}{subResourceCollection}?format=json";
-        }
-        private string BuildYahooCollectionUrl(string collection, string resource, List<string> keys, List<string> subResources = null)
-        {
-            var resourceKeys = string.Join(",", keys);
-            var subResourceCollection = subResources?.Any() ?? false
-                ? ";out=" + string.Join(",", subResources)
-                : string.Empty;
-            return $"{_settings.BaseUrl}/{collection};{resource}_keys={resourceKeys}{subResourceCollection}?format=json";
         }
 
         public static IReadOnlyDictionary<int, int> NFLGameKeys => new Dictionary<int, int>
@@ -151,4 +157,5 @@ namespace YahooFantasyService
             { 2020, 399 }
         };
     }
+
 }
