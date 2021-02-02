@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,10 @@ namespace YahooFantasyService
         [Flags]
         public enum TeamSubresource
         {
-            None = 0
+            None = 0,
+            Roster = 1,
+            Matchups = 2,
+            Stats = 4
         }
 
         [Flags]
@@ -37,5 +41,11 @@ namespace YahooFantasyService
             LeagueSubresource.DraftResults |
             LeagueSubresource.Standings |
             LeagueSubresource.Scoreboard;
+
+        public static readonly TeamSubresource AllTeamSubresources =
+            TeamSubresource.Roster |
+            TeamSubresource.Matchups |
+            TeamSubresource.Stats;
+
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace YahooFantasyService
 {
-    public class WeeklyMatchupPlayer : YahooPlayerBase
+    public class YahooRosterPlayer : YahooPlayerBase
     {
         public string SelectedPosition { get; set; }
         public string IsFlex { get; set; }

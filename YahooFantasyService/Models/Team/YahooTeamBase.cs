@@ -51,16 +51,5 @@ namespace YahooFantasyService
 
         [JsonProperty(PropertyName = "managers")]
         public List<YahooManager> Managers { get; set; }
-
-        public static JToken CondenseTeamJTokens(JToken targetToken, JToken baseTeam)
-        {
-            var baseTeamProps = baseTeam.SelectTokens("[*]").Select(j => j.FirstOrDefault());
-            foreach (var baseTeamProp in baseTeamProps)
-            {
-                if (baseTeamProp is JProperty prop)
-                    targetToken[prop.Name] = prop.Value;
-            }
-            return targetToken;
-        }
     }
 }

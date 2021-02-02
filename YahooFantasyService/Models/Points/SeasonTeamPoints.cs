@@ -2,7 +2,7 @@
 
 namespace YahooFantasyService
 {
-    public class StandingTeamPoints : YahooPointsBase
+    public class SeasonTeamPoints : YahooPointsBase
     {
         [JsonProperty(PropertyName = "season")]
         public string Season { get; set; }
