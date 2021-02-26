@@ -11,16 +11,22 @@ namespace YahooFantasyService
             ManagerId = manager["manager_id"].ToString();
             Nickname = manager["nickname"].ToString();
             Guid = manager["guid"].ToString();
+            IsCommisioner = manager["is_commissioner"]?.ToString() == "1";
+            FeloScore = manager["felo_score"].ToObject<int>();
+            FeloTier = manager["felo_tier"].ToString();
         }
 
-        [JsonProperty(PropertyName = "manager_id")]
         public string ManagerId { get; set; }
 
-        [JsonProperty(PropertyName = "nickname")]
         public string Nickname { get; set; }
 
-        [JsonProperty(PropertyName = "guid")]
         public string Guid { get; set; }
+
+        public bool? IsCommisioner { get; set; }
+
+        public int FeloScore { get; set; }
+
+        public string FeloTier { get; set; }
     }
 
 
