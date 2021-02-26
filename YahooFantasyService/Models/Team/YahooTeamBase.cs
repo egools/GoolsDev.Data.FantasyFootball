@@ -41,7 +41,7 @@ namespace YahooFantasyService
         public string LeagueScoringType { get; set; }
 
         [JsonProperty(PropertyName = "has_draft_grade")]
-        public int HasDraftGrade { get; set; }
+        public bool HasDraftGrade { get; set; }
 
         [JsonProperty(PropertyName = "auction_budget_total")]
         public string AuctionBudgetTotal { get; set; }

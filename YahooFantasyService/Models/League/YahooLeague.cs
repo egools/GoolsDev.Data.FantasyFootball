@@ -75,7 +75,7 @@ namespace YahooFantasyService
         public string EndDate { get; set; }
 
         [JsonProperty(PropertyName = "is_finished")]
-        public int IsFinished { get; set; }
+        public bool IsFinished { get; set; }
 
         [JsonProperty(PropertyName = "game_code")]
         public string GameCode { get; set; }
