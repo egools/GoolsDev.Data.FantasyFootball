@@ -1,8 +1,18 @@
-﻿namespace YahooFantasyService
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+
+namespace YahooFantasyService
 {
     public class PlayerStat
     {
-        public string StatId { get; set; }
-        public string Value { get; set; }
+
+        [JsonConstructor]
+        public PlayerStat(JToken stat_id, JToken value)
+        {
+            StatId = stat_id.ToObject<int>();
+            Value = value.ToObject<double>();
+        }
+        public int StatId { get; set; }
+        public double Value { get; set; }
     }
 }
