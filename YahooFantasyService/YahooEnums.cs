@@ -36,6 +36,12 @@ namespace YahooFantasyService
             Stats = 1
         }
 
+        public enum CoverageType
+        {
+            Season,
+            Week
+        }
+
         public static readonly LeagueSubresource AllLeagueResources =
             LeagueSubresource.Settings |
             LeagueSubresource.DraftResults |

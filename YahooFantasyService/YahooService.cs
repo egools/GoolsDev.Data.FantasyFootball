@@ -38,15 +38,52 @@ namespace YahooFantasyService
             return leagueResult.League.Settings;
         }
 
-        public async Task<YahooTeamApiResult> GetTeamRosterWithStats(string teamKey, string week, TeamSubresource resources = TeamSubresource.None)
+        public async Task<YahooTeamApiResult> GetTeamRosterWithStats(string teamKey, string week)
         {
             var uri = _uriBuilder.Build(new List<YahooUriPart> 
             { 
-                new YahooUriResource("team", teamKey, resources),
+                new YahooUriResource("team", teamKey, TeamSubresource.None),
                 new YahooUriResource("roster", new List<YahooFilter> {
                     new YahooFilter("week", week) 
                 }),
                 new YahooUriResource("players", null, PlayerSubresource.Stats)
+            });
+            var teamResult = await CallYahooFantasyApi<YahooTeamApiResult>(uri);
+
+            if (teamResult is YahooErrorApiResult errorResult)
+            {
+                throw new ArgumentException(errorResult.Error.Description);
+            }
+
+            return teamResult as YahooTeamApiResult;
+        }
+
+        public async Task<YahooTeamApiResult> GetTeamData(string teamKey, TeamSubresource resources)
+        {
+            var uri = _uriBuilder.Build(new List<YahooUriPart>
+            {
+                new YahooUriResource("team", teamKey, resources)
+            });
+            var teamResult = await CallYahooFantasyApi<YahooTeamApiResult>(uri);
+
+            if (teamResult is YahooErrorApiResult errorResult)
+            {
+                throw new ArgumentException(errorResult.Error.Description);
+            }
+
+            return teamResult as YahooTeamApiResult;
+        }
+
+        public async Task<YahooTeamApiResult> GetTeamStats(string teamKey, CoverageType coverageType = CoverageType.Season, string filter = "")
+        {
+            var uri = _uriBuilder.Build(new List<YahooUriPart>
+            {
+                new YahooUriResource("team", teamKey, TeamSubresource.None),
+                new YahooUriResource("stats", new List<YahooFilter>
+                {
+                    new YahooFilter("type", coverageType.ToString().ToLower()),
+                    new YahooFilter(coverageType.ToString().ToLower(), filter)
+                })
             });
             var teamResult = await CallYahooFantasyApi<YahooTeamApiResult>(uri);
 

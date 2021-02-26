@@ -9,15 +9,15 @@ namespace YahooFantasyService
 {
     public static class JObjectExtensions
     {
-        public static JToken AbsorbTokenProperties(this JToken targetToken, JToken baseTeam)
+        public static JToken AbsorbTokenProperties(this JToken baseToken, JToken targetToken)
         {
-            var baseTeamProps = baseTeam.SelectTokens("[*]").Select(j => j.FirstOrDefault());
+            var baseTeamProps = targetToken.SelectTokens("[*]").SelectMany(j => j);
             foreach (var baseTeamProp in baseTeamProps)
             {
                 if (baseTeamProp is JProperty prop)
-                    targetToken[prop.Name] = prop.Value;
+                    baseToken[prop.Name] = prop.Value;
             }
-            return targetToken;
+            return baseToken;
         }
     }
 }
