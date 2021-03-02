@@ -38,6 +38,7 @@ namespace FantasyParser
             //var team = await _yahooService.GetTeamRosterWithStats("399.l.299900.t.1", "1");
             var leagues = await _yahooService.GetLeagues(new List<string> { "399.l.299900", "390.l.724919" }, YahooEnums.AllLeagueResources);
             var teams = await _yahooService.GetTeams(new List<string> { "399.l.299900.t.1", "390.l.724919.t.1" });
+            var players = await _yahooService.GetPlayers(new List<string> { "399.p.31002", "399.p.8780" }, YahooEnums.PlayerSubresource.Stats);
         }
     }
 }

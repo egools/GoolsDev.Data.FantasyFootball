@@ -91,5 +91,17 @@ namespace YahooFantasyService
                 InjuryNote = injuryNote?.ToString()
             };
         }
+
+        public static YahooPlayerBase FromJTokens(IEnumerable<JToken> player)
+        {
+            var basePlayer = new JObject();
+            basePlayer.AbsorbTokenProperties(player.First());
+            foreach (var j in player.Skip(1))
+            {
+                if (j.First is JProperty prop)
+                    basePlayer[prop.Name] = prop.Value;
+            }
+            return basePlayer.ToObject<YahooPlayerBase>();
+        }
     }
 }

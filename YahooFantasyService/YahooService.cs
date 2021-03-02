@@ -152,6 +152,28 @@ namespace YahooFantasyService
             return leaguesResult as YahooLeagueCollectionApiResult;
         }
 
+        public async Task<YahooPlayerCollectionApiResult> GetPlayers(List<string> playerKeys, PlayerSubresource resources = PlayerSubresource.None)
+        {
+            var uri = _uriBuilder.Build(new List<YahooUriPart>
+            {
+                new YahooUriResource("players",new List<YahooFilter>
+                {
+                    new YahooFilter("player_keys", string.Join(',', playerKeys))
+                })
+                {
+                  Subresources = resources
+                }
+            });
+            var playersResult = await CallYahooFantasyApi<YahooPlayerCollectionApiResult>(uri);
+
+            if (playersResult is YahooErrorApiResult errorResult)
+            {
+                throw new ArgumentException(errorResult.Error.Description);
+            }
+
+            return playersResult as YahooPlayerCollectionApiResult;
+        }
+
         public async Task<YahooApiResultBase> CallYahooFantasyApi<T>(string uri)
         {
             await RefreshAuthToken();

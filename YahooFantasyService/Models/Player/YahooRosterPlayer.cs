@@ -17,10 +17,9 @@ namespace YahooFantasyService
 
         public SelectedPosition SelectedPosition { get; set; }
 
-        public static YahooRosterPlayer FromJTokens(List<JToken> player)
+        public static new YahooRosterPlayer FromJTokens(IEnumerable<JToken> player)
         {
             var rosterPlayer = new JObject();
-            
             rosterPlayer.AbsorbTokenProperties(player.First());
             foreach(var j in player.Skip(1))
             {
