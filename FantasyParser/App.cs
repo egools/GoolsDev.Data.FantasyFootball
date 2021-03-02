@@ -27,15 +27,16 @@ namespace FantasyParser
             _yahooService = yahooService;
             _uow = uow;
         }
-        public void Run()
+        public async Task Run()
         {
             //var text = File.ReadAllText(@"C:\Users\Eric\source\repos\egools\app_data\yahoo_api_leagueSettings\2020.json");
             //var league = _uow.LeagueRepo.FindById("10");
             //_uow.LeagueRepo.Insert(new League("BMGC2"));
             //_uow.Save();
             //var result = _yahooService.CallYahooFantasyApi("https://fantasysports.yahooapis.com/fantasy/v2/league/399.l.299900;out=draftresults,settings,scoreboard,standings?format=json").Result;
-            var leagueResult = _yahooService.GetLeagueData("399.l.299900", YahooEnums.AllLeagueResources).Result;
-            var teamResult = _yahooService.GetTeamRosterWithStats("399.l.299900.t.1", "1").Result;
+            //var league = await _yahooService.GetLeagueData("399.l.299900", YahooEnums.AllLeagueResources);
+            //var team = await _yahooService.GetTeamRosterWithStats("399.l.299900.t.1", "1");
+            //var leagues = await _yahooService.GetLeagues(new List<string> { "399.l.299900", "390.l.724919" }, YahooEnums.AllLeagueResources);
         }
     }
 }

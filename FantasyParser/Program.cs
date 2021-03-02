@@ -7,16 +7,17 @@ using Microsoft.Extensions.Configuration;
 using FantasyComponents;
 using Microsoft.EntityFrameworkCore;
 using FantasyComponents.DAL;
+using System.Threading.Tasks;
 
 namespace FantasyParser
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var services = ConfigureServices();
             var serviceProvider = services.BuildServiceProvider();
-            serviceProvider.GetService<App>().Run();
+            await serviceProvider.GetService<App>().Run();
         }
 
         private static IServiceCollection ConfigureServices()

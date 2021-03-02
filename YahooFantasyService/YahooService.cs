@@ -40,11 +40,11 @@ namespace YahooFantasyService
 
         public async Task<YahooTeamApiResult> GetTeamRosterWithStats(string teamKey, string week)
         {
-            var uri = _uriBuilder.Build(new List<YahooUriPart> 
-            { 
+            var uri = _uriBuilder.Build(new List<YahooUriPart>
+            {
                 new YahooUriResource("team", teamKey, TeamSubresource.None),
                 new YahooUriResource("roster", new List<YahooFilter> {
-                    new YahooFilter("week", week) 
+                    new YahooFilter("week", week)
                 }),
                 new YahooUriResource("players", null, PlayerSubresource.Stats)
             });
@@ -108,13 +108,34 @@ namespace YahooFantasyService
             return leagueResult as YahooLeagueApiResult;
         }
 
+        public async Task<YahooLeagueCollectionApiResult> GetLeagues(List<string> leagueKeys, LeagueSubresource resources = LeagueSubresource.None)
+        {
+            var uri = _uriBuilder.Build(new List<YahooUriPart>
+            {
+                new YahooUriResource("leagues",new List<YahooFilter>
+                {
+                    new YahooFilter("league_keys", string.Join(',', leagueKeys)),
+                    new YahooFilter("out", resources.ToString())
+                })
+            });
+            var leagueResult = await CallYahooFantasyApi<YahooLeagueCollectionApiResult>(uri);
+
+            if (leagueResult is YahooErrorApiResult errorResult)
+            {
+                throw new ArgumentException(errorResult.Error.Description);
+            }
+
+            return leagueResult as YahooLeagueCollectionApiResult;
+        }
+
         public async Task<YahooApiResultBase> CallYahooFantasyApi<T>(string uri)
         {
-            var client = new HttpClient();
-
             await RefreshAuthToken();
+
+            var client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _yahooToken.AccessToken);
             var response = await client.GetAsync(uri);
+            client.Dispose();
             var jsonResult = await response.Content.ReadAsStringAsync();
 
             if (response.IsSuccessStatusCode)
@@ -148,6 +169,7 @@ namespace YahooFantasyService
 
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", _settings.AuthHeader);
                 var response = await client.PostAsync(_settings.TokenUrl, new FormUrlEncodedContent(body));
+                client.Dispose();
 
                 if (response.IsSuccessStatusCode)
                 {
