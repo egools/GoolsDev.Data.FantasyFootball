@@ -74,6 +74,28 @@ namespace YahooFantasyService
             return teamResult as YahooTeamApiResult;
         }
 
+        public async Task<YahooTeamCollectionApiResult> GetTeams(List<string> teamKeys, TeamSubresource resources = TeamSubresource.None)
+        {
+            var uri = _uriBuilder.Build(new List<YahooUriPart>
+            {
+                new YahooUriResource("teams",new List<YahooFilter>
+                {
+                    new YahooFilter("team_keys", string.Join(',', teamKeys))
+                })
+                {
+                    Subresources = resources
+                }
+            });
+            var teamsResult = await CallYahooFantasyApi<YahooTeamCollectionApiResult>(uri);
+
+            if (teamsResult is YahooErrorApiResult errorResult)
+            {
+                throw new ArgumentException(errorResult.Error.Description);
+            }
+
+            return teamsResult as YahooTeamCollectionApiResult;
+        }
+
         public async Task<YahooTeamApiResult> GetTeamStats(string teamKey, CoverageType coverageType = CoverageType.Season, string filter = "")
         {
             var uri = _uriBuilder.Build(new List<YahooUriPart>
@@ -114,18 +136,20 @@ namespace YahooFantasyService
             {
                 new YahooUriResource("leagues",new List<YahooFilter>
                 {
-                    new YahooFilter("league_keys", string.Join(',', leagueKeys)),
-                    new YahooFilter("out", resources.ToString())
+                    new YahooFilter("league_keys", string.Join(',', leagueKeys))
                 })
+                {
+                  Subresources = resources
+                }
             });
-            var leagueResult = await CallYahooFantasyApi<YahooLeagueCollectionApiResult>(uri);
+            var leaguesResult = await CallYahooFantasyApi<YahooLeagueCollectionApiResult>(uri);
 
-            if (leagueResult is YahooErrorApiResult errorResult)
+            if (leaguesResult is YahooErrorApiResult errorResult)
             {
                 throw new ArgumentException(errorResult.Error.Description);
             }
 
-            return leagueResult as YahooLeagueCollectionApiResult;
+            return leaguesResult as YahooLeagueCollectionApiResult;
         }
 
         public async Task<YahooApiResultBase> CallYahooFantasyApi<T>(string uri)

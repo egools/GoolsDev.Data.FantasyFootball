@@ -10,7 +10,7 @@ namespace YahooFantasyService
         [JsonConstructor]
         public YahooLeagueApiResult(JToken [] league)
         {
-            League = YahooLeague.FromJTokenArray(league);
+            League = YahooLeague.FromJTokens(league);
         }
 
         public YahooLeague League { get; set; }

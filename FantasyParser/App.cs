@@ -36,7 +36,8 @@ namespace FantasyParser
             //var result = _yahooService.CallYahooFantasyApi("https://fantasysports.yahooapis.com/fantasy/v2/league/399.l.299900;out=draftresults,settings,scoreboard,standings?format=json").Result;
             //var league = await _yahooService.GetLeagueData("399.l.299900", YahooEnums.AllLeagueResources);
             //var team = await _yahooService.GetTeamRosterWithStats("399.l.299900.t.1", "1");
-            //var leagues = await _yahooService.GetLeagues(new List<string> { "399.l.299900", "390.l.724919" }, YahooEnums.AllLeagueResources);
+            var leagues = await _yahooService.GetLeagues(new List<string> { "399.l.299900", "390.l.724919" }, YahooEnums.AllLeagueResources);
+            var teams = await _yahooService.GetTeams(new List<string> { "399.l.299900.t.1", "390.l.724919.t.1" });
         }
     }
 }

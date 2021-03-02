@@ -94,7 +94,7 @@ namespace YahooFantasyService
 
         public List<YahooTeamStanding> Standings { get; set; }
 
-        public static YahooLeague FromJTokenArray(IEnumerable<JToken> leagueTokens)
+        public static YahooLeague FromJTokens(IEnumerable<JToken> leagueTokens)
         {
 
             var league = leagueTokens

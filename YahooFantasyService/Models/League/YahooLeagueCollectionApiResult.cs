@@ -11,7 +11,7 @@ namespace YahooFantasyService
         public YahooLeagueCollectionApiResult(JToken leagues)
         {
             Leagues = leagues.SelectTokens("..league")
-                .Select(l => YahooLeague.FromJTokenArray(l.Children()))
+                .Select(l => YahooLeague.FromJTokens(l.Children()))
                 .ToList();
         }
 
