@@ -1,5 +1,7 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace YahooFantasyService
 {
@@ -75,7 +77,7 @@ namespace YahooFantasyService
         public string EndDate { get; set; }
 
         [JsonProperty(PropertyName = "is_finished")]
-        public int IsFinished { get; set; }
+        public bool IsFinished { get; set; }
 
         [JsonProperty(PropertyName = "game_code")]
         public string GameCode { get; set; }
@@ -91,5 +93,30 @@ namespace YahooFantasyService
         public LeagueSettings Settings { get; set; }
 
         public List<YahooTeamStanding> Standings { get; set; }
+
+        public static YahooLeague FromJTokens(IEnumerable<JToken> leagueTokens)
+        {
+
+            var league = leagueTokens
+                .FirstOrDefault()
+                ?.ToObject<YahooLeague>();
+            league.Settings = leagueTokens
+                .Select(j => j.SelectToken("settings[0]"))
+                .FirstOrDefault(j => j is not null)
+                ?.ToObject<LeagueSettings>();
+            league.DraftPicks = leagueTokens
+                .SelectMany(j =>
+                    j.SelectTokens("draft_results..draft_result"))
+                .Select(j => j.ToObject<DraftPick>())
+                .ToList();
+            league.Scoreboard = leagueTokens
+                .FirstOrDefault(j => j.SelectToken("scoreboard") is not null)
+                ?.ToObject<LeagueScoreboard>();
+            league.Standings = leagueTokens
+                .SelectMany(j => j.SelectTokens("standings[*].teams..team"))
+                .Select(j => YahooTeamStanding.FromJTokens(j.Children().ToList()))
+                .ToList();
+            return league;
+        }
     }
 }

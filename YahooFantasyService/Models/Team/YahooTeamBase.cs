@@ -41,7 +41,7 @@ namespace YahooFantasyService
         public string LeagueScoringType { get; set; }
 
         [JsonProperty(PropertyName = "has_draft_grade")]
-        public int HasDraftGrade { get; set; }
+        public bool HasDraftGrade { get; set; }
 
         [JsonProperty(PropertyName = "auction_budget_total")]
         public string AuctionBudgetTotal { get; set; }
@@ -51,16 +51,5 @@ namespace YahooFantasyService
 
         [JsonProperty(PropertyName = "managers")]
         public List<YahooManager> Managers { get; set; }
-
-        public static JToken CondenseTeamJTokens(JToken targetToken, JToken baseTeam)
-        {
-            var baseTeamProps = baseTeam.SelectTokens("[*]").Select(j => j.FirstOrDefault());
-            foreach (var baseTeamProp in baseTeamProps)
-            {
-                if (baseTeamProp is JProperty prop)
-                    targetToken[prop.Name] = prop.Value;
-            }
-            return targetToken;
-        }
     }
 }

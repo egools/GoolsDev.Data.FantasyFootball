@@ -28,7 +28,12 @@ namespace YahooFantasyService
         public string DraftType { get; set; }
 
         [JsonProperty(PropertyName = "is_auction_draft")]
-        public string IsAuctionDraft { get; set; }
+        private string _isAuctionDraft
+        {
+            get => IsAuctionDraft ? "1" : "0";
+            set => IsAuctionDraft = value == "1";
+        }
+        public bool IsAuctionDraft { get; set; }
 
         [JsonProperty(PropertyName = "scoring_type")]
         public string ScoringType { get; set; }
@@ -58,7 +63,7 @@ namespace YahooFantasyService
         public int NumPlayoffConsolationTeams { get; set; }
 
         [JsonProperty(PropertyName = "has_multiweek_championship")]
-        public int HasMultiweekChampionship { get; set; }
+        public bool HasMultiweekChampionship { get; set; }
 
         [JsonProperty(PropertyName = "waiver_type")]
         public string WaiverType { get; set; }

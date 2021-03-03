@@ -11,14 +11,14 @@ namespace YahooFantasyService
         public double WinProbability { get; set; }
 
         [JsonProperty(PropertyName = "team_points")]
-        public MatchupTeamPoints TeamPoints { get; set; }
+        public WeeklyTeamPoints TeamPoints { get; set; }
 
         [JsonProperty(PropertyName = "team_projected_points")]
-        public MatchupTeamPoints TeamProjectedPoints { get; set; }
+        public WeeklyTeamPoints TeamProjectedPoints { get; set; }
 
         public static YahooMatchupTeam FromJTokens(List<JToken> team)
         {
-            var matchupTeam = CondenseTeamJTokens(team[1], team[0]);
+            var matchupTeam = team[1].AbsorbTokenProperties(team[0]);
             return matchupTeam.ToObject<YahooMatchupTeam>();
         }
     }

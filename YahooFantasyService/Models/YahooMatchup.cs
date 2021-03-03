@@ -21,13 +21,24 @@ namespace YahooFantasyService
         public string Status { get; set; }
 
         [JsonProperty(PropertyName = "is_playoffs")]
-        public string IsPlayoffs { get; set; }
+        private string _isPlayoffs
+        {
+            get => IsPlayoffs ? "1" : "0";
+            set => IsPlayoffs = value == "1";
+        }
+        public bool IsPlayoffs { get; set; }
+
 
         [JsonProperty(PropertyName = "is_consolation")]
-        public string IsConsolation { get; set; }
+        private string _isConsolation
+        {
+            get => IsConsolation ? "1" : "0";
+            set => IsConsolation = value == "1";
+        }
+        public bool IsConsolation { get; set; }
 
         [JsonProperty(PropertyName = "is_matchup_recap_available")]
-        public int IsMatchupRecapAvailable { get; set; }
+        public bool IsMatchupRecapAvailable { get; set; }
 
         [JsonProperty(PropertyName = "matchup_recap_url")]
         public string MatchupRecapUrl { get; set; }
@@ -36,7 +47,7 @@ namespace YahooFantasyService
         public string MatchupRecapTitle { get; set; }
 
         [JsonProperty(PropertyName = "is_tied")]
-        public int IsTied { get; set; }
+        public bool IsTied { get; set; }
 
         [JsonProperty(PropertyName = "winner_team_key")]
         public string WinnerTeamKey { get; set; }
