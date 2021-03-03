@@ -49,12 +49,6 @@ namespace YahooFantasyService
                 new YahooUriResource("players", null, PlayerSubresource.Stats)
             });
             var teamResult = await CallYahooFantasyApi<YahooTeamApiResult>(uri);
-
-            if (teamResult is YahooErrorApiResult errorResult)
-            {
-                throw new ArgumentException(errorResult.Error.Description);
-            }
-
             return teamResult as YahooTeamApiResult;
         }
 
@@ -65,12 +59,6 @@ namespace YahooFantasyService
                 new YahooUriResource("team", teamKey, resources)
             });
             var teamResult = await CallYahooFantasyApi<YahooTeamApiResult>(uri);
-
-            if (teamResult is YahooErrorApiResult errorResult)
-            {
-                throw new ArgumentException(errorResult.Error.Description);
-            }
-
             return teamResult as YahooTeamApiResult;
         }
 
@@ -87,12 +75,6 @@ namespace YahooFantasyService
                 }
             });
             var teamsResult = await CallYahooFantasyApi<YahooTeamCollectionApiResult>(uri);
-
-            if (teamsResult is YahooErrorApiResult errorResult)
-            {
-                throw new ArgumentException(errorResult.Error.Description);
-            }
-
             return teamsResult as YahooTeamCollectionApiResult;
         }
 
@@ -108,12 +90,6 @@ namespace YahooFantasyService
                 })
             });
             var teamResult = await CallYahooFantasyApi<YahooTeamApiResult>(uri);
-
-            if (teamResult is YahooErrorApiResult errorResult)
-            {
-                throw new ArgumentException(errorResult.Error.Description);
-            }
-
             return teamResult as YahooTeamApiResult;
         }
 
@@ -121,12 +97,6 @@ namespace YahooFantasyService
         {
             var uri = _uriBuilder.Build(new List<YahooUriPart> { new YahooUriResource("league", leagueKey, resources) });
             var leagueResult = await CallYahooFantasyApi<YahooLeagueApiResult>(uri);
-
-            if (leagueResult is YahooErrorApiResult errorResult)
-            {
-                throw new ArgumentException(errorResult.Error.Description);
-            }
-
             return leagueResult as YahooLeagueApiResult;
         }
 
@@ -143,12 +113,6 @@ namespace YahooFantasyService
                 }
             });
             var leaguesResult = await CallYahooFantasyApi<YahooLeagueCollectionApiResult>(uri);
-
-            if (leaguesResult is YahooErrorApiResult errorResult)
-            {
-                throw new ArgumentException(errorResult.Error.Description);
-            }
-
             return leaguesResult as YahooLeagueCollectionApiResult;
         }
 
@@ -165,12 +129,6 @@ namespace YahooFantasyService
                 }
             });
             var playersResult = await CallYahooFantasyApi<YahooPlayerCollectionApiResult>(uri);
-
-            if (playersResult is YahooErrorApiResult errorResult)
-            {
-                throw new ArgumentException(errorResult.Error.Description);
-            }
-
             return playersResult as YahooPlayerCollectionApiResult;
         }
 
@@ -195,9 +153,10 @@ namespace YahooFantasyService
             }
             else
             {
-                var errorResult = JsonConvert.DeserializeObject<YahooErrorApiResult>(jsonResult);
+                JObject o = JObject.Parse(jsonResult);
+                var errorResult = o.SelectToken("error").ToObject<YahooErrorApiResult>();
                 errorResult.StatusCode = response.StatusCode;
-                return errorResult;
+                throw new YahooServiceException(errorResult);
             }
         }
 
