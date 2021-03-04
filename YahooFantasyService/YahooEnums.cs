@@ -9,6 +9,12 @@ namespace YahooFantasyService
 {
     public static class YahooEnums
     {
+        public enum BaseResource
+        {
+            League,
+            Team,
+            Player
+        }
         [Flags]
         public enum LeagueSubresource
         {
