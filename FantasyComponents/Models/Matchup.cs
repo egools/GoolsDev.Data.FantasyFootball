@@ -10,16 +10,16 @@ namespace FantasyComponents
     public class Matchup
     {
         protected Matchup() { }
-        public Matchup(byte week)
+        public Matchup(string matchupId, byte week, MatchupRoster roster1, MatchupRoster roster2)
         {
-            MatchupId = Guid.NewGuid().ToString();
+            MatchupId = matchupId;
             Week = week;
-            Roster1 = new MatchupRoster();
-            Roster2 = new MatchupRoster();
+            Roster1 = roster1;
+            Roster2 = roster2;
         }
 
         [Key]
-        public string MatchupId { get; init; }
+        public string MatchupId { get; init; } //[gameKey].l.[yahooLeagueId].w.[week].t1.[roster1Id].t2.[roster2Id]
         public byte Week { get; init; }
 
         [NotMapped]
