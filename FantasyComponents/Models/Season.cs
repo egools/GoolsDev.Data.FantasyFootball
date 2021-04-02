@@ -13,12 +13,12 @@
     public class Season
     {
         protected Season() { }
-        public Season(short year, int yahooLeagueId, string seasonName)
+        public Season(short year, string seasonId, string seasonName, Settings settings)
         {
-            var gameKey = "399"; //lookup gameKey
-            SeasonId = $"{gameKey}.l.{yahooLeagueId}";
+            SeasonId = seasonId;
             Year = year;
             SeasonLeagueName = seasonName;
+            Settings = settings;
             Matchups = new List<Matchup>();
             Teams = new List<Team>();
         }
