@@ -8,25 +8,36 @@ namespace FantasyComponents
     public class MatchupPlayer : IComparable<MatchupPlayer>
     {
         protected MatchupPlayer() { }
-        public MatchupPlayer(NFLPlayer nflPlayer, float? projectedPoints, float? actualPoints, FantasyPosition matchupPosition)
+        public MatchupPlayer(
+            string matchupPlayerId, 
+            NFLPlayer nflPlayer, 
+            float? projectedPoints, 
+            float? actualPoints, 
+            FantasyPosition matchupPosition,
+            FantasyPosition eligiblePositions,
+            string gameResult,
+            string statBlock)
         {
-            MatchupPlayerId = Guid.NewGuid().ToString();
+            MatchupPlayerId = matchupPlayerId;
             NFLPlayer = nflPlayer;
             ProjectedPoints = projectedPoints;
             ActualPoints = actualPoints;
             MatchupPosition = matchupPosition;
+            EligiblePositions = eligiblePositions;
+            GameResult = gameResult;
+            StatBlock = statBlock;
         }
 
         [Key]
-        public string MatchupPlayerId { get; init; }
-        public virtual NFLPlayer NFLPlayer { get; set; }
+        public string MatchupPlayerId { get; init; } //[gameKey].l.[yahooLeagueId].w.[week].p.[playerKey]
+        public virtual NFLPlayer NFLPlayer { get; init; }
 
-        public float? ProjectedPoints { get; set; }
-        public float? ActualPoints { get; set; }
-        public FantasyPosition MatchupPosition { get; set; }
-        public FantasyPosition EligiblePositions { get; set; }
-        public string GameResult { get; set; }
-        public string StatBlock { get; set; }
+        public float? ProjectedPoints { get; init; }
+        public float? ActualPoints { get; init; }
+        public FantasyPosition MatchupPosition { get; init; }
+        public FantasyPosition EligiblePositions { get; init; }
+        public string GameResult { get; init; }
+        public string StatBlock { get; init; }
 
         public int CompareTo(MatchupPlayer other)
         {
