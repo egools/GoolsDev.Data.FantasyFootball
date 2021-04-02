@@ -9,8 +9,11 @@ namespace FantasyComponents
     public class Team
     {
         protected Team() { }
-        public Team(string teamName, short year)
+        public Team(string teamId, string managerId, string seasonId, string teamName, short year)
         {
+            TeamId = teamId;
+            ManagerId = managerId;
+            SeasonId = seasonId;
             TeamName = teamName;
             Year = year;
             Wins = 0;
