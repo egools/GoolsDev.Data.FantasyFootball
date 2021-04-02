@@ -10,10 +10,11 @@ namespace FantasyComponents
     public class Draft
     {
         protected Draft() { }
-        public Draft(string draftId, DraftType draftType)
+        public Draft(string draftId, DraftType draftType, short? budget = null)
         {
             DraftId = draftId;
             DraftType = draftType;
+            Budget = budget;
         }
 
         [Key]
@@ -24,6 +25,7 @@ namespace FantasyComponents
         [Column("DraftOrder")]
         private string DraftOrderString { get; set; }
 
+        [NotMapped]
         private List<int> _draftOrder;
         [NotMapped]
         public List<int> DraftOrder
