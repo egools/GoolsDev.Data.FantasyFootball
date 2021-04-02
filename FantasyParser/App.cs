@@ -46,7 +46,7 @@ namespace FantasyParser
                 var teamStats = await _yahooService.GetTeamStats("399.l.299900.t.11", CoverageType.Week, 1);
                 var teamAndRoster = await _yahooService.GetTeamRosterWithStats("399.l.299900.t.1", 1);
                 var player = await _yahooService.GetPlayer("399.p.31002", PlayerSubresource.Stats);
-                var players = await _yahooService.GetPlayers(new List<string> { "399.p.31002", "399.p.8780" }, YahooEnums.PlayerSubresource.Stats);
+                var players = await _yahooService.GetPlayers(new List<string> { "399.p.31002", "399.p.8780" }, PlayerSubresource.Stats);
             }
             catch (YahooServiceException ex)
             {
