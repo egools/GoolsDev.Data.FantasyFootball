@@ -18,15 +18,15 @@ namespace FantasyComponents
         }
 
         [Key]
-        public string NFLPlayerId { get; init; }
+        public string NFLPlayerId { get; init; } //[gameKey].p.[playerId]
         public string PFRUrl { get; set; }
         public string FullName { get; init; }
-        public string ShortName { get; set; }
-        public string DisplayPosition { get; set; }
-        public NFLPosition PrimaryPosition { get; set; }
+        public string ShortName { get; init; }
+        public string DisplayPosition { get; init; }
+        public NFLPosition PrimaryPosition { get; init; }
 
         [Column("Teams")]
-        public string TeamsString { get; set; }
+        private string TeamsString { get; set; }
 
         [NotMapped]
         private List<TeamTenure> _teams;
@@ -35,17 +35,12 @@ namespace FantasyComponents
         {
             get
             {
-                if (string.IsNullOrWhiteSpace(TeamsString))
-                    return new List<TeamTenure>();
-                else if (_teams == null)
-                    return JsonConvert.DeserializeObject<List<TeamTenure>>(TeamsString);
-                else
-                    return _teams;
+                return _teams ?? (string.IsNullOrEmpty(TeamsString) ? null : JsonConvert.DeserializeObject<List<TeamTenure>>(TeamsString));
             }
             set
             {
+                TeamsString = JsonConvert.SerializeObject(value);
                 _teams = value;
-                TeamsString = string.Join(',', value);
             }
         }
     }
