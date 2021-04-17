@@ -46,6 +46,7 @@ namespace FantasyComponents.DAL
         {
             context.SaveChanges();
         }
+
         public async Task SaveAsync()
         {
             await context.SaveChangesAsync();

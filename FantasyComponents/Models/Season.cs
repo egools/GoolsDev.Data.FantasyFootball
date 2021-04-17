@@ -5,14 +5,14 @@
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
-    using System.Security.Policy;
-    using System.Text.RegularExpressions;
 
     [Table("Seasons", Schema = "ff")]
     public class Season
     {
-        protected Season() { }
+        protected Season()
+        {
+        }
+
         public Season(short year, string seasonId, string seasonName, Settings settings)
         {
             SeasonId = seasonId;
@@ -25,6 +25,7 @@
 
         [Key]
         public string SeasonId { get; init; } //[gameKey].l.[yahooLeagueId]
+
         public short Year { get; init; }
         public string SeasonLeagueName { get; init; }
 
@@ -40,6 +41,7 @@
 
         [ForeignKey("DraftId")]
         public virtual Draft Draft { get; set; }
+
         public virtual ICollection<Matchup> Matchups { get; set; }
         public virtual ICollection<Team> Teams { get; set; }
     }
@@ -47,16 +49,30 @@
     [NotMapped]
     public class Settings
     {
-        public List<string> Divisions { get; set; }
+        public List<Division> Divisions { get; set; }
+        public int StartWeek { get; set; }
+        public int EndWeek { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int PlayoffTeams { get; set; }
         public int PlayoffStartWeek { get; set; }
         public bool HasConsolations { get; set; }
+        public int ConsolationTeams { get; set; }
+        public bool UsePlayoffReseeding { get; set; }
         public bool UseFractionalPoints { get; set; }
         public bool UseNegativePoints { get; set; }
-        public List<StatModifier> StatModifiers { get; set; }
+        public bool UsesFaab { get; set; }
+        public string WaiverRule { get; set; }
+        public string WaiverType { get; set; }
+        public Dictionary<int, StatModifier> StatModifiers { get; set; }
         public List<RosterPosition> RosterPositions { get; set; }
+    }
+
+    [NotMapped]
+    public class Division
+    {
+        public int DivisionId { get; set; }
+        public string Name { get; set; }
     }
 
     [NotMapped]
@@ -66,15 +82,32 @@
         public string StatName { get; set; }
         public string StatDisplayName { get; set; }
         public float Value { get; set; }
-        public float BonusThreshold { get; set; }
-        public float BonusAmount { get; set; }
         public bool Enabled { get; set; }
+        public bool IsDisplayOnly { get; set; }
+        public List<StatPositionType> PositionTypes { get; set; }
+        public List<StatBonus> Bonuses { get; set; }
+    }
+
+    [NotMapped]
+    public class StatBonus
+    {
+        public double BonusThreshold { get; set; }
+        public double BonusAmount { get; set; }
     }
 
     [NotMapped]
     public class RosterPosition
     {
         public FantasyPosition Position { get; set; }
+        public PositionType PositionType { get; set; }
         public int PositionCount { get; set; }
+    }
+
+    [NotMapped]
+    public class StatPositionType
+    {
+        public PositionType PositionType { get; set; }
+
+        public bool IsDisplayOnly { get; set; }
     }
 }

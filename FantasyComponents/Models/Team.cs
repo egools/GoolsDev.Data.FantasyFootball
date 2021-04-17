@@ -30,7 +30,7 @@ namespace FantasyComponents
             TradesMade = 0;
             SeasonRating = 0;
             NameRating = null;
-            Rosters = new List<MatchupRoster>();
+            Rosters = new List<Roster>();
             DraftedPlayers = new List<DraftedPlayer>();
         }
 
@@ -54,7 +54,7 @@ namespace FantasyComponents
         public short TradesMade { get; set; }
         public int SeasonRating { get; set; }
         public int? NameRating { get; set; }
-        public virtual ICollection<MatchupRoster> Rosters { get; set; }
+        public virtual ICollection<Roster> Rosters { get; set; }
         public virtual ICollection<DraftedPlayer> DraftedPlayers { get; set; }
     }
 }

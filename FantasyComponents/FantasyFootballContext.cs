@@ -66,7 +66,7 @@ namespace FantasyComponents
                 .HasOne(m => m.Roster2)
                 .WithOne();
 
-            modelBuilder.Entity<MatchupRoster>()
+            modelBuilder.Entity<Roster>()
                 .HasMany(mr => mr.MatchupPlayers)
                 .WithOne();
 
@@ -87,7 +87,7 @@ namespace FantasyComponents
         public DbSet<Settings> Settings { get; set; }
         public DbSet<Team> Teams { get; set; }
         public DbSet<Matchup> Matchups { get; set; }
-        public DbSet<MatchupRoster> Rosters { get; set; }
+        public DbSet<Roster> Rosters { get; set; }
         public DbSet<MatchupPlayer> MatchupPlayers { get; set; }
         public DbSet<NFLPlayer> NFLPlayers { get; set; }
         public DbSet<Draft> Drafts { get; set; }

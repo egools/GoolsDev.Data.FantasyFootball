@@ -4,10 +4,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FantasyComponents
 {
-    [Table("MatchupRosters", Schema = "ff")]
-    public class MatchupRoster
+    [Table("Rosters", Schema = "ff")]
+    public class Roster
     {
-        public MatchupRoster(string rosterId, float score, float projected)
+        public Roster(string rosterId, float score, float projected)
         {
             RosterId = rosterId;
             ActualScore = score;
@@ -17,6 +17,7 @@ namespace FantasyComponents
 
         [Key]
         public string RosterId { get; set; } //[gameKey].l.[yahooLeagueId].t.[teamNum].w.[week]
+
         public float ActualScore { get; set; }
         public float ProjectedScore { get; set; }
 

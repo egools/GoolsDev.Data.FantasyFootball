@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FantasyParser", "FantasyParser\FantasyParser.csproj", "{7A53B59F-70B0-49EA-8BD7-D6130666DF3B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FantasyComponents", "FantasyComponents\FantasyComponents.csproj", "{C6E60BB5-FA82-4D48-869E-9D6B8B007767}"
+	ProjectSection(ProjectDependencies) = postProject
+		{73A97E61-DE21-40EB-BFDF-58192A346205} = {73A97E61-DE21-40EB-BFDF-58192A346205}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C0008DC4-9318-482C-B059-99868049DB70}"
 	ProjectSection(SolutionItems) = preProject

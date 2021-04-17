@@ -10,7 +10,7 @@ namespace FantasyComponents
     public class Matchup
     {
         protected Matchup() { }
-        public Matchup(string matchupId, byte week, MatchupRoster roster1, MatchupRoster roster2)
+        public Matchup(string matchupId, byte week, Roster roster1, Roster roster2)
         {
             MatchupId = matchupId;
             Week = week;
@@ -41,8 +41,8 @@ namespace FantasyComponents
         }
 
         [ForeignKey("Roster1Id")]
-        public virtual MatchupRoster Roster1 { get; init; }
+        public virtual Roster Roster1 { get; init; }
         [ForeignKey("Roster2Id")]
-        public virtual MatchupRoster Roster2 { get; init; }
+        public virtual Roster Roster2 { get; init; }
     }
 }

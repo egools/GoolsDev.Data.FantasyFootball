@@ -17,10 +17,12 @@ namespace FantasyComponents
     [Flags]
     public enum PositionType
     {
+        Unknown = 0,
         O = 1,
         K = 2,
         DT = 4,
-        DP = 8
+        DP = 8,
+        IR = 16
     }
 
     [Flags]
@@ -55,34 +57,52 @@ namespace FantasyComponents
 
     public static class PositionUtilities
     {
-
         public static NFLPosition ParseNFLPosition(string pos)
         {
-            if (pos == "QB") return NFLPosition.QB;
-            else if (pos == "RB") return NFLPosition.RB;
-            else if (pos == "WR") return NFLPosition.WR;
-            else if (pos == "TE") return NFLPosition.TE;
-            else if (pos == "DEF") return NFLPosition.DEF;
-            else if (pos == "K") return NFLPosition.K;
-            else if (pos == "D") return NFLPosition.D;
-            else return NFLPosition.None;
+            return pos switch
+            {
+                "QB" => NFLPosition.QB,
+                "RB" => NFLPosition.RB,
+                "WR" => NFLPosition.WR,
+                "TE" => NFLPosition.TE,
+                "DEF" => NFLPosition.DEF,
+                "K" => NFLPosition.K,
+                "D" => NFLPosition.D,
+                _ => NFLPosition.None
+            };
         }
 
         public static FantasyPosition ParseFantasyPosition(string pos)
         {
-            if (pos == "BN") return FantasyPosition.BN;
-            if (pos == "QB") return FantasyPosition.QB;
-            if (pos == "WR") return FantasyPosition.WR;
-            if (pos == "RB") return FantasyPosition.RB;
-            if (pos == "TE") return FantasyPosition.TE;
-            if (pos == "K") return FantasyPosition.K;
-            if (pos == "DEF") return FantasyPosition.DEF;
-            if (pos == "W/R/T") return FantasyPosition.W_R_T;
-            if (pos == "W/R") return FantasyPosition.W_R;
-            if (pos == "W/T") return FantasyPosition.W_T;
-            if (pos == "D") return FantasyPosition.D;
-            if (pos == "IR") return FantasyPosition.IR;
-            else return FantasyPosition.BN;
+            return pos switch
+            {
+                "BN" => FantasyPosition.BN,
+                "QB" => FantasyPosition.QB,
+                "WR" => FantasyPosition.WR,
+                "RB" => FantasyPosition.RB,
+                "TE" => FantasyPosition.TE,
+                "K" => FantasyPosition.K,
+                "DEF" => FantasyPosition.DEF,
+                "W/R/T" => FantasyPosition.W_R_T,
+                "W/R" => FantasyPosition.W_R,
+                "W/T" => FantasyPosition.W_T,
+                "D" => FantasyPosition.D,
+                "IR" => FantasyPosition.IR,
+                _ => FantasyPosition.BN
+            };
+        }
+
+        public static PositionType ParsePositionType(string posType)
+        {
+            return posType switch
+            {
+                "O" => PositionType.O,
+                "K" => PositionType.K,
+                "DT" => PositionType.DT,
+                "DP" => PositionType.DP,
+                "IR" => PositionType.IR,
+                _ => PositionType.Unknown
+            };
         }
     }
 }
