@@ -15,7 +15,7 @@ using static YahooFantasyService.YahooEnums;
 
 namespace YahooFantasyService
 {
-    public partial class YahooService
+    public partial class YahooService : IYahooService
     {
         public YahooService(IOptions<YahooServiceSettings> options)
         {
@@ -220,5 +220,4 @@ namespace YahooFantasyService
             { 2020, 399 }
         };
     }
-
 }
