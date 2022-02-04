@@ -14,10 +14,10 @@ namespace FantasyComponents.DAL
     {
         public FantasyFootballUnitOfWork(FantasyFootballContext context)
         {
-            this.context = context;
+            fantasyFootballContext = context;
         }
 
-        private readonly FantasyFootballContext context;
+        private readonly FantasyFootballContext fantasyFootballContext;
         private LeagueRepository leagueRepository;
         private SeasonRepository seasonRepository;
         private ManagerRepository managerRepository;
@@ -30,26 +30,26 @@ namespace FantasyComponents.DAL
         private DraftedPlayerRepository draftedPlayerRepository;
         private EloRatingRepository ratingRepository;
 
-        public LeagueRepository LeagueRepo { get => leagueRepository ??= new LeagueRepository(context); }
-        public SeasonRepository SeasonRepo { get => seasonRepository ??= new SeasonRepository(context); }
-        public ManagerRepository ManagerRepo { get => managerRepository ??= new ManagerRepository(context); }
-        public TeamRepository TeamRepo { get => teamRepository ??= new TeamRepository(context); }
-        public MatchupRepository MatchupRepo { get => matchupRepository ??= new MatchupRepository(context); }
-        public MatchupRosterRepository RosterRepo { get => rosterRepository ??= new MatchupRosterRepository(context); }
-        public MatchupPlayerRepository MatchupPlayerRepo { get => matchupPlayerRepository ??= new MatchupPlayerRepository(context); }
-        public NFLPlayerRepository NFLPlayerRepo { get => nflPlayerRepository ??= new NFLPlayerRepository(context); }
-        public DraftRepository DraftRepo { get => draftRepository ??= new DraftRepository(context); }
-        public DraftedPlayerRepository DraftedPlayerRepo { get => draftedPlayerRepository ??= new DraftedPlayerRepository(context); }
-        public EloRatingRepository RatingRepo { get => ratingRepository ??= new EloRatingRepository(context); }
+        public LeagueRepository LeagueRepo { get => leagueRepository ??= new LeagueRepository(fantasyFootballContext); }
+        public SeasonRepository SeasonRepo { get => seasonRepository ??= new SeasonRepository(fantasyFootballContext); }
+        public ManagerRepository ManagerRepo { get => managerRepository ??= new ManagerRepository(fantasyFootballContext); }
+        public TeamRepository TeamRepo { get => teamRepository ??= new TeamRepository(fantasyFootballContext); }
+        public MatchupRepository MatchupRepo { get => matchupRepository ??= new MatchupRepository(fantasyFootballContext); }
+        public MatchupRosterRepository RosterRepo { get => rosterRepository ??= new MatchupRosterRepository(fantasyFootballContext); }
+        public MatchupPlayerRepository MatchupPlayerRepo { get => matchupPlayerRepository ??= new MatchupPlayerRepository(fantasyFootballContext); }
+        public NFLPlayerRepository NFLPlayerRepo { get => nflPlayerRepository ??= new NFLPlayerRepository(fantasyFootballContext); }
+        public DraftRepository DraftRepo { get => draftRepository ??= new DraftRepository(fantasyFootballContext); }
+        public DraftedPlayerRepository DraftedPlayerRepo { get => draftedPlayerRepository ??= new DraftedPlayerRepository(fantasyFootballContext); }
+        public EloRatingRepository RatingRepo { get => ratingRepository ??= new EloRatingRepository(fantasyFootballContext); }
 
         public void Save()
         {
-            context.SaveChanges();
+            fantasyFootballContext.SaveChanges();
         }
 
         public async Task SaveAsync()
         {
-            await context.SaveChangesAsync();
+            await fantasyFootballContext.SaveChangesAsync();
         }
 
         private bool disposed = false;
@@ -60,7 +60,7 @@ namespace FantasyComponents.DAL
             {
                 if (disposing)
                 {
-                    context.Dispose();
+                    fantasyFootballContext.Dispose();
                 }
             }
             this.disposed = true;
