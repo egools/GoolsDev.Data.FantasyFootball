@@ -9,41 +9,39 @@ using Microsoft.EntityFrameworkCore;
 using FantasyComponents.DAL;
 using System.Threading.Tasks;
 
-namespace FantasyParser
+namespace FantasyParser;
+public class Program
 {
-    public class Program
+    public static async Task Main(string[] args)
     {
-        public static async Task Main(string[] args)
-        {
-            var services = ConfigureServices();
-            var serviceProvider = services.BuildServiceProvider();
-            await serviceProvider.GetService<App>().Run();
-        }
+        var services = ConfigureServices();
+        var serviceProvider = services.BuildServiceProvider();
+        await serviceProvider.GetService<App>().Run();
+    }
 
-        private static IServiceCollection ConfigureServices()
-        {
-            IServiceCollection services = new ServiceCollection();
+    private static IServiceCollection ConfigureServices()
+    {
+        IServiceCollection services = new ServiceCollection();
 
-            var config = LoadConfiguration();
-            services.AddSingleton(config);
-            services.Configure<YahooServiceSettings>(config.GetSection("YahooServiceSettings"));
+        var config = LoadConfiguration();
+        services.AddSingleton(config);
+        services.Configure<YahooServiceSettings>(config.GetSection("YahooServiceSettings"));
 
-            services.AddTransient<App>();
-            services.AddTransient<YahooService>();
+        services.AddTransient<App>();
+        services.AddTransient<YahooService>();
 
-            services.AddTransient<FantasyFootballUnitOfWork>();
-            services.AddDbContext<FantasyFootballContext>(options => options.UseSqlServer(config.GetConnectionString("GoolsDevSqlConnection")));
+        services.AddTransient<FantasyFootballUnitOfWork>();
+        services.AddDbContext<FantasyFootballContext>(options => options.UseSqlServer(config.GetConnectionString("GoolsDevSqlConnection")));
 
-            return services;
-        }
+        return services;
+    }
 
-        public static IConfiguration LoadConfiguration()
-        {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+    public static IConfiguration LoadConfiguration()
+    {
+        var builder = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
 
-            return builder.Build();
-        }
+        return builder.Build();
     }
 }
