@@ -26,7 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FantasyComponents\FantasyComponents.csproj" />
+    <ProjectReference Include="..\FantasyDAL\FantasyDAL.csproj" />
   </ItemGroup>
 
   <ItemGroup>
