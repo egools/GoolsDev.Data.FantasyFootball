@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using YahooFantasyService;
 
-namespace FantasyComponents.Factories
+namespace FantasyDAO.Factories
 {
     public static class SeasonFactory
     {

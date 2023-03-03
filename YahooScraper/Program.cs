@@ -4,9 +4,8 @@ using System.IO;
 using System.Linq;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
-using FantasyComponents;
+using FantasyDAO;
 using Microsoft.EntityFrameworkCore;
-using FantasyComponents.DAL;
 using System.Threading.Tasks;
 
 namespace FantasyParser;

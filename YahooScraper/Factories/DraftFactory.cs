@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using YahooFantasyService;
 
-namespace FantasyComponents.Factories
+namespace FantasyDAO.Factories
 {
     public static class DraftFactory
     {

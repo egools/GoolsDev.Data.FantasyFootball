@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FantasyComponents.Factories
+namespace FantasyDAO.Factories
 {
     internal class ManagerFactory
     {

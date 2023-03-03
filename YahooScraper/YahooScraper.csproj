@@ -26,7 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FantasyDAL\FantasyDAL.csproj" />
+    <ProjectReference Include="..\FantasyDAO\FantasyDAO.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,9 +34,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="app_data\Test.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="YahooHtmlScraper\Services\" />
   </ItemGroup>
 
 </Project>

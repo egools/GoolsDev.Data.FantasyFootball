@@ -2,7 +2,7 @@
 using YahooFantasyService;
 using System;
 
-namespace FantasyComponents.Factories
+namespace FantasyDAO.Factories
 {
     public static class LeagueFactory
     {

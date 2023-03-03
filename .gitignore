@@ -365,3 +365,4 @@ FodyWeavers.xsd
 /nuget.config
 /FantasyParser/appsettings.json
 /appsettings.json
+/YahooScraper/appsettings.json
