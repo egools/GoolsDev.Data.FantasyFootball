@@ -2,17 +2,11 @@
 using FantasyDAO.Factories;
 using Microsoft.Extensions.Configuration;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Text.Json;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using YahooFantasyService;
 using static YahooFantasyService.YahooEnums;
 
-namespace FantasyParser;
+namespace YahooScraper;
 public class App
 {
     private readonly IConfiguration _config;

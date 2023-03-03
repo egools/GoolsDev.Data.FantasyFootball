@@ -8,7 +8,7 @@ using FantasyDAO;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
-namespace FantasyParser;
+namespace YahooScraper;
 public class Program
 {
     public static async Task Main(string[] args)

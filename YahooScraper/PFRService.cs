@@ -1,20 +1,13 @@
-﻿using AngleSharp;
-using AngleSharp.Dom;
-using Microsoft.EntityFrameworkCore.Internal;
+﻿using AngleSharp.Dom;
+using FantasyDAO.YahooHtmlScraper;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Text.Encodings.Web;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web;
-using FantasyDAO.YahooHtmlScraper;
 
-namespace FantasyDAO
+namespace YahooScraper
 {
     public static class PFRService
     {
