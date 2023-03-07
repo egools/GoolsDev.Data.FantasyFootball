@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FantasyDAO.YahooHtmlScraper
+namespace YahooScraper.YahooHtmlScraper
 {
     public static class AngleSharpHelper
     {

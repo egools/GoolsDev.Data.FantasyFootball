@@ -1,5 +1,5 @@
-﻿using FantasyDAO;
-using FantasyDAO.Factories;
+﻿using FantasyRepo.SQL;
+using YahooScraper.Factories;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Threading.Tasks;

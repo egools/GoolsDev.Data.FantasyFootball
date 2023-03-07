@@ -1,11 +1,11 @@
 ﻿using AngleSharp.Dom;
-using FantasyDAO.YahooHtmlScraper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web;
+using YahooScraper.YahooHtmlScraper;
 
 namespace YahooScraper
 {

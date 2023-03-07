@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YahooScraper", "YahooScraper\YahooScraper.csproj", "{7A53B59F-70B0-49EA-8BD7-D6130666DF3B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FantasyDAO", "FantasyDAO\FantasyDAO.csproj", "{C6E60BB5-FA82-4D48-869E-9D6B8B007767}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FantasyRepo.SQL", "FantasyRepo.SQL\FantasyRepo.SQL.csproj", "{C6E60BB5-FA82-4D48-869E-9D6B8B007767}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C0008DC4-9318-482C-B059-99868049DB70}"
 	ProjectSection(SolutionItems) = preProject
@@ -14,7 +14,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		nuget.config = nuget.config
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyEntities", "FantasyEntities\FantasyEntities.csproj", "{C2DA8926-FAB9-43BD-85E1-5DA1BF6C9735}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FantasyRepo.Cosmos", "FantasyRepo.Cosmos\FantasyRepo.Cosmos.csproj", "{2260A475-EAB9-498A-A93D-DCF0339F6331}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyFootball.Common", "FantasyFootball.Common\FantasyFootball.Common.csproj", "{380EC17B-0DBB-4194-9384-E6BDC3C6B947}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,10 +32,14 @@ Global
 		{C6E60BB5-FA82-4D48-869E-9D6B8B007767}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6E60BB5-FA82-4D48-869E-9D6B8B007767}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6E60BB5-FA82-4D48-869E-9D6B8B007767}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C2DA8926-FAB9-43BD-85E1-5DA1BF6C9735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C2DA8926-FAB9-43BD-85E1-5DA1BF6C9735}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C2DA8926-FAB9-43BD-85E1-5DA1BF6C9735}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C2DA8926-FAB9-43BD-85E1-5DA1BF6C9735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2260A475-EAB9-498A-A93D-DCF0339F6331}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2260A475-EAB9-498A-A93D-DCF0339F6331}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2260A475-EAB9-498A-A93D-DCF0339F6331}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2260A475-EAB9-498A-A93D-DCF0339F6331}.Release|Any CPU.Build.0 = Release|Any CPU
+		{380EC17B-0DBB-4194-9384-E6BDC3C6B947}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{380EC17B-0DBB-4194-9384-E6BDC3C6B947}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{380EC17B-0DBB-4194-9384-E6BDC3C6B947}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{380EC17B-0DBB-4194-9384-E6BDC3C6B947}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,8 +1,9 @@
-﻿using System.Text.RegularExpressions;
-using YahooFantasyService;
+﻿using FantasyRepo.SQL;
 using System;
+using System.Text.RegularExpressions;
+using YahooFantasyService;
 
-namespace FantasyDAO.Factories
+namespace YahooScraper.Factories
 {
     public static class LeagueFactory
     {

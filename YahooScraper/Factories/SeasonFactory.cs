@@ -1,9 +1,11 @@
-﻿using System;
+﻿using FantasyFootball.Common.Enums;
+using FantasyRepo.SQL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using YahooFantasyService;
 
-namespace FantasyDAO.Factories
+namespace YahooScraper.Factories
 {
     public static class SeasonFactory
     {
@@ -17,6 +19,7 @@ namespace FantasyDAO.Factories
                 short.Parse(yLeague.Season),
                 yLeague.LeagueKey,
                 yLeague.Name,
+
                 new Settings
                 {
                     Divisions = CreateDivisions(yLeague.Settings.Divisions),
