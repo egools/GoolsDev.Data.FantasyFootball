@@ -1,12 +1,17 @@
-﻿namespace FantasyRepo.Cosmos.Models
-{
-    public record Season(
-        string SeasonId,
-        string SeasonName,
-        int Year,
-        IEnumerable<TeamStanding> Standings);
+﻿using FantasyFootball.Common.Enums;
 
-    public record SeasonSettings();
+namespace FantasyRepo.Cosmos.Models
+{
+    public record League(
+        string LeagueId,
+        string LeagueKey,
+        string LeagueName,
+        int Year,
+        int CurrentWeek,
+        bool IsFinished,
+        LeagueSettings Settings,
+        Draft Draft,
+        IEnumerable<TeamStanding> Standings);
 
     public record TeamStanding(
         StandingsRecord OverallRecord,

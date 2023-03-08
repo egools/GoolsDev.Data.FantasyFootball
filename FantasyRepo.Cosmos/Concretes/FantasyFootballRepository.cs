@@ -9,29 +9,29 @@ using System.Threading.Tasks;
 
 namespace FantasyRepo.Cosmos.Concretes
 {
-    internal class SeasonRepository : IRepository<Season>
+    internal class SeasonRepository : IRepository<League>
     {
         public void Delete(string id)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Season> Find(Expression<Func<Season, bool>>? filter = null, Func<IQueryable<Season>, IOrderedQueryable<Season>>? orderBy = null, string includeProperties = "")
+        public IEnumerable<League> Find(Expression<Func<League, bool>>? filter = null, Func<IQueryable<League>, IOrderedQueryable<League>>? orderBy = null, string includeProperties = "")
         {
             throw new NotImplementedException();
         }
 
-        public Season Get(string id)
+        public League Get(string id)
         {
             throw new NotImplementedException();
         }
 
-        public void Insert(Season entity)
+        public void Insert(League entity)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Season entityToUpdate)
+        public void Update(League entityToUpdate)
         {
             throw new NotImplementedException();
         }
